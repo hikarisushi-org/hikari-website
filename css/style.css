@@ -667,6 +667,50 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   border-top: 1px solid #E0DCD6;
 }
 
+/* Menu Swiper Carousel — Mobile Only */
+@media (max-width: 768px) {
+  .menu-grid.swiper {
+    display: block;
+    overflow: visible;
+    margin-top: 20px;
+  }
+  .menu-grid.swiper .swiper-wrapper {
+    display: flex;
+  }
+  .menu-grid.swiper .swiper-slide {
+    width: 85%;
+    flex-shrink: 0;
+    height: auto;
+  }
+  .menu-grid.swiper .menu-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .menu-swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 14px;
+  }
+  .menu-swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #E0D0D0;
+    opacity: 1;
+    border-radius: 50%;
+    transition: all var(--transition);
+  }
+  .menu-swiper-pagination .swiper-pagination-bullet-active {
+    background: var(--color-accent);
+    transform: scale(1.25);
+  }
+}
+@media (min-width: 769px) {
+  .menu-swiper-pagination {
+    display: none !important;
+  }
+}
+
 /* ========================================
    Gallery
    ======================================== */
