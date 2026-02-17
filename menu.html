@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Hikari Sushi</title>
+  <meta name="description" content="Browse our full menu of fresh sushi, premium rolls, and Japanese cuisine.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu-page.css">
+</head>
+<body class="menu-page">
+
+  <!-- Simple Header -->
+  <header class="menu-header">
+    <div class="menu-header-inner">
+      <img src="assets/images/logo.webp" alt="Hikari Sushi" class="menu-logo">
+      <a href="/" class="menu-home-link">Full Site</a>
+    </div>
+  </header>
+
+  <!-- Menu Filters -->
+  <div class="menu-filters-sticky">
+    <div class="container">
+      <div class="menu-brand">
+        <img src="assets/images/logo.webp" alt="Hikari Sushi" class="menu-brand-logo">
+        <span class="menu-brand-text">Hikari Sushi</span>
+      </div>
+      <div class="menu-filters" id="menu-filters">
+        <button class="menu-filter active" data-filter="all">All</button>
+        <button class="menu-filter" data-filter="most-ordered">Popular</button>
+        <button class="menu-filter" data-filter="premium-rolls">Premium</button>
+        <button class="menu-filter" data-filter="traditional-rolls">Traditional</button>
+        <button class="menu-filter" data-filter="tempura-fried">Fried</button>
+      </div>
+      <div class="menu-search-container">
+        <input type="text" id="menu-search" class="menu-search" placeholder="Search menu...">
+        <button class="menu-search-clear" id="search-clear" style="display: none;">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Content -->
+  <div class="menu-content">
+    <div class="container" id="menu-container">
+      <!-- Menu items will be loaded here by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Simple Footer -->
+  <footer class="menu-footer">
+    <div class="container">
+      <p>Hikari Sushi | Modern Japanese Kitchen</p>
+      <p>10468 South Redwood Road, South Jordan, UT 84095</p>
+      <p><a href="tel:+13858663746">(385) 866-3746</a></p>
+    </div>
+  </footer>
+
+  <!-- Modal for Item Details -->
+  <div class="menu-modal" id="menu-modal">
+    <div class="menu-modal-overlay" id="modal-overlay"></div>
+    <div class="menu-modal-content">
+      <button class="menu-modal-close" id="modal-close">&times;</button>
+      <div class="menu-modal-body">
+        <img src="" alt="" class="menu-modal-img" id="modal-img">
+        <div class="menu-modal-info">
+          <h2 class="menu-modal-name" id="modal-name"></h2>
+          <p class="menu-modal-price" id="modal-price"></p>
+          <p class="menu-modal-desc" id="modal-desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating My Picks Button -->
+  <div class="my-list-float" id="my-list-float" style="display: none;">
+    <button class="my-list-btn" id="my-list-btn">
+      My Picks <span class="my-list-count" id="my-list-count">0</span>
+    </button>
+  </div>
+
+  <!-- My Picks Modal -->
+  <div class="my-list-modal" id="my-list-modal">
+    <div class="my-list-overlay" id="my-list-overlay"></div>
+    <div class="my-list-content">
+      <div class="my-list-header">
+        <div class="my-list-header-text">
+          <h2>My Picks</h2>
+          <p class="my-list-subtitle">Track your selections to share with your server</p>
+        </div>
+        <button class="my-list-close" id="my-list-close">&times;</button>
+      </div>
+      <div class="my-list-items" id="my-list-items">
+        <!-- Items will be added here -->
+      </div>
+      <div class="my-list-footer">
+        <button class="my-list-clear" id="my-list-clear">Clear All</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Onboarding Popover -->
+  <div class="onboarding-overlay" id="onboarding-overlay" style="display: none;">
+    <div class="onboarding-popover" id="onboarding-popover">
+      <div class="onboarding-arrow"></div>
+      <div class="onboarding-content">
+        <p class="onboarding-text">Pick your favorites and we'll keep a tally for you. No more forgetting what you wanted!</p>
+        <button class="onboarding-btn" id="onboarding-dismiss">Got it</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Onboarding Finger (separate from overlay for proper z-index stacking) -->
+  <div class="onboarding-finger" id="onboarding-finger" style="display: none;">👇</div>
+
+  <script src="js/menu-page.js"></script>
+</body>
+</html>
