@@ -210,77 +210,77 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         text: "In any moment of decision, the best thing you can do is the right thing.",
         author: "Theodore Roosevelt",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/President_Roosevelt_-_Pach_Bros.jpg/440px-President_Roosevelt_-_Pach_Bros.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/26_theodore_roosevelt.jpg"
       },
       {
         text: "The only thing we have to fear is fear itself.",
         author: "Franklin D. Roosevelt",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/FDR_1944_Color_Portrait.jpg/440px-FDR_1944_Color_Portrait.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/32_franklin_d_roosevelt.jpg"
       },
       {
         text: "Ask not what your country can do for you – ask what you can do for your country.",
         author: "John F. Kennedy",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/John_F._Kennedy%2C_White_House_color_photo_portrait.jpg/440px-John_F._Kennedy%2C_White_House_color_photo_portrait.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/35_john_f_kennedy.jpg"
       },
       {
         text: "A house divided against itself cannot stand.",
         author: "Abraham Lincoln",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/16_abraham_lincoln.jpg"
       },
       {
         text: "It is better to offer no excuse than a bad one.",
         author: "George Washington",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/440px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/01_george_washington.jpg"
       },
       {
         text: "Speak softly and carry a big stick.",
         author: "Theodore Roosevelt",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/President_Roosevelt_-_Pach_Bros.jpg/440px-President_Roosevelt_-_Pach_Bros.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/26_theodore_roosevelt.jpg"
       },
       {
         text: "The buck stops here.",
         author: "Harry S. Truman",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg/440px-TRUMAN_58-766-06_%28cropped%29.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/33_harry_s_truman.jpg"
       },
       {
         text: "Government of the people, by the people, for the people, shall not perish from the earth.",
         author: "Abraham Lincoln",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/16_abraham_lincoln.jpg"
       },
       {
         text: "The only limit to our realization of tomorrow will be our doubts of today.",
         author: "Franklin D. Roosevelt",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/FDR_1944_Color_Portrait.jpg/440px-FDR_1944_Color_Portrait.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/32_franklin_d_roosevelt.jpg"
       },
       {
         text: "Change will not come if we wait for some other person or some other time.",
         author: "Barack Obama",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/440px-President_Barack_Obama.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/44_barack_obama.jpg"
       },
       {
         text: "We cannot always build the future for our youth, but we can build our youth for the future.",
         author: "Franklin D. Roosevelt",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/FDR_1944_Color_Portrait.jpg/440px-FDR_1944_Color_Portrait.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/32_franklin_d_roosevelt.jpg"
       },
       {
         text: "Associate yourself with men of good quality if you esteem your own reputation.",
         author: "George Washington",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/440px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/01_george_washington.jpg"
       },
       {
         text: "The best way to predict your future is to create it.",
         author: "Abraham Lincoln",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/16_abraham_lincoln.jpg"
       },
       {
         text: "Do what you can, with what you have, where you are.",
         author: "Theodore Roosevelt",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/President_Roosevelt_-_Pach_Bros.jpg/440px-President_Roosevelt_-_Pach_Bros.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/26_theodore_roosevelt.jpg"
       },
       {
         text: "It is amazing what you can accomplish if you do not care who gets the credit.",
         author: "Harry S. Truman",
-        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg/440px-TRUMAN_58-766-06_%28cropped%29.jpg"
+        photo: "https://www.whitehouse.gov/wp-content/uploads/2021/01/33_harry_s_truman.jpg"
       },
     ];
 
