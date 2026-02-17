@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "name": "Valentine's Day Theme",
+    "id": "valentines",
+    "description": "Romantic pink and red theme with floating hearts",
+    "dateCreated": "2025-02-01",
+    "activeRange": {
+      "month": 2,
+      "dayStart": 10,
+      "dayEnd": 15,
+      "note": "Valentine's Day week"
+    }
+  },
+  "colors": {
+    "bg": "#FFF5F5",
+    "bg-alt": "#FFE8E8",
+    "text": "#2C2C2C",
+    "text-light": "#6B6B6B",
+    "accent": "#C62828",
+    "accent-light": "#E53935",
+    "gold": "#E8A0BF",
+    "white": "#FFFFFF",
+    "dark": "#1A1A1A",
+    "red": "#C62828"
+  },
+  "typography": {
+    "font-sans": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-serif": "'Playfair Display', Georgia, serif"
+  },
+  "hero": {
+    "videoPath": "assets/video/hero.mp4",
+    "overlayGradient": "linear-gradient(to bottom, rgba(100,0,20,0.45) 0%, rgba(60,0,10,0.35) 50%, rgba(30,0,5,0.65) 100%)"
+  },
+  "banner": {
+    "enabled": true,
+    "sectionClass": "valentines-banner",
+    "title": "Celebrate Valentine's Day at Hikari Sushi",
+    "subtitle": "Make it a night to remember with fresh sushi, premium rolls, and a romantic atmosphere.",
+    "celebrationText": "Happy Valentine's Day!",
+    "celebrationSubtext": "We're open today - share the love!",
+    "inviteTitle": "Come Celebrate With Us",
+    "inviteSub": "Treat your Valentine to an unforgettable evening of fresh sushi, handcrafted rolls, and great company.",
+    "inviteNote": "Walk-ins welcome — no reservations needed"
+  },
+  "floatingElements": {
+    "enabled": true,
+    "containerClass": "floating-hearts",
+    "elementClass": "floating-heart",
+    "characters": ["❤", "♥", "♡", "💗", "💕"],
+    "colors": [
+      "rgba(198, 40, 40, 0.25)",
+      "rgba(198, 40, 40, 0.18)",
+      "rgba(255, 255, 255, 0.35)",
+      "rgba(255, 255, 255, 0.25)",
+      "rgba(232, 160, 191, 0.30)"
+    ],
+    "animation": "floatUp",
+    "interval": 600
+  },
+  "quoteGenerator": {
+    "enabled": true,
+    "type": "romantic",
+    "interval": 5000,
+    "quotes": [
+      {
+        "text": "Like our signature rolls, you're a perfect combination of everything wonderful.",
+        "author": "Hikari Sushi"
+      },
+      {
+        "text": "Our love is like fresh sashimi — simple, beautiful, and unforgettable.",
+        "author": "Hikari Sushi"
+      },
+      {
+        "text": "Life is raw and beautiful, just like our love and our tuna.",
+        "author": "Hikari Sushi"
+      }
+    ]
+  },
+  "assets": {
+    "themeImages": []
+  }
+}

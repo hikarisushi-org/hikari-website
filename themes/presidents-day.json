@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "name": "Presidents' Day Theme",
+    "id": "presidents-day",
+    "description": "Patriotic red, white, and blue theme for Presidents' Day",
+    "dateCreated": "2026-02-16",
+    "activeRange": {
+      "month": 2,
+      "dayStart": 14,
+      "dayEnd": 18,
+      "note": "Week of Presidents' Day (3rd Monday in February)"
+    }
+  },
+  "colors": {
+    "bg": "#F5F7FA",
+    "bg-alt": "#E8EDF5",
+    "text": "#2C2C2C",
+    "text-light": "#6B6B6B",
+    "accent": "#1A4D8F",
+    "accent-light": "#2563B8",
+    "gold": "#B8956A",
+    "white": "#FFFFFF",
+    "dark": "#1A1A1A",
+    "red": "#C62828"
+  },
+  "typography": {
+    "font-sans": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-serif": "'Playfair Display', Georgia, serif"
+  },
+  "hero": {
+    "videoPath": "assets/video/hero.mp4",
+    "overlayGradient": "linear-gradient(to bottom, rgba(10,30,60,0.4) 0%, rgba(20,50,90,0.3) 50%, rgba(15,25,45,0.5) 100%)"
+  },
+  "banner": {
+    "enabled": true,
+    "sectionClass": "presidents-banner",
+    "title": "Celebrate Presidents' Day at Hikari Sushi",
+    "subtitle": "Honor the legacy of great leaders with exceptional sushi and unforgettable flavors.",
+    "celebrationText": "Happy Presidents' Day!",
+    "celebrationSubtext": "We're open today - come celebrate with us!",
+    "inviteTitle": "Join Us This Presidents' Day",
+    "inviteSub": "Celebrate with fresh sushi, handcrafted rolls, and exceptional flavors.",
+    "inviteNote": "Walk-ins welcome — special holiday hours"
+  },
+  "floatingElements": {
+    "enabled": true,
+    "containerClass": "floating-stars",
+    "elementClass": "floating-star",
+    "characters": ["★", "☆", "⭐", "✦", "✧"],
+    "colors": [
+      "rgba(26, 77, 143, 0.3)",
+      "rgba(198, 40, 40, 0.25)",
+      "rgba(255, 215, 0, 0.4)",
+      "rgba(255, 255, 255, 0.35)",
+      "rgba(184, 149, 106, 0.3)"
+    ],
+    "animation": "floatUpStar",
+    "interval": 700
+  },
+  "quoteGenerator": {
+    "enabled": true,
+    "type": "presidential",
+    "interval": 4000,
+    "quotes": [
+      {
+        "text": "In any moment of decision, the best thing you can do is the right thing.",
+        "author": "Theodore Roosevelt",
+        "photo": "assets/images/presidents/roosevelt_t.jpg"
+      },
+      {
+        "text": "The only thing we have to fear is fear itself.",
+        "author": "Franklin D. Roosevelt",
+        "photo": "assets/images/presidents/roosevelt_f.jpg"
+      },
+      {
+        "text": "Ask not what your country can do for you – ask what you can do for your country.",
+        "author": "John F. Kennedy",
+        "photo": "assets/images/presidents/kennedy.jpg"
+      },
+      {
+        "text": "A house divided against itself cannot stand.",
+        "author": "Abraham Lincoln",
+        "photo": "assets/images/presidents/lincoln.jpg"
+      },
+      {
+        "text": "It is better to offer no excuse than a bad one.",
+        "author": "George Washington",
+        "photo": "assets/images/presidents/washington.jpg"
+      }
+    ]
+  },
+  "assets": {
+    "themeImages": [
+      "assets/images/presidents/washington.jpg",
+      "assets/images/presidents/lincoln.jpg",
+      "assets/images/presidents/roosevelt_t.jpg",
+      "assets/images/presidents/roosevelt_f.jpg",
+      "assets/images/presidents/kennedy.jpg",
+      "assets/images/presidents/truman.jpg",
+      "assets/images/presidents/obama.jpg"
+    ]
+  }
+}

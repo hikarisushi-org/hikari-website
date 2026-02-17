@@ -1,0 +1,208 @@
+/* ========================================
+   Hikari Sushi — Theme Animations
+   CSS animations used by various themes
+   ======================================== */
+
+/* Floating elements container (hearts, stars, etc.) */
+.floating-hearts,
+.floating-stars,
+.floating-elements {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+  display: none; /* Hidden by default, shown by theme loader */
+}
+
+/* Individual floating elements */
+.floating-heart,
+.floating-star,
+.floating-element {
+  position: absolute;
+  bottom: -40px;
+  font-size: 1.6rem;
+}
+
+/* Heart floating animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(60deg);
+    opacity: 0;
+  }
+}
+
+.floating-heart {
+  animation: floatUp linear forwards;
+}
+
+/* Star floating animation (with rotation) */
+@keyframes floatUpStar {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-55vh) rotate(180deg) scale(1.3);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.floating-star {
+  animation: floatUpStar linear forwards;
+}
+
+/* Generic floating element */
+.floating-element {
+  animation: floatUp linear forwards;
+}
+
+/* Fade transition for quote/message changes */
+.fade {
+  opacity: 0 !important;
+  transition: opacity 0.3s ease;
+}
+
+/* Theme-specific banner sections */
+.presidents-banner,
+.valentines-banner,
+.holiday-banner {
+  display: none; /* Hidden by default, shown by theme loader when enabled */
+}
+
+/* Celebration badge animations */
+.celebration-badge {
+  animation: celebrationPulse 3s ease-in-out infinite;
+}
+
+@keyframes celebrationPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(255,215,0,0.4);
+  }
+}
+
+/* Star/heart icon pulse */
+.celebration-icon,
+.presidents-star,
+.valentines-heart {
+  display: inline-block;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(72deg);
+    opacity: 0.8;
+  }
+}
+
+/* Heartbeat animation for Valentine's */
+.valentines-heart {
+  animation: heartbeat 1.2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.25);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.15);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+/* Star spinning for Presidents' Day */
+.presidents-star {
+  animation: starPulse 2s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(72deg);
+    opacity: 0.8;
+  }
+}
+
+/* Shimmer effect for president portraits */
+.president-portrait::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255,255,255,0.2) 50%,
+    transparent 70%
+  );
+  animation: shine 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes shine {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+/* Stripe scroll animation for patriotic banner */
+.presidents-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  animation: stripeScroll 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes stripeScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
