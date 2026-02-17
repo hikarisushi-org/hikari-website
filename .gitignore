@@ -1,2 +1,2 @@
-# Local Netlify folder
-.netlify
+# Temporarily exclude large president images
+assets/images/presidents/*.jpg

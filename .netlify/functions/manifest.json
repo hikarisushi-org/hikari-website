@@ -1,0 +1,1 @@
+{"functions":[{"bundler":"zisi","buildData":{"runtimeAPIVersion":1},"mainFile":"/Users/jediOne/Projects/hikarisojo/netlify/functions/reviews.js","name":"reviews","priority":10,"runtimeVersion":"nodejs20.x","path":"/Users/jediOne/Projects/hikarisojo/.netlify/functions/reviews.zip","runtime":"js"}],"system":{"arch":"arm64","platform":"darwin"},"timestamp":1771288346242,"version":1}
