@@ -1,18 +1,19 @@
 /* ========================================
-   Hikari Sushi — Valentine's Day Theme
+   Hikari Sushi — Presidents' Day Theme
    Default theme backed up at css/theme-default.css
    ======================================== */
 
 :root {
-  --color-bg: #FFF5F5;
-  --color-bg-alt: #FFE8E8;
+  --color-bg: #F5F7FA;
+  --color-bg-alt: #E8EDF5;
   --color-text: #2C2C2C;
   --color-text-light: #6B6B6B;
-  --color-accent: #C62828;
-  --color-accent-light: #E53935;
-  --color-gold: #E8A0BF;
+  --color-accent: #1A4D8F;
+  --color-accent-light: #2563B8;
+  --color-gold: #B8956A;
   --color-white: #FFFFFF;
   --color-dark: #1A1A1A;
+  --color-red: #C62828;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
   --radius: 12px;
@@ -145,7 +146,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   right: 0;
   z-index: 1000;
   background: transparent;
-  transition: all var(--transition);
+  transition: background var(--transition), box-shadow var(--transition);
 }
 .nav.scrolled {
   background: rgba(255,245,245,0.95);
@@ -234,9 +235,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(100,0,20,0.45) 0%,
-    rgba(60,0,10,0.35) 50%,
-    rgba(30,0,5,0.65) 100%
+    rgba(10,30,60,0.25) 0%,
+    rgba(20,50,90,0.2) 50%,
+    rgba(15,25,45,0.35) 100%
   );
 }
 .hero-content {
@@ -282,7 +283,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
    About
    ======================================== */
 .about {
-  background: var(--color-white);
+  background: var(--color-bg);
 }
 .about-grid {
   display: grid;
@@ -345,16 +346,37 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 
 /* ========================================
-   Valentine's Banner
+   Presidents' Day Banner
    ======================================== */
-.valentines-banner {
-  background: linear-gradient(135deg, #C62828, #AD1457);
+.presidents-banner {
+  background: linear-gradient(135deg, #1A4D8F 0%, #C62828 50%, #1A4D8F 100%);
   padding: 56px 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
-.valentines-banner .container {
+.presidents-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  animation: stripeScroll 20s linear infinite;
+  pointer-events: none;
+}
+@keyframes stripeScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(40px); }
+}
+.presidents-banner .container {
   position: relative;
   z-index: 2;
   display: flex;
@@ -362,118 +384,175 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   align-items: center;
   gap: 16px;
 }
-.valentines-text {
+.presidents-text {
   color: var(--color-white);
   font-family: var(--font-serif);
   font-size: 1.6rem;
   font-weight: 600;
 }
-.valentines-heart {
-  color: #E8A0BF;
-  font-size: 1.2rem;
+.presidents-star {
+  color: #FFD700;
+  font-size: 1.4rem;
   display: inline-block;
-  animation: heartbeat 1.2s ease-in-out infinite;
+  animation: starPulse 2s ease-in-out infinite;
 }
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  15% { transform: scale(1.25); }
-  30% { transform: scale(1); }
-  45% { transform: scale(1.15); }
-  60% { transform: scale(1); }
+@keyframes starPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  50% { transform: scale(1.2) rotate(72deg); opacity: 0.8; }
 }
-.valentines-sub {
-  color: rgba(255,255,255,0.85);
+.presidents-sub {
+  color: rgba(255,255,255,0.9);
   font-size: 1.05rem;
-  max-width: 500px;
+  max-width: 550px;
 }
 
-/* Countdown */
-.valentines-countdown {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 12px 0;
-}
-.countdown-unit {
+/* Presidents' Day Celebration */
+.presidents-celebration {
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  padding: 14px 18px;
-  min-width: 72px;
+  gap: 12px;
 }
-.countdown-num {
+.celebration-badge {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  border: 3px solid rgba(255,215,0,0.6);
+  border-radius: 60px;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  animation: celebrationPulse 3s ease-in-out infinite;
+}
+@keyframes celebrationPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+  50% { transform: scale(1.05); box-shadow: 0 12px 40px rgba(255,215,0,0.4); }
+}
+.celebration-icon {
+  font-size: 2rem;
+  color: #FFD700;
+  animation: starSpin 4s linear infinite;
+  display: inline-block;
+}
+@keyframes starSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.celebration-text {
+  font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 700;
   color: var(--color-white);
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  letter-spacing: 0.02em;
 }
-.countdown-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.7);
-  margin-top: 4px;
-}
-.countdown-sep {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.5);
-  margin-top: -14px;
+.celebration-subtitle {
+  color: rgba(255,255,255,0.95);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
-/* Valentine's Dinner Teaser */
-.vday-dinner-teaser {
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.2);
+/* Presidents' Day Dinner Teaser */
+.pday-dinner-teaser {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.25);
   border-radius: 16px;
   padding: 28px 36px;
-  max-width: 500px;
+  max-width: 540px;
   margin: 4px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
-.vday-dinner-title {
+.pday-dinner-title {
   color: var(--color-white);
   font-family: var(--font-serif);
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-.vday-dinner-sub {
-  color: rgba(255,255,255,0.85);
+.pday-dinner-sub {
+  color: rgba(255,255,255,0.9);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 12px;
 }
-.vday-dinner-note {
-  color: #E8A0BF;
+.pday-dinner-note {
+  color: #FFD700;
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-}
-.vday-dinner-hint {
-  color: rgba(255,255,255,0.5);
-  font-size: 0.8rem;
-  font-style: italic;
-  margin-top: 8px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-/* Love Message Generator */
-.love-message-box {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(8px);
+/* Presidential Message Generator */
+.presidential-message-box {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 24px 32px;
-  max-width: 480px;
+  max-width: 520px;
   margin: 8px 0;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
-.love-message {
+.president-portrait-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.president-portrait {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(26,77,143,0.3), rgba(198,40,40,0.3));
+  border: 4px solid rgba(255,215,0,0.9);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3), 0 0 20px rgba(255,215,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.president-portrait::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255,255,255,0.2) 50%,
+    transparent 70%
+  );
+  animation: shine 3s ease-in-out infinite;
+  z-index: 1;
+}
+@keyframes shine {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+}
+.president-portrait.fade {
+  opacity: 0;
+  transform: scale(0.8) rotate(-10deg);
+}
+.president-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 0;
+  background: #f0f0f0;
+}
+.presidential-message {
   color: var(--color-white);
   font-family: var(--font-serif);
   font-style: italic;
@@ -482,61 +561,68 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   margin-bottom: 16px;
   min-height: 52px;
   transition: opacity 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
-.love-message.fade {
+.presidential-message.fade {
   opacity: 0;
 }
-.btn-love {
-  background: rgba(255,255,255,0.2);
+.btn-presidential {
+  background: rgba(255,255,255,0.25);
   color: var(--color-white);
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 10px 24px;
+  border: 2px solid rgba(255,255,255,0.35);
+  padding: 12px 28px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
   transition: all var(--transition);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
-.btn-love:hover {
-  background: rgba(255,255,255,0.3);
+.btn-presidential:hover {
+  background: rgba(255,255,255,0.35);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  border-color: rgba(255,255,255,0.5);
 }
 
-/* Floating Hearts (site-wide) */
-.floating-hearts {
+/* Floating Stars (site-wide) */
+.floating-stars {
   position: fixed;
   inset: 0;
   z-index: 9999;
   pointer-events: none;
   overflow: hidden;
 }
-.floating-heart {
+.floating-star {
   position: absolute;
   bottom: -40px;
-  font-size: 1.6rem;
-  animation: floatUp linear forwards;
+  font-size: 1.8rem;
+  animation: floatUpStar linear forwards;
 }
-@keyframes floatUp {
-  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(-110vh) rotate(60deg); opacity: 0; }
+@keyframes floatUpStar {
+  0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: translateY(-55vh) rotate(180deg) scale(1.3); opacity: 0.7; }
+  100% { transform: translateY(-110vh) rotate(360deg) scale(0.8); opacity: 0; }
 }
 
-.valentines-banner .btn-reserve {
+.presidents-banner .btn-reserve {
   margin-top: 8px;
   background: var(--color-white);
-  color: #C62828;
+  color: #1A4D8F;
+  border: 2px solid rgba(255,255,255,0.3);
 }
-.valentines-banner .btn-reserve:hover {
-  background: #FFF5F5;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+.presidents-banner .btn-reserve:hover {
+  background: #F5F7FA;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 480px) {
-  .countdown-unit { min-width: 56px; padding: 10px 12px; }
-  .countdown-num { font-size: 1.5rem; }
-  .valentines-countdown { gap: 6px; }
-  .love-message-box { padding: 20px 20px; }
+  .celebration-badge { padding: 14px 28px; }
+  .celebration-text { font-size: 1.4rem; }
+  .celebration-icon { font-size: 1.4rem; }
+  .celebration-subtitle { font-size: 0.95rem; }
+  .presidential-message-box { padding: 20px 20px; }
 }
 
 /* ========================================
@@ -671,7 +757,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 @media (max-width: 768px) {
   .menu-grid.swiper {
     display: block;
-    overflow: visible;
+    overflow: hidden;
     margin-top: 20px;
   }
   .menu-grid.swiper .swiper-wrapper {
@@ -715,7 +801,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
    Gallery
    ======================================== */
 .gallery {
-  background: var(--color-white);
+  background: var(--color-bg);
 }
 .gallery-grid {
   display: grid;
@@ -1070,6 +1156,16 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 
 @media (max-width: 768px) {
+  .nav {
+    background: rgba(255,245,245,0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  .nav-toggle span {
+    background: var(--color-dark);
+  }
   .nav-links {
     display: none;
     position: fixed;

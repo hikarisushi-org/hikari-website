@@ -196,75 +196,123 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Valentine's Day Countdown ----
-  const cdDays = document.getElementById('cd-days');
-  const cdHours = document.getElementById('cd-hours');
-  const cdMins = document.getElementById('cd-mins');
-  const cdSecs = document.getElementById('cd-secs');
-  const countdownEl = document.getElementById('vday-countdown');
+  // ---- Presidents' Day Celebration ----
+  // No countdown needed - it's Presidents' Day today!
+  // The celebration badge is displayed via HTML/CSS
 
-  if (cdDays) {
-    const vday = new Date('2026-02-14T18:00:00').getTime();
+  // ---- Presidential Quote Auto-Rotation ----
+  const presidentialMsg = document.getElementById('presidential-message');
+  const presidentPortrait = document.getElementById('president-portrait');
+  const presidentPhoto = document.getElementById('president-photo');
 
-    function updateCountdown() {
-      const now = Date.now();
-      const diff = vday - now;
-
-      if (diff <= 0) {
-        countdownEl.innerHTML = '<p style="color:#fff;font-family:var(--font-serif);font-size:1.4rem;">Happy Valentine\'s Day!</p>';
-        return;
-      }
-
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-
-      cdDays.textContent = String(d).padStart(2, '0');
-      cdHours.textContent = String(h).padStart(2, '0');
-      cdMins.textContent = String(m).padStart(2, '0');
-      cdSecs.textContent = String(s).padStart(2, '0');
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  }
-
-  // ---- Love Message Generator ----
-  const loveBtn = document.getElementById('love-btn');
-  const loveMsg = document.getElementById('love-message');
-
-  if (loveBtn && loveMsg) {
-    const messages = [
-      "Like our signature rolls, you're a perfect combination of everything wonderful.",
-      "You're the wasabi to my sushi — a little kick that makes everything better.",
-      "Our love is like fresh sashimi — simple, beautiful, and unforgettable.",
-      "You had me at 'omakase.' Let the chef of love decide tonight.",
-      "Life is raw and beautiful, just like our love and our tuna.",
-      "You're the soy sauce to my rice — I'm better with you by my side.",
-      "Like a perfect nigiri, some things are just meant to be together.",
-      "You stole a pizza my heart... but tonight, let's do sushi instead.",
-      "Roses are red, tuna is too, nothing on our menu is as sweet as you.",
-      "Love, like sushi, is best when it's fresh — and ours is the freshest.",
-      "You're more addictive than our Firefly Fusion, and that's saying something.",
-      "I love you more than unlimited edamame, and that's a lot.",
-      "Let's roll into forever together — one sushi date at a time.",
-      "You're the ginger that cleanses my palate between life's tough bites.",
-      "Our love story? Best served with chopsticks and a side of miso.",
+  if (presidentialMsg) {
+    const quotes = [
+      {
+        text: "In any moment of decision, the best thing you can do is the right thing.",
+        author: "Theodore Roosevelt",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/President_Roosevelt_-_Pach_Bros.jpg/440px-President_Roosevelt_-_Pach_Bros.jpg"
+      },
+      {
+        text: "The only thing we have to fear is fear itself.",
+        author: "Franklin D. Roosevelt",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/FDR_1944_Color_Portrait.jpg/440px-FDR_1944_Color_Portrait.jpg"
+      },
+      {
+        text: "Ask not what your country can do for you – ask what you can do for your country.",
+        author: "John F. Kennedy",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/John_F._Kennedy%2C_White_House_color_photo_portrait.jpg/440px-John_F._Kennedy%2C_White_House_color_photo_portrait.jpg"
+      },
+      {
+        text: "A house divided against itself cannot stand.",
+        author: "Abraham Lincoln",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+      },
+      {
+        text: "It is better to offer no excuse than a bad one.",
+        author: "George Washington",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/440px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"
+      },
+      {
+        text: "Speak softly and carry a big stick.",
+        author: "Theodore Roosevelt",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/President_Roosevelt_-_Pach_Bros.jpg/440px-President_Roosevelt_-_Pach_Bros.jpg"
+      },
+      {
+        text: "The buck stops here.",
+        author: "Harry S. Truman",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg/440px-TRUMAN_58-766-06_%28cropped%29.jpg"
+      },
+      {
+        text: "Government of the people, by the people, for the people, shall not perish from the earth.",
+        author: "Abraham Lincoln",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+      },
+      {
+        text: "The only limit to our realization of tomorrow will be our doubts of today.",
+        author: "Franklin D. Roosevelt",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/FDR_1944_Color_Portrait.jpg/440px-FDR_1944_Color_Portrait.jpg"
+      },
+      {
+        text: "Change will not come if we wait for some other person or some other time.",
+        author: "Barack Obama",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/440px-President_Barack_Obama.jpg"
+      },
+      {
+        text: "We cannot always build the future for our youth, but we can build our youth for the future.",
+        author: "Franklin D. Roosevelt",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/FDR_1944_Color_Portrait.jpg/440px-FDR_1944_Color_Portrait.jpg"
+      },
+      {
+        text: "Associate yourself with men of good quality if you esteem your own reputation.",
+        author: "George Washington",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/440px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"
+      },
+      {
+        text: "The best way to predict your future is to create it.",
+        author: "Abraham Lincoln",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+      },
+      {
+        text: "Do what you can, with what you have, where you are.",
+        author: "Theodore Roosevelt",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/President_Roosevelt_-_Pach_Bros.jpg/440px-President_Roosevelt_-_Pach_Bros.jpg"
+      },
+      {
+        text: "It is amazing what you can accomplish if you do not care who gets the credit.",
+        author: "Harry S. Truman",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg/440px-TRUMAN_58-766-06_%28cropped%29.jpg"
+      },
     ];
 
-    let lastIndex = -1;
+    let currentIndex = 0;
 
-    loveBtn.addEventListener('click', () => {
-      loveMsg.classList.add('fade');
+    function showQuote(index) {
+      presidentialMsg.classList.add('fade');
+      if (presidentPortrait) presidentPortrait.classList.add('fade');
+
       setTimeout(() => {
-        let idx;
-        do { idx = Math.floor(Math.random() * messages.length); } while (idx === lastIndex);
-        lastIndex = idx;
-        loveMsg.textContent = '"' + messages[idx] + '"';
-        loveMsg.classList.remove('fade');
+        const quote = quotes[index];
+        presidentialMsg.textContent = '"' + quote.text + '" — ' + quote.author;
+        if (presidentPhoto) {
+          presidentPhoto.src = quote.photo;
+          presidentPhoto.alt = quote.author;
+        }
+
+        presidentialMsg.classList.remove('fade');
+        if (presidentPortrait) presidentPortrait.classList.remove('fade');
       }, 300);
-    });
+    }
+
+    function nextQuote() {
+      currentIndex = (currentIndex + 1) % quotes.length;
+      showQuote(currentIndex);
+    }
+
+    // Show first quote immediately
+    showQuote(currentIndex);
+
+    // Auto-rotate every 4 seconds
+    setInterval(nextQuote, 4000);
   }
 
   // ---- Reviews Carousel ----
@@ -488,31 +536,31 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchReviews();
   }
 
-  // ---- Floating Hearts ----
-  const heartsContainer = document.querySelector('.floating-hearts');
-  if (heartsContainer) {
-    const heartChars = ['\u2764', '\u2665', '\u2661', '\uD83D\uDC97', '\uD83D\uDC95'];
-    const heartColors = [
-      'rgba(198, 40, 40, 0.25)',   // red — visible on light sections
-      'rgba(198, 40, 40, 0.18)',   // softer red
-      'rgba(255, 255, 255, 0.35)', // white — visible on dark/red sections
-      'rgba(255, 255, 255, 0.25)', // softer white
-      'rgba(232, 160, 191, 0.30)', // rose pink — works on both
+  // ---- Floating Stars ----
+  const starsContainer = document.querySelector('.floating-stars');
+  if (starsContainer) {
+    const starChars = ['\u2605', '\u2606', '\u2B50', '\u269C', '\u2726'];
+    const starColors = [
+      'rgba(26, 77, 143, 0.3)',    // blue — patriotic
+      'rgba(198, 40, 40, 0.25)',   // red — patriotic
+      'rgba(255, 215, 0, 0.4)',    // gold — stars
+      'rgba(255, 255, 255, 0.35)', // white — visible on all backgrounds
+      'rgba(184, 149, 106, 0.3)',  // bronze/gold
     ];
 
-    function spawnHeart() {
-      const heart = document.createElement('span');
-      heart.className = 'floating-heart';
-      heart.textContent = heartChars[Math.floor(Math.random() * heartChars.length)];
-      heart.style.left = Math.random() * 100 + '%';
-      heart.style.fontSize = (1.6 + Math.random() * 2.2) + 'rem';
-      heart.style.animationDuration = (4 + Math.random() * 5) + 's';
-      heart.style.color = heartColors[Math.floor(Math.random() * heartColors.length)];
-      heartsContainer.appendChild(heart);
-      heart.addEventListener('animationend', () => heart.remove());
+    function spawnStar() {
+      const star = document.createElement('span');
+      star.className = 'floating-star';
+      star.textContent = starChars[Math.floor(Math.random() * starChars.length)];
+      star.style.left = Math.random() * 100 + '%';
+      star.style.fontSize = (1.4 + Math.random() * 2.4) + 'rem';
+      star.style.animationDuration = (5 + Math.random() * 6) + 's';
+      star.style.color = starColors[Math.floor(Math.random() * starColors.length)];
+      starsContainer.appendChild(star);
+      star.addEventListener('animationend', () => star.remove());
     }
 
-    setInterval(spawnHeart, 600);
+    setInterval(spawnStar, 700);
   }
 
 });

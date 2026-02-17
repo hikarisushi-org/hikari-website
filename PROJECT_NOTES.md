@@ -71,28 +71,87 @@ Built a complete static website from scratch to replace the existing Carrd site.
 - [x] Create Netlify account
 - [x] Deploy to Netlify (hikarisojo.netlify.app)
 - [x] Point hikarisojo.com domain to Netlify (Porkbun DNS)
-- [ ] Cancel Carrd subscription once new site is live
+- [x] Cancel Carrd subscription
 
 ### Content & Design
 - [x] Add descriptions for premium rolls (Strawberry Blossom, Diamond Roll, Forbidden Roll, Firefly Fusion, Red Lantern, Avocado King, Cowboy Roll)
-- [ ] Google Maps embed currently uses approximate coordinates — verify it shows the correct pin
+- [x] Google Maps embed verified — correct pin location
 - [x] Added favicon (using new circular logo)
 - [x] Removed 20% off promo banner (no longer active)
 - [x] Updated nav logo to new circular sun/wave design
 - [x] Added Reservations button (Carbonara)
 
 ### Performance
-- [ ] Optimize images (compress PNGs, convert to WebP where possible) — total site is ~194MB, mostly from uncompressed food photos
-- [ ] Consider lazy loading the hero video on mobile to save bandwidth
+- [x] Optimize images (Feb 7, 2026) — converted all PNG/JPG to WebP, resized to display dimensions (800px menu, 1400px gallery), removed 29 unused images. **192MB → 4.6MB (97.6% reduction)**
+- [x] Optimize hero video (Feb 7, 2026) — stripped unused audio track, re-encoded at 1Mbps with faststart. **2.6MB → 992KB (62% reduction)**
 
 ### SEO & Analytics
-- [ ] Add Google Analytics or Plausible tracking
-- [ ] Submit sitemap to Google Search Console
-- [ ] Add Schema.org structured data for restaurant (hours, address, menu)
+- [x] Add Google Analytics (G-SH54LFXHJ3)
+- [x] Submit sitemap to Google Search Console
+- [x] Add Schema.org structured data for restaurant (hours, address, menu)
+
+### Mobile UX
+- [x] Mobile menu swiper carousels (Feb 7, 2026) — see details below
+- [x] Fixed mobile nav bar — always visible with solid background, GPU-composited to prevent scroll jank
 
 ### Future Enhancements
-- [ ] Add a reservation/contact form (Formspree or similar)
+- [x] Add reservations button (Carbonara)
 - [ ] Instagram feed embed
-- [ ] Google Reviews widget
+- [x] Google Reviews carousel (Feb 7, 2026) — see details below
 - [ ] Desserts section (photos already in assets: mochi, tiramisu)
 - [ ] Lunch specials section (if applicable)
+
+## Google Reviews Carousel (Feb 7, 2026)
+
+### Architecture
+- **Netlify serverless function** (`netlify/functions/reviews.js`) proxies Google Places API (New)
+- API key stored as Netlify env var — never exposed client-side
+- Place ID: `ChIJZV0qzpqHUocR4SuU3IlrTsg`
+
+### Google Cloud
+- **Project**: Hikari Sushi (`hikari-sushi-486804`)
+- **API**: Places API (New) enabled
+- **API Key**: Restricted to Places API (New) only
+- **Billing**: Free trial — $300 credit, 91 days remaining as of Feb 7
+
+### Caching
+- Server-side: 1-hour in-memory cache in the serverless function
+- Client-side: 24-hour localStorage cache (`hikari_reviews` key)
+- HTTP Cache-Control: `public, max-age=3600`
+
+### Filtering & Sorting
+- Only 5-star reviews are shown (lower ratings filtered out server-side)
+- Sorted newest first
+
+### Carousel Behavior
+- Desktop: 3 cards visible, arrow navigation
+- Tablet (<=1024px): 2 cards visible
+- Mobile (<=768px): 1 card, swipe/drag navigation, arrows hidden
+- Dots indicator synced with position
+
+### Netlify Environment Variables
+- `GOOGLE_PLACES_API_KEY` — API key for Places API
+- `GOOGLE_PLACE_ID` — `ChIJZV0qzpqHUocR4SuU3IlrTsg`
+
+## Mobile Menu Swiper Carousels (Feb 7, 2026)
+
+### Overview
+Menu categories display as horizontal swipeable carousels on mobile (768px and below), reducing scroll length. Desktop 2-column grid layout is unchanged.
+
+### Implementation
+- **Library**: Swiper.js v11 via jsDelivr CDN (CSS + JS bundle)
+- **Dynamic init/destroy**: JS wraps menu items into Swiper markup on mobile, unwraps back to grid on desktop
+- **Breakpoint**: 768px — debounced resize listener handles crossing
+- **Minimum items**: Categories with < 3 items skip carousel (Heroes, Entrees, Bento, Kids, Beverages stay stacked)
+- **Slide layout**: `slidesPerView: 'auto'`, 85% width per slide (1 card + peek of next), 12px gap
+- **Pagination**: Clickable dots styled with `--color-accent`
+
+### Integration
+- **Filter buttons**: Swipers destroy and re-init when category visibility changes
+- **Scroll reveal**: Swipers update after reveal animation completes (850ms delay)
+
+### Mobile Nav Fixes
+- Nav always shows solid background on mobile (no transparent-to-opaque toggle)
+- `transition: background, box-shadow` instead of `transition: all` to prevent jank
+- `transform: translateZ(0)` forces GPU compositing layer, prevents disappearing during scroll momentum
+- Hamburger menu lines always dark on mobile

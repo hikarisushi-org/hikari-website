@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hikari Sushi - Lunch Specials</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: 11.5in 9in;
+    margin: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 11.5in;
+    height: 9in;
+    margin: 0 auto;
+    padding: 0;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 11.5in;
+    height: 9in;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* ============ CROP MARKS ============ */
+  .crop-mark {
+    position: absolute;
+    background: #000;
+    z-index: 100;
+  }
+  /* Top-left */
+  .cm-tl-h { top: 0.25in; left: 0; width: 0.1875in; height: 0.3pt; }
+  .cm-tl-v { top: 0; left: 0.25in; width: 0.3pt; height: 0.1875in; }
+  /* Top-right */
+  .cm-tr-h { top: 0.25in; right: 0; width: 0.1875in; height: 0.3pt; }
+  .cm-tr-v { top: 0; right: 0.25in; width: 0.3pt; height: 0.1875in; }
+  /* Bottom-left */
+  .cm-bl-h { bottom: 0.25in; left: 0; width: 0.1875in; height: 0.3pt; }
+  .cm-bl-v { bottom: 0; left: 0.25in; width: 0.3pt; height: 0.1875in; }
+  /* Bottom-right */
+  .cm-br-h { bottom: 0.25in; right: 0; width: 0.1875in; height: 0.3pt; }
+  .cm-br-v { bottom: 0; right: 0.25in; width: 0.3pt; height: 0.1875in; }
+  /* Center vertical cut marks (top and bottom) */
+  .cm-ct { top: 0; left: 5.75in; width: 0.3pt; height: 0.1875in; transform: translateX(-50%); }
+  .cm-cb { bottom: 0; left: 5.75in; width: 0.3pt; height: 0.1875in; transform: translateX(-50%); }
+
+  /* ============ FLYER ============ */
+  .flyer {
+    width: 5.75in;
+    height: 9in;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, #379E90 0%, #42ADA0 20%, #4DB8A8 40%, #55C0B0 60%, #4AB5A5 80%, #3FA99B 100%);
+  }
+
+  .wave-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .wave-bg svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ============ CONTENT ============ */
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 0.6in 0.5in 0.45in 0.5in;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Title — Roboto Condensed, #014d4e */
+  .title-block {
+    text-align: center;
+    margin-bottom: 0.38in;
+  }
+
+  .title-block h1 {
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    font-weight: 400;
+    font-size: 38pt;
+    color: #014d4e;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  /* Hours — Roboto Condensed, golden */
+  .title-block .hours {
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    font-weight: 400;
+    font-size: 19pt;
+    color: #ffffff;
+    margin-top: 0.05in;
+    letter-spacing: 0.5px;
+  }
+
+  /* Section titles — Helvetica, #083f3c */
+  .section-title {
+    font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    color: #083f3c;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.06in;
+    text-transform: uppercase;
+  }
+
+  .section-gap {
+    height: 0.32in;
+  }
+
+  /* Menu items — Helvetica, #1a4d47 */
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14pt;
+    color: #1a4d47;
+    line-height: 1.55;
+  }
+
+  .menu-item .name {
+    white-space: nowrap;
+  }
+
+  .menu-item .dots {
+    flex: 1;
+    border-bottom: 1px dotted rgba(0,0,0,0.18);
+    margin: 0 0.08in;
+    position: relative;
+    top: -3px;
+  }
+
+  /* Prices — Helvetica Bold, #1a4d47 */
+  .menu-item .price {
+    font-weight: 700;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    white-space: nowrap;
+    font-size: 14.5pt;
+    color: #1a4d47;
+  }
+
+  /* Combo items */
+  .combo-item {
+    margin-bottom: 0.15in;
+  }
+
+  .combo-name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  /* Combo names — Helvetica Neue Bold, #ffd700 (gold) */
+  .combo-name {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14.5pt;
+    color: #ffd700;
+    line-height: 1.45;
+  }
+
+  /* Combo prices — Helvetica Bold, #1a4d47 */
+  .combo-price {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14.5pt;
+    color: #1a4d47;
+    white-space: nowrap;
+    margin-left: 0.15in;
+  }
+
+  /* Descriptions — Roboto Condensed, #645e5e */
+  .combo-desc {
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    font-size: 12pt;
+    color: #645e5e;
+    line-height: 1.4;
+    margin-top: 1px;
+  }
+
+  /* Bento item name — Helvetica Neue Bold, #1a4d47 (dark teal, NOT gold) */
+  .combo-name.dark {
+    color: #1a4d47;
+  }
+
+  /* QR section */
+  .qr-block {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 0.1in;
+  }
+
+  .qr-wrapper {
+    display: inline-block;
+    background: white;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+  }
+
+  .qr-wrapper img {
+    display: block;
+    width: 1.15in;
+    height: 1.15in;
+  }
+
+  /* "See Menu" — Roboto Condensed Bold, #000000 */
+  .qr-label {
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    font-weight: 700;
+    font-size: 12pt;
+    color: #000000;
+    margin-top: 0.04in;
+  }
+
+  /* ============ PRINT ============ */
+  @media print {
+    html, body {
+      width: 11.5in;
+      height: 9in;
+    }
+  }
+
+  /* Screen display helper */
+  @media screen {
+    body {
+      background: #e0e0e0;
+      padding: 0.5in 0;
+    }
+    .page {
+      margin: 0 auto;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- Crop Marks -->
+  <div class="crop-mark cm-tl-h"></div>
+  <div class="crop-mark cm-tl-v"></div>
+  <div class="crop-mark cm-tr-h"></div>
+  <div class="crop-mark cm-tr-v"></div>
+  <div class="crop-mark cm-bl-h"></div>
+  <div class="crop-mark cm-bl-v"></div>
+  <div class="crop-mark cm-br-h"></div>
+  <div class="crop-mark cm-br-v"></div>
+  <div class="crop-mark cm-ct"></div>
+  <div class="crop-mark cm-cb"></div>
+
+  <!-- ========== FLYER 1 ========== -->
+  <div class="flyer">
+    <div class="wave-bg">
+      <svg viewBox="0 0 575 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-30,120 C60,80 180,170 300,120 C420,70 500,150 610,100" stroke="rgba(255,255,255,0.09)" stroke-width="50" fill="none"/>
+        <path d="M-30,280 C80,330 200,250 340,300 C480,350 540,280 610,320" stroke="rgba(255,255,255,0.07)" stroke-width="60" fill="none"/>
+        <path d="M-30,460 C70,420 200,510 340,460 C480,410 550,480 610,450" stroke="rgba(255,255,255,0.08)" stroke-width="55" fill="none"/>
+        <path d="M-30,640 C100,600 230,680 370,640 C510,600 560,660 610,630" stroke="rgba(255,255,255,0.06)" stroke-width="45" fill="none"/>
+        <path d="M-30,780 C90,750 220,820 360,780 C500,740 560,800 610,770" stroke="rgba(255,255,255,0.05)" stroke-width="40" fill="none"/>
+        <ellipse cx="460" cy="80" rx="160" ry="110" fill="rgba(255,255,255,0.025)"/>
+        <ellipse cx="80" cy="800" rx="150" ry="100" fill="rgba(255,255,255,0.02)"/>
+      </svg>
+    </div>
+    <div class="content">
+      <div class="title-block">
+        <h1>Lunch Specials</h1>
+        <div class="hours">Tue-Fri 11am-3pm</div>
+      </div>
+
+      <div class="section-title">Appetizers</div>
+      <div class="menu-item"><span class="name">Chicken Sando</span><span class="dots"></span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Gyoza (5 pcs)</span><span class="dots"></span><span class="price">$6.99</span></div>
+      <div class="menu-item"><span class="name">Jalape&ntilde;o Bomb</span><span class="dots"></span><span class="price">$6.99</span></div>
+      <div class="menu-item"><span class="name">Sushi Nachos</span><span class="dots"></span><span class="price">$8.50</span></div>
+
+      <div class="section-gap"></div>
+
+      <div class="section-title">Sushi Combinations</div>
+      <div class="combo-item">
+        <div class="combo-name-row">
+          <span class="combo-name">2 Premium Combo</span>
+          <span class="combo-price">$19.99</span>
+        </div>
+        <div class="combo-desc">2 Premium Rolls + canned soda</div>
+      </div>
+      <div class="combo-item">
+        <div class="combo-name-row">
+          <span class="combo-name">2 Classic Combo</span>
+          <span class="combo-price">$13.99</span>
+        </div>
+        <div class="combo-desc">2 Classic Rolls + canned soda</div>
+      </div>
+      <div class="combo-item">
+        <div class="combo-name-row">
+          <span class="combo-name">Classic + Premium Combo</span>
+          <span class="combo-price">$16.99</span>
+        </div>
+        <div class="combo-desc">1 Classic Roll, 1 Premium Roll + canned soda</div>
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="section-title">Bento Box</div>
+      <div class="combo-item">
+        <div class="combo-name-row">
+          <span class="combo-name dark">Crispy Chicken Bento Box</span>
+          <span class="combo-price">$11.99</span>
+        </div>
+        <div class="combo-desc">Includes 4 pcs California Roll, gyoza, rice, salad + canned soda</div>
+      </div>
+
+      <div class="qr-block">
+        <div class="qr-wrapper">
+          <img src="qr-code.png" alt="Scan for Menu">
+        </div>
+        <div class="qr-label">See Menu</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FLYER 2 (identical) ========== -->
+  <div class="flyer">
+    <div class="wave-bg">
+      <svg viewBox="0 0 575 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-30,120 C60,80 180,170 300,120 C420,70 500,150 610,100" stroke="rgba(255,255,255,0.09)" stroke-width="50" fill="none"/>
+        <path d="M-30,280 C80,330 200,250 340,300 C480,350 540,280 610,320" stroke="rgba(255,255,255,0.07)" stroke-width="60" fill="none"/>
+        <path d="M-30,460 C70,420 200,510 340,460 C480,410 550,480 610,450" stroke="rgba(255,255,255,0.08)" stroke-width="55" fill="none"/>
+        <path d="M-30,640 C100,600 230,680 370,640 C510,600 560,660 610,630" stroke="rgba(255,255,255,0.06)" stroke-width="45" fill="none"/>
+        <path d="M-30,780 C90,750 220,820 360,780 C500,740 560,800 610,770" stroke="rgba(255,255,255,0.05)" stroke-width="40" fill="none"/>
+        <ellipse cx="460" cy="80" rx="160" ry="110" fill="rgba(255,255,255,0.025)"/>
+        <ellipse cx="80" cy="800" rx="150" ry="100" fill="rgba(255,255,255,0.02)"/>
+      </svg>
+    </div>
+    <div class="content">
+      <div class="title-block">
+        <h1>Lunch Specials</h1>
+        <div class="hours">Tue-Fri 11am-3pm</div>
+      </div>
+
+      <div class="section-title">Appetizers</div>
+      <div class="menu-item"><span class="name">Chicken Sando</span><span class="dots"></span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Gyoza (5 pcs)</span><span class="dots"></span><span class="price">$6.99</span></div>
+      <div class="menu-item"><span class="name">Jalape&ntilde;o Bomb</span><span class="dots"></span><span class="price">$6.99</span></div>
+      <div class="menu-item"><span class="name">Sushi Nachos</span><span class="dots"></span><span class="price">$8.50</span></div>
+
+      <div class="section-gap"></div>
+
+      <div class="section-title">Sushi Combinations</div>
+      <div class="combo-item">
+        <div class="combo-name-row">
+          <span class="combo-name">2 Premium Combo</span>
+          <span class="combo-price">$19.99</span>
+        </div>
+        <div class="combo-desc">2 Premium Rolls + canned soda</div>
+      </div>
+      <div class="combo-item">
+        <div class="combo-name-row">
+          <span class="combo-name">2 Classic Combo</span>
+          <span class="combo-price">$13.99</span>
+        </div>
+        <div class="combo-desc">2 Classic Rolls + canned soda</div>
+      </div>
+      <div class="combo-item">
+        <div class="combo-name-row">
+          <span class="combo-name">Classic + Premium Combo</span>
+          <span class="combo-price">$16.99</span>
+        </div>
+        <div class="combo-desc">1 Classic Roll, 1 Premium Roll + canned soda</div>
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="section-title">Bento Box</div>
+      <div class="combo-item">
+        <div class="combo-name-row">
+          <span class="combo-name dark">Crispy Chicken Bento Box</span>
+          <span class="combo-price">$11.99</span>
+        </div>
+        <div class="combo-desc">Includes 4 pcs California Roll, gyoza, rice, salad + canned soda</div>
+      </div>
+
+      <div class="qr-block">
+        <div class="qr-wrapper">
+          <img src="qr-code.png" alt="Scan for Menu">
+        </div>
+        <div class="qr-label">See Menu</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
