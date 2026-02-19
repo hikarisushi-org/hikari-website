@@ -4,6 +4,27 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---- Hero Video Autoplay ----
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    // Force play the video (handles browser autoplay policies)
+    const playPromise = heroVideo.play();
+    
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        // Autoplay started successfully
+        console.log('Hero video playing');
+      }).catch(error => {
+        // Autoplay was prevented - try playing on user interaction
+        console.warn('Hero video autoplay prevented:', error);
+        document.addEventListener('click', function playOnClick() {
+          heroVideo.play();
+          document.removeEventListener('click', playOnClick);
+        }, { once: true });
+      });
+    }
+  }
+
   // ---- Navbar scroll effect ----
   const nav = document.getElementById('nav');
   const handleScroll = () => {
