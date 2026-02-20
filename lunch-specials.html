@@ -161,39 +161,16 @@
     [data-animate-delay="2"] { transition-delay: 0.2s; }
     [data-animate-delay="3"] { transition-delay: 0.3s; }
 
-    /* 2. Menu item hover — lift + teal left border */
-    .menu-compact-item {
-      transition: all 0.25s ease;
-    }
-    .menu-compact-item:hover {
-      background: rgba(26,122,109,0.04);
-      border-left: 3px solid var(--hk-teal);
-      padding-left: 13px;
-      margin: 0 -16px;
-      padding-right: 16px;
-      transform: translateX(4px);
-    }
-
-    /* 3. Hero — Ken Burns slow zoom on load */
-    .lunch-hero {
-      animation: heroZoom 20s ease forwards;
-      overflow: hidden;
-    }
-    @keyframes heroZoom {
-      0%   { transform: scale(1); }
-      100% { transform: scale(1.06); }
-    }
-    /* Wrap hero so zoom doesn't overflow */
+    /* 2. Hero video */
     .lunch-hero-wrap {
       border-radius: var(--radius, 12px);
       overflow: hidden;
       margin-bottom: 32px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     }
-    .lunch-hero-wrap .lunch-hero {
-      margin-bottom: 0;
-      border-radius: 0;
-      box-shadow: none;
+    .lunch-hero-wrap video {
+      width: 100%;
+      display: block;
     }
   </style>
 </head>
@@ -219,7 +196,9 @@
         <span class="lunch-hours-badge">Tue–Fri 11 am–3 pm</span>
       </div>
       <div class="lunch-hero-wrap" data-animate data-animate-delay="3">
-        <img src="assets/images/lunch-hero.jpg" alt="Sushi platter with premium and classic rolls" class="lunch-hero">
+        <video autoplay loop muted playsinline>
+          <source src="assets/images/lunch-hero.mp4" type="video/mp4">
+        </video>
       </div>
 
       <!-- Sushi Combinations -->
@@ -300,11 +279,12 @@
     </div>
   </footer>
   <script>
-    // Scroll-reveal: add .visible when elements enter viewport
+    // Scroll-reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.15 });
     document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
   </script>
 </body>
 </html>
