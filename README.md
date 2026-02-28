@@ -44,7 +44,6 @@ hikarisojo/
 ├── netlify/
 │   └── functions/
 │       └── reviews.js    # Google Places API proxy
-└── print/                # Printable materials (lunch specials, QR codes)
 ```
 
 ---
@@ -161,8 +160,8 @@ Automatic deployment via Netlify:
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/sammori77/hikarisojo.git
-cd hikarisojo
+git clone git@github.com:hikarisushi/hikari-website.git
+cd hikari-website
 ```
 
 2. Open `index.html` in a browser or use a local server:
