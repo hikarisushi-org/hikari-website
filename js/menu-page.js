@@ -3,8 +3,8 @@ const menuData = {
   'most-ordered': {
     title: 'Most Popular',
     items: [
-      { name: 'Firefly Fusion', price: '$14.50', desc: 'Tempura shrimp, spicy crab, and jalapeño. Crowned with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.', img: 'assets/images/menu/sushi/firefly_fussion_2.png' },
-      { name: 'Citrus Mango Dream', price: '$14', desc: 'Tempura shrimp, cream cheese, and crab mix. Crowned with fresh mango and lemon slices. Finished with mango sauce.', img: 'assets/images/menu/sushi/citrus_mango_dream.png' },
+      { name: 'Firefly Fusion', price: '$14.50', desc: 'Tempura shrimp, spicy crab, and jalapeño. Topped with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.', img: 'assets/images/menu/sushi/firefly_fussion_2.png' },
+      { name: 'Citrus Mango Dream', price: '$14', desc: 'Tempura shrimp, cream cheese, and crab mix. Topped with fresh mango and lemon slices. Finished with mango sauce.', img: 'assets/images/menu/sushi/citrus_mango_dream.png' },
       { name: 'Hot Cheetos Roll', price: '$12', desc: 'Crushed Hot Cheetos on rice with spicy crab, cream cheese, and cucumber. Finished with eel sauce and spicy mayo.', img: 'assets/images/menu/sushi/hot_cheetos.png' },
       { name: 'Strawberry Blossom', price: '$14', desc: 'Kani crab, cream cheese, and cucumber. Topped with salmon, strawberries, mango sauce, crunchies, and sesame seeds.', img: 'assets/images/menu/sushi/strawberry_blossom.png' },
       { name: 'Avocado King', price: '$12', desc: 'Shrimp tempura, cucumbers, and radish sprouts. Topped with avocado, eel sauce, and crunchies.', img: 'assets/images/menu/sushi/avocado_king.png' },
@@ -42,20 +42,20 @@ const menuData = {
   'premium-rolls': {
     title: 'Premium Rolls',
     items: [
-      { name: 'Citrus Mango Dream', price: '$14', desc: 'Tempura shrimp, cream cheese, and crab mix. Crowned with fresh mango and lemon slices. Finished with mango sauce.', img: 'assets/images/menu/sushi/citrus_mango_dream.png' },
-      { name: 'Emerald Dragon Roll', price: '$14', desc: 'Tempura shrimp, cucumber, and crab mix. Crowned with eel and avocado. Finished with wasabi mayo, eel sauce, and sesame seeds.', img: 'assets/images/menu/sushi/emerald_dragon.png' },
-      { name: 'Hikari Delight Roll', price: '$14.50', desc: 'Salmon, mango, spicy mayo, and jalapeño. Crowned with hamachi. Finished with ponzu sauce, crunchies, and green onions.', img: 'assets/images/menu/sushi/hikari_delight.png', raw: true },
-      { name: 'Salmon Sunrise Roll', price: '$13', desc: 'Grilled asparagus, crab mix, and avocado. Crowned with salmon and lemon slices. Finished with ponzu sauce.', img: 'assets/images/menu/sushi/salmon_sunrise.png', raw: true },
-      { name: 'Solar Flare Roll', price: '$14.50', desc: 'Spicy salmon, jalapeño, and cucumber. Crowned with hamachi, ebi, and green onions. Finished with macha sauce.', img: 'assets/images/menu/sushi/solar_flare.png', raw: true },
+      { name: 'Citrus Mango Dream', price: '$14', desc: 'Tempura shrimp, cream cheese, and crab mix. Topped with fresh mango and lemon slices. Finished with mango sauce.', img: 'assets/images/menu/sushi/citrus_mango_dream.png' },
+      { name: 'Emerald Dragon Roll', price: '$14', desc: 'Tempura shrimp, cucumber, and crab mix. Topped with eel and avocado. Finished with wasabi mayo, eel sauce, and sesame seeds.', img: 'assets/images/menu/sushi/emerald_dragon.png' },
+      { name: 'Hikari Delight Roll', price: '$14.50', desc: 'Salmon, mango, spicy mayo, and jalapeño. Topped with hamachi. Finished with ponzu sauce, crunchies, and green onions.', img: 'assets/images/menu/sushi/hikari_delight.png', raw: true },
+      { name: 'Salmon Sunrise Roll', price: '$13', desc: 'Grilled asparagus, crab mix, and avocado. Topped with salmon and lemon slices. Finished with ponzu sauce.', img: 'assets/images/menu/sushi/salmon_sunrise.png', raw: true },
+      { name: 'Solar Flare Roll', price: '$14.50', desc: 'Spicy salmon, jalapeño, and cucumber. Topped with hamachi, ebi, and green onions. Finished with macha sauce.', img: 'assets/images/menu/sushi/solar_flare.png', raw: true },
       { name: 'Hot Cheetos Roll', price: '$12', desc: 'Crushed Hot Cheetos on rice with spicy crab, cream cheese, and cucumber. Finished with eel sauce and spicy mayo.', img: 'assets/images/menu/sushi/hot_cheetos.png' },
       { name: 'Playboy', price: '$12', desc: 'Shrimp tempura, crab mix, and cream cheese. Topped with tuna and avocado. Finished with eel sauce, spicy mayo, tobiko, and sesame seeds.', img: 'assets/images/menu/sushi/playboy.png', raw: true },
       { name: 'Lava Volcano Roll', price: '$12', desc: 'Broiled eel, crab mix, and avocado. Baked with spicy mayo. Finished with eel sauce, tobiko, and green onions.', raw: true },
-      { name: 'Illuminated Fire Tuna', price: '$14', desc: 'Mango, tuna, and jalapeño. Crowned with spicy tuna and lime slices. Finished with garlic ponzu, Thai chiles, and green onions.', img: 'assets/images/menu/sushi/illuminated_fire_tuna.png', raw: true },
-      { name: 'Mt Fuji Roll', price: '$14.50', desc: 'Albacore, avocado, and cucumber. Crowned with ebi and crab mix. Finished with eel sauce, crunch flakes, and green onions.', img: 'assets/images/menu/sushi/mt_fuji.png', raw: true },
+      { name: 'Illuminated Fire Tuna', price: '$14', desc: 'Mango, tuna, and jalapeño. Topped with spicy tuna and lime slices. Finished with garlic ponzu, Thai chiles, and green onions.', img: 'assets/images/menu/sushi/illuminated_fire_tuna.png', raw: true },
+      { name: 'Mt Fuji Roll', price: '$14.50', desc: 'Albacore, avocado, and cucumber. Topped with ebi and crab mix. Finished with eel sauce, crunch flakes, and green onions.', img: 'assets/images/menu/sushi/mt_fuji.png', raw: true },
       { name: 'Strawberry Blossom', price: '$14', desc: 'Kani crab, cream cheese, and cucumber. Topped with salmon, strawberries, mango sauce, crunchies, and sesame seeds.', img: 'assets/images/menu/sushi/strawberry_blossom.png' },
       { name: 'Diamond Roll', price: '$14.50', desc: 'Fresh tuna, spicy crab, and cilantro. Finished with Kampachi, lime slices, jalapeño slices, garlic ponzu, and tobiko.', img: 'assets/images/menu/sushi/diamond.png' },
       { name: 'The Forbidden Roll', price: '$13.50', desc: 'Apple, crab mix, and red bell peppers. Topped with cream cheese, fried banana, eel sauce, and lemon zest.', img: 'assets/images/menu/sushi/forbidden_roll.png' },
-      { name: 'Firefly Fusion', price: '$14.50', desc: 'Tempura shrimp, spicy crab, and jalapeño. Crowned with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.', img: 'assets/images/menu/sushi/firefly_fussion_2.png' },
+      { name: 'Firefly Fusion', price: '$14.50', desc: 'Tempura shrimp, spicy crab, and jalapeño. Topped with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.', img: 'assets/images/menu/sushi/firefly_fussion_2.png' },
       { name: 'Red Lantern', price: '$13.50', desc: 'Seaweed salad, red bell peppers, and shrimp tempura. Topped with tuna. Finished with eel sauce, spicy mayo sriracha, and crunchies.', img: 'assets/images/menu/sushi/red_lantern.png' },
       { name: 'Avocado King', price: '$12', desc: 'Shrimp tempura, cucumbers, and radish sprouts. Topped with avocado, eel sauce, and crunchies.', img: 'assets/images/menu/sushi/avocado_king.png' },
       { name: 'Cowboy Roll', price: '$15', desc: 'Asparagus and crab mix inside. Topped with Wagyu beef, spicy eel sauce, green onions, and sesame seeds.', img: 'assets/images/menu/sushi/cowboy_roll.png' },
@@ -74,7 +74,7 @@ const menuData = {
       { name: 'Cali Mex Roll', price: '$10', desc: 'Crab, avocado, and cucumber. Topped with eel sauce, spicy mayo, tobiko, cilantro, and sesame seeds.', img: 'assets/images/menu/sushi/calimex.png', raw: true },
       { name: 'Fire Spicy Tuna Roll', price: '$10', desc: 'Spicy tuna mix, cucumber, and jalapeño. Topped with eel sauce, sriracha sauce, green onions, and sesame seeds.', img: 'assets/images/menu/sushi/fire_spicy_tuna.png', raw: true },
       { name: 'Las Vegas Roll', price: '$12', desc: 'Salmon, crab mix, and cream cheese. Topped with spicy mayo and eel sauce.', img: 'assets/images/menu/sushi/las_vegas.png', raw: true },
-      { name: 'Monument Roll', price: '$10', desc: 'Hamachi, salmon, tuna, ebi, and avocado. Crowned with spicy eel sauce, green onions, and sesame seeds.', img: 'assets/images/menu/sushi/monument.png', raw: true },
+      { name: 'Monument Roll', price: '$10', desc: 'Hamachi, salmon, tuna, ebi, and avocado. Topped with spicy eel sauce, green onions, and sesame seeds.', img: 'assets/images/menu/sushi/monument.png', raw: true },
     ]
   },
   'maki': {
