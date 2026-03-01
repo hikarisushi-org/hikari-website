@@ -107,6 +107,15 @@ for (const id of config.themes) {
   // Rules
   assert(theme.rules && typeof theme.rules.enabled === 'boolean', `${id}: rules.enabled is boolean`);
   assert(theme.rules && typeof theme.rules.allowManualOverride === 'boolean', `${id}: rules.allowManualOverride is boolean`);
+
+  // Floating elements (optional)
+  if (theme.floatingElements && theme.floatingElements.enabled) {
+    const fe = theme.floatingElements;
+    assert(typeof fe.containerClass === 'string' && fe.containerClass.length > 0, `${id}: floatingElements.containerClass is non-empty string`);
+    assert(typeof fe.elementClass === 'string' && fe.elementClass.length > 0, `${id}: floatingElements.elementClass is non-empty string`);
+    assert(Array.isArray(fe.characters) && fe.characters.length > 0, `${id}: floatingElements.characters is non-empty array`);
+    assert(typeof fe.interval === 'number' && fe.interval > 0, `${id}: floatingElements.interval is a positive number`);
+  }
 }
 
 // Fallback exists

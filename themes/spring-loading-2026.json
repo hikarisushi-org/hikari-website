@@ -16,7 +16,7 @@
     "--color-white": "#FFFFFF",
     "--color-dark": "#1A1A1A",
     "--hero-overlay": "linear-gradient(to bottom, rgba(26,60,40,0.25) 0%, rgba(20,50,35,0.15) 50%, rgba(15,35,25,0.30) 100%)",
-    "--hero-glow-color": "rgba(251, 197, 84, 0.10)",
+    "--hero-glow-color": "rgba(251, 197, 84, 0.25)",
     "--hero-glow-opacity": "1",
     "--theme-badge-display": "inline-block"
   },
@@ -25,6 +25,19 @@
     "subheadline": "Longer days. Brighter nights.",
     "badgeText": "Spring Is Loading\u2026",
     "heroImageKey": null
+  },
+  "floatingElements": {
+    "enabled": true,
+    "containerClass": "floating-elements",
+    "elementClass": "floating-element",
+    "characters": ["🌸", "✿", "🍃", "❀"],
+    "colors": [
+      "rgba(255, 182, 193, 0.5)",
+      "rgba(255, 218, 233, 0.45)",
+      "rgba(144, 200, 140, 0.4)",
+      "rgba(255, 255, 255, 0.35)"
+    ],
+    "interval": 900
   },
   "rules": {
     "enabled": true,

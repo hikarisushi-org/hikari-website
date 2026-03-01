@@ -26,6 +26,7 @@
     "badgeText": null,
     "heroImageKey": null
   },
+  "floatingElements": null,
   "rules": {
     "enabled": true,
     "allowManualOverride": false

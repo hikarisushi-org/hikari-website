@@ -92,6 +92,12 @@ class ThemeLoader {
     if (!theme) return;
     this.activeTheme = theme;
 
+    // Clean up previous floating elements
+    if (this._floatingInterval) {
+      clearInterval(this._floatingInterval);
+      this._floatingInterval = null;
+    }
+
     // Set CSS custom properties
     const root = document.documentElement;
     if (theme.tokens) {
@@ -111,7 +117,45 @@ class ThemeLoader {
       }
     }
 
+    // Floating elements
+    this._applyFloatingElements(theme.floatingElements);
+
     console.log(`Theme: ${theme.name} (${theme.id})`);
+  }
+
+  _applyFloatingElements(config) {
+    // If no config or disabled, hide container and stop spawning
+    if (!config || !config.enabled) {
+      const existing = document.querySelector('.floating-elements');
+      if (existing) {
+        existing.style.display = 'none';
+        existing.innerHTML = '';
+      }
+      return;
+    }
+
+    // Find or create container
+    let container = document.querySelector('.' + config.containerClass);
+    if (!container) {
+      container = document.createElement('div');
+      container.className = config.containerClass;
+      document.body.appendChild(container);
+    }
+    container.style.display = 'block';
+    container.innerHTML = '';
+
+    // Spawn floating elements on an interval
+    this._floatingInterval = setInterval(() => {
+      const el = document.createElement('span');
+      el.className = config.elementClass;
+      el.textContent = config.characters[Math.floor(Math.random() * config.characters.length)];
+      el.style.left = Math.random() * 100 + '%';
+      el.style.color = config.colors[Math.floor(Math.random() * config.colors.length)];
+      el.style.fontSize = (1.2 + Math.random() * 1.8).toFixed(1) + 'rem';
+      el.style.animationDuration = (5 + Math.random() * 6).toFixed(1) + 's';
+      el.addEventListener('animationend', () => el.remove());
+      container.appendChild(el);
+    }, config.interval);
   }
 
   /* ---- Helpers ---- */
