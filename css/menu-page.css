@@ -3,6 +3,8 @@
 :root {
   --menu-header-height: 70px;
   --filter-height: 140px;
+  --color-primary: var(--color-accent, #116161);
+  --font-heading: var(--font-serif, 'Playfair Display', Georgia, serif);
 }
 
 /* Reset menu page body */
@@ -84,7 +86,7 @@
   color: #222;
 }
 
-.menu-filters {
+.menu-filters-sticky .menu-filters {
   display: flex;
   flex-wrap: nowrap;
   gap: 8px;
@@ -96,11 +98,11 @@
   scroll-behavior: smooth;
 }
 
-.menu-filters::-webkit-scrollbar {
+.menu-filters-sticky .menu-filters::-webkit-scrollbar {
   display: none;
 }
 
-.menu-filter {
+.menu-filters-sticky .menu-filter {
   flex-shrink: 0;
   padding: 6px 14px;
   background: transparent;
@@ -115,12 +117,12 @@
   margin: 0 !important;
 }
 
-.menu-filter:hover {
+.menu-filters-sticky .menu-filter:hover {
   border-color: #116161;
   color: #116161;
 }
 
-.menu-filter.active {
+.menu-filters-sticky .menu-filter.active {
   background: #116161;
   border-color: #116161;
   color: #ffffff;

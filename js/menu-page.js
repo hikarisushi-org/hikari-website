@@ -1,3 +1,6 @@
+// Page detection — My Picks, onboarding, and search are /menu only
+const isMenuPage = document.body.classList.contains('menu-page');
+
 // Complete Menu Data extracted from index.html
 const menuData = {
   'most-ordered': {
@@ -158,18 +161,24 @@ let myList = [];
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-  loadMyList();
+  if (isMenuPage) {
+    loadMyList();
+  }
   renderMenu();
   setupFilters();
-  setupSearch();
+  if (isMenuPage) {
+    setupSearch();
+  }
   setupModal();
-  setupMyList();
-  updateMyListBadge();
+  if (isMenuPage) {
+    setupMyList();
+    updateMyListBadge();
 
-  // Show onboarding after delay if first visit
-  setTimeout(() => {
-    showOnboardingIfNeeded();
-  }, 1000);
+    // Show onboarding after delay if first visit
+    setTimeout(() => {
+      showOnboardingIfNeeded();
+    }, 1000);
+  }
 });
 
 // Render menu items
@@ -257,15 +266,17 @@ function createMenuItem(item, category, index) {
     div.classList.add('no-image');
   }
 
-  // Add to list button
-  const addBtn = document.createElement('button');
-  addBtn.className = 'add-to-list-btn';
-  addBtn.innerHTML = '<span class="checkmark">✓</span>';
-  addBtn.onclick = (e) => {
-    e.stopPropagation();
-    addToList(item);
-  };
-  div.appendChild(addBtn);
+  // Add to list button (menu page only)
+  if (isMenuPage) {
+    const addBtn = document.createElement('button');
+    addBtn.className = 'add-to-list-btn';
+    addBtn.innerHTML = '<span class="checkmark">✓</span>';
+    addBtn.onclick = (e) => {
+      e.stopPropagation();
+      addToList(item);
+    };
+    div.appendChild(addBtn);
+  }
 
   // Info
   const info = document.createElement('div');
@@ -320,15 +331,17 @@ function createCompactListItem(item, category, index) {
   header.appendChild(price);
   div.appendChild(header);
 
-  // Add to list button
-  const addBtn = document.createElement('button');
-  addBtn.className = 'add-to-list-btn';
-  addBtn.innerHTML = '<span class="checkmark">✓</span>';
-  addBtn.onclick = (e) => {
-    e.stopPropagation();
-    addToList(item);
-  };
-  div.appendChild(addBtn);
+  // Add to list button (menu page only)
+  if (isMenuPage) {
+    const addBtn = document.createElement('button');
+    addBtn.className = 'add-to-list-btn';
+    addBtn.innerHTML = '<span class="checkmark">✓</span>';
+    addBtn.onclick = (e) => {
+      e.stopPropagation();
+      addToList(item);
+    };
+    div.appendChild(addBtn);
+  }
 
   // No description for compact list items - just name and price
 
@@ -352,6 +365,7 @@ function setupFilters() {
 function setupSearch() {
   const searchInput = document.getElementById('menu-search');
   const clearBtn = document.getElementById('search-clear');
+  if (!searchInput || !clearBtn) return;
 
   searchInput.addEventListener('input', (e) => {
     searchQuery = e.target.value.toLowerCase();
@@ -433,6 +447,7 @@ function setupModal() {
   const overlay = document.getElementById('modal-overlay');
   const closeBtn = document.getElementById('modal-close');
   const modalContent = document.querySelector('.menu-modal-content');
+  if (!modal || !overlay || !closeBtn || !modalContent) return;
 
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', closeModal);
@@ -485,6 +500,7 @@ function openModal(item) {
   const modalName = document.getElementById('modal-name');
   const modalPrice = document.getElementById('modal-price');
   const modalDesc = document.getElementById('modal-desc');
+  if (!modal || !modalContent || !modalImg || !modalName || !modalPrice || !modalDesc) return;
 
   // Save current scroll position
   modalScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -517,6 +533,7 @@ function openModal(item) {
 function closeModal() {
   const modal = document.getElementById('menu-modal');
   const modalContent = document.querySelector('.menu-modal-content');
+  if (!modal || !modalContent) return;
 
   // Reset transform
   modalContent.style.transform = '';
@@ -535,8 +552,10 @@ function closeModal() {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeModal();
-    closeMyListModal();
-    dismissOnboarding();
+    if (isMenuPage) {
+      closeMyListModal();
+      dismissOnboarding();
+    }
   }
 });
 
@@ -610,6 +629,7 @@ function dismissOnboarding() {
   const overlay = document.getElementById('onboarding-overlay');
   const finger = document.getElementById('onboarding-finger');
   const firstItem = document.querySelector('.onboarding-highlight');
+  if (!overlay) return;
 
   overlay.classList.remove('active');
   if (firstItem) {
@@ -681,6 +701,7 @@ function removeFromList(itemName) {
 function updateMyListBadge() {
   const floatBtn = document.getElementById('my-list-float');
   const countBadge = document.getElementById('my-list-count');
+  if (!floatBtn || !countBadge) return;
 
   const totalItems = myList.reduce((sum, item) => sum + item.quantity, 0);
 
@@ -721,6 +742,7 @@ function updatePickedHighlights() {
 // Show visual feedback when item added
 function showAddedFeedback() {
   const floatBtn = document.getElementById('my-list-float');
+  if (!floatBtn) return;
   floatBtn.classList.add('pulse');
   setTimeout(() => floatBtn.classList.remove('pulse'), 300);
 }
@@ -731,6 +753,7 @@ function setupMyList() {
   const closeBtn = document.getElementById('my-list-close');
   const overlay = document.getElementById('my-list-overlay');
   const clearBtn = document.getElementById('my-list-clear');
+  if (!floatBtn || !closeBtn || !overlay || !clearBtn) return;
 
   floatBtn.addEventListener('click', openMyListModal);
   closeBtn.addEventListener('click', closeMyListModal);
@@ -741,6 +764,7 @@ function setupMyList() {
 // Open My List modal
 function openMyListModal() {
   const modal = document.getElementById('my-list-modal');
+  if (!modal) return;
   renderMyListItems();
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -749,6 +773,7 @@ function openMyListModal() {
 // Close My List modal
 function closeMyListModal() {
   const modal = document.getElementById('my-list-modal');
+  if (!modal) return;
   modal.classList.remove('active');
   document.body.style.overflow = '';
 }
@@ -756,6 +781,7 @@ function closeMyListModal() {
 // Render My Picks items
 function renderMyListItems() {
   const container = document.getElementById('my-list-items');
+  if (!container) return;
 
   if (myList.length === 0) {
     container.innerHTML = '<p class="my-list-empty">No items yet! Tap the checkmark on menu items you\'d like to order. Show this list to your server when ready.</p>';

@@ -15,9 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/theme-animations.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu-page.css">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -148,6 +148,25 @@
     </div>
   </section>
 
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Reviews</p>
+        <h2>What Our Guests Say</h2>
+      </div>
+      <div class="reviews-carousel reveal" id="reviews-carousel">
+        <div class="reviews-track" id="reviews-track">
+          <!-- Review cards injected by JS -->
+        </div>
+        <button class="reviews-arrow reviews-arrow-left" id="reviews-prev" aria-label="Previous reviews">&#8249;</button>
+        <button class="reviews-arrow reviews-arrow-right" id="reviews-next" aria-label="Next reviews">&#8250;</button>
+        <div class="reviews-dots" id="reviews-dots"></div>
+      </div>
+      <p class="reviews-attribution">Reviews from <a href="https://www.google.com/maps/place/?q=place_id:ChIJZV0qzpqHUocR4SuU3IlrTsg" target="_blank" rel="noopener">Google</a></p>
+    </div>
+  </section>
+
   <!-- About -->
   <section class="section about" id="about">
     <div class="container">
@@ -193,437 +212,8 @@
         <button class="menu-filter" data-filter="beverages">Beverages</button>
       </div>
 
-      <!-- Most Popular -->
-      <div class="menu-category reveal" data-category="most-ordered">
-        <h3 class="menu-category-title">Most Popular</h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/firefly_fussion_2.png" alt="Firefly Fusion" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Firefly Fusion</span><span class="menu-item-price">$14.50</span></div>
-            <p class="menu-item-desc">Tempura shrimp, spicy crab, and jalape&#241;o. Topped with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/citrus_mango_dream.png" alt="Citrus Mango Dream" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Citrus Mango Dream</span><span class="menu-item-price">$14</span></div>
-            <p class="menu-item-desc">Tempura shrimp, cream cheese, and crab mix. Topped with fresh mango and lemon slices. Finished with mango sauce.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/hot_cheetos.png" alt="Hot Cheetos Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Hot Cheetos Roll</span><span class="menu-item-price">$12</span></div>
-            <p class="menu-item-desc">Crushed Hot Cheetos on rice with spicy crab, cream cheese, and cucumber. Finished with eel sauce and spicy mayo.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/strawberry_blossom.png" alt="Strawberry Blossom" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Strawberry Blossom</span><span class="menu-item-price">$14</span></div>
-            <p class="menu-item-desc">Kani crab, cream cheese, and cucumber. Topped with salmon, strawberries, mango sauce, crunchies, and sesame seeds.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/avocado_king.png" alt="Avocado King" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Avocado King</span><span class="menu-item-price">$12</span></div>
-            <p class="menu-item-desc">Shrimp tempura, cucumbers, and radish sprouts. Topped with avocado, eel sauce, and crunchies.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/cowboy_roll.png" alt="Cowboy Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Cowboy Roll</span><span class="menu-item-price">$15</span></div>
-            <p class="menu-item-desc">Asparagus and crab mix inside. Topped with Wagyu beef, spicy eel sauce, green onions, and sesame seeds.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Appetizers -->
-      <div class="menu-category reveal" data-category="appetizers">
-        <h3 class="menu-category-title">Appetizers</h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <img src="assets/images/menu/appetizers/sushi_nachos.png" alt="Sushi Nachos" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Sushi Nachos <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$10.50</span></div>
-            <p class="menu-item-desc">Crispy wonton chips topped with spicy tuna, crab mix, creamy avocado, and a drizzle of spicy aioli.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/appetizers/jalapeno_bomb.png" alt="Jalapeño Bomb" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Jalape&ntilde;o Bomb (4 pcs) <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$8</span></div>
-            <p class="menu-item-desc">Tempura-battered jalape&ntilde;o stuffed with spicy tuna and cream cheese. Topped with spicy aioli, eel sauce, green onion, and tobiko.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/appetizers/garlic_shrimp.png" alt="Butterflied Garlic Shrimp" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Butterflied Garlic Shrimp</span><span class="menu-item-price">$10</span></div>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/appetizers/edamame.png" alt="Edamame" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Edamame (steamed w/ salt)</span><span class="menu-item-price">$5</span></div>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/appetizers/miso.png" alt="Miso Soup" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Miso Soup</span><span class="menu-item-price">$3</span></div>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/appetizers/shrimp_&_veggie_tempura.png" alt="Shrimp &amp; Vegetable Tempura" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Shrimp &amp; Vegetable Tempura</span><span class="menu-item-price">$10</span></div>
-            <p class="menu-item-desc">Lightly battered and fried shrimp served with assorted seasonal vegetables.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/hikari_crunch.png" alt="Hikari Fire Crunch" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Hikari Fire Crunch</span><span class="menu-item-price">$8</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Traditional Rolls -->
-      <div class="menu-category reveal" data-category="traditional-rolls">
-        <h3 class="menu-category-title">Traditional Rolls</h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Alaskan Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$8</span></div>
-            <p class="menu-item-desc">Salmon, cucumber, and avocado.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/california_roll.png" alt="Classic California Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Classic California Roll</span><span class="menu-item-price">$8</span></div>
-            <p class="menu-item-desc">Crab, cucumber, and avocado.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/philly.png" alt="Philly Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Philly Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$8</span></div>
-            <p class="menu-item-desc">Cream cheese, smoked salmon, and avocado.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/tempura_shrimp_roll.png" alt="Shrimp Tempura Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Shrimp Tempura Roll</span><span class="menu-item-price">$8</span></div>
-            <p class="menu-item-desc">Tempura shrimp, cucumber, sprouts, and eel sauce.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/spicy_hamachi.jpg" alt="Spicy Hamachi Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Spicy Hamachi Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$8</span></div>
-            <p class="menu-item-desc">Spicy hamachi, sprouts, cucumber, and spicy mayo.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/spicy_salmon.jpg" alt="Spicy Salmon Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Spicy Salmon Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$9</span></div>
-            <p class="menu-item-desc">Salmon, avocado, sprouts, and spicy mayo.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/spicy_tuna_roll.jpg" alt="Spicy Tuna Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Spicy Tuna Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$9</span></div>
-            <p class="menu-item-desc">Spicy tuna mix, cucumber, avocado, radish sprouts, and spicy mayo.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/sweet_potato_roll.png" alt="Sweet Potato Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Sweet Potato Roll</span><span class="menu-item-price">$7.50</span></div>
-            <p class="menu-item-desc">Sweet potato and eel sauce.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Unagi Maki Roll</span><span class="menu-item-price">$9</span></div>
-            <p class="menu-item-desc">Broiled eel, avocado, and cucumber. Finished with eel sauce and sesame seeds.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/veggie_roll.png" alt="Veggie Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Veggie Roll</span><span class="menu-item-price">$7.50</span></div>
-            <p class="menu-item-desc">Avocado, cucumber, asparagus, and red bell pepper.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/yaki_maguro.png" alt="Yaki Maguro" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Yaki Maguro <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$14</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Premium Rolls -->
-      <div class="menu-category reveal" data-category="premium-rolls">
-        <h3 class="menu-category-title">Premium Rolls</h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/citrus_mango_dream.png" alt="Citrus Mango Dream" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Citrus Mango Dream</span><span class="menu-item-price">$14</span></div>
-            <p class="menu-item-desc">Tempura shrimp, cream cheese, and crab mix. Topped with fresh mango and lemon slices. Finished with mango sauce.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/emerald_dragon.png" alt="Emerald Dragon Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Emerald Dragon Roll</span><span class="menu-item-price">$14</span></div>
-            <p class="menu-item-desc">Tempura shrimp, cucumber, and crab mix. Topped with eel and avocado. Finished with wasabi mayo, eel sauce, and sesame seeds.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/hikari_delight.png" alt="Hikari Delight Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Hikari Delight Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$14.50</span></div>
-            <p class="menu-item-desc">Salmon, mango, spicy mayo, and jalape&ntilde;o. Topped with hamachi. Finished with ponzu sauce, crunchies, and green onions.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/salmon_sunrise.png" alt="Salmon Sunrise Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Salmon Sunrise Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$13</span></div>
-            <p class="menu-item-desc">Grilled asparagus, crab mix, and avocado. Topped with salmon and lemon slices. Finished with ponzu sauce.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/solar_flare.png" alt="Solar Flare Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Solar Flare Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$14.50</span></div>
-            <p class="menu-item-desc">Spicy salmon, jalape&ntilde;o, and cucumber. Topped with hamachi, ebi, and green onions. Finished with macha sauce.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/hot_cheetos.png" alt="Hot Cheetos Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Hot Cheetos Roll</span><span class="menu-item-price">$12</span></div>
-            <p class="menu-item-desc">Crushed Hot Cheetos on rice with spicy crab, cream cheese, and cucumber. Finished with eel sauce and spicy mayo.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/playboy.png" alt="Playboy" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Playboy <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$12</span></div>
-            <p class="menu-item-desc">Shrimp tempura, crab mix, and cream cheese. Topped with tuna and avocado. Finished with eel sauce, spicy mayo, tobiko, and sesame seeds.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Lava Volcano Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$12</span></div>
-            <p class="menu-item-desc">Broiled eel, crab mix, and avocado. Baked with spicy mayo. Finished with eel sauce, tobiko, and green onions.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/illuminated_fire_tuna.png" alt="Illuminated Fire Tuna" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Illuminated Fire Tuna <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$14</span></div>
-            <p class="menu-item-desc">Mango, tuna, and jalape&ntilde;o. Topped with spicy tuna and lime slices. Finished with garlic ponzu, Thai chiles, and green onions.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/mt_fuji.png" alt="Mt Fuji Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Mt Fuji Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$14.50</span></div>
-            <p class="menu-item-desc">Albacore, avocado, and cucumber. Topped with ebi and crab mix. Finished with eel sauce, crunch flakes, and green onions.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/strawberry_blossom.png" alt="Strawberry Blossom" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Strawberry Blossom</span><span class="menu-item-price">$14</span></div>
-            <p class="menu-item-desc">Kani crab, cream cheese, and cucumber. Topped with salmon, strawberries, mango sauce, crunchies, and sesame seeds.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/diamond.png" alt="Diamond Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Diamond Roll</span><span class="menu-item-price">$14.50</span></div>
-            <p class="menu-item-desc">Fresh tuna, spicy crab, and cilantro. Finished with Kampachi, lime slices, jalape&#241;o slices, garlic ponzu, and tobiko.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/forbidden_roll.png" alt="The Forbidden Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">The Forbidden Roll</span><span class="menu-item-price">$13.50</span></div>
-            <p class="menu-item-desc">Apple, crab mix, and red bell peppers. Topped with cream cheese, fried banana, eel sauce, and lemon zest.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/firefly_fussion_2.png" alt="Firefly Fusion" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Firefly Fusion</span><span class="menu-item-price">$14.50</span></div>
-            <p class="menu-item-desc">Tempura shrimp, spicy crab, and jalape&#241;o. Topped with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/red_lantern.png" alt="Red Lantern" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Red Lantern</span><span class="menu-item-price">$13.50</span></div>
-            <p class="menu-item-desc">Seaweed salad, red bell peppers, and shrimp tempura. Topped with tuna. Finished with eel sauce, spicy mayo sriracha, and crunchies.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/avocado_king.png" alt="Avocado King" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Avocado King</span><span class="menu-item-price">$12</span></div>
-            <p class="menu-item-desc">Shrimp tempura, cucumbers, and radish sprouts. Topped with avocado, eel sauce, and crunchies.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/cowboy_roll.png" alt="Cowboy Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Cowboy Roll</span><span class="menu-item-price">$15</span></div>
-            <p class="menu-item-desc">Asparagus and crab mix inside. Topped with Wagyu beef, spicy eel sauce, green onions, and sesame seeds.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/yaki_maguro.png" alt="Yaki Maguro Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Yaki Maguro Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$14</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sushi Heroes -->
-      <div class="menu-category reveal" data-category="heroes">
-        <h3 class="menu-category-title">Sushi Heroes</h3>
-        <p class="menu-category-subtitle">Anime-inspired signature rolls</p>
-        <div class="menu-grid">
-          <div class="menu-item menu-item-featured">
-            <img src="assets/images/menu/sushi/naruto.png" alt="Naruto Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Naruto Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$14.50</span></div>
-            <p class="menu-item-desc">Seared tuna, shishito pepper, and lemon slices. Topped with ebi and fresh mango. Finished with eel sauce and crispy fried onions. A vibrant mix with unexpected punch — believe it!</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tempura Fried Rolls -->
-      <div class="menu-category reveal" data-category="tempura-fried">
-        <h3 class="menu-category-title">Tempura Fried Rolls</h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/calimex.png" alt="Cali Mex Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Cali Mex Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$10</span></div>
-            <p class="menu-item-desc">Crab, avocado, and cucumber. Topped with eel sauce, spicy mayo, tobiko, cilantro, and sesame seeds.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/fire_spicy_tuna.png" alt="Fire Spicy Tuna Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Fire Spicy Tuna Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$10</span></div>
-            <p class="menu-item-desc">Spicy tuna mix, cucumber, and jalape&ntilde;o. Topped with eel sauce, sriracha sauce, green onions, and sesame seeds.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/las_vegas_close_up.jpg" alt="Las Vegas Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Las Vegas Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$12</span></div>
-            <p class="menu-item-desc">Salmon, crab mix, and cream cheese. Topped with spicy mayo and eel sauce.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/monument.png" alt="Monument Roll" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Monument Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$10</span></div>
-            <p class="menu-item-desc">Hamachi, salmon, tuna, ebi, and avocado. Topped with spicy eel sauce, green onions, and sesame seeds.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Maki -->
-      <div class="menu-category reveal" data-category="maki">
-        <h3 class="menu-category-title">Maki</h3>
-        <img src="assets/images/menu/sushi/maki.png" alt="Maki rolls" class="menu-category-img" loading="lazy">
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Avocado Maki Roll</span><span class="menu-item-price">$4</span></div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Hamachi Maki Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Yellowtail and sushi rice, wrapped in crisp nori. A clean, buttery finish.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Kappa Maki Roll</span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Thin cucumber and sushi rice, rolled in seaweed. A light, refreshing bite.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Negihama Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Yellowtail and scallions, wrapped in nori with rice. Fresh and bold with a gentle onion kick.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Sake Maki Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Salmon and sushi rice, wrapped in nori. Smooth, simple, and classic.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Tekka Maki Roll <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Lean tuna and sushi rice, rolled in nori. Clean, umami-packed hosomaki.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Nigiri -->
-      <div class="menu-category reveal" data-category="nigiri">
-        <h3 class="menu-category-title">Nigiri <span class="menu-category-note">(2 pcs)</span></h3>
-        <img src="assets/images/menu/sushi/nigiri.png" alt="Nigiri selection" class="menu-category-img" loading="lazy">
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Albacore Nigiri <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Albacore tuna over seasoned sushi rice. Finished with a touch of ponzu.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Ebi Nigiri</span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Butterflied shrimp placed over sushi rice. Lightly sweet and chilled.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Eel Nigiri</span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Grilled eel served over warm rice. Finished with house-made eel sauce.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Kampachi Nigiri <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Amberjack on seasoned sushi rice. Clean, buttery flavor with a firm bite.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Salmon Nigiri <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Fresh salmon over vinegared rice. Smooth, rich, and silky.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Tuna Nigiri <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Lean tuna on hand-formed sushi rice. Classic, clean, and savory.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Yellowtail Nigiri <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Yellowtail over sushi rice. Mild, slightly sweet, with a delicate finish.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sashimi -->
-      <div class="menu-category reveal" data-category="sashimi">
-        <h3 class="menu-category-title">Sashimi <span class="menu-category-note">(3 pcs)</span></h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/sashimi_albacore.png" alt="Albacore Sashimi" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Albacore Sashimi <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Lightly seared albacore tuna, served over crisp daikon. Accompanied by ponzu sauce.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/sashimi_ebi.png" alt="Ebi Sashimi" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Ebi Sashimi</span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Chilled shrimp, delicately sliced. Served with soy sauce and wasabi.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/sashimi_eel.png" alt="Eel Sashimi" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Eel Sashimi</span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Tender broiled eel, rich and silky. Finished with house-made eel sauce.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/sashimi_kampachi.png" alt="Kampachi Sashimi" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Kampachi Sashimi <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Fresh kampachi (amberjack), clean and buttery. Served with a hint of lemon.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/salmon_sashimi_.png" alt="Salmon Sashimi" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Salmon Sashimi <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Premium salmon, smooth and luscious. Accompanied by soy sauce and wasabi.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/sushi/sashimi_tuna.png" alt="Tuna Sashimi" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Tuna Sashimi <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Lean tuna, vibrant and meaty. Served with traditional soy and wasabi.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Yellowtail Sashimi <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$5</span></div>
-            <p class="menu-item-desc">Yellowtail (hamachi), firm and mildly sweet. Finished with yuzu ponzu.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Entrees -->
-      <div class="menu-category reveal" data-category="entrees">
-        <h3 class="menu-category-title">Entrees</h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <img src="assets/images/menu/bowls/poke_bowl.png" alt="Poke Bowl" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Poke Bowl <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$9</span></div>
-            <p class="menu-item-desc">Cubed raw fish tossed with savory sauces over rice, topped with avocado, seaweed, and crunchy toppings.</p>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/bowls/chirashi_bowl.png" alt="Chirashi Bowl" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Chirashi Bowl <span class="raw-indicator" title="Contains raw fish">&#9632;</span></span><span class="menu-item-price">$12</span></div>
-            <p class="menu-item-desc">An assorted selection of sashimi over seasoned sushi rice, served with fresh vegetables and garnish.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bento Boxes -->
-      <div class="menu-category reveal" data-category="bento">
-        <h3 class="menu-category-title">Bento Boxes</h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <img src="assets/images/menu/food/bento_katsu.png" alt="Crispy Chicken Bento Box" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Crispy Chicken Bento Box</span><span class="menu-item-price">$15</span></div>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/menu/food/bento_salmon.png" alt="Salmon Bento Box" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Salmon Bento Box</span><span class="menu-item-price">$16</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Kids -->
-      <div class="menu-category reveal" data-category="kids">
-        <h3 class="menu-category-title">Kids Meals</h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <img src="assets/images/menu/food/popcorn_chicken.png" alt="Chicken Fingers &amp; Fries" class="menu-item-img" loading="lazy">
-            <div class="menu-item-header"><span class="menu-item-name">Chicken Fingers &amp; Fries</span><span class="menu-item-price">$7</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Beverages -->
-      <div class="menu-category reveal" data-category="beverages">
-        <h3 class="menu-category-title">Beverages</h3>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Coke (12oz can)</span><span class="menu-item-price">$2.50</span></div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header"><span class="menu-item-name">Sprite (12oz can)</span><span class="menu-item-price">$2.50</span></div>
-          </div>
-        </div>
+      <div id="menu-container">
+        <!-- Menu items rendered by menu-page.js -->
       </div>
 
       <p class="menu-footnote reveal">&#9632; = Contains raw fish. Consuming raw or undercooked items may increase your risk of foodborne illness.</p>
@@ -654,25 +244,6 @@
           <img src="assets/images/sushi_platter_ai.webp" alt="Premium sushi platter presentation" loading="lazy">
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Reviews -->
-  <section class="section reviews" id="reviews">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">Reviews</p>
-        <h2>What Our Guests Say</h2>
-      </div>
-      <div class="reviews-carousel reveal" id="reviews-carousel">
-        <div class="reviews-track" id="reviews-track">
-          <!-- Review cards injected by JS -->
-        </div>
-        <button class="reviews-arrow reviews-arrow-left" id="reviews-prev" aria-label="Previous reviews">&#8249;</button>
-        <button class="reviews-arrow reviews-arrow-right" id="reviews-next" aria-label="Next reviews">&#8250;</button>
-        <div class="reviews-dots" id="reviews-dots"></div>
-      </div>
-      <p class="reviews-attribution">Reviews from <a href="https://www.google.com/maps/place/?q=place_id:ChIJZV0qzpqHUocR4SuU3IlrTsg" target="_blank" rel="noopener">Google</a></p>
     </div>
   </section>
 
@@ -753,8 +324,24 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Modal for Item Details -->
+  <div class="menu-modal" id="menu-modal">
+    <div class="menu-modal-overlay" id="modal-overlay"></div>
+    <div class="menu-modal-content">
+      <button class="menu-modal-close" id="modal-close">&times;</button>
+      <div class="menu-modal-body">
+        <img src="" alt="" class="menu-modal-img" id="modal-img">
+        <div class="menu-modal-info">
+          <h2 class="menu-modal-name" id="modal-name"></h2>
+          <p class="menu-modal-price" id="modal-price"></p>
+          <p class="menu-modal-desc" id="modal-desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/theme-loader.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/menu-page.js"></script>
 </body>
 </html>
