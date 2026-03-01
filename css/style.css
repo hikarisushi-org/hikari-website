@@ -899,6 +899,31 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   color: var(--color-text-light);
 }
 
+/* Google branding — scoped to .reviews */
+.reviews .review-card-stars,
+.reviews .reviews-overall-stars {
+  color: #FBBC04;
+}
+.reviews .review-card-avatar-placeholder {
+  background: #4285F4;
+}
+.reviews .section-tag {
+  color: #4285F4;
+}
+.reviews .reviews-attribution a {
+  color: #4285F4;
+}
+.google-g-icon {
+  display: inline-block;
+  vertical-align: -2px;
+  margin-right: 2px;
+}
+.reviews-overall-google-g {
+  display: inline-block;
+  vertical-align: -4px;
+  margin-right: 6px;
+}
+
 @media (max-width: 1024px) {
   .review-card {
     flex: 0 0 calc(50% - 16px);
