@@ -1,5 +1,5 @@
 {
-  "activeTheme": "default",
-  "autoSwitch": false,
-  "fallbackTheme": "default"
+  "themes": ["default", "spring-loading-2026"],
+  "fallbackTheme": "default",
+  "manualOverride": null
 }

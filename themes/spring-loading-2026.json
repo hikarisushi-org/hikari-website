@@ -1,0 +1,33 @@
+{
+  "id": "spring-loading-2026",
+  "name": "Spring Is Loading\u2026",
+  "startDate": "2026-03-01",
+  "endDate": "2026-03-13",
+  "priority": 10,
+  "level": "light",
+  "tokens": {
+    "--color-bg": "#F6F4EF",
+    "--color-bg-alt": "#F2EDE5",
+    "--color-accent": "#1A8A84",
+    "--color-accent-light": "#297B78",
+    "--color-gold": "#FBC554",
+    "--color-text": "#2C2C2C",
+    "--color-text-light": "#6B6B6B",
+    "--color-white": "#FFFFFF",
+    "--color-dark": "#1A1A1A",
+    "--hero-overlay": "linear-gradient(to bottom, rgba(26,60,40,0.25) 0%, rgba(20,50,35,0.15) 50%, rgba(15,35,25,0.30) 100%)",
+    "--hero-glow-color": "rgba(251, 197, 84, 0.10)",
+    "--hero-glow-opacity": "1",
+    "--theme-badge-display": "inline-block"
+  },
+  "content": {
+    "headline": "Something light is coming.",
+    "subheadline": "Longer days. Brighter nights.",
+    "badgeText": "Spring Is Loading\u2026",
+    "heroImageKey": null
+  },
+  "rules": {
+    "enabled": true,
+    "allowManualOverride": true
+  }
+}
