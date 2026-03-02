@@ -628,6 +628,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   color: var(--color-accent);
   font-weight: 600;
 }
+.reviews .section-header {
+  margin-bottom: 24px;
+}
 .reviews-overall {
   text-align: center;
   margin-bottom: 24px;
@@ -671,7 +674,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .reviews-overall-google-g {
   display: inline-block;
   vertical-align: -4px;
-  margin-right: 6px;
+  margin-right: 12px;
 }
 
 @media (max-width: 1024px) {
