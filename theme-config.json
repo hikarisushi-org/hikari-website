@@ -1,5 +1,5 @@
 {
-  "themes": ["default", "spring-loading-2026"],
+  "themes": ["default", "spring-loading-2026", "st-patricks-day"],
   "fallbackTheme": "default",
   "manualOverride": null
 }

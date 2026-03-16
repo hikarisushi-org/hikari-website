@@ -1,0 +1,46 @@
+{
+  "id": "st-patricks-day",
+  "name": "St. Patrick's Day",
+  "startDate": "2026-03-15",
+  "endDate": "2026-03-18",
+  "priority": 15,
+  "level": "light",
+  "tokens": {
+    "--color-bg": "#F4F8F4",
+    "--color-bg-alt": "#E8F0E8",
+    "--color-text": "#2C2C2C",
+    "--color-text-light": "#5A6B5A",
+    "--color-accent": "#1B7A3D",
+    "--color-accent-light": "#28A55B",
+    "--color-gold": "#FFD700",
+    "--color-white": "#FFFFFF",
+    "--color-dark": "#1A1A1A",
+    "--hero-overlay": "linear-gradient(to bottom, rgba(10,50,20,0.40) 0%, rgba(15,40,20,0.25) 50%, rgba(10,30,15,0.50) 100%)",
+    "--hero-glow-color": "rgba(255, 215, 0, 0.20)",
+    "--hero-glow-opacity": "1",
+    "--theme-badge-display": "inline-block"
+  },
+  "content": {
+    "headline": "Luck meets flavor.",
+    "subheadline": "Celebrate St. Patrick's Day with fresh sushi & good company.",
+    "badgeText": "Happy St. Patrick's Day ☘️",
+    "heroImageKey": null
+  },
+  "floatingElements": {
+    "enabled": true,
+    "containerClass": "floating-elements",
+    "elementClass": "floating-element",
+    "characters": ["☘️", "🍀", "✦", "⭐"],
+    "colors": [
+      "rgba(27, 122, 61, 0.45)",
+      "rgba(40, 165, 91, 0.35)",
+      "rgba(255, 215, 0, 0.40)",
+      "rgba(255, 255, 255, 0.30)"
+    ],
+    "interval": 800
+  },
+  "rules": {
+    "enabled": true,
+    "allowManualOverride": true
+  }
+}
