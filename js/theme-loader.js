@@ -117,6 +117,9 @@ class ThemeLoader {
       }
     }
 
+    // Logo swap
+    this._applyLogo(theme.content && theme.content.logoImageKey);
+
     // Hero image swap (replaces video with static image)
     this._applyHeroImage(theme.content && theme.content.heroImageKey);
 
@@ -124,6 +127,21 @@ class ThemeLoader {
     this._applyFloatingElements(theme.floatingElements);
 
     console.log(`Theme: ${theme.name} (${theme.id})`);
+  }
+
+  _applyLogo(logoPath) {
+    const navLogo = document.querySelector('.nav-logo-img');
+    const footerLogo = document.querySelector('.footer-logo');
+    if (!logoPath) return;
+
+    if (navLogo) {
+      navLogo._originalSrc = navLogo._originalSrc || navLogo.src;
+      navLogo.src = logoPath;
+    }
+    if (footerLogo) {
+      footerLogo._originalSrc = footerLogo._originalSrc || footerLogo.src;
+      footerLogo.src = logoPath;
+    }
   }
 
   _applyHeroImage(imagePath) {
@@ -171,14 +189,33 @@ class ThemeLoader {
     container.style.display = 'block';
     container.innerHTML = '';
 
+    // Combine characters and images into a single pool
+    const items = (config.characters || []).map(c => ({ type: 'text', value: c }));
+    if (config.images) {
+      config.images.forEach(src => items.push({ type: 'image', value: src }));
+    }
+
     // Spawn floating elements on an interval
     this._floatingInterval = setInterval(() => {
-      const el = document.createElement('span');
-      el.className = config.elementClass;
-      el.textContent = config.characters[Math.floor(Math.random() * config.characters.length)];
+      const pick = items[Math.floor(Math.random() * items.length)];
+      const size = (1.2 + Math.random() * 1.8).toFixed(1);
+
+      let el;
+      if (pick.type === 'image') {
+        el = document.createElement('img');
+        el.src = pick.value;
+        el.className = config.elementClass;
+        el.style.width = size + 'rem';
+        el.style.height = size + 'rem';
+      } else {
+        el = document.createElement('span');
+        el.className = config.elementClass;
+        el.textContent = pick.value;
+        el.style.color = config.colors[Math.floor(Math.random() * config.colors.length)];
+        el.style.fontSize = size + 'rem';
+      }
+
       el.style.left = Math.random() * 100 + '%';
-      el.style.color = config.colors[Math.floor(Math.random() * config.colors.length)];
-      el.style.fontSize = (1.2 + Math.random() * 1.8).toFixed(1) + 'rem';
       el.style.animationDuration = (5 + Math.random() * 6).toFixed(1) + 's';
       el.addEventListener('animationend', () => el.remove());
       container.appendChild(el);

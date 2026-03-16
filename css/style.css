@@ -935,3 +935,78 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   .menu-filters { gap: 6px; }
   .menu-filter { padding: 6px 14px; font-size: 0.8rem; }
 }
+
+/* ========================================
+   St. Patrick's Day Theme Accents
+   ======================================== */
+
+/* Shamrock before section tags */
+[data-theme="st-patricks-day"] .section-tag::before {
+  content: '☘ ';
+}
+
+
+/* Subtle gold shimmer on primary buttons */
+[data-theme="st-patricks-day"] .btn-primary {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #28A55B 50%, var(--color-accent) 100%);
+  background-size: 200% 200%;
+  animation: goldShimmer 4s ease-in-out infinite;
+}
+
+@keyframes goldShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Subtle clover watermark on about section */
+[data-theme="st-patricks-day"] .about {
+  background-color: rgba(212, 245, 212, 0.3);
+}
+
+/* Gold accent on section header h2 */
+[data-theme="st-patricks-day"] .section-header h2 {
+  background: linear-gradient(135deg, var(--color-dark) 60%, #1B7A3D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Green tint on gallery images on hover */
+/* Rainbow stripe under nav */
+[data-theme="st-patricks-day"] .nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #FF4500, #FF8C00, #FFD700, #1B7A3D, #0057B8, #4B0082);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+[data-theme="st-patricks-day"] .nav.scrolled::after {
+  opacity: 1;
+}
+
+
+/* 4. Green glow on menu card hover */
+[data-theme="st-patricks-day"] .menu-page-item {
+  transition: all 0.3s ease;
+}
+[data-theme="st-patricks-day"] .menu-page-item:hover {
+  box-shadow: 0 6px 24px rgba(27, 122, 61, 0.4), 0 0 0 2px rgba(27, 122, 61, 0.2);
+  transform: translateY(-2px);
+}
+
+/* 6. Irish flag gradient on primary buttons */
+[data-theme="st-patricks-day"] .btn-primary {
+  background: linear-gradient(135deg, #1B7A3D 0%, #1B7A3D 30%, #FFFFFF 45%, #FFFFFF 55%, #FF8C00 70%, #FF8C00 100%);
+  background-size: 250% 250%;
+  background-position: 0% 50%;
+  transition: all 0.4s ease;
+}
+[data-theme="st-patricks-day"] .btn-primary:hover {
+  background-position: 100% 50%;
+  box-shadow: 0 6px 20px rgba(27, 122, 61, 0.35);
+}
+

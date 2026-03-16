@@ -24,13 +24,15 @@
     "headline": "Luck meets flavor.",
     "subheadline": "Celebrate St. Patrick's Day with fresh sushi & good company.",
     "badgeText": null,
-    "heroImageKey": "assets/images/hero-st-patricks-day.png"
+    "heroImageKey": "assets/images/hero-st-patricks-day.png",
+    "logoImageKey": "assets/images/logo-st-patricks-day.png"
   },
   "floatingElements": {
     "enabled": true,
     "containerClass": "floating-elements",
     "elementClass": "floating-element",
-    "characters": ["☘️", "🍀", "✦", "⭐"],
+    "characters": ["☘️", "🍀"],
+    "images": ["assets/images/gold-coin.svg"],
     "colors": [
       "rgba(27, 122, 61, 0.45)",
       "rgba(40, 165, 91, 0.35)",
