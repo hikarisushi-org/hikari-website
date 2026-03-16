@@ -20,168 +20,152 @@ Complete guide for developing, maintaining, and deploying the Hikari Sushi websi
 
 ### Overview
 
-The theme system allows quick switching between seasonal/holiday themes without manual CSS editing. Themes are defined in JSON files and applied automatically based on date ranges.
+The theme system automatically switches between seasonal/holiday themes based on date ranges. Themes are JSON files that control colors, hero images, logos, floating elements, and CSS custom properties. No manual activation needed — just set `startDate`/`endDate` and deploy.
 
 ### Architecture
 
-- **Theme Definitions**: `themes/*.json` - JSON configurations
-- **Theme Logic**: `js/theme.js` - Client-side theme application
-- **Theme CLI**: `scripts/theme.js` - Command-line theme management
-- **Active Theme**: `theme-config.json` - Currently active theme ID
+- **Theme Loader**: `js/theme-loader.js` — resolves and applies the active theme on page load
+- **Theme Definitions**: `themes/*.json` — individual theme configurations
+- **Theme Registry**: `theme-config.json` — lists all registered theme IDs
+- **Theme CSS**: `css/style.css` — theme-scoped styles via `[data-theme="<id>"]` selectors
+- **Animations**: `css/theme-animations.css` — floating element keyframes and shared animations
 
-### Theme Configuration Structure
+### How Theme Resolution Works
+
+The theme loader resolves which theme to apply using this priority:
+
+1. `?theme=<id>` query param (if theme has `allowManualOverride: true`)
+2. `manualOverride` in `theme-config.json` (for testing — normally `null`)
+3. Date-based: filters themes where today falls within `startDate`–`endDate`, picks highest `priority`
+4. Fallback: uses `fallbackTheme` from config (typically `"default"`)
+
+### theme-config.json
 
 ```json
 {
-  "metadata": {
-    "name": "Valentine's Day Theme",
-    "id": "valentines",
-    "activeRange": {
-      "month": 2,
-      "dayStart": 10,
-      "dayEnd": 15
-    }
-  },
-  "colors": {
-    "bg": "#FFF5F5",
-    "accent": "#C62828",
-    "accentLight": "#E8A0BF",
-    "text": "#2C2C2C",
-    "heroOverlay": "rgba(198, 40, 40, 0.4)"
-  },
-  "banner": {
-    "enabled": true,
-    "sectionClass": "valentines-banner",
-    "title": "Love is in the Air",
-    "subtitle": "Valentine's Day Special",
-    "description": "Celebrate with your loved ones...",
-    "cta": {
-      "text": "Reserve Now",
-      "url": "https://reserve.hikarisojo.com"
-    }
-  },
-  "floatingElements": {
-    "enabled": true,
-    "characters": ["❤️", "💕", "🌹"],
-    "colors": ["rgba(198, 40, 40, 0.3)", "rgba(232, 160, 191, 0.3)"]
-  },
-  "videoPath": "assets/video/hero.mp4"
+  "themes": ["default", "spring-loading-2026", "st-patricks-day"],
+  "fallbackTheme": "default",
+  "manualOverride": null
 }
 ```
 
-### CLI Commands
+- `themes`: array of theme IDs — each must have a matching `themes/<id>.json`
+- `manualOverride`: set to a theme ID to force it regardless of date (useful for testing, set back to `null` for production)
 
-```bash
-# Get current active theme
-node scripts/theme.js get
+### Theme JSON Structure
 
-# Switch to a different theme
-node scripts/theme.js switch <theme-id>
-
-# List all available themes
-node scripts/theme.js list
-
-# Get detailed info about a theme
-node scripts/theme.js info <theme-id>
-```
-
-### Creating a New Theme
-
-#### Method 1: Copy and Modify
-
-1. Copy an existing theme as a template:
-```bash
-cp themes/valentines.json themes/st-patricks.json
-```
-
-2. Edit the new file:
 ```json
 {
-  "metadata": {
-    "name": "St. Patrick's Day Theme",
-    "id": "st-patricks",
-    "activeRange": { "month": 3, "dayStart": 14, "dayEnd": 17 }
+  "id": "st-patricks-day",
+  "name": "St. Patrick's Day",
+  "startDate": "2026-03-15",
+  "endDate": "2026-03-18",
+  "priority": 15,
+  "level": "light",
+  "tokens": {
+    "--color-bg": "#F4F8F4",
+    "--color-bg-alt": "#E8F0E8",
+    "--color-text": "#2C2C2C",
+    "--color-text-light": "#5A6B5A",
+    "--color-accent": "#1B7A3D",
+    "--color-accent-light": "#28A55B",
+    "--color-gold": "#FFD700",
+    "--color-white": "#FFFFFF",
+    "--color-dark": "#1A1A1A",
+    "--hero-overlay": "linear-gradient(...)",
+    "--hero-glow-color": "rgba(255, 215, 0, 0.20)",
+    "--hero-glow-opacity": "1",
+    "--theme-badge-display": "none"
   },
-  "colors": {
-    "bg": "#F0FFF0",
-    "accent": "#2E7D32",
-    "accentLight": "#66BB6A"
-  },
-  "banner": {
-    "enabled": true,
-    "title": "Luck of the Irish Sushi",
-    "subtitle": "St. Patrick's Day Special"
+  "content": {
+    "headline": "Luck meets flavor.",
+    "subheadline": "Celebrate St. Patrick's Day with fresh sushi & good company.",
+    "badgeText": null,
+    "heroImageKey": "assets/images/hero-st-patricks-day.png",
+    "logoImageKey": "assets/images/logo-st-patricks-day.png"
   },
   "floatingElements": {
     "enabled": true,
+    "containerClass": "floating-elements",
+    "elementClass": "floating-element",
     "characters": ["☘️", "🍀"],
-    "colors": ["rgba(46, 125, 50, 0.3)"]
+    "images": ["assets/images/gold-coin.svg"],
+    "colors": [
+      "rgba(27, 122, 61, 0.45)",
+      "rgba(40, 165, 91, 0.35)"
+    ],
+    "interval": 800
+  },
+  "rules": {
+    "enabled": true,
+    "allowManualOverride": true
   }
 }
 ```
 
-3. Activate the theme:
+#### Key fields
+
+| Field | Description |
+|-------|-------------|
+| `id` | Unique identifier, must match filename |
+| `startDate` / `endDate` | ISO date strings — theme is active during this range (inclusive) |
+| `priority` | Higher number wins when date ranges overlap |
+| `tokens` | CSS custom properties applied to `:root` |
+| `content.heroImageKey` | Path to a static image that replaces the hero video |
+| `content.logoImageKey` | Path to a themed logo that replaces nav + footer logos |
+| `content.badgeText` | Text shown in the hero badge pill (set `--theme-badge-display` to `inline-block` to show) |
+| `floatingElements.characters` | Emoji/text characters that float up from the bottom |
+| `floatingElements.images` | Image paths (e.g. SVGs) that float alongside characters |
+| `floatingElements.interval` | Milliseconds between spawning new elements |
+| `rules.allowManualOverride` | Whether `?theme=<id>` query param can activate this theme |
+
+### Creating a New Theme
+
+1. Create `themes/<id>.json` using the structure above
+2. Add the ID to the `themes` array in `theme-config.json`
+3. Add any theme-specific CSS in `style.css` scoped with `[data-theme="<id>"]`
+4. Add theme assets (hero image, logo, SVGs) to `assets/images/`
+5. Test locally with `?theme=<id>` query param
+6. Commit and push — theme auto-activates when the date range hits
+
+### Theme-Scoped CSS
+
+Add visual accents in `style.css` scoped to the theme's data attribute:
+
+```css
+/* Only applies when St. Patrick's Day theme is active */
+[data-theme="st-patricks-day"] .section-tag::before {
+  content: '☘ ';
+}
+
+[data-theme="st-patricks-day"] .menu-page-item:hover {
+  box-shadow: 0 6px 24px rgba(27, 122, 61, 0.4);
+}
+```
+
+### Testing Locally
+
 ```bash
-node scripts/theme.js switch st-patricks
-git add -A
-git commit -m "Add St. Patrick's Day theme"
+# Serve from the website directory
+python3 -m http.server 8080
+
+# Force a specific theme via query param
+open "http://localhost:8080?theme=st-patricks-day"
+
+# Or set manualOverride in theme-config.json temporarily
+```
+
+### Deployment
+
+Themes auto-activate and deactivate based on dates — just push and forget:
+
+```bash
+git add themes/new-theme.json theme-config.json assets/images/...
+git commit -m "Add [Holiday] theme (Month DD-DD)"
 git push
 ```
 
-#### Method 2: Snapshot Tool (Advanced)
-
-Create a theme from current live CSS:
-
-```bash
-node scripts/snapshot-theme.js
-# Follow prompts to generate JSON from current styles
-```
-
-### Theme Deployment Workflow
-
-#### Holiday Preparation (1 week before)
-
-1. Create/update theme JSON file
-2. Test locally
-3. Commit to git (but don't activate yet)
-
-```bash
-git add themes/new-theme.json
-git commit -m "Add [Holiday] theme"
-git push
-```
-
-#### Activation (day of event)
-
-```bash
-node scripts/theme.js switch new-theme
-git add theme-config.json
-git commit -m "Activate [Holiday] theme"
-git push
-```
-
-#### Revert to Default (day after event)
-
-```bash
-node scripts/theme.js switch default
-git add theme-config.json
-git commit -m "Revert to default theme"
-git push
-```
-
-### Automated Theme Switching
-
-Themes can auto-activate based on date ranges (future enhancement):
-
-```javascript
-// Example: Auto-switch on page load
-const today = new Date();
-const month = today.getMonth() + 1;
-const day = today.getDate();
-
-// Check if current date falls within any theme's activeRange
-// Apply that theme automatically
-```
+No manual switching or reverting needed. When the `endDate` passes, the theme loader falls back to default automatically.
 
 ---
 
@@ -455,4 +439,4 @@ Based on competitor research of 15+ upscale sushi restaurants. See [RECOMMENDATI
 
 ---
 
-**Last Updated**: February 2026
+**Last Updated**: March 2026

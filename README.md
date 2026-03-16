@@ -50,52 +50,29 @@ hikarisojo/
 
 ## 🎨 Theme System
 
-Hikari uses an automated theme system for holidays and special occasions.
-
-### Quick Theme Commands
-
-```bash
-# Check current theme
-node scripts/theme.js get
-
-# Switch theme
-node scripts/theme.js switch valentines
-node scripts/theme.js switch presidents-day
-node scripts/theme.js switch default
-
-# List all available themes
-node scripts/theme.js list
-
-# Get theme details
-node scripts/theme.js info valentines
-```
+Themes auto-activate based on date ranges — no manual switching needed. Just create the theme JSON, register it, and deploy.
 
 ### Available Themes
 
-- **default** - Standard Hikari branding (warm earth tones)
-- **valentines** - Valentine's Day (Feb 10-15) - deep reds, pink accents
-- **presidents-day** - Presidents' Day (Feb 14-18) - patriotic colors, president portraits
+| Theme | Dates | File |
+|-------|-------|------|
+| **default** | Always (fallback) | `themes/default.json` |
+| **spring-loading-2026** | Mar 1–13 | `themes/spring-loading-2026.json` |
+| **st-patricks-day** | Mar 15–18 | `themes/st-patricks-day.json` |
 
-### Creating New Themes
+### Quick Start — New Theme
 
-1. Copy an existing theme file:
-```bash
-cp themes/valentines.json themes/new-theme.json
-```
+1. Create `themes/<id>.json` (see [DEVELOPMENT.md](./DEVELOPMENT.md) for full schema)
+2. Add the ID to `theme-config.json` → `themes` array
+3. Add theme-scoped CSS in `style.css` via `[data-theme="<id>"]`
+4. Test locally: `python3 -m http.server 8080` → `?theme=<id>`
+5. Push — it auto-activates/deactivates by date
 
-2. Edit the JSON configuration:
-- `metadata`: Name, ID, active date range
-- `colors`: Background, accent, text colors
-- `banner`: Title, subtitle, CTA button
-- `floatingElements`: Emoji/character animations
-- `videoPath`: Custom hero video (optional)
+### Theme Features
 
-3. Activate the new theme:
-```bash
-node scripts/theme.js switch new-theme
-```
+Themes can customize: CSS tokens (colors, overlays), hero image (replaces video), logo (nav + footer), floating elements (emoji + images), badge text, and scoped CSS accents.
 
-See [DEVELOPMENT.md](./DEVELOPMENT.md) for detailed theme creation guide.
+See [DEVELOPMENT.md](./DEVELOPMENT.md) for the full theme JSON schema and architecture details.
 
 ---
 

@@ -9,14 +9,14 @@
 
 ## 🎨 Hikari Theme System
 
-This project uses a custom automated theme system.
+Themes auto-activate by date range — no manual switching needed.
 
-- **Config File:** `theme-config.json`
-- **Management Script:** `scripts/theme.js`
-- **Key Commands:**
-  - `node scripts/theme.js get` — Check current theme
-  - `node scripts/theme.js list` — See all available themes
-  - `node scripts/theme.js switch [theme-name]` — Change site branding
+- **Theme Loader:** `js/theme-loader.js` — resolves and applies themes on page load
+- **Theme Registry:** `theme-config.json` — lists registered theme IDs + fallback
+- **Theme Definitions:** `themes/*.json` — individual theme configs (colors, hero, logo, floating elements)
+- **Theme CSS:** `css/style.css` — scoped styles via `[data-theme="<id>"]` selectors
+- **Testing:** `?theme=<id>` query param to force a theme locally
+- **Full docs:** See `DEVELOPMENT.md` → Theme System
 
 ## 📁 Project Paths
 
