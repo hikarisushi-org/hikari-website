@@ -117,10 +117,37 @@ class ThemeLoader {
       }
     }
 
+    // Hero image swap (replaces video with static image)
+    this._applyHeroImage(theme.content && theme.content.heroImageKey);
+
     // Floating elements
     this._applyFloatingElements(theme.floatingElements);
 
     console.log(`Theme: ${theme.name} (${theme.id})`);
+  }
+
+  _applyHeroImage(imagePath) {
+    const video = document.querySelector('.hero-video');
+    if (!video) return;
+
+    if (!imagePath) {
+      // No hero image — ensure video is visible
+      video.style.display = '';
+      const existingImg = document.querySelector('.hero-image');
+      if (existingImg) existingImg.remove();
+      return;
+    }
+
+    // Hide video, insert image
+    video.style.display = 'none';
+    let img = document.querySelector('.hero-image');
+    if (!img) {
+      img = document.createElement('img');
+      img.className = 'hero-image hero-video'; // reuse hero-video styling
+      video.parentNode.insertBefore(img, video);
+    }
+    img.src = imagePath;
+    img.alt = 'Hikari Sushi';
   }
 
   _applyFloatingElements(config) {

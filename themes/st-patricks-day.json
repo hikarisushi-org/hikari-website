@@ -24,7 +24,7 @@
     "headline": "Luck meets flavor.",
     "subheadline": "Celebrate St. Patrick's Day with fresh sushi & good company.",
     "badgeText": "Happy St. Patrick's Day ☘️",
-    "heroImageKey": null
+    "heroImageKey": "assets/images/hero-st-patricks-day.png"
   },
   "floatingElements": {
     "enabled": true,
