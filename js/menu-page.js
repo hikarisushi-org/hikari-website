@@ -17,7 +17,7 @@ const menuData = {
   'appetizers': {
     title: 'Appetizers',
     items: [
-      { name: 'Sushi Nachos', price: '$10.50', desc: 'Crispy wonton chips topped with spicy tuna, crab mix, creamy avocado, and a drizzle of spicy aioli.', img: 'assets/images/menu/appetizers/sushi_nachos.png', raw: true },
+      { name: 'Sushi Nachos', price: '$10.50', desc: 'Crispy wonton chips topped with crab mix, spicy tuna, spicy mayo, eel sauce, tobiko, sesame seeds, and green onions.', img: 'assets/images/menu/appetizers/sushi_nachos.png', raw: true },
       { name: 'Jalapeño Bomb (4 pcs)', price: '$8', desc: 'Spicy tuna and cream cheese. Topped with spicy mayo, eel sauce, tobiko, green onions, and sesame seeds.', img: 'assets/images/menu/appetizers/jalapeno_bomb.png', raw: true },
       { name: 'Butterflied Garlic Shrimp', price: '$10', desc: '', img: 'assets/images/menu/appetizers/garlic_shrimp.png' },
       { name: 'Edamame (steamed w/ salt)', price: '$5', desc: '', img: 'assets/images/menu/appetizers/edamame.png' },
