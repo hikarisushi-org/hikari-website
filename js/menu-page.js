@@ -23,7 +23,7 @@ const menuData = {
       { name: 'Edamame (steamed w/ salt)', price: '$5', desc: '', img: 'assets/images/menu/appetizers/edamame.png' },
       { name: 'Miso Soup', price: '$3', desc: '', img: 'assets/images/menu/appetizers/miso.png' },
       { name: 'Shrimp & Vegetable Tempura', price: '$10', desc: 'Lightly battered and fried shrimp served with assorted seasonal vegetables.', img: 'assets/images/menu/appetizers/shrimp_&_veggie_tempura.png' },
-      { name: 'Hikari Fire Crunch', price: '$8', desc: '', img: 'assets/images/menu/sushi/hikari_crunch.png' },
+      { name: 'Hikari Fire Crunch', price: '$8', desc: 'Two crispy mini wonton tostadas topped with spicy tuna in chili oil, fried garlic, sesame oil, sriracha, avocado, mango and cilantro.', img: 'assets/images/menu/sushi/hikari_crunch.png' },
     ]
   },
   'traditional-rolls': {
