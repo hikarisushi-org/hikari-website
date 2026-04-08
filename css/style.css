@@ -190,6 +190,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   color: var(--color-white);
   border: none;
 }
+.nav-links .btn-reserve {
+  color: var(--color-dark);
+}
 .nav.scrolled .nav-links .btn-doordash {
   background: #FF3008;
   color: var(--color-white);
