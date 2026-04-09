@@ -235,6 +235,12 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   height: 100%;
   object-fit: cover;
 }
+/* Show landscape on desktop, portrait on mobile */
+.hero-video--portrait { display: none; }
+@media (max-width: 768px) {
+  .hero-video--landscape { display: none; }
+  .hero-video--portrait { display: block; }
+}
 /* Hero overlay — controlled by --hero-overlay token */
 .hero::after {
   content: '';
