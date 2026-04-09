@@ -20,7 +20,7 @@
   --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
   --transition: 0.3s ease;
   --max-width: 1200px;
-  --hero-overlay: linear-gradient(to bottom, rgba(26,60,40,0.4) 0%, rgba(20,50,35,0.3) 50%, rgba(15,35,25,0.5) 100%);
+  --hero-overlay: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.85) 100%);
   --hero-glow-color: transparent;
   --hero-glow-opacity: 0;
   --theme-badge-display: none;

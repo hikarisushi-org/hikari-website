@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (reviewsTrack) {
     const CACHE_KEY = 'hikari_reviews';
-    const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
+    const CACHE_DURATION = 60 * 60 * 1000; // 1 hour — reviews now rotate server-side
     let currentSlide = 0;
     let cardsPerView = 3;
     let totalCards = 0;
