@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
             avatarHTML +
             '<div>' +
               '<div class="review-card-author">' + review.author + '</div>' +
-              '<div class="review-card-time">' + review.relativeTime + '</div>' +
+              '<div class="review-card-time">' + (review.publishTime ? new Date(review.publishTime).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : review.relativeTime) + '</div>' +
             '</div>' +
           '</div>' +
           '<div class="review-card-stars">' + renderStars(review.rating) + '</div>' +
