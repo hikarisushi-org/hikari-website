@@ -110,14 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Update headline with rating and count
-      var headline = document.getElementById('reviews-headline');
-      if (headline && rating) {
-        headline.innerHTML = rating.toFixed(1) + '&#9733; Google Reviews';
+      // Update rating display
+      var ratingEl = document.getElementById('reviews-rating');
+      if (ratingEl && rating) {
+        ratingEl.textContent = rating.toFixed(1);
       }
-      var sub = document.getElementById('reviews-sub');
-      if (sub && totalReviews) {
-        sub.textContent = totalReviews + '+ reviews from Hikari Sushi guests';
+      var countEl = document.getElementById('reviews-count');
+      if (countEl && totalReviews) {
+        countEl.textContent = totalReviews + '+ Google reviews';
       }
 
       // Render cards

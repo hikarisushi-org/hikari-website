@@ -501,15 +501,20 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   color: #2C2C2C !important;
 }
 .reviews.section {
-  padding: 48px 0 32px;
+  padding: 72px 0 48px;
 }
 /* -- Header */
 .reviews .section-header {
-  margin-bottom: 28px;
+  margin-bottom: 40px;
 }
 .reviews .section-header h2 {
-  color: #1A1A1A;
+  color: var(--color-accent);
   font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 0;
 }
 .reviews .section-header h2::after {
   content: '';
@@ -517,17 +522,55 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   width: 48px;
   height: 2px;
   background: var(--color-accent);
-  margin: 14px auto 0;
+  margin: 20px auto 0;
   border-radius: 1px;
 }
-.reviews .section-sub {
-  font-size: 0.95rem;
-  color: #6B6B6B;
-  margin-top: 12px;
+.reviews .section-sub-hero {
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  margin-top: 16px;
   letter-spacing: 0.01em;
+  line-height: 1.6;
+  font-weight: 400;
 }
 .reviews .section-tag {
   color: #1A8A84;
+  margin-bottom: 8px;
+}
+/* -- Rating Display */
+.reviews-rating-display {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.reviews-rating-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+.reviews-rating-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #9A9A9A;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.reviews-rating-stars {
+  font-size: 1.4rem;
+  color: #E8B730;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin: 4px 0;
+}
+.reviews-rating-count {
+  font-size: 0.9rem;
+  color: #9A9A9A;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.01em;
 }
 /* -- Carousel */
 .reviews-carousel {
@@ -736,7 +779,13 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
     display: none;
   }
   .reviews.section {
-    padding: 40px 0 44px;
+    padding: 48px 0 44px;
+  }
+  .reviews .section-header h2 {
+    font-size: 2rem;
+  }
+  .reviews-rating-number {
+    font-size: 1.6rem;
   }
 }
 
