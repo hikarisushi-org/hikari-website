@@ -497,8 +497,8 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
    ======================================== */
 /* -- Section */
 .reviews {
-  background: #FAFAF8;
-  color: #2C2C2C;
+  background: #F5F5F0 !important;
+  color: #2C2C2C !important;
 }
 .reviews.section {
   padding: 48px 0 52px;
@@ -542,7 +542,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   right: 48px;
   bottom: 0;
   width: 60px;
-  background: linear-gradient(to right, transparent, #FAFAF7);
+  background: linear-gradient(to right, transparent, #F5F5F0);
   z-index: 1;
   pointer-events: none;
 }
@@ -554,7 +554,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .review-card {
   flex: 0 0 calc(46% - 16px);
   margin: 0 8px;
-  background: #FFFFFF;
+  background: #FFFFFF !important;
   border-radius: 16px;
   padding: 28px 26px;
   box-shadow: 0 1px 8px rgba(0,0,0,0.04);
