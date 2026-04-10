@@ -557,6 +557,14 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   color: var(--color-accent);
   font-size: 1rem;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.review-card-rating {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
   letter-spacing: 2px;
 }
 .review-card-text {
@@ -683,8 +691,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 
 /* Google branding — scoped to .reviews */
-.reviews .review-card-stars,
-.reviews .reviews-overall-stars {
+.reviews .review-card-stars {
   color: #FBBC04;
 }
 .reviews .review-card-avatar-placeholder {
