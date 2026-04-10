@@ -496,44 +496,64 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
    Reviews Carousel
    ======================================== */
 .reviews {
-  background: var(--color-bg-alt);
+  background: #F7F3EE;
+}
+.reviews.section {
+  padding: 64px 0;
+}
+.reviews .section-header {
+  margin-bottom: 32px;
+}
+.reviews .section-header h2 {
+  color: var(--color-dark);
+}
+.reviews .section-sub {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-top: 8px;
 }
 .reviews-carousel {
   position: relative;
   overflow: hidden;
-  padding: 0 48px;
+  padding: 0 56px;
 }
 .reviews-track {
   display: flex;
   transition: transform 0.4s ease;
 }
 .review-card {
-  flex: 0 0 calc(33.333% - 16px);
+  flex: 0 0 calc(50% - 16px);
   margin: 0 8px;
   background: var(--color-white);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  box-shadow: var(--shadow);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
-  min-height: 220px;
+  min-height: 240px;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.review-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
 }
 .review-card-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 .review-card-avatar {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--color-bg-alt);
 }
 .review-card-avatar-placeholder {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--color-accent);
   color: var(--color-white);
@@ -541,36 +561,36 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.05rem;
   flex-shrink: 0;
 }
 .review-card-author {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--color-dark);
 }
 .review-card-time {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--color-text-light);
+  margin-top: 1px;
 }
 .review-card-stars {
-  color: var(--color-accent);
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+  color: #FBBC04;
 }
 .review-card-rating {
   font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--color-text);
-  letter-spacing: 2px;
+  font-size: 0.95rem;
+  color: var(--color-dark);
 }
 .review-card-text {
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-  line-height: 1.6;
+  font-size: 1rem;
+  color: #4A4A4A;
+  line-height: 1.75;
   flex: 1;
   overflow: hidden;
   display: -webkit-box;
@@ -584,9 +604,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   background: none;
   border: none;
   color: var(--color-accent);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  padding: 4px 0 0;
+  padding: 6px 0 0;
   font-weight: 500;
 }
 .review-card-toggle:hover {
@@ -596,12 +616,12 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--color-white);
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--color-dark);
   display: flex;
   align-items: center;
@@ -609,14 +629,15 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   cursor: pointer;
   transition: all var(--transition);
   z-index: 2;
-  border: none;
+  border: 1px solid rgba(0,0,0,0.06);
   padding: 0;
   line-height: 1;
 }
 .reviews-arrow:hover {
   background: var(--color-accent);
   color: var(--color-white);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 20px rgba(26,138,132,0.25);
 }
 .reviews-arrow-left {
   left: 0;
@@ -634,7 +655,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #E0D0D0;
+  background: #D8D0C8;
   border: none;
   cursor: pointer;
   transition: all var(--transition);
@@ -644,18 +665,17 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   background: var(--color-accent);
   transform: scale(1.2);
 }
-.reviews-attribution {
+.reviews-cta {
   text-align: center;
-  font-size: 0.8rem;
-  color: var(--color-text-light);
-  margin-top: 20px;
+  margin-top: 32px;
 }
-.reviews-attribution a {
+.reviews-cta-btn {
+  border-color: var(--color-accent);
   color: var(--color-accent);
-  font-weight: 600;
 }
-.reviews-attribution a:hover {
-  text-decoration: underline;
+.reviews-cta-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
 }
 .reviews-fallback {
   text-align: center;
@@ -666,69 +686,25 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   color: var(--color-accent);
   font-weight: 600;
 }
-.reviews .section-header {
-  margin-bottom: 24px;
-}
-.reviews-overall {
-  text-align: center;
-  margin-bottom: 24px;
-}
-.reviews-overall-rating {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--color-dark);
-}
-.reviews-overall-stars {
-  color: var(--color-accent);
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  margin: 0 8px;
-}
-.reviews-overall-count {
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-}
-
-/* Google branding — scoped to .reviews */
-.reviews .review-card-stars {
-  color: #FBBC04;
-}
 .reviews .review-card-avatar-placeholder {
   background: #4285F4;
 }
 .reviews .section-tag {
   color: #4285F4;
 }
-.reviews .reviews-attribution a {
-  color: #4285F4;
-}
-.google-g-icon {
-  display: inline-block;
-  vertical-align: -2px;
-  margin-right: 2px;
-}
-.reviews-overall-google-g {
-  display: inline-block;
-  vertical-align: -4px;
-  margin-right: 12px;
-}
-
-@media (max-width: 1024px) {
-  .review-card {
-    flex: 0 0 calc(50% - 16px);
-  }
-}
-
 @media (max-width: 768px) {
   .reviews-carousel {
-    padding: 0;
+    padding: 0 8px;
   }
   .review-card {
     flex: 0 0 calc(100% - 16px);
+    padding: 24px 20px;
   }
   .reviews-arrow {
     display: none;
+  }
+  .reviews.section {
+    padding: 48px 0;
   }
 }
 

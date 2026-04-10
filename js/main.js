@@ -91,8 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getCardsPerView() {
       if (window.innerWidth <= 768) return 1;
-      if (window.innerWidth <= 1024) return 2;
-      return 3;
+      return 2;
     }
 
     function renderStars(rating) {
@@ -109,6 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!reviews || reviews.length === 0) {
         showFallback();
         return;
+      }
+
+      // Update headline with rating and count
+      var headline = document.getElementById('reviews-headline');
+      if (headline && rating) {
+        headline.innerHTML = rating.toFixed(1) + '&#9733; Google Reviews';
+      }
+      var sub = document.getElementById('reviews-sub');
+      if (sub && totalReviews) {
+        sub.textContent = totalReviews + '+ reviews from Hikari Sushi guests';
       }
 
       // Render cards
