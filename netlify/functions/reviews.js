@@ -11,7 +11,7 @@ let reviewsData = null;
 
 function loadReviews() {
   if (reviewsData) return reviewsData;
-  const filePath = path.join(__dirname, '..', '..', 'data', 'reviews.json');
+  const filePath = path.resolve('data', 'reviews.json');
   const raw = fs.readFileSync(filePath, 'utf8');
   reviewsData = JSON.parse(raw);
   return reviewsData;
