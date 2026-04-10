@@ -187,8 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentSlide > maxSlide) currentSlide = maxSlide;
       if (currentSlide < 0) currentSlide = 0;
 
-      // Each card is 48% width; slide by 48% per step
-      var cardPercent = window.innerWidth <= 768 ? 100 : 48;
+      // Each card is 50% width; slide by 50% per step
+      var cardPercent = window.innerWidth <= 768 ? 100 : 50;
       reviewsTrack.style.transform = 'translateX(-' + (currentSlide * cardPercent) + '%)';
 
       // Update dots

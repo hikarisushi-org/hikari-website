@@ -541,7 +541,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 /* -- Cards */
 .review-card {
-  flex: 0 0 calc(48% - 16px);
+  flex: 0 0 calc(50% - 16px);
   margin: 0 8px;
   background: #FFFFFF !important;
   border-radius: 14px;
@@ -659,7 +659,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   box-shadow: 0 3px 12px rgba(26,138,132,0.2);
 }
 .reviews-arrow-left {
-  left: 6px;
+  left: 4px;
 }
 .reviews-arrow-right {
   right: 4px;
