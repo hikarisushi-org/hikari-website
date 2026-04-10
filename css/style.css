@@ -501,7 +501,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   color: #2C2C2C !important;
 }
 .reviews.section {
-  padding: 48px 0 52px;
+  padding: 48px 0 40px;
 }
 /* -- Header */
 .reviews .section-header {
@@ -533,7 +533,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .reviews-carousel {
   position: relative;
   overflow: hidden;
-  padding: 0 44px;
+  padding: 0 40px;
 }
 .reviews-track {
   display: flex;
@@ -546,15 +546,15 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   background: #FFFFFF !important;
   border-radius: 14px;
   padding: 22px 22px;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0,0,0,0.05);
-  transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .review-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
 }
 .review-card-header {
   display: flex;
@@ -659,10 +659,10 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   box-shadow: 0 3px 12px rgba(26,138,132,0.2);
 }
 .reviews-arrow-left {
-  left: 2px;
+  left: 4px;
 }
 .reviews-arrow-right {
-  right: 2px;
+  right: 4px;
 }
 /* -- Dots */
 .reviews-dots {
@@ -688,25 +688,25 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 /* -- CTA */
 .reviews-cta {
   text-align: center;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 .reviews-cta-btn {
   display: inline-block;
-  background: #1A8A84;
+  background: #167A75;
   color: #FFFFFF;
   border: none;
-  font-weight: 500;
-  padding: 10px 26px;
+  font-weight: 600;
+  padding: 11px 28px;
   border-radius: 8px;
   font-size: 0.88rem;
-  letter-spacing: 0.01em;
-  box-shadow: 0 2px 8px rgba(26,138,132,0.15);
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 10px rgba(22,122,117,0.18);
   transition: all var(--transition);
   text-decoration: none;
 }
 .reviews-cta-btn:hover {
-  background: #297B78;
-  box-shadow: 0 3px 14px rgba(26,138,132,0.25);
+  background: #125F5B;
+  box-shadow: 0 4px 16px rgba(22,122,117,0.28);
   transform: translateY(-1px);
 }
 /* -- Fallback */
