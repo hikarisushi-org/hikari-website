@@ -501,7 +501,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   color: #2C2C2C !important;
 }
 .reviews.section {
-  padding: 48px 0 40px;
+  padding: 48px 0 32px;
 }
 /* -- Header */
 .reviews .section-header {
@@ -541,15 +541,15 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 /* -- Cards */
 .review-card {
-  flex: 0 0 calc(50% - 16px);
+  flex: 0 0 calc(48% - 16px);
   margin: 0 8px;
   background: #FFFFFF !important;
   border-radius: 14px;
   padding: 22px 22px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 14px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.03);
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.07);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .review-card:hover {
@@ -659,7 +659,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   box-shadow: 0 3px 12px rgba(26,138,132,0.2);
 }
 .reviews-arrow-left {
-  left: 4px;
+  left: 6px;
 }
 .reviews-arrow-right {
   right: 4px;
