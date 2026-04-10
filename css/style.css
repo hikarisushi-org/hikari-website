@@ -541,7 +541,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   top: 0;
   right: 48px;
   bottom: 0;
-  width: 60px;
+  width: 30px;
   background: linear-gradient(to right, transparent, #F5F5F0);
   z-index: 1;
   pointer-events: none;
