@@ -155,6 +155,19 @@ document.addEventListener('DOMContentLoaded', () => {
           '<p class="review-card-text">' + review.text + '</p>';
 
         reviewsTrack.appendChild(card);
+
+        // Add "Read more" toggle if text is clamped
+        var textEl = card.querySelector('.review-card-text');
+        if (textEl.scrollHeight > textEl.clientHeight) {
+          var toggle = document.createElement('button');
+          toggle.className = 'review-card-toggle';
+          toggle.textContent = 'Read more';
+          toggle.addEventListener('click', function() {
+            var expanded = textEl.classList.toggle('expanded');
+            toggle.textContent = expanded ? 'Read less' : 'Read more';
+          });
+          card.appendChild(toggle);
+        }
       });
 
       totalCards = reviews.length;

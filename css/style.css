@@ -566,8 +566,23 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   flex: 1;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+.review-card-text.expanded {
+  -webkit-line-clamp: unset;
+}
+.review-card-toggle {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 4px 0 0;
+  font-weight: 500;
+}
+.review-card-toggle:hover {
+  text-decoration: underline;
 }
 .reviews-arrow {
   position: absolute;
