@@ -522,7 +522,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   transition: transform 0.4s ease;
 }
 .review-card {
-  flex: 0 0 calc(50% - 16px);
+  flex: 0 0 calc(45% - 16px);
   margin: 0 8px;
   background: var(--color-white);
   border-radius: 16px;
@@ -532,9 +532,17 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   flex-direction: column;
   min-height: 240px;
   border: 1px solid rgba(0,0,0,0.04);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7;
+}
+.review-card.featured {
+  opacity: 1;
+  box-shadow: 0 8px 32px rgba(26,138,132,0.12);
+  transform: scale(1.03);
+  border-color: rgba(26,138,132,0.12);
 }
 .review-card:hover {
+  opacity: 1;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   transform: translateY(-2px);
 }

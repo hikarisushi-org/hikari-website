@@ -187,8 +187,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentSlide > maxSlide) currentSlide = maxSlide;
       if (currentSlide < 0) currentSlide = 0;
 
-      const cardWidth = 100 / cardsPerView;
-      reviewsTrack.style.transform = 'translateX(-' + (currentSlide * cardWidth) + '%)';
+      // Each card is 45% + 16px margin; slide by 45% per step
+      var cardPercent = window.innerWidth <= 768 ? 100 : 45;
+      reviewsTrack.style.transform = 'translateX(-' + (currentSlide * cardPercent) + '%)';
+
+      // Update featured card
+      var cards = reviewsTrack.querySelectorAll('.review-card');
+      cards.forEach(function(card, i) {
+        card.classList.toggle('featured', i === currentSlide);
+      });
 
       // Update dots
       var dots = reviewsDotsContainer.querySelectorAll('.reviews-dot');
