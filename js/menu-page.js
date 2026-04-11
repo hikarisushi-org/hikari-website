@@ -287,7 +287,7 @@ function createMenuItem(item, category, index) {
 
   const name = document.createElement('span');
   name.className = 'menu-page-item-name';
-  name.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">◼</span>' : '') + (item.peanuts ? ' <span class="peanut-indicator" title="Contains peanuts">🥜</span>' : '');
+  name.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">🐟</span>' : '') + (item.peanuts ? ' <span class="peanut-indicator" title="Contains peanuts">🥜</span>' : '');
 
   const price = document.createElement('span');
   price.className = 'menu-page-item-price';
@@ -321,7 +321,7 @@ function createCompactListItem(item, category, index) {
 
   const name = document.createElement('span');
   name.className = 'menu-compact-item-name';
-  name.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">◼</span>' : '') + (item.peanuts ? ' <span class="peanut-indicator" title="Contains peanuts">🥜</span>' : '');
+  name.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">🐟</span>' : '') + (item.peanuts ? ' <span class="peanut-indicator" title="Contains peanuts">🥜</span>' : '');
 
   const price = document.createElement('span');
   price.className = 'menu-compact-item-price';
@@ -506,7 +506,7 @@ function openModal(item) {
   modalScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   // Set content
-  modalName.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">◼</span>' : '') + (item.peanuts ? ' <span class="peanut-indicator" title="Contains peanuts">🥜</span>' : '');
+  modalName.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">🐟</span>' : '') + (item.peanuts ? ' <span class="peanut-indicator" title="Contains peanuts">🥜</span>' : '');
   modalPrice.textContent = item.price;
   modalDesc.textContent = item.desc || 'A delicious menu item from Hikari Sushi.';
 
@@ -725,7 +725,7 @@ function updatePickedHighlights() {
     const addBtn = itemEl.querySelector('.add-to-list-btn');
 
     if (nameEl) {
-      const itemName = nameEl.textContent.replace(' ◼', '').trim();
+      const itemName = nameEl.textContent.replace(' 🐟', '').replace(' 🥜', '').trim();
       const isPicked = pickedNames.includes(itemName);
 
       if (isPicked) {

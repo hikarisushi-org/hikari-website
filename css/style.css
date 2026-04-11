@@ -447,9 +447,8 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   margin-bottom: 16px;
 }
 .raw-indicator {
-  color: var(--color-accent);
-  font-size: 0.65rem;
-  vertical-align: middle;
+  font-size: 14px;
+  margin-left: 2px;
 }
 .menu-footnote {
   text-align: center;
