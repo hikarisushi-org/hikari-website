@@ -278,6 +278,11 @@
   margin-left: 2px;
 }
 
+.peanut-indicator {
+  font-size: 11px;
+  margin-left: 2px;
+}
+
 /* Category Headers */
 .menu-category-header {
   margin: 32px 0 16px;

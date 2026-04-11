@@ -49,7 +49,7 @@ const menuData = {
       { name: 'Emerald Dragon Roll', price: '$14', desc: 'Tempura shrimp, crab mix, and cucumber. Topped with eel and avocado. Finished with wasabi mayo, eel sauce, and sesame seeds.', img: 'assets/images/menu/sushi/emerald_dragon.png' },
       { name: 'Hikari Delight Roll', price: '$14.50', desc: 'Salmon, mango, spicy mayo, and jalapeño. Topped with hamachi. Finished with ponzu sauce, crunchies, and green onions.', img: 'assets/images/menu/sushi/hikari_delight.png', raw: true },
       { name: 'Salmon Sunrise Roll', price: '$13', desc: 'Crab mix, grilled asparagus, and avocado. Topped with salmon and lemon slices. Finished with ponzu sauce.', img: 'assets/images/menu/sushi/salmon_sunrise.png', raw: true },
-      { name: 'Solar Flare Roll', price: '$14.50', desc: 'Spicy salmon, jalapeño, and cucumber. Topped with hamachi and ebi. Finished with macha sauce and green onions.', img: 'assets/images/menu/sushi/solar_flare.png', raw: true },
+      { name: 'Solar Flare Roll', price: '$14.50', desc: 'Spicy salmon, jalapeño, and cucumber. Topped with hamachi and ebi. Finished with macha sauce and green onions.', img: 'assets/images/menu/sushi/solar_flare.png', raw: true, peanuts: true },
       { name: 'Hot Cheetos Roll', price: '$12', desc: 'Crushed Hot Cheetos on rice with spicy crab, cream cheese, and cucumber. Finished with spicy mayo and eel sauce.', img: 'assets/images/menu/sushi/hot_cheetos.png' },
       { name: 'Playboy', price: '$12', desc: 'Shrimp tempura, crab mix, and cream cheese. Topped with tuna and avocado. Finished with spicy mayo, eel sauce, tobiko, and sesame seeds.', img: 'assets/images/menu/sushi/playboy.png', raw: true },
       { name: 'Lava Volcano Roll', price: '$12', desc: 'Broiled eel, crab mix, and avocado. Baked with spicy mayo. Finished with eel sauce, tobiko, and green onions.', raw: true },
@@ -287,7 +287,7 @@ function createMenuItem(item, category, index) {
 
   const name = document.createElement('span');
   name.className = 'menu-page-item-name';
-  name.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">◼</span>' : '');
+  name.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">◼</span>' : '') + (item.peanuts ? ' <span class="peanut-indicator" title="Contains peanuts">🥜</span>' : '');
 
   const price = document.createElement('span');
   price.className = 'menu-page-item-price';
@@ -321,7 +321,7 @@ function createCompactListItem(item, category, index) {
 
   const name = document.createElement('span');
   name.className = 'menu-compact-item-name';
-  name.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">◼</span>' : '');
+  name.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">◼</span>' : '') + (item.peanuts ? ' <span class="peanut-indicator" title="Contains peanuts">🥜</span>' : '');
 
   const price = document.createElement('span');
   price.className = 'menu-compact-item-price';
@@ -506,7 +506,7 @@ function openModal(item) {
   modalScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   // Set content
-  modalName.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">◼</span>' : '');
+  modalName.innerHTML = item.name + (item.raw ? ' <span class="raw-indicator" title="Contains raw fish">◼</span>' : '') + (item.peanuts ? ' <span class="peanut-indicator" title="Contains peanuts">🥜</span>' : '');
   modalPrice.textContent = item.price;
   modalDesc.textContent = item.desc || 'A delicious menu item from Hikari Sushi.';
 
