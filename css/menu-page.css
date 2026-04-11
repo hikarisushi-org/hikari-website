@@ -274,12 +274,12 @@
 
 .raw-indicator {
   color: var(--color-primary);
-  font-size: 10px;
+  font-size: 14px;
   margin-left: 2px;
 }
 
 .peanut-indicator {
-  font-size: 11px;
+  font-size: 22px;
   margin-left: 2px;
 }
 
