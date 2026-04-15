@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Sylvia Connolly",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocJIjP4OenCaOaoLPuku7hGYuB_46VYnmXvPr0tBBtYy-dVliQ=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "I very rarely do any reviews but this one is important to to note of. Been searching for a while for a great Japanese restaurant and happy to say I found this one! Hikari Sushi is outstanding. Hands down the best in SLC. Authentic, fresh and delicious. I highly recommend them to everyone. Cheerful service too! I had the salmon bento, tempura shrimp & vegetables, edamame and miso soup. Next time, I have my eyes and stomach set on the sushi rolls! Lots to choose from and cannot wait.",
+      "relativeTime": "",
+      "publishTime": "2026-04-15T01:39:46.409588Z"
+    },
+    {
       "author": "Julien Lopez",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUSWiz2QFmgKs3Sckvi_Jnr-4_QreajaJyY_dk8Fw6ZXEEGPXp2=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1194,5 +1202,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 160
+  "totalReviews": 161
 }
