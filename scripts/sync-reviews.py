@@ -11,8 +11,8 @@ import json
 import os
 from pathlib import Path
 
-# Load from hikari-gbp/.env locally; in CI, env vars are set as secrets
-GBP_ENV = Path.home() / "projects" / "hikari-gbp" / ".env"
+# Load from ~/projects/.env locally; in CI, env vars are set as secrets
+GBP_ENV = Path.home() / "projects" / ".env"
 if GBP_ENV.exists():
     from dotenv import load_dotenv
     load_dotenv(GBP_ENV)
