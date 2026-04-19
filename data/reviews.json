@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "Aaron Griffith",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocJFiQHSAqv2SLpFQwOZD45x9LG9NFmrw4sg9tut5JwZtfuf7w=s120-c-rp-mo-ba2-br100",
+      "rating": 5,
+      "text": "The sushi is very fresh and so good!  The owners and staff are friendly and helpful. Try the Jalape\u00f1o Bombs. 10 outa 10. The mochi ice cream is also excellent!",
+      "relativeTime": "",
+      "publishTime": "2026-04-18T23:54:47.315487Z"
+    },
+    {
+      "author": "Shandra Brown",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjV5Euz4Sz8EMkDPHfqTyx5FnPiQ0juZj5LN0V7VKb8EfDK_bPZcgA=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "The cook was phenomenal. The rolls were fresh with unique flavors. The forbidden was a top favorite! It surprised me with apple and fried banana. But it was delicious. Also loved firefly.\nWe were skeptical when entering the small dining area that looks so casual for a sushi restaurant, but the service and food is high quality!!",
+      "relativeTime": "",
+      "publishTime": "2026-04-18T13:40:49.664169Z"
+    },
+    {
       "author": "Sylvia Connolly",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocJIjP4OenCaOaoLPuku7hGYuB_46VYnmXvPr0tBBtYy-dVliQ=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1202,5 +1218,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 161
+  "totalReviews": 164
 }
