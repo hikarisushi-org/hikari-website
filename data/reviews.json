@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "Virtanti Darmawan",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLerkMXvQtaRLpTqmlZ0YSzGw1ZLHn6JeU3Lz_4mqVktjUDnQ=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "The restaurant is nice... The food also nice, yummy, delicious ... The owner sooo nice \u2764\ufe0f\u2764\ufe0f",
+      "relativeTime": "",
+      "publishTime": "2026-04-24T05:00:27.690688Z"
+    },
+    {
+      "author": "Katy Em",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUrGs1qeIfWb7iRT3kH0uryFxDr2zrNUzvwpcvrPf1V8tFOLNvD=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Just tried this place today & my spouse and I loved it! We tried the CalMex roll & the hot cheeto roll! Both were soo great, i recommend trying the hot cheeto roll it was great! We will definitely be returning to try more\ud83d\ude4c\ud83c\udffc",
+      "relativeTime": "",
+      "publishTime": "2026-04-24T00:44:20.994926Z"
+    },
+    {
       "author": "Sterling Davis",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUeA9jV5frXGfFy3EyxRSpA6vZjY27tReEYnsZvnfVsYYxHAzPETA=s120-c-rp-mo-ba2-br100",
       "rating": 5,
@@ -1226,5 +1242,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 165
+  "totalReviews": 167
 }
