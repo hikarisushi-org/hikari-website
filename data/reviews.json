@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "Serity Rogers",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjVMYminhXJNjIhsREZ_FysNywjLCx7b2W7Gcs99v45ki445z8hW=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "They had some delicious and different types of rolls. The owners were super nice and attentive. I appreciated the fresh flowers and the nice table settings too.",
+      "relativeTime": "",
+      "publishTime": "2026-04-25T00:53:02.511100Z"
+    },
+    {
+      "author": "Richard Rogers",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUVznRhruDOU1yfutEb8u7acwU-aO_pSbmnIuivEhHRtsBGo1-8=s120-c-rp-mo-ba2-br100",
+      "rating": 5,
+      "text": "Absolutely loved all of the little details. The fresh flowers on the table, the lemon and mint in the water. Not to mention the food was fresh and delicious. We will definitely be coming back again and again",
+      "relativeTime": "",
+      "publishTime": "2026-04-25T00:50:28.495360Z"
+    },
+    {
       "author": "Virtanti Darmawan",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLerkMXvQtaRLpTqmlZ0YSzGw1ZLHn6JeU3Lz_4mqVktjUDnQ=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1242,5 +1258,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 167
+  "totalReviews": 169
 }
