@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Kelly Joe",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocKfpaTUTErIVgtBOpee2aIsjp9xmVJNi553hEvvJwfJvIHStg=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "The sushi is generously portioned with fresh, thick fish slices. The signature sauce with seeds and scallions adds so much depth and texture to every bite.\nEverything feels high-quality and well-made. Would absolutely recommend this spot to friends!",
+      "relativeTime": "",
+      "publishTime": "2026-04-25T20:48:01.931845Z"
+    },
+    {
       "author": "Serity Rogers",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjVMYminhXJNjIhsREZ_FysNywjLCx7b2W7Gcs99v45ki445z8hW=s120-c-rp-mo-br100",
       "rating": 5,
@@ -17,8 +25,8 @@
       "publishTime": "2026-04-25T00:50:28.495360Z"
     },
     {
-      "author": "Virtanti Darmawan",
-      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLerkMXvQtaRLpTqmlZ0YSzGw1ZLHn6JeU3Lz_4mqVktjUDnQ=s120-c-rp-mo-br100",
+      "author": "A Google User",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/default-user=s120-c-br100",
       "rating": 5,
       "text": "The restaurant is nice... The food also nice, yummy, delicious ... The owner sooo nice \u2764\ufe0f\u2764\ufe0f",
       "relativeTime": "",
@@ -1258,5 +1266,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 169
+  "totalReviews": 170
 }
