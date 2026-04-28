@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "Bradyn Bischoff",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLQieccvCYgQgRJak_3U9UEKJEyWvVwETJqbC2ypqgLPfo0Vw=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Everything I\u2019ve had here is absolutely delicious. Everyone here is so kind and I\u2019ve been given so many free items. Coming here will leave you with a amazing experience and a full belly",
+      "relativeTime": "",
+      "publishTime": "2026-04-27T22:58:45.048703Z"
+    },
+    {
+      "author": "Erin Hill",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjVyXi-_nhDY4hLJ62Mjsy8sRKOndk1vTIoMrNSAcotUr10bf0xQ=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "The food is delicious and creative with excellent personal service",
+      "relativeTime": "",
+      "publishTime": "2026-04-27T23:00:13.516652Z"
+    },
+    {
       "author": "Kelly Joe",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocKfpaTUTErIVgtBOpee2aIsjp9xmVJNi553hEvvJwfJvIHStg=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1258,5 +1274,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 170
+  "totalReviews": 172
 }
