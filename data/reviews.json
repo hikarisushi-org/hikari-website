@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Amanda Payne-Zaugg",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUsV3dSe5WonLfVGZswNqjrR73qGHltAOSLs2Hr825_EtH8W_sx=s120-c-rp-mo-ba3-br100",
+      "rating": 5,
+      "text": "A very unique variety of rolls. It\u2019s our favorite place!",
+      "relativeTime": "",
+      "publishTime": "2026-04-28T23:27:36.774795Z"
+    },
+    {
       "author": "Bradyn Bischoff",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLQieccvCYgQgRJak_3U9UEKJEyWvVwETJqbC2ypqgLPfo0Vw=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1217,8 +1225,8 @@
       "publishTime": "2025-07-12T04:22:43.552534Z"
     },
     {
-      "author": "Anthony Barney",
-      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUDBodkj6e7_F44vhf8YR-Vc017sXCDDr4D43osJhT-IRStKwM=s120-c-rp-mo-ba3-br100",
+      "author": "A Google User",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/default-user=s120-c-br100",
       "rating": 5,
       "text": "Brand new sushi place in SoJo! So delicious and innovative. They have all the classics, but several of their own new creations as well. The fish was so fresh and flavorful! Freddy even gave us some REAL ground wasabi root! The difference between \"wasabi\" and wasabi was like the difference between watching fireworks on TV vs laying right underneath the show in real life! I will come back! With friends!",
       "relativeTime": "",
@@ -1274,5 +1282,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 172
+  "totalReviews": 173
 }
