@@ -1233,14 +1233,6 @@
       "publishTime": "2025-07-12T04:22:43.552534Z"
     },
     {
-      "author": "A Google User",
-      "profilePhoto": "https://lh3.googleusercontent.com/a/default-user=s120-c-br100",
-      "rating": 5,
-      "text": "Brand new sushi place in SoJo! So delicious and innovative. They have all the classics, but several of their own new creations as well. The fish was so fresh and flavorful! Freddy even gave us some REAL ground wasabi root! The difference between \"wasabi\" and wasabi was like the difference between watching fireworks on TV vs laying right underneath the show in real life! I will come back! With friends!",
-      "relativeTime": "",
-      "publishTime": "2025-07-12T00:32:34.309716Z"
-    },
-    {
       "author": "Wilson Rodriguez",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLb_Rss7zTPyoFA4-2C6hZsm1nSi76bqUmFvQx-JLERGOukXg=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1290,5 +1282,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 174
+  "totalReviews": 173
 }
