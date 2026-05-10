@@ -1,157 +1,567 @@
 // Page detection — My Picks, onboarding, and search are /menu only
 const isMenuPage = document.body.classList.contains('menu-page');
 
-// Complete Menu Data extracted from index.html
+// MENU-DATA:START
 const menuData = {
-  'most-ordered': {
-    title: 'Most Popular',
-    items: [
-      { name: 'Firefly Fusion', price: '$14.50', desc: 'Tempura shrimp, jalapeño, and cilantro. Topped with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.', img: 'assets/images/menu/sushi/firefly_fussion_2.png' },
-      { name: 'Citrus Mango Dream', price: '$14', desc: 'Tempura shrimp, crab mix, and cream cheese. Topped with fresh mango and lemon slices. Finished with mango sauce.', img: 'assets/images/menu/sushi/citrus_mango_dream.png' },
-      { name: 'Hot Cheetos Roll', price: '$12', desc: 'Crushed Hot Cheetos on rice with spicy crab, cream cheese, and cucumber. Finished with spicy mayo and eel sauce.', img: 'assets/images/menu/sushi/hot_cheetos.png' },
-      { name: 'Strawberry Blossom', price: '$14', desc: 'Kani crab, cream cheese, and cucumber. Topped with salmon, strawberries, mango sauce, crunchies, and sesame seeds.', img: 'assets/images/menu/sushi/strawberry_blossom.png' },
-      { name: 'Avocado King', price: '$12', desc: 'Shrimp tempura, cucumbers, and radish sprouts. Topped with avocado, eel sauce, and crunchies.', img: 'assets/images/menu/sushi/avocado_king.png' },
-      { name: 'Cowboy Roll', price: '$15', desc: 'Crab mix and asparagus inside. Topped with Wagyu beef, eel sauce, green onions, and sesame seeds.', img: 'assets/images/menu/sushi/cowboy_roll.png' },
+  "most-ordered": {
+    "title": "Most Popular",
+    "items": [
+      {
+        "name": "Citrus Mango Dream",
+        "price": "$14",
+        "desc": "Tempura shrimp, crab mix, and cream cheese. Topped with fresh mango and lemon slices. Finished with mango sauce.",
+        "img": "assets/images/menu/sushi/citrus_mango_dream.png"
+      },
+      {
+        "name": "Hot Cheetos Roll",
+        "price": "$12",
+        "desc": "Crushed Hot Cheetos on rice with spicy crab, cream cheese, and cucumber. Finished with spicy mayo and eel sauce.",
+        "img": "assets/images/menu/sushi/hot_cheetos.png"
+      },
+      {
+        "name": "Strawberry Blossom",
+        "price": "$14",
+        "desc": "Kani crab, cream cheese, and cucumber. Topped with salmon, strawberries, mango sauce, crunchies, and sesame seeds.",
+        "img": "assets/images/menu/sushi/strawberry_blossom.png"
+      },
+      {
+        "name": "Firefly Fusion",
+        "price": "$14.50",
+        "desc": "Tempura shrimp, jalapeño, and cilantro. Topped with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.",
+        "img": "assets/images/menu/sushi/firefly_fussion_2.png",
+        "raw": true
+      },
+      {
+        "name": "Avocado King",
+        "price": "$12",
+        "desc": "Shrimp tempura, cucumbers, and radish sprouts. Topped with avocado, eel sauce, and crunchies.",
+        "img": "assets/images/menu/sushi/avocado_king.png"
+      },
+      {
+        "name": "Cowboy Roll",
+        "price": "$15",
+        "desc": "Crab mix and asparagus inside. Topped with Wagyu beef, eel sauce, green onions, and sesame seeds.",
+        "img": "assets/images/menu/sushi/cowboy_roll.png"
+      }
     ]
   },
-  'appetizers': {
-    title: 'Appetizers',
-    items: [
-      { name: 'Sushi Nachos', price: '$10.50', desc: 'Crispy wonton chips topped with crab mix, spicy tuna, spicy mayo, eel sauce, tobiko, sesame seeds, and green onions.', img: 'assets/images/menu/appetizers/sushi_nachos.png', raw: true },
-      { name: 'Jalapeño Bomb (4 pcs)', price: '$8', desc: 'Spicy tuna and cream cheese. Topped with spicy mayo, eel sauce, tobiko, green onions, and sesame seeds.', img: 'assets/images/menu/appetizers/jalapeno_bomb.png', raw: true },
-      { name: 'Butterflied Garlic Shrimp', price: '$10', desc: '', img: 'assets/images/menu/appetizers/garlic_shrimp.png' },
-      { name: 'Edamame (steamed w/ salt)', price: '$5', desc: '', img: 'assets/images/menu/appetizers/edamame.png' },
-      { name: 'Miso Soup', price: '$3', desc: '', img: 'assets/images/menu/appetizers/miso.png' },
-      { name: 'Shrimp & Vegetable Tempura', price: '$10', desc: 'Lightly battered and fried shrimp served with assorted seasonal vegetables.', img: 'assets/images/menu/appetizers/shrimp_&_veggie_tempura.png' },
-      { name: 'Hikari Fire Crunch', price: '$8', desc: 'Two crispy mini wonton tostadas topped with spicy tuna in chili oil, fried garlic, sesame oil, sriracha, avocado, mango and cilantro.', img: 'assets/images/menu/sushi/hikari_crunch.png' },
+  "appetizers": {
+    "title": "Appetizers",
+    "items": [
+      {
+        "name": "Sushi Nachos",
+        "price": "$10.50",
+        "desc": "Crispy wonton chips topped with crab mix, spicy tuna, spicy mayo, eel sauce, tobiko, sesame seeds, and green onions.",
+        "img": "assets/images/menu/appetizers/sushi_nachos.png"
+      },
+      {
+        "name": "Jalapeño Bomb (4 pcs)",
+        "price": "$8",
+        "desc": "Spicy tuna and cream cheese. Topped with spicy mayo, eel sauce, tobiko, green onions, and sesame seeds.",
+        "img": "assets/images/menu/appetizers/jalapeno_bomb.png"
+      },
+      {
+        "name": "Butterflied Garlic Shrimp",
+        "price": "$10",
+        "desc": "",
+        "img": "assets/images/menu/appetizers/garlic_shrimp.png"
+      },
+      {
+        "name": "Edamame (steamed w/ salt)",
+        "price": "$5",
+        "desc": "",
+        "img": "assets/images/menu/appetizers/edamame.png"
+      },
+      {
+        "name": "Miso Soup",
+        "price": "$3",
+        "desc": "",
+        "img": "assets/images/menu/appetizers/miso.png"
+      },
+      {
+        "name": "Shrimp & Vegetable Tempura",
+        "price": "$10",
+        "desc": "Lightly battered and fried shrimp served with assorted seasonal vegetables.",
+        "img": "assets/images/menu/appetizers/shrimp_&_veggie_tempura.png"
+      },
+      {
+        "name": "Small Shrimp & Vegetable Tempura",
+        "price": "$6",
+        "desc": "Lightly battered and fried shrimp served with assorted seasonal vegetables.",
+        "img": "assets/images/menu/appetizers/small_shrimp_&_veggie_tempura.png"
+      },
+      {
+        "name": "Hikari Fire Crunch",
+        "price": "$8",
+        "desc": "Two crispy mini wonton tostadas topped with spicy tuna in chili oil, fried garlic, sesame oil, sriracha, avocado, mango and cilantro.",
+        "img": "assets/images/menu/sushi/hikari_crunch.png"
+      },
+      {
+        "name": "Crab Rangoons",
+        "price": "$8",
+        "desc": "",
+        "img": "assets/images/menu/appetizers/crab_rangoons.png"
+      },
+      {
+        "name": "Gyoza",
+        "price": "$8",
+        "desc": "",
+        "img": "assets/images/menu/appetizers/gyoza.png"
+      }
     ]
   },
-  'traditional-rolls': {
-    title: 'Traditional Rolls',
-    items: [
-      { name: 'Alaskan Roll', price: '$8', desc: 'Salmon, cucumber, and avocado.', raw: true },
-      { name: 'Classic California Roll', price: '$8', desc: 'Crab, cucumber, and avocado.', img: 'assets/images/menu/sushi/california_roll.png' },
-      { name: 'Philly Roll', price: '$8', desc: 'Smoked salmon, cream cheese, and avocado.', img: 'assets/images/menu/sushi/philly.png', raw: true },
-      { name: 'Shrimp Tempura Roll', price: '$8', desc: 'Tempura shrimp, cucumber, sprouts, and eel sauce.', img: 'assets/images/menu/sushi/tempura_shrimp_roll.png' },
-      { name: 'Spicy Hamachi Roll', price: '$8', desc: 'Spicy hamachi, sprouts, cucumber, and spicy mayo.', img: 'assets/images/menu/sushi/spicy_hamachi.jpg', raw: true },
-      { name: 'Spicy Salmon Roll', price: '$9', desc: 'Salmon, avocado, sprouts, and spicy mayo.', img: 'assets/images/menu/sushi/spicy_salmon.jpg', raw: true },
-      { name: 'Spicy Tuna Roll', price: '$9', desc: 'Spicy tuna mix, cucumber, avocado, radish sprouts, and spicy mayo.', img: 'assets/images/menu/sushi/spicy_tuna_roll.jpg', raw: true },
-      { name: 'Sweet Potato Roll', price: '$7.50', desc: 'Sweet potato and eel sauce.', img: 'assets/images/menu/sushi/sweet_potato_roll.png' },
-      { name: 'Unagi Maki Roll', price: '$9', desc: 'Broiled eel, avocado, and cucumber. Finished with eel sauce and sesame seeds.' },
-      { name: 'Veggie Roll', price: '$7.50', desc: 'Avocado, cucumber, asparagus, and red bell pepper.', img: 'assets/images/menu/sushi/veggie_roll.png' },
-      { name: 'Yaki Maguro', price: '$14', desc: 'Tempura shrimp and cucumber. Topped with seared tuna. Finished with spicy mayo, ponzu sauce, and togarashi.', img: 'assets/images/menu/sushi/yaki_maguro.png', raw: true },
+  "traditional-rolls": {
+    "title": "Traditional Rolls",
+    "items": [
+      {
+        "name": "Alaskan Roll",
+        "price": "$8",
+        "desc": "Salmon, cucumber, and avocado.",
+        "raw": true
+      },
+      {
+        "name": "Classic California Roll",
+        "price": "$8",
+        "desc": "Crab, cucumber, and avocado.",
+        "img": "assets/images/menu/sushi/california_roll.png"
+      },
+      {
+        "name": "Philly Roll",
+        "price": "$8",
+        "desc": "Smoked salmon, cream cheese, and avocado.",
+        "img": "assets/images/menu/sushi/philly.png",
+        "raw": true
+      },
+      {
+        "name": "Shrimp Tempura Roll",
+        "price": "$8",
+        "desc": "Tempura shrimp, cucumber, sprouts, and eel sauce.",
+        "img": "assets/images/menu/sushi/tempura_shrimp_roll.png"
+      },
+      {
+        "name": "Spicy Hamachi Roll",
+        "price": "$8",
+        "desc": "Spicy hamachi, sprouts, cucumber, and spicy mayo.",
+        "img": "assets/images/menu/sushi/spicy_hamachi.jpg",
+        "raw": true
+      },
+      {
+        "name": "Spicy Salmon Roll",
+        "price": "$9",
+        "desc": "Salmon, avocado, sprouts, and spicy mayo.",
+        "img": "assets/images/menu/sushi/spicy_salmon.jpg",
+        "raw": true
+      },
+      {
+        "name": "Spicy Tuna Roll",
+        "price": "$9",
+        "desc": "Spicy tuna mix, cucumber, avocado, radish sprouts, and spicy mayo.",
+        "img": "assets/images/menu/sushi/spicy_tuna_roll.jpg",
+        "raw": true
+      },
+      {
+        "name": "Sweet Potato Roll",
+        "price": "$7.50",
+        "desc": "Sweet potato and eel sauce.",
+        "img": "assets/images/menu/sushi/sweet_potato_roll.png"
+      },
+      {
+        "name": "Unagi Maki Roll",
+        "price": "$9",
+        "desc": "Broiled eel, avocado, and cucumber. Finished with eel sauce and sesame seeds."
+      },
+      {
+        "name": "Veggie Roll",
+        "price": "$7.50",
+        "desc": "Avocado, cucumber, asparagus, and red bell pepper.",
+        "img": "assets/images/menu/sushi/veggie_roll.png"
+      },
+      {
+        "name": "Yaki Maguro",
+        "price": "$14",
+        "desc": "Tempura shrimp and cucumber. Topped with seared tuna. Finished with spicy mayo, ponzu sauce, and togarashi.",
+        "img": "assets/images/menu/sushi/yaki_maguro.png",
+        "raw": true
+      }
     ]
   },
-  'premium-rolls': {
-    title: 'Premium Rolls',
-    items: [
-      { name: 'Citrus Mango Dream', price: '$14', desc: 'Tempura shrimp, crab mix, and cream cheese. Topped with fresh mango and lemon slices. Finished with mango sauce.', img: 'assets/images/menu/sushi/citrus_mango_dream.png' },
-      { name: 'Emerald Dragon Roll', price: '$14', desc: 'Tempura shrimp, crab mix, and cucumber. Topped with eel and avocado. Finished with wasabi mayo, eel sauce, and sesame seeds.', img: 'assets/images/menu/sushi/emerald_dragon.png' },
-      { name: 'Hikari Delight Roll', price: '$14.50', desc: 'Salmon, mango, spicy mayo, and jalapeño. Topped with hamachi. Finished with ponzu sauce, crunchies, and green onions.', img: 'assets/images/menu/sushi/hikari_delight.png', raw: true },
-      { name: 'Salmon Sunrise Roll', price: '$13', desc: 'Crab mix, grilled asparagus, and avocado. Topped with salmon and lemon slices. Finished with ponzu sauce.', img: 'assets/images/menu/sushi/salmon_sunrise.png', raw: true },
-      { name: 'Solar Flare Roll', price: '$14.50', desc: 'Spicy salmon, jalapeño, and cucumber. Topped with hamachi and ebi. Finished with macha sauce and green onions.', img: 'assets/images/menu/sushi/solar_flare.png', raw: true, peanuts: true },
-      { name: 'Hot Cheetos Roll', price: '$12', desc: 'Crushed Hot Cheetos on rice with spicy crab, cream cheese, and cucumber. Finished with spicy mayo and eel sauce.', img: 'assets/images/menu/sushi/hot_cheetos.png' },
-      { name: 'Playboy', price: '$12', desc: 'Shrimp tempura, crab mix, and cream cheese. Topped with tuna and avocado. Finished with spicy mayo, eel sauce, tobiko, and sesame seeds.', img: 'assets/images/menu/sushi/playboy.png', raw: true },
-      { name: 'Lava Volcano Roll', price: '$12', desc: 'Broiled eel, crab mix, and avocado. Baked with spicy mayo. Finished with eel sauce, tobiko, and green onions.', raw: true },
-      { name: 'Illuminated Fire Tuna', price: '$14', desc: 'Tuna, mango, and jalapeño. Topped with spicy tuna and lime slices. Finished with garlic ponzu, Thai chiles, and green onions.', img: 'assets/images/menu/sushi/illuminated_fire_tuna.png', raw: true },
-      { name: 'Mt Fuji Roll', price: '$14.50', desc: 'Albacore, avocado, and cucumber. Topped with ebi and crab mix. Finished with eel sauce, crunch flakes, and green onions.', img: 'assets/images/menu/sushi/mt_fuji.png', raw: true },
-      { name: 'Strawberry Blossom', price: '$14', desc: 'Kani crab, cream cheese, and cucumber. Topped with salmon, strawberries, mango sauce, crunchies, and sesame seeds.', img: 'assets/images/menu/sushi/strawberry_blossom.png' },
-      { name: 'Diamond Roll', price: '$14.50', desc: 'Fresh tuna, spicy crab, and cilantro. Finished with Kampachi, lime slices, jalapeño slices, garlic ponzu, and tobiko.', img: 'assets/images/menu/sushi/diamond.png' },
-      { name: 'The Forbidden Roll', price: '$13.50', desc: 'Crab mix, apple, and red bell peppers. Topped with cream cheese, fried banana, eel sauce, and lemon zest.', img: 'assets/images/menu/sushi/forbidden_roll.png' },
-      { name: 'Firefly Fusion', price: '$14.50', desc: 'Tempura shrimp, jalapeño, and cilantro. Topped with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.', img: 'assets/images/menu/sushi/firefly_fussion_2.png' },
-      { name: 'Red Lantern', price: '$13.50', desc: 'Shrimp tempura, seaweed salad, and red bell peppers. Topped with tuna. Finished with spicy mayo, eel sauce, sriracha, and crunchies.', img: 'assets/images/menu/sushi/red_lantern.png' },
-      { name: 'Avocado King', price: '$12', desc: 'Shrimp tempura, cucumbers, and radish sprouts. Topped with avocado, eel sauce, and crunchies.', img: 'assets/images/menu/sushi/avocado_king.png' },
-      { name: 'Cowboy Roll', price: '$15', desc: 'Crab mix and asparagus inside. Topped with Wagyu beef, eel sauce, green onions, and sesame seeds.', img: 'assets/images/menu/sushi/cowboy_roll.png' },
-      { name: 'Yaki Maguro Roll', price: '$14', desc: 'Tempura shrimp and cucumber. Topped with seared tuna. Finished with spicy mayo, ponzu sauce, and togarashi.', img: 'assets/images/menu/sushi/yaki_maguro.png', raw: true },
+  "premium-rolls": {
+    "title": "Premium Rolls",
+    "items": [
+      {
+        "name": "Citrus Mango Dream",
+        "price": "$14",
+        "desc": "Tempura shrimp, crab mix, and cream cheese. Topped with fresh mango and lemon slices. Finished with mango sauce.",
+        "img": "assets/images/menu/sushi/citrus_mango_dream.png"
+      },
+      {
+        "name": "Emerald Dragon Roll",
+        "price": "$14",
+        "desc": "Tempura shrimp, crab mix, and cucumber. Topped with eel and avocado. Finished with wasabi mayo, eel sauce, and sesame seeds.",
+        "img": "assets/images/menu/sushi/emerald_dragon.png"
+      },
+      {
+        "name": "Hikari Delight Roll",
+        "price": "$14.50",
+        "desc": "Salmon, mango, spicy mayo, and jalapeño. Topped with hamachi. Finished with ponzu sauce, crunchies, and green onions.",
+        "img": "assets/images/menu/sushi/hikari_delight.png",
+        "raw": true
+      },
+      {
+        "name": "Salmon Sunrise Roll",
+        "price": "$13",
+        "desc": "Crab mix, grilled asparagus, and avocado. Topped with salmon and lemon slices. Finished with ponzu sauce.",
+        "img": "assets/images/menu/sushi/salmon_sunrise.png",
+        "raw": true
+      },
+      {
+        "name": "Solar Flare Roll",
+        "price": "$14.50",
+        "desc": "Spicy salmon, jalapeño, and cucumber. Topped with hamachi and ebi. Finished with macha sauce and green onions.",
+        "img": "assets/images/menu/sushi/solar_flare.png",
+        "raw": true,
+        "peanuts": true
+      },
+      {
+        "name": "Hot Cheetos Roll",
+        "price": "$12",
+        "desc": "Crushed Hot Cheetos on rice with spicy crab, cream cheese, and cucumber. Finished with spicy mayo and eel sauce.",
+        "img": "assets/images/menu/sushi/hot_cheetos.png"
+      },
+      {
+        "name": "Playboy",
+        "price": "$12",
+        "desc": "Shrimp tempura, crab mix, and cream cheese. Topped with tuna and avocado. Finished with spicy mayo, eel sauce, tobiko, and sesame seeds.",
+        "img": "assets/images/menu/sushi/playboy.png",
+        "raw": true
+      },
+      {
+        "name": "Lava Volcano Roll",
+        "price": "$12",
+        "desc": "Broiled eel, crab mix, and avocado. Baked with spicy mayo. Finished with eel sauce, tobiko, and green onions.",
+        "raw": true
+      },
+      {
+        "name": "Illuminated Fire Tuna",
+        "price": "$14",
+        "desc": "Tuna, mango, and jalapeño. Topped with spicy tuna and lime slices. Finished with garlic ponzu, Thai chiles, and green onions.",
+        "img": "assets/images/menu/sushi/illuminated_fire_tuna.png",
+        "raw": true
+      },
+      {
+        "name": "Mt Fuji Roll",
+        "price": "$14.50",
+        "desc": "Albacore, avocado, and cucumber. Topped with ebi and crab mix. Finished with eel sauce, crunch flakes, and green onions.",
+        "img": "assets/images/menu/sushi/mt_fuji.png",
+        "raw": true
+      },
+      {
+        "name": "Strawberry Blossom",
+        "price": "$14",
+        "desc": "Kani crab, cream cheese, and cucumber. Topped with salmon, strawberries, mango sauce, crunchies, and sesame seeds.",
+        "img": "assets/images/menu/sushi/strawberry_blossom.png"
+      },
+      {
+        "name": "Diamond Roll",
+        "price": "$14.50",
+        "desc": "Fresh tuna, spicy crab, and cilantro. Finished with Kampachi, lime slices, jalapeño slices, garlic ponzu, and tobiko.",
+        "img": "assets/images/menu/sushi/diamond.png"
+      },
+      {
+        "name": "The Forbidden Roll",
+        "price": "$13.50",
+        "desc": "Crab mix, apple, and red bell peppers. Topped with cream cheese, fried banana, eel sauce, and lemon zest.",
+        "img": "assets/images/menu/sushi/forbidden_roll.png"
+      },
+      {
+        "name": "Firefly Fusion",
+        "price": "$14.50",
+        "desc": "Tempura shrimp, jalapeño, and cilantro. Topped with tuna and lime slices. Finished with eel sauce, mango sauce, tobiko, and cilantro.",
+        "img": "assets/images/menu/sushi/firefly_fussion_2.png",
+        "raw": true
+      },
+      {
+        "name": "Red Lantern",
+        "price": "$13.50",
+        "desc": "Shrimp tempura, seaweed salad, and red bell peppers. Topped with tuna. Finished with spicy mayo, eel sauce, sriracha, and crunchies.",
+        "img": "assets/images/menu/sushi/red_lantern.png",
+        "raw": true
+      },
+      {
+        "name": "Avocado King",
+        "price": "$12",
+        "desc": "Shrimp tempura, cucumbers, and radish sprouts. Topped with avocado, eel sauce, and crunchies.",
+        "img": "assets/images/menu/sushi/avocado_king.png"
+      },
+      {
+        "name": "Cowboy Roll",
+        "price": "$15",
+        "desc": "Crab mix and asparagus inside. Topped with Wagyu beef, eel sauce, green onions, and sesame seeds.",
+        "img": "assets/images/menu/sushi/cowboy_roll.png"
+      },
+      {
+        "name": "Yaki Maguro Roll",
+        "price": "$14",
+        "desc": "Tempura shrimp and cucumber. Topped with seared tuna. Finished with spicy mayo, ponzu sauce, and togarashi.",
+        "img": "assets/images/menu/sushi/yaki_maguro.png",
+        "raw": true
+      },
+      {
+        "name": "Rainbow Roll",
+        "price": "$14",
+        "desc": "Crab mix, avocado, and cucumber. Topped with hamachi, mango, tuna, ebi, and ponzu sauce.",
+        "img": "assets/images/menu/sushi/rainbow.png",
+        "raw": true
+      }
     ]
   },
-  'heroes': {
-    title: 'Heroes',
-    items: [
-      { name: 'Naruto Roll', price: '$14.50', desc: 'Seared tuna, shishito pepper, and lemon slices. Topped with ebi and fresh mango. Finished with eel sauce and crispy fried onions. A vibrant mix with unexpected punch — believe it!', img: 'assets/images/menu/sushi/naruto.png', raw: true },
+  "heroes": {
+    "title": "Heroes",
+    "items": [
+      {
+        "name": "Naruto Roll",
+        "price": "$14.50",
+        "desc": "Seared tuna, shishito pepper, and lemon slices. Topped with ebi and fresh mango. Finished with eel sauce and crispy fried onions. A vibrant mix with unexpected punch — believe it!",
+        "img": "assets/images/menu/sushi/naruto.png",
+        "raw": true
+      }
     ]
   },
-  'tempura-fried': {
-    title: 'Tempura Fried',
-    items: [
-      { name: 'Cali Mex Roll', price: '$10', desc: 'Crab, avocado, and cucumber. Topped with spicy mayo, eel sauce, tobiko, cilantro, and sesame seeds.', img: 'assets/images/menu/sushi/calimex.png', raw: true },
-      { name: 'Fire Spicy Tuna Roll', price: '$10', desc: 'Spicy tuna mix, cucumber, and jalapeño. Topped with eel sauce, sriracha sauce, green onions, and sesame seeds.', img: 'assets/images/menu/sushi/fire_spicy_tuna.png', raw: true },
-      { name: 'Las Vegas Roll', price: '$12', desc: 'Salmon, crab mix, and cream cheese. Topped with spicy mayo and eel sauce.', img: 'assets/images/menu/sushi/las_vegas.png', raw: true },
-      { name: 'Monument Roll', price: '$10', desc: 'Hamachi, salmon, tuna, ebi, and avocado. Topped with eel sauce, green onions, and sesame seeds.', img: 'assets/images/menu/sushi/monument.png', raw: true },
+  "tempura-fried": {
+    "title": "Tempura Fried",
+    "items": [
+      {
+        "name": "Cali Mex Roll",
+        "price": "$10",
+        "desc": "Crab, avocado, and cucumber. Topped with spicy mayo, eel sauce, tobiko, cilantro, and sesame seeds.",
+        "img": "assets/images/menu/sushi/calimex.png",
+        "raw": true
+      },
+      {
+        "name": "Fire Spicy Tuna Roll",
+        "price": "$10",
+        "desc": "Spicy tuna mix, cucumber, and jalapeño. Topped with eel sauce, sriracha sauce, green onions, and sesame seeds.",
+        "img": "assets/images/menu/sushi/fire_spicy_tuna.png",
+        "raw": true
+      },
+      {
+        "name": "Las Vegas Roll",
+        "price": "$12",
+        "desc": "Salmon, crab mix, and cream cheese. Topped with spicy mayo and eel sauce.",
+        "img": "assets/images/menu/sushi/las_vegas.png",
+        "raw": true
+      },
+      {
+        "name": "Monument Roll",
+        "price": "$10",
+        "desc": "Hamachi, salmon, tuna, ebi, and avocado. Topped with eel sauce, green onions, and sesame seeds.",
+        "img": "assets/images/menu/sushi/monument.png",
+        "raw": true
+      }
     ]
   },
-  'maki': {
-    title: 'Maki',
-    note: '(6 pcs)',
-    heroImage: 'assets/images/menu/sushi/maki.png',
-    compactList: true,
-    items: [
-      { name: 'Avocado Maki', price: '$4', desc: '' },
-      { name: 'Hamachi Maki', price: '$5', desc: 'Yellowtail and sushi rice, wrapped in crisp nori. A clean, buttery finish.', raw: true },
-      { name: 'Kappa Maki', price: '$5', desc: 'Thin cucumber and sushi rice, rolled in seaweed. A light, refreshing bite.' },
-      { name: 'Negihama', price: '$5', desc: 'Yellowtail and scallions, wrapped in nori with rice. Fresh and bold with a gentle onion kick.', raw: true },
-      { name: 'Sake Maki', price: '$5', desc: 'Salmon and sushi rice, wrapped in nori. Smooth, simple, and classic.', raw: true },
-      { name: 'Tekka Maki', price: '$5', desc: 'Lean tuna and sushi rice, rolled in nori. Clean, umami-packed hosomaki.', raw: true },
+  "maki": {
+    "title": "Maki",
+    "note": "(6 pcs)",
+    "heroImage": "assets/images/menu/sushi/maki.png",
+    "compactList": true,
+    "items": [
+      {
+        "name": "Avocado Maki",
+        "price": "$4",
+        "desc": ""
+      },
+      {
+        "name": "Hamachi Maki",
+        "price": "$5",
+        "desc": "Yellowtail and sushi rice, wrapped in crisp nori. A clean, buttery finish.",
+        "raw": true
+      },
+      {
+        "name": "Kappa Maki",
+        "price": "$5",
+        "desc": "Thin cucumber and sushi rice, rolled in seaweed. A light, refreshing bite."
+      },
+      {
+        "name": "Negihama",
+        "price": "$5",
+        "desc": "Yellowtail and scallions, wrapped in nori with rice. Fresh and bold with a gentle onion kick.",
+        "raw": true
+      },
+      {
+        "name": "Sake Maki",
+        "price": "$5",
+        "desc": "Salmon and sushi rice, wrapped in nori. Smooth, simple, and classic.",
+        "raw": true
+      },
+      {
+        "name": "Tekka Maki",
+        "price": "$5",
+        "desc": "Lean tuna and sushi rice, rolled in nori. Clean, umami-packed hosomaki.",
+        "raw": true
+      }
     ]
   },
-  'nigiri': {
-    title: 'Nigiri',
-    note: '(2 pcs)',
-    heroImage: 'assets/images/menu/sushi/nigiri.png',
-    compactList: true,
-    items: [
-      { name: 'Albacore Nigiri', price: '$5', desc: 'Albacore tuna over seasoned sushi rice. Finished with a touch of ponzu.', raw: true },
-      { name: 'Ebi Nigiri', price: '$5', desc: 'Butterflied shrimp placed over sushi rice. Lightly sweet and chilled.' },
-      { name: 'Eel Nigiri', price: '$5', desc: 'Grilled eel served over warm rice. Finished with house-made eel sauce.' },
-      { name: 'Kampachi Nigiri', price: '$5', desc: 'Amberjack on seasoned sushi rice. Clean, buttery flavor with a firm bite.', raw: true },
-      { name: 'Salmon Nigiri', price: '$5', desc: 'Fresh salmon over vinegared rice. Smooth, rich, and silky.', raw: true },
-      { name: 'Tuna Nigiri', price: '$5', desc: 'Lean tuna on hand-formed sushi rice. Classic, clean, and savory.', raw: true },
-      { name: 'Yellowtail Nigiri', price: '$5', desc: 'Yellowtail over sushi rice. Mild, slightly sweet, with a delicate finish.', raw: true },
+  "nigiri": {
+    "title": "Nigiri",
+    "note": "(2 pcs)",
+    "heroImage": "assets/images/menu/sushi/nigiri.png",
+    "compactList": true,
+    "items": [
+      {
+        "name": "Albacore Nigiri",
+        "price": "$5",
+        "desc": "Albacore tuna over seasoned sushi rice. Finished with a touch of ponzu.",
+        "raw": true
+      },
+      {
+        "name": "Ebi Nigiri",
+        "price": "$5",
+        "desc": "Butterflied shrimp placed over sushi rice. Lightly sweet and chilled."
+      },
+      {
+        "name": "Eel Nigiri",
+        "price": "$5",
+        "desc": "Grilled eel served over warm rice. Finished with house-made eel sauce."
+      },
+      {
+        "name": "Kampachi Nigiri",
+        "price": "$5",
+        "desc": "Amberjack on seasoned sushi rice. Clean, buttery flavor with a firm bite.",
+        "raw": true
+      },
+      {
+        "name": "Salmon Nigiri",
+        "price": "$5",
+        "desc": "Fresh salmon over vinegared rice. Smooth, rich, and silky.",
+        "raw": true
+      },
+      {
+        "name": "Tuna Nigiri",
+        "price": "$5",
+        "desc": "Lean tuna on hand-formed sushi rice. Classic, clean, and savory.",
+        "raw": true
+      },
+      {
+        "name": "Yellowtail Nigiri",
+        "price": "$5",
+        "desc": "Yellowtail over sushi rice. Mild, slightly sweet, with a delicate finish.",
+        "raw": true
+      }
     ]
   },
-  'sashimi': {
-    title: 'Sashimi',
-    note: '(3 pcs)',
-    heroImage: 'assets/images/menu/sushi/sashimi_new.png',
-    compactList: true,
-    items: [
-      { name: 'Albacore Sashimi', price: '$5', desc: 'Lightly seared albacore tuna, served over crisp daikon. Accompanied by ponzu sauce.', raw: true },
-      { name: 'Ebi Sashimi', price: '$5', desc: 'Chilled shrimp, delicately sliced. Served with soy sauce and wasabi.' },
-      { name: 'Eel Sashimi', price: '$5', desc: 'Tender broiled eel, rich and silky. Finished with house-made eel sauce.' },
-      { name: 'Kampachi Sashimi', price: '$5', desc: 'Fresh kampachi (amberjack), clean and buttery. Served with a hint of lemon.', raw: true },
-      { name: 'Salmon Sashimi', price: '$5', desc: 'Premium salmon, smooth and luscious. Accompanied by soy sauce and wasabi.', raw: true },
-      { name: 'Tuna Sashimi', price: '$5', desc: 'Lean tuna, vibrant and meaty. Served with traditional soy and wasabi.', raw: true },
-      { name: 'Yellowtail Sashimi', price: '$5', desc: 'Yellowtail (hamachi), firm and mildly sweet. Finished with yuzu ponzu.', raw: true },
+  "sashimi": {
+    "title": "Sashimi",
+    "note": "(3 pcs)",
+    "heroImage": "assets/images/menu/sushi/sashimi_new.png",
+    "compactList": true,
+    "items": [
+      {
+        "name": "Albacore Sashimi",
+        "price": "$5",
+        "desc": "Lightly seared albacore tuna, served over crisp daikon. Accompanied by ponzu sauce.",
+        "raw": true
+      },
+      {
+        "name": "Ebi Sashimi",
+        "price": "$5",
+        "desc": "Chilled shrimp, delicately sliced. Served with soy sauce and wasabi."
+      },
+      {
+        "name": "Eel Sashimi",
+        "price": "$5",
+        "desc": "Tender broiled eel, rich and silky. Finished with house-made eel sauce."
+      },
+      {
+        "name": "Kampachi Sashimi",
+        "price": "$5",
+        "desc": "Fresh kampachi (amberjack), clean and buttery. Served with a hint of lemon.",
+        "raw": true
+      },
+      {
+        "name": "Salmon Sashimi",
+        "price": "$5",
+        "desc": "Premium salmon, smooth and luscious. Accompanied by soy sauce and wasabi.",
+        "raw": true
+      },
+      {
+        "name": "Tuna Sashimi",
+        "price": "$5",
+        "desc": "Lean tuna, vibrant and meaty. Served with traditional soy and wasabi.",
+        "raw": true
+      },
+      {
+        "name": "Yellowtail Sashimi",
+        "price": "$5",
+        "desc": "Yellowtail (hamachi), firm and mildly sweet. Finished with yuzu ponzu.",
+        "raw": true
+      }
     ]
   },
-  'entrees': {
-    title: 'Bowls',
-    items: [
-      { name: 'Poke Bowl', price: '$9', desc: 'Cubed raw fish tossed with savory sauces over rice, topped with avocado, seaweed, and crunchy toppings.', img: 'assets/images/menu/bowls/poke_bowl.png', raw: true },
-      { name: 'Chirashi Bowl', price: '$12', desc: 'An assorted selection of sashimi over seasoned sushi rice, served with fresh vegetables and garnish.', img: 'assets/images/menu/bowls/chirashi_bowl.png', raw: true },
+  "entrees": {
+    "title": "Bowls",
+    "items": [
+      {
+        "name": "Poke Bowl",
+        "price": "$9",
+        "desc": "Cubed raw fish tossed with savory sauces over rice, topped with avocado, seaweed, and crunchy toppings.",
+        "img": "assets/images/menu/bowls/poke_bowl.png",
+        "raw": true
+      },
+      {
+        "name": "Chirashi Bowl",
+        "price": "$12",
+        "desc": "An assorted selection of sashimi over seasoned sushi rice, served with fresh vegetables and garnish.",
+        "img": "assets/images/menu/bowls/chirashi_bowl.png",
+        "raw": true
+      }
     ]
   },
-  'bento': {
-    title: 'Bento Boxes',
-    items: [
-      { name: 'Crispy Chicken Bento Box', price: '$15', desc: '', img: 'assets/images/menu/food/bento_katsu.png' },
-      { name: 'Salmon Bento Box', price: '$16', desc: '', img: 'assets/images/menu/food/bento_salmon.png' },
+  "bento": {
+    "title": "Bento Boxes",
+    "items": [
+      {
+        "name": "Crispy Chicken Bento Box",
+        "price": "$15",
+        "desc": "",
+        "img": "assets/images/menu/food/bento_katsu.png"
+      },
+      {
+        "name": "Salmon Bento Box",
+        "price": "$16",
+        "desc": "",
+        "img": "assets/images/menu/food/bento_salmon.png"
+      }
     ]
   },
-  'kids': {
-    title: 'Kids',
-    items: [
-      { name: 'Chicken Fingers & Fries', price: '$7', desc: '', img: 'assets/images/menu/food/popcorn_chicken.png' },
+  "kids": {
+    "title": "Kids",
+    "items": [
+      {
+        "name": "Chicken Fingers & Fries",
+        "price": "$7",
+        "desc": "",
+        "img": "assets/images/menu/food/popcorn_chicken.png"
+      }
     ]
   },
-  'beverages': {
-    title: 'Beverages',
-    items: [
-      { name: 'Coke (12oz can)', price: '$2.50', desc: '' },
-      { name: 'Sprite (12oz can)', price: '$2.50', desc: '' },
+  "beverages": {
+    "title": "Beverages",
+    "items": [
+      {
+        "name": "Coke (12oz can)",
+        "price": "$2.50",
+        "desc": ""
+      },
+      {
+        "name": "Sprite (12oz can)",
+        "price": "$2.50",
+        "desc": ""
+      }
     ]
   }
 };
+// MENU-DATA:END
 
 // State
 let currentFilter = 'all';
