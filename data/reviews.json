@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "M Bennett",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocL8IGpfVcIzLJWuXCAwpKswPXiXsx-6UOMpmspxFq1R2MJJmA=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Would highly recommend this sushi restaurant. Very friendly ownership who cares about the customer experience.  Felt like we made friends in 60 minutes.  Will definitely visit again!",
+      "relativeTime": "",
+      "publishTime": "2026-05-09T23:41:12.682992Z"
+    },
+    {
+      "author": "Paula Bennett",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocI4udg2XbjAOwAn4E83jvhkSby1LpPUE2WoIbcjml82Ufug=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Delicious, fresh, beautiful presentation, wonderful service! First time here and will for sure come back!",
+      "relativeTime": "",
+      "publishTime": "2026-05-09T23:40:28.468806Z"
+    },
+    {
       "author": "Sara Garduno",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLOqC0y_vstNkq-PzdwMqwz8atKoby2H1ArmlNRq3WQir2PS_nF=s120-c-rp-mo-ba3-br100",
       "rating": 5,
@@ -1290,5 +1306,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 174
+  "totalReviews": 176
 }
