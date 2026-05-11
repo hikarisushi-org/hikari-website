@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Jake Olofson",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLUWZepzHwWuDh1zXCX79jjRRKJi8XGwvvTdFEBHMoFtp0Lgp0=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "This sushi spot is outwardly inconspicuous and superb. Came in on Mother\u2019s Day and they gave my mother a rose and a complimentary drink. We ordered 5 rolls and two appetizers, and crushed them all. Inside you may not be blown away by decor but don\u2019t let that fool you. The quality is another level, from the handmade rolls to down to utensils. With genuinely rich and flavorful high quality soy sauce and ginger. The staff were quick and very kind. I recommend the jalape\u00f1o bombs, the cowboy roll, and the firefly roll! This small restaurant is worth going to again and often!",
+      "relativeTime": "",
+      "publishTime": "2026-05-11T01:18:41.095852Z"
+    },
+    {
       "author": "M Bennett",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocL8IGpfVcIzLJWuXCAwpKswPXiXsx-6UOMpmspxFq1R2MJJmA=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1306,5 +1314,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 176
+  "totalReviews": 177
 }
