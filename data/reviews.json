@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Selene Beltran",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjXhbxUoXwzFjY4poK2GO25Rbgt7IewEle147XXxP3J3M3L2RLL9iA=s120-c-rp-mo-ba4-br100",
+      "rating": 5,
+      "text": "Great local sushi! Food & service is awesome! Owner was awesome!\nWe'll be back for sure!",
+      "relativeTime": "",
+      "publishTime": "2026-05-16T22:18:20.221182Z"
+    },
+    {
       "author": "Haley Park",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWt0mES0dXVBQgqNwzxj7jPhaIPBfj_X3UdBvDZ9zIhrpCFp6YG=s120-c-rp-mo-ba3-br100",
       "rating": 5,
@@ -1322,5 +1330,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 179
+  "totalReviews": 180
 }
