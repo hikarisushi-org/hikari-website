@@ -499,6 +499,11 @@
   font-size: 14px;
 }
 
+.menu-footer .menu-footer-hours {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
 .menu-footer a {
   color: var(--color-white);
   text-decoration: none;
