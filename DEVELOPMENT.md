@@ -9,10 +9,11 @@ Complete guide for developing, maintaining, and deploying the Hikari Sushi websi
 1. [Theme System](#theme-system)
 2. [Deployment](#deployment)
 3. [Menu Management](#menu-management)
-4. [Google Reviews](#google-reviews)
-5. [Mobile Optimization](#mobile-optimization)
-6. [Asset Management](#asset-management)
-7. [Planned Features](#planned-features)
+4. [Hours and Holiday Messaging](#hours-and-holiday-messaging)
+5. [Google Reviews](#google-reviews)
+6. [Mobile Optimization](#mobile-optimization)
+7. [Asset Management](#asset-management)
+8. [Planned Features](#planned-features)
 
 ---
 
@@ -119,6 +120,20 @@ The theme loader resolves which theme to apply using this priority:
 | `floatingElements.interval` | Milliseconds between spawning new elements |
 | `rules.allowManualOverride` | Whether `?theme=<id>` query param can activate this theme |
 
+### Holiday Hours Guardrail
+
+Seasonal themes should not imply the restaurant is open outside regular hours. Avoid copy such as "We're open today", "special holiday hours", or "come in this Sunday" unless ownership has explicitly confirmed that day's hours.
+
+Sunday holidays need extra care because the restaurant is normally closed Sundays. This includes Mother's Day, Father's Day, Easter, Super Bowl Sunday, and any other Sunday event.
+
+Use neutral theme copy by default:
+
+- "Celebrate with fresh sushi and handcrafted rolls."
+- "Regular hours apply."
+- "Check our current hours before visiting."
+
+Do not add a Sunday `openingHoursSpecification` entry or update Schema.org hours unless special Sunday hours are confirmed.
+
 ### Creating a New Theme
 
 1. Create `themes/<id>.json` using the structure above
@@ -189,7 +204,7 @@ git push origin main
 
 3. **Live in ~30 seconds**
    - Site updates at `hikarisojo.com`
-   - Cloudflare CDN cache invalidates
+   - Netlify serves the production site
 
 ### Manual Deploy (Netlify Dashboard)
 
@@ -207,8 +222,62 @@ Set in Netlify Dashboard → Site Settings → Environment Variables:
 ### Domain Configuration
 
 - **Registrar**: Porkbun
-- **DNS**: Cloudflare (proxied through Netlify)
+- **DNS**: Cloudflare DNS only for web records
 - **SSL**: Automatic via Netlify (Let's Encrypt)
+
+Current public web records:
+
+| Host | Type | Target | Cloudflare proxy |
+|------|------|--------|------------------|
+| `hikarisojo.com` / `@` | `A` | `75.2.60.5` | DNS only |
+| `www` | `CNAME` | `hikarisojo.netlify.app` | DNS only |
+
+Netlify certificate:
+
+- Provider: Let's Encrypt
+- Domains: `hikarisojo.com`, `www.hikarisojo.com`
+
+### Cloudflare 525 Troubleshooting
+
+On May 19, 2026, the live site showed `SSL handshake failed`, Cloudflare error `525`, for some visitors.
+
+What it meant:
+
+- Browser traffic reached Cloudflare.
+- Cloudflare tried to connect to Netlify over HTTPS.
+- The Cloudflare-to-Netlify TLS handshake failed.
+- The website code was not the cause.
+
+What was found:
+
+- Netlify had HTTPS enabled with a valid Let's Encrypt certificate for both `hikarisojo.com` and `www.hikarisojo.com`.
+- Cloudflare was proxying both the apex and `www` records with orange-cloud status.
+- After bypassing the proxy, requests returned `HTTP/2 200` directly from Netlify.
+
+Fix applied:
+
+1. In Cloudflare SSL/TLS Overview, set encryption mode to `Full (strict)`.
+2. In Cloudflare DNS, set the apex `A` record for `hikarisojo.com` pointing to `75.2.60.5` to DNS only.
+3. In Cloudflare DNS, set the `www` CNAME pointing to `hikarisojo.netlify.app` to DNS only.
+4. Verified DNS and HTTPS:
+   - `dig +short hikarisojo.com` -> `75.2.60.5`
+   - `dig +short www.hikarisojo.com` -> `hikarisojo.netlify.app`
+   - `curl -L -I https://hikarisojo.com` -> `HTTP/2 200`, `server: Netlify`
+   - `curl -L -I https://www.hikarisojo.com` -> `301` to apex, then `HTTP/2 200`
+
+Why it can happen without code changes:
+
+- Cloudflare-to-origin TLS depends on Cloudflare edge routing, SNI, origin certificate handling, and Netlify edge behavior.
+- Netlify or Cloudflare can rotate certificates or edge infrastructure.
+- A proxied Netlify target may work for a while and then fail if origin routing or certificate expectations change.
+
+Next time:
+
+- Do not start by editing site files.
+- Check Netlify Domain management -> HTTPS certificate status.
+- Check Cloudflare DNS records and proxy status.
+- Temporarily gray-cloud the web records to confirm direct Netlify HTTPS works.
+- Only renew the Netlify certificate if the Netlify dashboard reports a certificate/domain mismatch.
 
 ---
 
@@ -263,6 +332,43 @@ Prices are synced with DoorDash. To update:
 - Upload to Cloudinary for CDN delivery (recommended)
 - Reference Google Drive directly
 - Keep text-only menu
+
+---
+
+## Hours and Holiday Messaging
+
+### Current Public Hours
+
+These hours are the source of truth for website copy, metadata, structured data, and promotional content:
+
+| Day | Hours |
+|-----|-------|
+| Monday | 4:30 PM - 9:00 PM |
+| Tuesday-Friday | 11:00 AM - 3:00 PM; 4:30 PM - 9:00 PM |
+| Saturday | 11:00 AM - 9:00 PM |
+| Sunday | Closed |
+
+### Where Hours Appear
+
+- `index.html`: visible Visit section and Schema.org `openingHoursSpecification`
+- `index.html`: meta description and footer note
+- `menu.html`: footer note
+- `lunch-specials.html`: lunch availability and footer note
+- `sitemap.xml`: update `lastmod` when public-facing hours content changes
+
+### Sunday and Holiday Rules
+
+The restaurant is closed Sundays by default. Do not publish Sunday or holiday-specific open messaging unless ownership explicitly confirms special hours.
+
+Avoid phrases such as:
+
+- "We're open today"
+- "Special holiday hours"
+- "Come in this Sunday"
+
+This is especially important for Mother's Day, Father's Day, Easter, Super Bowl Sunday, and any other Sunday event.
+
+When special hours are confirmed, update all visible copy and Schema.org structured data together so search engines and customers see the same schedule.
 
 ---
 
@@ -439,4 +545,4 @@ Based on competitor research of 15+ upscale sushi restaurants. See [RECOMMENDATI
 
 ---
 
-**Last Updated**: March 2026
+**Last Updated**: May 2026

@@ -66,4 +66,6 @@ This document defines the approved holidays and themed events that will be used 
 - Not every holiday requires a full redesign. Some may only need a hero banner swap or a small visual accent.
 - Major revenue holidays may justify a full accent color shift, themed assets, and promotional content.
 - Minor or fun holidays may be limited to social media tie-ins or a single banner update.
+- Sunday holidays require explicit ownership approval before any website copy says the restaurant is open. Hikari is closed Sundays by default.
+- Mother's Day, Father's Day, Easter, and Super Bowl Sunday should use neutral promotional copy unless special Sunday hours are confirmed.
 - This document should be updated whenever holidays are added or removed from the rotation.

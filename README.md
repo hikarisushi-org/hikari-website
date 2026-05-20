@@ -6,6 +6,19 @@ Modern Japanese Kitchen | South Jordan, Utah
 **Location**: 10468 South Redwood Road, South Jordan, UT 84095
 **Phone**: (385) 866-3746
 
+## Current Restaurant Hours
+
+These are the public hours that should be reflected anywhere the website, metadata, or promotional content mentions availability:
+
+| Day | Hours |
+|-----|-------|
+| Monday | 4:30 PM - 9:00 PM |
+| Tuesday-Friday | 11:00 AM - 3:00 PM; 4:30 PM - 9:00 PM |
+| Saturday | 11:00 AM - 9:00 PM |
+| Sunday | Closed |
+
+Important: do not publish Sunday or holiday-specific open messaging unless ownership explicitly confirms special hours. This includes Mother's Day, Father's Day, Super Bowl Sunday, and any other Sunday event.
+
 ---
 
 ## 🏗️ Tech Stack
@@ -82,7 +95,20 @@ Automatic deployment via Netlify:
 
 1. Push to `main` branch → Auto-deploy
 2. Netlify builds and deploys to `hikarisojo.com`
-3. Cloudflare DNS managed via Porkbun
+3. DNS is managed in Cloudflare; the registrar is Porkbun
+
+### Domain and SSL Notes
+
+`hikarisojo.com` and `www.hikarisojo.com` are served by Netlify with a Let's Encrypt certificate managed in Netlify. Cloudflare should be used for DNS only unless proxying is intentionally re-enabled and tested.
+
+Known incident: on May 19, 2026, visitors saw Cloudflare `525 SSL handshake failed`. Netlify's certificate was valid, but Cloudflare's proxied orange-cloud path failed the TLS handshake to the Netlify origin. The fix was:
+
+- Set Cloudflare SSL/TLS mode to `Full (strict)`.
+- Change the apex `A` record for `hikarisojo.com` pointing to `75.2.60.5` from proxied to DNS only.
+- Change the `www` CNAME pointing to `hikarisojo.netlify.app` from proxied to DNS only.
+- Verify `https://hikarisojo.com` returns `HTTP/2 200` from `server: Netlify`.
+
+If a 525 appears again, check Cloudflare DNS proxy status before changing site code.
 
 ### Environment Variables (Netlify)
 
@@ -112,6 +138,7 @@ Automatic deployment via Netlify:
 - SEO optimized (sitemap, Schema.org structured data)
 - Google Analytics (G-SH54LFXHJ3)
 - Automated theme system
+- Public hours messaging across homepage, menu, lunch specials, and Schema.org structured data
 
 📋 **Planned** (see [DEVELOPMENT.md](./DEVELOPMENT.md))
 - Social media links (Facebook + Instagram)
@@ -178,4 +205,4 @@ For website issues or feature requests, contact the development team or open an 
 
 ---
 
-**Last Updated**: February 2026
+**Last Updated**: May 2026
