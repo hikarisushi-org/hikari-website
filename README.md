@@ -71,6 +71,7 @@ Themes auto-activate based on date ranges — no manual switching needed. Just c
 |-------|-------|------|
 | **default** | Always (fallback) | `themes/default.json` |
 | **spring-loading-2026** | Mar 1–13 | `themes/spring-loading-2026.json` |
+| **memorial-day** | May 23–26 | `themes/memorial-day.json` |
 | **st-patricks-day** | Mar 15–18 | `themes/st-patricks-day.json` |
 
 ### Quick Start — New Theme

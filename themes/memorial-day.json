@@ -1,0 +1,47 @@
+{
+  "id": "memorial-day",
+  "name": "Memorial Day Weekend",
+  "startDate": "2026-05-23",
+  "endDate": "2026-05-26",
+  "priority": 20,
+  "level": "light",
+  "tokens": {
+    "--color-bg": "#F7F9FC",
+    "--color-bg-alt": "#E9EEF7",
+    "--color-text": "#24304A",
+    "--color-text-light": "#5C6A83",
+    "--color-accent": "#B4233C",
+    "--color-accent-light": "#D94B63",
+    "--color-gold": "#C8A15E",
+    "--color-white": "#FFFFFF",
+    "--color-dark": "#0E1A2B",
+    "--hero-overlay": "linear-gradient(to bottom, rgba(14,26,43,0.38) 0%, rgba(180,35,60,0.22) 50%, rgba(14,26,43,0.55) 100%)",
+    "--hero-glow-color": "rgba(180, 35, 60, 0.22)",
+    "--hero-glow-opacity": "1",
+    "--theme-badge-display": "inline-block"
+  },
+  "content": {
+    "headline": "A patriotic weekend worth gathering for.",
+    "subheadline": "Celebrate Memorial Day weekend with fresh sushi, bright flavors, and a little extra sparkle.",
+    "badgeText": "Memorial Day Weekend",
+    "heroImageKey": "assets/images/sushi_platter_ai.webp"
+  },
+  "floatingElements": {
+    "enabled": true,
+    "containerClass": "floating-stars",
+    "elementClass": "floating-star",
+    "characters": ["★", "✦", "✧", "✺", "✹"],
+    "colors": [
+      "rgba(180, 35, 60, 0.50)",
+      "rgba(255, 255, 255, 0.45)",
+      "rgba(14, 26, 43, 0.45)",
+      "rgba(41, 109, 204, 0.35)",
+      "rgba(200, 161, 94, 0.35)"
+    ],
+    "interval": 700
+  },
+  "rules": {
+    "enabled": true,
+    "allowManualOverride": true
+  }
+}

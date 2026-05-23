@@ -153,35 +153,40 @@ console.log('  Test: date after spring end -> fallback');
 const r5 = resolve(themes, '2026-03-14', null, null, 'default');
 assert(r5.id === 'default', 'Returns default for March 14');
 
-// Test 6: Invalid ?theme= override -> falls back correctly
+// Test 6: Memorial Day weekend theme
+console.log('  Test: date within Memorial Day range -> memorial-day');
+const r6 = resolve(themes, '2026-05-24', null, null, 'default');
+assert(r6.id === 'memorial-day', 'Returns memorial-day for May 24');
+
+// Test 7: Invalid ?theme= override -> falls back correctly
 console.log('  Test: invalid query override -> date-based');
-const r6 = resolve(themes, '2026-03-05', 'nonexistent', null, 'default');
-assert(r6.id === 'spring-loading-2026', 'Invalid override falls back to spring (in range)');
+const r7 = resolve(themes, '2026-03-05', 'nonexistent', null, 'default');
+assert(r7.id === 'spring-loading-2026', 'Invalid override falls back to spring (in range)');
 
-// Test 7: ?theme=default rejected (allowManualOverride: false)
+// Test 8: ?theme=default rejected (allowManualOverride: false)
 console.log('  Test: override rejected when allowManualOverride=false');
-const r7 = resolve(themes, '2026-03-05', 'default', null, 'default');
-assert(r7.id === 'spring-loading-2026', 'Default override ignored, spring active by date');
+const r8 = resolve(themes, '2026-03-05', 'default', null, 'default');
+assert(r8.id === 'spring-loading-2026', 'Default override ignored, spring active by date');
 
-// Test 8: ?theme=spring-loading-2026 accepted
+// Test 9: ?theme=spring-loading-2026 accepted
 console.log('  Test: override accepted when allowManualOverride=true');
-const r8 = resolve(themes, '2026-06-15', 'spring-loading-2026', null, 'default');
-assert(r8.id === 'spring-loading-2026', 'Spring override accepted outside date range');
+const r9 = resolve(themes, '2026-06-15', 'spring-loading-2026', null, 'default');
+assert(r9.id === 'spring-loading-2026', 'Spring override accepted outside date range');
 
-// Test 9: manualOverride in config
+// Test 10: manualOverride in config
 console.log('  Test: config manualOverride');
-const r9 = resolve(themes, '2026-06-15', null, 'spring-loading-2026', 'default');
-assert(r9.id === 'spring-loading-2026', 'Config manual override returns spring');
+const r10 = resolve(themes, '2026-06-15', null, 'spring-loading-2026', 'default');
+assert(r10.id === 'spring-loading-2026', 'Config manual override returns spring');
 
-// Test 10: Higher priority wins
+// Test 11: Higher priority wins
 console.log('  Test: higher priority wins overlap');
 const fakeThemes = [
   defaultTheme,
   springTheme,
   { id: 'overlap', startDate: '2026-03-01', endDate: '2026-03-13', priority: 5, level: 'light', tokens: {}, rules: { enabled: true, allowManualOverride: true } }
 ];
-const r10 = resolve(fakeThemes, '2026-03-05', null, null, 'default');
-assert(r10.id === 'spring-loading-2026', 'Priority 10 beats priority 5');
+const r11 = resolve(fakeThemes, '2026-03-05', null, null, 'default');
+assert(r11.id === 'spring-loading-2026', 'Priority 10 beats priority 5');
 
 /* ---- Summary ---- */
 

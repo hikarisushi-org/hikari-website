@@ -44,7 +44,7 @@ The theme loader resolves which theme to apply using this priority:
 
 ```json
 {
-  "themes": ["default", "spring-loading-2026", "st-patricks-day"],
+  "themes": ["default", "spring-loading-2026", "memorial-day", "st-patricks-day"],
   "fallbackTheme": "default",
   "manualOverride": null
 }
