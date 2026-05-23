@@ -120,8 +120,12 @@ class ThemeLoader {
     // Logo swap
     this._applyLogo(theme.content && theme.content.logoImageKey);
 
-    // Hero image swap (replaces video with static image)
-    this._applyHeroImage(theme.content && theme.content.heroImageKey);
+    // Hero media swap: prefer a themed video, otherwise fall back to a static image.
+    if (theme.content && theme.content.heroVideoPath) {
+      this._applyHeroVideo(theme.content.heroVideoPath);
+    } else {
+      this._applyHeroImage(theme.content && theme.content.heroImageKey);
+    }
 
     // Floating elements
     this._applyFloatingElements(theme.floatingElements);
@@ -166,6 +170,31 @@ class ThemeLoader {
     }
     img.src = imagePath;
     img.alt = 'Hikari Sushi';
+  }
+
+  _applyHeroVideo(videoPath) {
+    const videos = Array.from(document.querySelectorAll('.hero-video'));
+    if (videos.length === 0) return;
+
+    const existingImg = document.querySelector('.hero-image');
+    if (existingImg) existingImg.remove();
+
+    videos.forEach(video => {
+      video.style.display = '';
+      const sources = video.querySelectorAll('source');
+      sources.forEach(source => {
+        source.src = videoPath;
+      });
+      try {
+        video.load();
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(() => {});
+        }
+      } catch (error) {
+        // Ignore autoplay/load issues; the browser will still show the updated source.
+      }
+    });
   }
 
   _applyFloatingElements(config) {

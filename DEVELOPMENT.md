@@ -112,7 +112,8 @@ The theme loader resolves which theme to apply using this priority:
 | `startDate` / `endDate` | ISO date strings — theme is active during this range (inclusive) |
 | `priority` | Higher number wins when date ranges overlap |
 | `tokens` | CSS custom properties applied to `:root` |
-| `content.heroImageKey` | Path to a static image that replaces the hero video |
+| `content.heroVideoPath` | Path to a themed hero video that replaces the default hero sources |
+| `content.heroImageKey` | Path to a static image that replaces the hero video when no themed video is set |
 | `content.logoImageKey` | Path to a themed logo that replaces nav + footer logos |
 | `content.badgeText` | Text shown in the hero badge pill (set `--theme-badge-display` to `inline-block` to show) |
 | `floatingElements.characters` | Emoji/text characters that float up from the bottom |
