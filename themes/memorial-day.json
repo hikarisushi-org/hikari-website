@@ -30,13 +30,12 @@
     "enabled": true,
     "containerClass": "floating-stars",
     "elementClass": "floating-star",
-    "characters": ["★", "✦", "✧", "🇺🇸", "★", "✺", "✹"],
+    "characters": ["★", "✦", "✧", "★", "✺", "✹"],
     "colors": [
-      "rgba(180, 35, 60, 0.50)",
-      "rgba(255, 255, 255, 0.45)",
-      "rgba(14, 26, 43, 0.45)",
-      "rgba(41, 109, 204, 0.35)",
-      "rgba(200, 161, 94, 0.35)"
+      "rgba(180, 35, 60, 0.55)",
+      "rgba(255, 255, 255, 0.55)",
+      "rgba(14, 26, 43, 0.50)",
+      "rgba(41, 109, 204, 0.45)"
     ],
     "interval": 700
   },
