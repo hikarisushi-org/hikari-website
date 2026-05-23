@@ -310,28 +310,39 @@ Menu items are hardcoded in `index.html` within category sections:
 
 ### Adding a New Menu Item
 
-1. Add the HTML structure in the appropriate category section
-2. Add the item image to `assets/images/menu/[category]/` (or use Cloudinary)
-3. Update DoorDash menu if applicable
-4. Commit and deploy
+The public website menu section and the in-store QR menu page both use generated data from `../hikari-ops/menu-data/hikari-menu.json`.
+
+1. Add or update the item in `hikari-ops/menu-data/hikari-menu.json`
+2. Add the digital-menu-ready image to `assets/images/menu/[category]/`
+3. Run `node scripts/generate-menu.js` from `../hikari-ops`
+4. Verify `js/menu-page.js` was regenerated
+5. Update DoorDash menu if applicable
+6. Commit and deploy both repos as needed
 
 ### Updating Prices
 
-Prices are synced with DoorDash. To update:
+Prices shown on the public website menu and QR menu come from `../hikari-ops/menu-data/hikari-menu.json`, then generate into `js/menu-page.js`.
 
-1. Search for the item name in `index.html`
-2. Update the `<span class="menu-item-price">` value
+1. Update the price in `hikari-ops/menu-data/hikari-menu.json`
+2. Run `node scripts/generate-menu.js` from `../hikari-ops`
 3. Verify DoorDash menu matches
-4. Deploy
+4. Commit and deploy
 
 ### Menu Images
 
-**Current Status**: Menu images were moved to Google Drive. Images are referenced but files don't exist locally.
+Google Drive is the master media archive, but digital menus must use deployable local assets.
 
-**Options**:
-- Upload to Cloudinary for CDN delivery (recommended)
-- Reference Google Drive directly
-- Keep text-only menu
+For public website and QR menu items:
+
+- `hikari-menu.json` should reference paths like `assets/images/menu/sushi/rainbow.png`
+- the referenced file must exist inside this repo under `assets/images/menu/...`
+- do not reference `/Users/.../GoogleDrive/...` paths from digital menu data
+- print-only optimized assets belong in `../hikari-ops/printable-menu/assets/...`, not in website menu data
+- name new images by dish and use, such as `edamame-salted__qr-1x1.png`, instead of numbered names like `edamame_2.png`
+
+See `../hikari-ops/menu-data/README.md` for the full data and image workflow.
+
+That workflow doc also contains the future Google Drive media cleanup plan. Do not move or rename the Drive media library in bulk without following that migration checklist.
 
 ---
 
