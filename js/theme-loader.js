@@ -110,19 +110,22 @@ class ThemeLoader {
     document.body.setAttribute('data-theme', theme.id);
 
     // Badge text
-    if (theme.content && theme.content.badgeText) {
-      const badge = document.querySelector('.theme-badge');
-      if (badge) {
-        badge.textContent = theme.content.badgeText;
-      }
+    const badge = document.querySelector('.theme-badge');
+    if (badge) {
+      badge.textContent =
+        theme.content && theme.content.badgeText ? theme.content.badgeText : '';
     }
 
     // Logo swap
     this._applyLogo(theme.content && theme.content.logoImageKey);
 
-    // Hero media swap: prefer a themed video, otherwise fall back to a static image.
+    // Hero media swap: themed video, default reels, or static image(s).
     if (theme.content && theme.content.heroVideoPath) {
       this._applyHeroVideo(theme.content.heroVideoPath);
+    } else if (theme.content && theme.content.heroVideoSources) {
+      this._applyHeroVideoSources(theme.content.heroVideoSources);
+    } else if (theme.content && theme.content.heroImageSources) {
+      this._applyHeroImageSources(theme.content.heroImageSources);
     } else {
       this._applyHeroImage(theme.content && theme.content.heroImageKey);
     }
@@ -154,14 +157,18 @@ class ThemeLoader {
 
     if (!imagePath) {
       // No hero image — ensure video is visible
-      video.style.display = '';
+      document.querySelectorAll('.hero-video').forEach(v => {
+        v.style.display = '';
+      });
       const existingImg = document.querySelector('.hero-image');
       if (existingImg) existingImg.remove();
       return;
     }
 
     // Hide video, insert image
-    video.style.display = 'none';
+    document.querySelectorAll('.hero-video').forEach(v => {
+      v.style.display = 'none';
+    });
     let img = document.querySelector('.hero-image');
     if (!img) {
       img = document.createElement('img');
@@ -169,6 +176,28 @@ class ThemeLoader {
       video.parentNode.insertBefore(img, video);
     }
     img.src = imagePath;
+    img.alt = 'Hikari Sushi';
+  }
+
+  _applyHeroImageSources(sources) {
+    const videos = Array.from(document.querySelectorAll('.hero-video'));
+    if (videos.length === 0) return;
+
+    // Hide both videos since we're using a static image.
+    videos.forEach(v => {
+      v.style.display = 'none';
+    });
+
+    let img = document.querySelector('.hero-image');
+    if (!img) {
+      img = document.createElement('img');
+      img.className = 'hero-image hero-video'; // reuse hero-video styling
+      videos[0].parentNode.insertBefore(img, videos[0]);
+    }
+
+    const usePortrait = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    const nextSrc = usePortrait ? sources.portrait : sources.landscape;
+    if (nextSrc) img.src = nextSrc;
     img.alt = 'Hikari Sushi';
   }
 
@@ -180,31 +209,50 @@ class ThemeLoader {
     if (existingImg) existingImg.remove();
 
     videos.forEach(video => {
-      video.style.display = '';
-      const sources = video.querySelectorAll('source');
-      sources.forEach(source => {
-        source.src = videoPath;
-      });
-      try {
-        video.load();
-        const playPromise = video.play();
-        if (playPromise && typeof playPromise.catch === 'function') {
-          playPromise.catch(() => {});
-        }
-      } catch (error) {
-        // Ignore autoplay/load issues; the browser will still show the updated source.
-      }
+      this._setHeroVideoSource(video, videoPath);
     });
+  }
+
+  _applyHeroVideoSources(sources) {
+    const landscape = document.querySelector('.hero-video--landscape');
+    const portrait = document.querySelector('.hero-video--portrait');
+    if (!landscape && !portrait) return;
+
+    const existingImg = document.querySelector('.hero-image');
+    if (existingImg) existingImg.remove();
+
+    if (landscape && sources.landscape) {
+      this._setHeroVideoSource(landscape, sources.landscape);
+    }
+    if (portrait && sources.portrait) {
+      this._setHeroVideoSource(portrait, sources.portrait);
+    }
+  }
+
+  _setHeroVideoSource(video, videoPath) {
+    video.style.display = '';
+    const source = video.querySelector('source');
+    if (source) {
+      source.src = videoPath;
+    }
+    try {
+      video.load();
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {});
+      }
+    } catch (error) {
+      // Ignore autoplay/load issues; the browser will still show the updated source.
+    }
   }
 
   _applyFloatingElements(config) {
     // If no config or disabled, hide container and stop spawning
     if (!config || !config.enabled) {
-      const existing = document.querySelector('.floating-elements');
-      if (existing) {
-        existing.style.display = 'none';
-        existing.innerHTML = '';
-      }
+      document.querySelectorAll('.floating-elements, .floating-stars').forEach(container => {
+        container.style.display = 'none';
+        container.innerHTML = '';
+      });
       return;
     }
 

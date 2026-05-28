@@ -1,9 +1,9 @@
 {
-  "id": "default",
-  "name": "Hikari Sushi",
-  "startDate": null,
-  "endDate": null,
-  "priority": 0,
+  "id": "hamburger-day-2026",
+  "name": "Hamburger Day",
+  "startDate": "2026-05-28",
+  "endDate": "2026-05-28",
+  "priority": 30,
   "level": "light",
   "tokens": {
     "--color-bg": "#F6F4EF",
@@ -15,7 +15,7 @@
     "--color-gold": "#FBC554",
     "--color-white": "#FFFFFF",
     "--color-dark": "#1A1A1A",
-    "--hero-overlay": "linear-gradient(to bottom, rgba(26,60,40,0.4) 0%, rgba(20,50,35,0.3) 50%, rgba(15,35,25,0.5) 100%)",
+    "--hero-overlay": "transparent",
     "--hero-glow-color": "transparent",
     "--hero-glow-opacity": "0",
     "--theme-badge-display": "none"
@@ -24,15 +24,14 @@
     "headline": null,
     "subheadline": null,
     "badgeText": null,
-    "heroImageKey": null,
-    "heroVideoSources": {
-      "landscape": "https://media.hikarisojo.com/hero-daily-landscape.mp4",
-      "portrait": "https://media.hikarisojo.com/hero-daily-portrait.mp4"
+    "heroImageSources": {
+      "landscape": "assets/images/hamburger_day.png?v=20260527",
+      "portrait": "assets/images/hamburger_day_portrait.png?v=20260527"
     }
   },
   "floatingElements": null,
   "rules": {
     "enabled": true,
-    "allowManualOverride": false
+    "allowManualOverride": true
   }
 }
