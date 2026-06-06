@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Dean Novak",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocI_ScEV8Q28-Xl1MP_sPAHGQwoPfmf5_fcVk9XTG-z1SVfN7A=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "The quality of fish here is superb! You can taste the difference in sushi here versus other places. Delicious and freshbsushi you'd get at a high end restaurant without the crazy price. Ill be back to try more since they have a lot of interesting rolls!",
+      "relativeTime": "",
+      "publishTime": "2026-06-05T15:42:13.483551Z"
+    },
+    {
       "author": "Mel Davis",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLqf-3Amy8tgxVoYq2nr5DuAlLItuUZa_urTD9KMsaGjdjvfho=s120-c-rp-mo-ba4-br100",
       "rating": 5,
@@ -1346,5 +1354,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 184
+  "totalReviews": 185
 }
