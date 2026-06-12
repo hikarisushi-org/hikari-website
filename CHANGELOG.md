@@ -2,6 +2,11 @@
 
 All notable changes to this repo will be documented here.
 
+## 2026-06-12
+
+### Added
+- **Hero notice banner** (`components/notice-banner.html`): reusable, documented temporary-announcement component — frosted dark-glass pill with a gold pulsing status dot, designed to sit in the hero over the video. Self-contained style + markup + optional timezone-proof auto-hide script. First deployed as a "Closed for lunch today / dinner resumes at 4:30 PM" notice, set to auto-hide at 3:00 PM MDT.
+
 ## 2026-05-27
 
 ### Fixed

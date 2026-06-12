@@ -1,5 +1,24 @@
 # Hikari Sushi Website
 
+## Pick up here
+
+> **For AI:** Read this section when the user says **"pick up here"**. Update when pausing or finishing a checkpoint.
+
+**Last updated:** 2026-06-07
+**Phase:** —
+
+### Done
+- (none yet)
+
+### Next
+- (none yet)
+
+### Blocked
+- (none)
+
+---
+
+
 Modern Japanese Kitchen | South Jordan, Utah
 
 **Live Site**: [hikarisojo.com](https://hikarisojo.com)
@@ -207,3 +226,16 @@ For website issues or feature requests, contact the development team or open an 
 ---
 
 **Last Updated**: May 2026
+
+## Reusable components
+
+- **Hero notice banner** — [`components/notice-banner.html`](./components/notice-banner.html). Frosted dark-glass pill with a gold pulsing dot for short-lived hero announcements (lunch closed, holiday hours, one-off events). Self-contained style + markup + optional timezone-proof auto-hide script, with paste-in instructions at the top of the file. First used 2026-06-12.
+
+## Project files
+
+| File | Purpose |
+|------|---------|
+| [README.md](./README.md) | Overview · § Pick up here |
+| [CHANGELOG.md](./CHANGELOG.md) | What changed |
+| [DECISION-LOG.md](./DECISION-LOG.md) | Why |
+| [SPECS.md](./SPECS.md) | Specs & measurements |
