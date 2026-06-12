@@ -20,6 +20,25 @@
   <link rel="stylesheet" href="css/style.css?v=4">
   <link rel="stylesheet" href="css/menu-page.css">
 
+  <!-- TEMP NOTICE styles — closed for lunch 2026-06-12. Remove to revert. -->
+  <style>
+    .lunch-notice {
+      display: inline-block;
+      background: var(--color-gold, #FBC554);
+      color: #1A1A1A;
+      padding: 12px 22px;
+      border-radius: var(--radius-sm, 8px);
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+    }
+    .lunch-notice strong { font-weight: 700; }
+    @media (max-width: 600px) {
+      .lunch-notice { font-size: 0.9rem; padding: 10px 16px; }
+    }
+  </style>
+
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
@@ -143,6 +162,17 @@
       <source src="https://media.hikarisojo.com/hero-daily-portrait.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
+      <!-- TEMP NOTICE — closed for lunch 2026-06-12. Auto-hides at 3:00 PM MDT. Remove this block + the matching <style> and <script> to revert. -->
+      <div class="lunch-notice" role="status" id="lunch-notice">
+        <strong>Closed for lunch today.</strong> We&rsquo;ll reopen for dinner at 4:30&nbsp;PM.
+      </div>
+      <script>
+        // Hide the lunch notice at/after 3:00 PM MDT (21:00 UTC) on 2026-06-12.
+        (function () {
+          var el = document.getElementById('lunch-notice');
+          if (el && Date.now() >= Date.UTC(2026, 5, 12, 21, 0, 0)) el.remove();
+        })();
+      </script>
       <div class="theme-badge" aria-hidden="true"></div>
       <p class="hero-tag">Modern Japanese Kitchen</p>
       <h1 class="hero-title">Hikari Sushi</h1>
