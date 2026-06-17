@@ -1,6 +1,30 @@
 {
   "reviews": [
     {
+      "author": "Paige",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjVoiw18mvYqjDFmeUTx4esiB-Cbaa-WhM-XZEYn_dmCSFoCi_Lcrw=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "My husband and I were thrilled that a sushi restaurant popped up just down the street from our house! We have been to Hikari Sushi multiple times since it first opened. It has become our favorite sushi place! Definitely some of the best sushi we have ever had. Such a unique menu compared to other sushi spots. We have ordered rolls made with Hot Cheetos, Rice Krispies, and other delicious combinations you would not expect. (They have plenty of classic choices for the less adventurous, too!) We never have to wait long for a table, if at all, and the service is timely. The owner and staff are kind and friendly! We always feel welcome. We love Hikari Sushi and cannot recommend it enough!",
+      "relativeTime": "",
+      "publishTime": "2026-06-17T00:42:06.580307Z"
+    },
+    {
+      "author": "Cameron Gould",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUuSN_hrjWM0bi-QlyfMNG6DAVrUnY_4znaLpogdBmNfYVEbQqj=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "Great sushi great price great experience. Would recommend firefly fusion roll",
+      "relativeTime": "",
+      "publishTime": "2026-06-16T23:59:07.520811Z"
+    },
+    {
+      "author": "Kara Wilson",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocKSzZIP7X8qja5HdsFQYBft3gG8MGmy7KYudyXfxWve7Xh2AQ=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Fantastic gem! So good!!!",
+      "relativeTime": "",
+      "publishTime": "2026-06-16T18:59:49.792544Z"
+    },
+    {
       "author": "Victor H",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocIhuaiIU3VAewuxTKDoeiw9kwmL3VumHvfwGqLBWGD1-BVQbQ=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1241,7 +1265,7 @@
       "publishTime": "2025-08-01T02:14:23.320304Z"
     },
     {
-      "author": "Bria Judd",
+      "author": "Bria Nukaya",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLo9CZQwvHY_5zyRm9l3rhSMMOTNA8UVq1w91c0lAaI_7HNtQ=s120-c-rp-mo-ba12-br100",
       "rating": 5,
       "text": "Cutest restaurant, love the food. I\u2019m a huge fan of eel and it feels like not a lot of restaurants have unagi rolls. This one does and it\u2019s amazing. They also have the friendliest staff! We definitely will be coming back",
@@ -1394,5 +1418,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 191
+  "totalReviews": 194
 }
