@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Sandra Griffith",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocILVOUIrmg4WVzkjzy6_UH5aPa9aBwKkmkHL1njh0y6YEzdcQ=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "I hesitate to let you know about this place. I don\u2019t want to wait hours. But it is amazing! The fish is so fresh. The presentation is beautiful and the employees couldn\u2019t be any kinder. Rumor has it that the chef used to work at Tsunami. He really knows how to make your taste buds sing!",
+      "relativeTime": "",
+      "publishTime": "2026-06-20T01:19:53.315413Z"
+    },
+    {
       "author": "A. Dawn Riddle",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjW4RxAuugYRsuMSkK__uD308dn-w65xvZizmFStk66Ucf_fNK8=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1426,5 +1434,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 195
+  "totalReviews": 196
 }
