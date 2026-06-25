@@ -8,6 +8,7 @@
   etc.
 
   First used: 2026-06-12 ("Closed for lunch today").
+  Latest example: 2026-06-24 ("Closed this week" through Monday, June 29).
 
   ---------------------------------------------------------------------------
   HOW TO USE
@@ -106,8 +107,8 @@
 <div class="lunch-notice" role="status" id="lunch-notice">
   <span class="lunch-notice-dot" aria-hidden="true"></span>
   <span class="lunch-notice-copy">
-    <span class="lunch-notice-title">Closed for lunch today</span>
-    <span class="lunch-notice-sub">Dinner service resumes at <strong>4:30&nbsp;PM</strong></span>
+    <span class="lunch-notice-title">Closed this week</span>
+    <span class="lunch-notice-sub">We&rsquo;ll reopen <strong>Monday, June 29</strong> while our team takes a short break.</span>
   </span>
 </div>
 
@@ -115,9 +116,9 @@
 <!-- ===== SCRIPT (optional auto-hide; place right after the markup) ========= -->
 <script>
   // Hide the notice at/after the target time. UTC timestamp = timezone-proof.
-  // Example below: 3:00 PM MDT on 2026-06-12  ->  21:00 UTC, month index 5 (Jun).
+  // Example below: 4:30 PM MDT on 2026-06-29  ->  22:30 UTC, month index 5 (Jun).
   (function () {
     var el = document.getElementById('lunch-notice');
-    if (el && Date.now() >= Date.UTC(2026, 5, 12, 21, 0, 0)) el.remove();
+    if (el && Date.now() >= Date.UTC(2026, 5, 29, 22, 30, 0)) el.remove();
   })();
 </script>

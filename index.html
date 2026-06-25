@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="css/style.css?v=4">
   <link rel="stylesheet" href="css/menu-page.css">
 
-  <!-- TEMP NOTICE styles — closed for lunch 2026-06-12. Remove to revert. -->
+  <!-- TEMP NOTICE styles — closed for team break through 2026-06-29. Remove to revert. -->
   <style>
     .lunch-notice {
       display: inline-flex;
@@ -185,8 +185,8 @@
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#location">Visit</a></li>
-        <li><a href="https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi" target="_blank" rel="noopener" class="btn btn-reserve btn-sm">Reservations</a></li>
-        <li><a href="https://cash.app/order/$hikarisushius" target="_blank" rel="noopener" class="btn btn-doordash btn-sm"><img src="assets/images/doordash_logo.png" alt="DoorDash" class="doordash-icon"> Order Online</a></li>
+        <li><button type="button" class="btn btn-reserve btn-closure-trigger btn-sm" data-closure-message="Closed this week. We&rsquo;ll reopen Monday, June 29." data-live-href="https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi">Reservations</button></li>
+        <li><button type="button" class="btn btn-doordash btn-closure-trigger btn-sm" data-closure-message="Closed this week. We&rsquo;ll reopen Monday, June 29." data-live-href="https://cash.app/order/$hikarisushius"><img src="assets/images/doordash_logo.png" alt="DoorDash" class="doordash-icon"> Order Online</button></li>
       </ul>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span>
@@ -207,19 +207,19 @@
       <source src="https://media.hikarisojo.com/hero-daily-portrait.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
-      <!-- TEMP NOTICE — closed for lunch 2026-06-12. Auto-hides at 3:00 PM MDT. Remove this block + the matching <style> and <script> to revert. -->
+      <!-- TEMP NOTICE — closed for team break through 2026-06-29. Auto-hides at 4:30 PM MDT on reopen day. Remove this block + the matching <style> and <script> to revert. -->
       <div class="lunch-notice" role="status" id="lunch-notice">
         <span class="lunch-notice-dot" aria-hidden="true"></span>
         <span class="lunch-notice-copy">
-          <span class="lunch-notice-title">Closed for lunch today</span>
-          <span class="lunch-notice-sub">Dinner service resumes at <strong>4:30&nbsp;PM</strong></span>
+          <span class="lunch-notice-title">Closed this week</span>
+          <span class="lunch-notice-sub">We&rsquo;ll reopen <strong>Monday, June 29</strong> while our team takes a short break.</span>
         </span>
       </div>
       <script>
-        // Hide the lunch notice at/after 3:00 PM MDT (21:00 UTC) on 2026-06-12.
+        // Hide the team-break notice at/after 4:30 PM MDT (22:30 UTC) on 2026-06-29.
         (function () {
           var el = document.getElementById('lunch-notice');
-          if (el && Date.now() >= Date.UTC(2026, 5, 12, 21, 0, 0)) el.remove();
+          if (el && Date.now() >= Date.UTC(2026, 5, 29, 22, 30, 0)) el.remove();
         })();
       </script>
       <div class="theme-badge" aria-hidden="true"></div>
@@ -227,8 +227,8 @@
       <h1 class="hero-title">Hikari Sushi</h1>
 
       <div class="hero-actions">
-        <a href="https://cash.app/order/$hikarisushius" target="_blank" rel="noopener" class="btn btn-doordash"><img src="assets/images/doordash_logo.png" alt="DoorDash" class="doordash-icon"> Order Online</a>
-        <a href="https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi" target="_blank" rel="noopener" class="btn btn-reserve">Reservations</a>
+        <button type="button" class="btn btn-doordash btn-closure-trigger" data-closure-message="Closed this week. We&rsquo;ll reopen Monday, June 29." data-live-href="https://cash.app/order/$hikarisushius"><img src="assets/images/doordash_logo.png" alt="DoorDash" class="doordash-icon"> Order Online</button>
+        <button type="button" class="btn btn-reserve btn-closure-trigger" data-closure-message="Closed this week. We&rsquo;ll reopen Monday, June 29." data-live-href="https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi">Reservations</button>
         <a href="#menu" class="btn btn-outline">View Menu</a>
       </div>
     </div>
@@ -367,8 +367,8 @@
             <h4>Contact</h4>
             <p><a href="tel:+13858663746">(385) 866-3746</a></p>
           </div>
-          <a href="https://cash.app/order/$hikarisushius" target="_blank" rel="noopener" class="btn btn-doordash"><img src="assets/images/doordash_logo.png" alt="DoorDash" class="doordash-icon"> Order Online</a>
-          <a href="https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi" target="_blank" rel="noopener" class="btn btn-reserve">Reservations</a>
+          <button type="button" class="btn btn-doordash btn-closure-trigger" data-closure-message="Closed this week. We&rsquo;ll reopen Monday, June 29." data-live-href="https://cash.app/order/$hikarisushius"><img src="assets/images/doordash_logo.png" alt="DoorDash" class="doordash-icon"> Order Online</button>
+          <button type="button" class="btn btn-reserve btn-closure-trigger" data-closure-message="Closed this week. We&rsquo;ll reopen Monday, June 29." data-live-href="https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi">Reservations</button>
           <a href="https://www.google.com/maps/dir/?api=1&destination=Hikari+Sushi,+10468+S+Redwood+Rd,+South+Jordan,+UT+84095" target="_blank" rel="noopener" class="btn btn-primary">Get Directions</a>
         </div>
         <div class="location-map reveal">
@@ -412,8 +412,8 @@
         </div>
         <div class="footer-order">
           <h4>Order & Reserve</h4>
-          <a href="https://cash.app/order/$hikarisushius" target="_blank" rel="noopener" class="btn btn-doordash btn-sm"><img src="assets/images/doordash_logo.png" alt="DoorDash" class="doordash-icon"> Order Now</a>
-          <a href="https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi" target="_blank" rel="noopener" class="btn btn-reserve btn-sm">Reservations</a>
+          <button type="button" class="btn btn-doordash btn-closure-trigger btn-sm" data-closure-message="Closed this week. We&rsquo;ll reopen Monday, June 29." data-live-href="https://cash.app/order/$hikarisushius"><img src="assets/images/doordash_logo.png" alt="DoorDash" class="doordash-icon"> Order Online</button>
+          <button type="button" class="btn btn-reserve btn-closure-trigger btn-sm" data-closure-message="Closed this week. We&rsquo;ll reopen Monday, June 29." data-live-href="https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi">Reservations</button>
         </div>
       </div>
       <div class="footer-bottom">
