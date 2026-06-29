@@ -196,6 +196,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .nav-links .btn-reserve {
   color: var(--color-white);
 }
+.nav.scrolled .nav-links .btn-reserve {
+  color: var(--color-white);
+}
 .nav-toggle {
   display: none;
   flex-direction: column;
