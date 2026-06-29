@@ -19,6 +19,14 @@ Complete guide for developing, maintaining, and deploying the Hikari Sushi websi
 
 ## 🎨 Theme System
 
+Brand/style decisions live in:
+
+```text
+/Users/samanthashiro/projects/visual-design/BRAND.md
+```
+
+The website theme system applies those rules. It is not a separate style guide.
+
 ### Overview
 
 The theme system automatically switches between seasonal/holiday themes based on date ranges. Themes are JSON files that control colors, hero images, logos, floating elements, and CSS custom properties. No manual activation needed — just set `startDate`/`endDate` and deploy.
