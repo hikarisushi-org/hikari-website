@@ -3,8 +3,6 @@
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const closureEndsAt = Date.UTC(2026, 5, 29, 22, 30, 0);
-
   // ---- Hero Video Autoplay ----
   const heroVideo = document.querySelector('.hero-video');
   if (heroVideo) {
@@ -44,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Close mobile nav on nav link click, including links restored after the closure window ends.
+  // Close mobile nav on nav link click.
   links.addEventListener('click', (event) => {
     if (event.target.closest('a')) {
       toggle.classList.remove('open');
@@ -76,68 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // ---- Temporary closure info bubble for reservations ----
-  const closureTriggers = document.querySelectorAll('.btn-closure-trigger');
-  let closureBubbleTimeout = null;
-
-  function removeClosureBubble() {
-    const bubble = document.querySelector('.closure-bubble');
-    if (bubble) bubble.remove();
-  }
-
-  if (Date.now() >= closureEndsAt) {
-    closureTriggers.forEach(trigger => {
-      const liveHref = trigger.dataset.liveHref;
-      if (!liveHref) return;
-
-      const link = document.createElement('a');
-      link.className = trigger.className.replace(' btn-closure-trigger', '');
-      link.href = liveHref;
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.innerHTML = trigger.innerHTML;
-      trigger.replaceWith(link);
-    });
-  } else {
-    closureTriggers.forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        removeClosureBubble();
-        if (closureBubbleTimeout) window.clearTimeout(closureBubbleTimeout);
-
-        const bubble = document.createElement('div');
-        const message = trigger.dataset.closureMessage || 'Closed this week.';
-        bubble.className = 'closure-bubble';
-        bubble.setAttribute('role', 'status');
-        bubble.innerHTML = message;
-        document.body.appendChild(bubble);
-
-        const rect = trigger.getBoundingClientRect();
-        const bubbleRect = bubble.getBoundingClientRect();
-        const maxLeft = window.innerWidth - bubbleRect.width - 16;
-        const left = Math.min(Math.max(16, rect.left + rect.width / 2 - bubbleRect.width / 2), maxLeft);
-        const aboveTop = rect.top - bubbleRect.height - 16;
-        const belowTop = rect.bottom + 16;
-        const showBelow = aboveTop < 16 && belowTop + bubbleRect.height <= window.innerHeight - 16;
-        const top = showBelow ? belowTop : Math.max(16, aboveTop);
-
-        bubble.style.left = left + 'px';
-        bubble.style.top = top + 'px';
-        bubble.classList.toggle('is-below', showBelow);
-
-        requestAnimationFrame(() => {
-          bubble.classList.add('is-visible');
-        });
-
-        closureBubbleTimeout = window.setTimeout(() => {
-          bubble.classList.remove('is-visible');
-          window.setTimeout(() => {
-            if (bubble.parentNode) bubble.remove();
-          }, 180);
-        }, 2600);
-      });
-    });
-  }
 
   // ---- Reviews Carousel ----
   const reviewsTrack = document.getElementById('reviews-track');

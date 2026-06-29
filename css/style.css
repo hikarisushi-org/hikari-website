@@ -127,56 +127,6 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(251,197,84,0.35);
 }
-.btn-closure-trigger {
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-}
-.btn-closure-trigger:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.9);
-  outline-offset: 3px;
-}
-.closure-bubble {
-  position: fixed;
-  z-index: 1200;
-  max-width: min(280px, calc(100vw - 32px));
-  padding: 12px 14px;
-  border-radius: 14px;
-  background: rgba(24, 24, 24, 0.94);
-  color: #fff;
-  font-size: 0.88rem;
-  line-height: 1.45;
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
-  border: 1px solid rgba(251, 197, 84, 0.38);
-  opacity: 0;
-  transform: translateY(8px) scale(0.98);
-  transition: opacity 0.18s ease, transform 0.18s ease;
-  pointer-events: none;
-}
-.closure-bubble.is-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.closure-bubble::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -8px;
-  width: 14px;
-  height: 14px;
-  background: rgba(24, 24, 24, 0.94);
-  border-right: 1px solid rgba(251, 197, 84, 0.38);
-  border-bottom: 1px solid rgba(251, 197, 84, 0.38);
-  transform: translateX(-50%) rotate(45deg);
-}
-.closure-bubble.is-below::after {
-  top: -8px;
-  bottom: auto;
-  border-right: none;
-  border-bottom: none;
-  border-left: 1px solid rgba(251, 197, 84, 0.38);
-  border-top: 1px solid rgba(251, 197, 84, 0.38);
-}
 .btn-sm {
   padding: 10px 24px;
   font-size: 0.85rem;
