@@ -119,7 +119,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 .btn-reserve {
   background: var(--color-gold);
-  color: var(--color-dark);
+  color: var(--color-white);
   font-weight: 600;
 }
 .btn-reserve:hover {
@@ -194,7 +194,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   color: var(--color-white);
 }
 .nav-links .btn-reserve {
-  color: var(--color-dark);
+  color: var(--color-white);
 }
 .nav-toggle {
   display: none;

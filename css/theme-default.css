@@ -115,7 +115,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 .btn-reserve {
   background: var(--color-gold);
-  color: var(--color-dark);
+  color: var(--color-white);
   font-weight: 600;
 }
 .btn-reserve:hover {
