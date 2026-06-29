@@ -17,3 +17,6 @@ assets/video/*.mov
 # Environment
 .env
 .env.local
+
+# AI session logs and local vector memory
+.ai/context-logger/

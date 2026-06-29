@@ -75,7 +75,7 @@ hikarisojo/
 │   └── snapshot-theme.js # Theme snapshot creation tool
 ├── netlify/
 │   └── functions/
-│       └── reviews.js    # Google Places API proxy
+│       └── reviews.js    # Daily review rotation endpoint
 ```
 
 ---
@@ -132,8 +132,11 @@ If a 525 appears again, check Cloudflare DNS proxy status before changing site c
 
 ### Environment Variables (Netlify)
 
-- `GOOGLE_PLACES_API_KEY` - Google Places API key for reviews
-- `GOOGLE_PLACE_ID` - `ChIJZV0qzpqHUocR4SuU3IlrTsg`
+- `GBP_CLIENT_ID` - Google Business Profile OAuth client ID
+- `GBP_CLIENT_SECRET` - Google Business Profile OAuth client secret
+- `GBP_REFRESH_TOKEN` - Google Business Profile OAuth refresh token
+- `GBP_LOCATION_ID` - Google Business Profile location ID
+- `GBP_ACCOUNT_ID` - Google Business Profile account ID
 
 ---
 
@@ -141,7 +144,7 @@ If a 525 appears again, check Cloudflare DNS proxy status before changing site c
 
 - **Images**: All converted to WebP, resized to display dimensions (97.6% size reduction)
 - **Video**: Hero video re-encoded at 1Mbps, audio stripped, faststart enabled (62% reduction)
-- **Reviews**: Server-side + client-side caching (1hr + 24hr)
+- **Reviews**: Daily server-side rotation from the synced Google Business Profile review pool, with 15-minute HTTP and 1-hour browser caching
 - **Mobile**: Swiper carousels reduce scroll length on category-heavy menu sections
 
 ---

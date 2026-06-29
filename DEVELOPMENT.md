@@ -217,8 +217,11 @@ git push origin main
 
 Set in Netlify Dashboard → Site Settings → Environment Variables:
 
-- `GOOGLE_PLACES_API_KEY` - API key for Google Places (reviews)
-- `GOOGLE_PLACE_ID` - `ChIJZV0qzpqHUocR4SuU3IlrTsg`
+- `GBP_CLIENT_ID` - Google Business Profile OAuth client ID
+- `GBP_CLIENT_SECRET` - Google Business Profile OAuth client secret
+- `GBP_REFRESH_TOKEN` - Google Business Profile OAuth refresh token
+- `GBP_LOCATION_ID` - Google Business Profile location ID
+- `GBP_ACCOUNT_ID` - Google Business Profile account ID
 
 ### Domain Configuration
 
@@ -389,23 +392,23 @@ When special hours are confirmed, update all visible copy and Schema.org structu
 ### Architecture
 
 - **Netlify Function**: `netlify/functions/reviews.js`
-- **API**: Google Places API (New)
+- **Source API**: Google Business Profile API, synced by `.github/workflows/sync-reviews.yml`
+- **Static Pool**: `data/reviews.json`
 - **Caching**:
-  - Server-side: 1-hour in-memory cache
-  - Client-side: 24-hour localStorage cache
-  - HTTP: `Cache-Control: public, max-age=3600`
+  - Function: loads the static review pool once per function instance
+  - Client-side: 1-hour localStorage cache
+  - HTTP: `Cache-Control: public, max-age=900`
 
 ### Google Cloud Configuration
 
 - **Project**: Hikari Sushi (`hikari-sushi-486804`)
-- **API**: Places API (New) enabled
-- **Place ID**: `ChIJZV0qzpqHUocR4SuU3IlrTsg`
-- **Billing**: Free trial ($300 credit, expires ~May 2026)
+- **API**: Google Business Profile API enabled
+- **Daily Sync**: GitHub Actions schedule runs at 10:00 UTC and commits `data/reviews.json` only when review data changes
 
 ### Filtering
 
 - Only 5-star reviews are displayed
-- Sorted by newest first
+- The synced pool is sorted newest first, then the Netlify function selects a deterministic five-review group based on the current Hikari local date (`America/Denver`)
 - Server-side filtering prevents exposing lower ratings
 
 ### Carousel Behavior
@@ -551,7 +554,7 @@ Based on competitor research of 15+ upscale sushi restaurants. See [RECOMMENDATI
 ## 📚 Additional Resources
 
 - [Swiper.js Documentation](https://swiperjs.com/)
-- [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview)
+- [Google Business Profile APIs](https://developers.google.com/my-business)
 - [Netlify Functions](https://docs.netlify.com/functions/overview/)
 - [Schema.org Restaurant](https://schema.org/Restaurant)
 
