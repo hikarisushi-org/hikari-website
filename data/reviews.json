@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Lucy",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWgOKvheXx8ihMmFi2WHY7v-eVzdYJfVlO623MfaLmMVxsfsFc=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "Great quality Sushi.  Great presentation, and the flavor is amazing!  This is my new go to place for Sushi.  Prices are reasonable and the staff is very friendly.  I had the Poke bowl and a specialty roll and both were very good.",
+      "relativeTime": "",
+      "publishTime": "2026-07-03T03:26:58.646997Z"
+    },
+    {
       "author": "Kimberly Long",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocIFxyPHFV7o3CONFC78vtcBtYdv6szyPtASW_cXv6S8Yz57xw=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1442,5 +1450,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 197
+  "totalReviews": 198
 }
