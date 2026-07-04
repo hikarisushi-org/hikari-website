@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Zachary Wilhelm",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjVtaV5idR4kshSHncZYtrpX3b2yV5YFbaP8CPDlCVGstst0_2df=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Phenomenal staff. It\u2019s the most welcomed I\u2019ve ever felt at a restaurant. Great food as well.",
+      "relativeTime": "",
+      "publishTime": "2026-07-04T00:28:54.228630Z"
+    },
+    {
       "author": "Lucy",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWgOKvheXx8ihMmFi2WHY7v-eVzdYJfVlO623MfaLmMVxsfsFc=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1450,5 +1458,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 198
+  "totalReviews": 199
 }
