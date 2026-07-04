@@ -151,8 +151,8 @@
       <source src="assets/video/holiday/july-4-hero-hikari-2026.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
-      <!-- TEMP NOTICE: Remove after July 4, 2026. -->
-      <div class="lunch-notice" role="status" id="holiday-hours-hero-notice">
+      <!-- TEMP NOTICE: Shows after 3:00 PM MDT on July 4, 2026. Remove after the holiday. -->
+      <div class="lunch-notice" role="status" id="holiday-hours-hero-notice" hidden>
         <span class="lunch-notice-dot" aria-hidden="true"></span>
         <span class="lunch-notice-copy">
           <span class="lunch-notice-title">Closed now</span>
@@ -292,7 +292,7 @@
           </div>
           <div class="location-detail">
             <h4>Hours</h4>
-            <div class="holiday-callout" id="holiday-hours-location-notice" role="status">
+            <div class="holiday-callout" id="holiday-hours-location-notice" role="status" hidden>
               <p class="holiday-callout-kicker">Holiday hours</p>
               <p class="holiday-callout-title">Closed for the rest of July 4</p>
               <p class="holiday-callout-hours">We&rsquo;ll reopen during regular hours after the holiday.</p>
@@ -381,6 +381,17 @@
   </div>
 
   <script src="js/theme-loader.js"></script>
+  <script>
+    (function () {
+      var showAfter = Date.UTC(2026, 6, 4, 21, 0, 0); // 3:00 PM MDT in Utah.
+      if (Date.now() < showAfter) return;
+
+      ['holiday-hours-hero-notice', 'holiday-hours-location-notice'].forEach(function (id) {
+        var notice = document.getElementById(id);
+        if (notice) notice.hidden = false;
+      });
+    })();
+  </script>
   <script src="js/main.js"></script>
   <script src="js/menu-page.js"></script>
 </body>
