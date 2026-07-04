@@ -383,8 +383,25 @@
   <script src="js/theme-loader.js"></script>
   <script>
     (function () {
-      var showAfter = Date.UTC(2026, 6, 4, 21, 0, 0); // 3:00 PM MDT in Utah.
-      if (Date.now() < showAfter) return;
+      var now = Date.now();
+      var holidayStart = Date.UTC(2026, 6, 4, 6, 0, 0); // July 4, 2026 12:00 AM MDT in Utah.
+      var holidayEnd = Date.UTC(2026, 6, 5, 6, 0, 0); // July 5, 2026 12:00 AM MDT in Utah.
+      var closedNoticeStart = Date.UTC(2026, 6, 4, 21, 0, 0); // 3:00 PM MDT in Utah.
+
+      if (now >= holidayStart && now < holidayEnd) {
+        document.querySelectorAll('.btn-order[href*="hikarisushi-online.square.site"]').forEach(function (button) {
+          button.dataset.originalHref = button.href;
+          button.removeAttribute('href');
+          button.removeAttribute('target');
+          button.setAttribute('aria-disabled', 'true');
+          button.setAttribute('tabindex', '-1');
+          button.setAttribute('title', 'Online ordering is paused for July 4.');
+          button.classList.add('btn-disabled');
+          button.textContent = 'Ordering Paused Today';
+        });
+      }
+
+      if (now < closedNoticeStart) return;
 
       ['holiday-hours-hero-notice', 'holiday-hours-location-notice'].forEach(function (id) {
         var notice = document.getElementById(id);
