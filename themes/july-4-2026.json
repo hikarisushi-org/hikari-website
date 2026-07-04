@@ -1,0 +1,34 @@
+{
+  "id": "july-4-2026",
+  "name": "Fourth of July",
+  "startDate": "2026-07-03",
+  "endDate": "2026-07-04",
+  "priority": 30,
+  "level": "light",
+  "tokens": {
+    "--color-bg": "#F7F9FC",
+    "--color-bg-alt": "#E9EEF7",
+    "--color-text": "#24304A",
+    "--color-text-light": "#5C6A83",
+    "--color-accent": "#B4233C",
+    "--color-accent-light": "#D94B63",
+    "--color-gold": "#C8A15E",
+    "--color-white": "#FFFFFF",
+    "--color-dark": "#0E1A2B",
+    "--hero-overlay": "linear-gradient(to bottom, rgba(14,26,43,0.22) 0%, rgba(14,26,43,0.18) 50%, rgba(14,26,43,0.38) 100%)",
+    "--hero-glow-color": "rgba(180, 35, 60, 0.18)",
+    "--hero-glow-opacity": "1",
+    "--theme-badge-display": "none"
+  },
+  "content": {
+    "headline": null,
+    "subheadline": null,
+    "badgeText": null,
+    "heroVideoPath": "assets/video/holiday/july-4-hero-hikari-2026.mp4?v=20260704"
+  },
+  "floatingElements": null,
+  "rules": {
+    "enabled": true,
+    "allowManualOverride": true
+  }
+}

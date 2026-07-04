@@ -324,6 +324,61 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   justify-content: center;
   flex-wrap: wrap;
 }
+.lunch-notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 24px 13px 20px;
+  margin-bottom: 28px;
+  border-radius: 999px;
+  background: rgba(18, 18, 18, 0.55);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(251, 197, 84, 0.45);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  color: var(--color-white);
+  animation: lunchNoticeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.lunch-notice-dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #FBC554;
+  animation: lunchPulse 2.2s ease-out infinite;
+}
+.lunch-notice-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  text-align: left;
+  line-height: 1.3;
+}
+.lunch-notice-title {
+  color: #FBC554;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.lunch-notice-sub {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+.lunch-notice-sub strong {
+  color: var(--color-white);
+  font-weight: 600;
+}
+@keyframes lunchPulse {
+  0% { box-shadow: 0 0 0 0 rgba(251, 197, 84, 0.6); }
+  70% { box-shadow: 0 0 0 9px rgba(251, 197, 84, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(251, 197, 84, 0); }
+}
+@keyframes lunchNoticeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* ========================================
    About
@@ -1041,6 +1096,14 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 
   .hero-title { font-size: 3.2rem; }
   .hero-subtitle { font-size: 1rem; }
+  .lunch-notice {
+    gap: 11px;
+    max-width: min(100%, 520px);
+    padding: 11px 18px 11px 15px;
+    margin-bottom: 22px;
+  }
+  .lunch-notice-title { font-size: 0.7rem; }
+  .lunch-notice-sub { font-size: 0.85rem; }
 
   .section { padding: 72px 0; }
   .section-header h2,
@@ -1086,6 +1149,13 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   .footer-grid { grid-template-columns: 1fr; }
   .menu-filters { gap: 6px; }
   .menu-filter { padding: 6px 14px; font-size: 0.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lunch-notice,
+  .lunch-notice-dot {
+    animation: none;
+  }
 }
 
 /* ========================================
