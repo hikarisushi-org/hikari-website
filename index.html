@@ -151,14 +151,6 @@
       <source src="assets/video/holiday/july-4-hero-hikari-2026.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
-      <!-- TEMP NOTICE: Shows after 3:00 PM MDT on July 4, 2026. Remove after the holiday. -->
-      <div class="lunch-notice" role="status" id="holiday-hours-hero-notice" hidden>
-        <span class="lunch-notice-dot" aria-hidden="true"></span>
-        <span class="lunch-notice-copy">
-          <span class="lunch-notice-title">Closed now</span>
-          <span class="lunch-notice-sub">We&rsquo;re closed for the rest of <strong>July 4</strong>. Have a safe holiday!</span>
-        </span>
-      </div>
       <div class="theme-badge" aria-hidden="true"></div>
       <p class="hero-tag">Modern Japanese Kitchen</p>
       <h1 class="hero-title">Hikari Sushi</h1>
@@ -292,11 +284,6 @@
           </div>
           <div class="location-detail">
             <h4>Hours</h4>
-            <div class="holiday-callout" id="holiday-hours-location-notice" role="status" hidden>
-              <p class="holiday-callout-kicker">Holiday hours</p>
-              <p class="holiday-callout-title">Closed for the rest of July 4</p>
-              <p class="holiday-callout-hours">We&rsquo;ll reopen during regular hours after the holiday.</p>
-            </div>
             <table class="hours-table">
               <tr><td>Monday</td><td>4:30 PM &ndash; 9:00 PM</td></tr>
               <tr><td>Tue &ndash; Fri</td><td>11:00 AM &ndash; 3:00 PM<br>4:30 PM &ndash; 9:00 PM</td></tr>
@@ -381,34 +368,6 @@
   </div>
 
   <script src="js/theme-loader.js"></script>
-  <script>
-    (function () {
-      var now = Date.now();
-      var holidayStart = Date.UTC(2026, 6, 4, 6, 0, 0); // July 4, 2026 12:00 AM MDT in Utah.
-      var holidayEnd = Date.UTC(2026, 6, 5, 6, 0, 0); // July 5, 2026 12:00 AM MDT in Utah.
-      var closedNoticeStart = Date.UTC(2026, 6, 4, 21, 0, 0); // 3:00 PM MDT in Utah.
-
-      if (now >= holidayStart && now < holidayEnd) {
-        document.querySelectorAll('.btn-order[href*="hikarisushi-online.square.site"]').forEach(function (button) {
-          button.dataset.originalHref = button.href;
-          button.removeAttribute('href');
-          button.removeAttribute('target');
-          button.setAttribute('aria-disabled', 'true');
-          button.setAttribute('tabindex', '-1');
-          button.setAttribute('title', 'Online ordering is paused for July 4.');
-          button.classList.add('btn-disabled');
-          button.textContent = 'Ordering Paused Today';
-        });
-      }
-
-      if (now < closedNoticeStart) return;
-
-      ['holiday-hours-hero-notice', 'holiday-hours-location-notice'].forEach(function (id) {
-        var notice = document.getElementById(id);
-        if (notice) notice.hidden = false;
-      });
-    })();
-  </script>
   <script src="js/main.js"></script>
   <script src="js/menu-page.js"></script>
 </body>
