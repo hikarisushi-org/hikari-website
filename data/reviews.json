@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "cooper hinkel",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocJ8kv4snMmsmp-YIDUW0xe3SqHPSmsyo9cgGEbkkcYKPoEP0Q=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Best food in slc, super nice staff and clam atmosphere",
+      "relativeTime": "",
+      "publishTime": "2026-07-11T18:04:35.693831Z"
+    },
+    {
       "author": "Zachary Wilhelm",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjVtaV5idR4kshSHncZYtrpX3b2yV5YFbaP8CPDlCVGstst0_2df=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1458,5 +1466,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 199
+  "totalReviews": 200
 }
