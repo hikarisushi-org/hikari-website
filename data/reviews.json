@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Lyman Kirkland",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjV9o5QvH10GMfWqE4kHld9tAkTmcskwH5hO2XTPUBELGpxnYmymyA=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "This place is fantastic. Freddie is an experienced chef and has a great fish supplier. Punches well above its weight. The sushi nachos are incredible. So glad we discovered Hikari.",
+      "relativeTime": "",
+      "publishTime": "2026-07-14T00:53:23.602200Z"
+    },
+    {
       "author": "cooper hinkel",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocJ8kv4snMmsmp-YIDUW0xe3SqHPSmsyo9cgGEbkkcYKPoEP0Q=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1466,5 +1474,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 200
+  "totalReviews": 201
 }
