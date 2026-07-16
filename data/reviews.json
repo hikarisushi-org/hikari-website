@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Lesley Barrera",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocIRirz8G7ZNOy7gwviT2WVZ4wTzE1nu7AsgWD1yAtVbFf6ivg=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "(Translated by Google) A unique and special service, I love it because the owners are Latino! And their kindness and attention are lovely... Eva, the waitress, is very sweet and elegant... the place is small yet very simple.\n\n(Original)\nUn servicio \u00fanico, especial me encanta, porq son latinos los due\u00f1os!!! Y su amabilidad y ate ncion es linda... EVA es muy dulce \u00f1a mesera y aparte elegante... el lugarcito y a la vez muy cencillo",
+      "relativeTime": "",
+      "publishTime": "2026-07-16T02:03:39.404967Z"
+    },
+    {
       "author": "Lyman Kirkland",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjV9o5QvH10GMfWqE4kHld9tAkTmcskwH5hO2XTPUBELGpxnYmymyA=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1474,5 +1482,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 201
+  "totalReviews": 203
 }
