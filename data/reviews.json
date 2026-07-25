@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Deirdre McIntosh",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjV4_4qobMfb7Jj8dl3GJWLa1U6of_4xrQiGbOyrrr3hB843JQg=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "This was our first time here. We started with the sushi nachos which were phoenominal! The mochi ice cream was delicious too. Fast, friendly service as well. We will be back!",
+      "relativeTime": "",
+      "publishTime": "2026-07-24T18:02:07.282971Z"
+    },
+    {
       "author": "Matt Drews",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocJYWTvRhkh74fiJ9tDEpQMyD5IXhN-yA_hPdu1E5Zk1QtjNfcM=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1498,5 +1506,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 205
+  "totalReviews": 206
 }
