@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "Brandon Miner",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUdV60JaU78oTYoobfxuMSRheok1ZwS2hkzHAIgfagQ1aqzomwE=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "I giggled when I took my first bite it was so good!!!!",
+      "relativeTime": "",
+      "publishTime": "2026-08-07T00:52:18.428444Z"
+    },
+    {
+      "author": "Mallory Day",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjV2TBwm2xY6bhBhEifSrTtFYq_UtG1FPhO9PRbiD8TFU76qrO8D=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "Everything was delicious. The Mango Dream was stand out, but truly everything was fresh and made with such precision.",
+      "relativeTime": "",
+      "publishTime": "2026-08-07T00:04:43.220617Z"
+    },
+    {
       "author": "Deirdre McIntosh",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjV4_4qobMfb7Jj8dl3GJWLa1U6of_4xrQiGbOyrrr3hB843JQg=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1498,5 +1514,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 205
+  "totalReviews": 208
 }
