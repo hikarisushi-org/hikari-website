@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "Brett Ottley",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjW5ICSN9uC365BIzhEWd9t-1k1K3fv43XcWodJySKxzt7z5Fnxmsg=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "Great sushi place!  This will be a regular place for us moving forward.",
+      "relativeTime": "",
+      "publishTime": "2026-08-16T00:38:32.779438Z"
+    },
+    {
+      "author": "Conner Ottley",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocKkWCRDg6dcNsw4JFShkApEwrygHP0n4074tiVHeCEOIwFI-Q=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Super kind and welcoming. Food was amazing!",
+      "relativeTime": "",
+      "publishTime": "2026-08-16T00:19:53.134796Z"
+    },
+    {
       "author": "Anjelina Sandoval",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocKLGf3gf_2TopMes2dIQr8Y9CfVWX0VbTfxoP3WM9SgJH3Edw=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1538,5 +1554,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 211
+  "totalReviews": 213
 }
