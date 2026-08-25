@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Amsy",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWO6yqlk3S_HqIgnwT9BVWu8bCL4ZOzKAiVOCuG7tMnZGtPu-I=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "The poki bowls were so yummy and fresh! Our server was very kind and brought out our food promptly. We really enjoyed our time here!",
+      "relativeTime": "",
+      "publishTime": "2026-08-24T13:35:58.703484Z"
+    },
+    {
       "author": "Brett Ottley",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjW5ICSN9uC365BIzhEWd9t-1k1K3fv43XcWodJySKxzt7z5Fnxmsg=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1554,5 +1562,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 213
+  "totalReviews": 214
 }
