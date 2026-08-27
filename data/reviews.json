@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "G C",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjX9SIp-DqNCEJJYdyGQ0jiTXcAlxVVe5I_GpZsoCjNVLx_Z1biN=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "This little sushi spot was such a fun treat! \ud83c\udf63\u2728 I love how simple and unpretentious it is\u2014the menu isn\u2019t overwhelming, the design is super cute, and even the plates and table setting have that clean, elegant Japanese feel.\n\nWe started with the spicy edamame, which had a little hint of mint. Maybe it's just me tasting the mint, but it was still tasty! The karaage though? \ud83e\udd0c\ud83c\udffc SO good\u2014crispy, juicy, and fried to perfection. The miso soup was pretty standard for me, although I\u2019d happily add more green onions because, honestly, green onions make everything better! \ud83d\ude02\n\nBut the rolls stole the show! \ud83c\udf63 The Cheetos roll was surprisingly delicious\u2014the crunchy Cheetos with the creamy filling worked way better than I expected. And the Firefly roll was an absolute explosion of flavors with every bite. REALLY, really good! \ud83d\udd25\n\nI also love how simple yet appetizing their presentation is. Even the water comes with mint and lemon already in it\u2014such a cute little touch. \ud83c\udf4b\ud83c\udf3f\n\nOverall, such a great find! Small, simple, clean, and the food is genuinely delicious. Sometimes the little sushi places are the ones that surprise you the most. \ud83d\udc95\ud83c\udf63 Definitely a treat for me\u2014love it!",
+      "relativeTime": "",
+      "publishTime": "2026-08-26T20:08:46.356936Z"
+    },
+    {
       "author": "Sai Kun",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLMhj2DJuTJYV_6_i8on9lfnTlHeTaGl0gbdoKsEWmm3LqdDA=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1570,5 +1578,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 215
+  "totalReviews": 216
 }
