@@ -55,7 +55,7 @@ Important: do not publish Sunday or holiday-specific open messaging unless owner
 Hikari's single style guide lives at:
 
 ```text
-/Users/samanthashiro/projects/visual-design/BRAND.md
+/Users/samanthashiro/projects/hikari-visual-design/BRAND.md
 ```
 
 Website CSS and theme JSON files apply that guide; they are not separate brand

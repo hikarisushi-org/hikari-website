@@ -22,7 +22,7 @@ Complete guide for developing, maintaining, and deploying the Hikari Sushi websi
 Brand/style decisions live in:
 
 ```text
-/Users/samanthashiro/projects/visual-design/BRAND.md
+/Users/samanthashiro/projects/hikari-visual-design/BRAND.md
 ```
 
 The website theme system applies those rules. It is not a separate style guide.

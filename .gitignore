@@ -20,3 +20,11 @@ assets/video/*.mov
 
 # AI session logs and local vector memory
 .ai/context-logger/
+
+# Generated Project Pulse re-entry dashboard (observer --pulse) — regenerate, never commit
+PROJECT-PULSE.md
+
+# Local agent/tool config (personal, not committed)
+.codex/
+.skillshare/
+.claude/skills/

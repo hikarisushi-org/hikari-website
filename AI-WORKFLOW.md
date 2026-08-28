@@ -1,10 +1,10 @@
-# 🤖 OpenClaw Workflow & Environment Memory
+# 🤖 Workflow & Environment Memory
 
 ## 🔑 SSH & Git Configuration
 
-- **Identity File:** `~/.ssh/openclaw_github_ed25519`
+- **Identity File:** `~/.ssh/arcos33_github_ed25519`
 - **Host Handshake:** GitHub.com is verified in `known_hosts`.
-- **SSH Config:** The `~/.ssh/config` is set to automatically use the openclaw key for all `github.com` requests.
+- **SSH Config:** The `~/.ssh/config` is set to use the `arcos33` key for all `github.com` requests.
 - **Verification Command:** `ssh -T git@github.com`
 
 ## 🎨 Hikari Theme System

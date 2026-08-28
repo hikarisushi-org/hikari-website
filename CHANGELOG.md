@@ -2,6 +2,11 @@
 
 All notable changes to this repo will be documented here.
 
+## 2026-08-20
+
+### Changed
+- Updated the documented GitHub SSH identity from the retired automation key to the active `arcos33` key.
+
 ## 2026-06-12
 
 ### Added
@@ -25,4 +30,3 @@ All notable changes to this repo will be documented here.
 
 ### Changed
 - **Hamburger Day hero layout**: Hides the standard hero badge/tagline/title/subtitle for this theme so the promo artwork isn’t covered; keeps CTA buttons visible.
-
