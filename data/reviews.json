@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Lindsay Hansen",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjX-YoT28pNIO8lzs2d99C96cqR_e4VFWF6uAjRPGptY0NXUTir4=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "We love Hikari! It\u2019s a hidden gem right behind the guitar store. Our whole family loves the food, and the service is great. The food presentation is absolutely gorgeous and that just makes the whole experience of being there even more enjoyable. The strawberry sushi roll, salmon sunrise, Vegas, and firefly rolls are a few of our favorites. Thank you, Hikari Sushi, for always taking great care of us.",
+      "relativeTime": "",
+      "publishTime": "2026-08-31T20:11:12.821847Z"
+    },
+    {
       "author": "Tasia Thorne",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocL6KWPBehF8_LjxwqOPFsfZ9ZUSkUOM1AUwWIGhRTpOc-Aj=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1586,5 +1594,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 218
+  "totalReviews": 219
 }
