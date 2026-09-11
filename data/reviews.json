@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "Kayla Linn",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocIqHqzYnzc397x1_NLVYG8m2K8Hi8eltHeWC8MjHBN9WubF2g=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "This was a wonderful experience for my daughter and I. It was a very soothing setting, wonderful service and food along with conversations with the chef. The sushi was delicious, the waitress helped teach my daughter to use the chopsticks, and even got her to try kabocha! We will definitely be back \u2764\ufe0f\ud83d\udc4c",
+      "relativeTime": "",
+      "publishTime": "2026-09-11T01:59:56.955286Z"
+    },
+    {
+      "author": "Laura Villarreal",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocJl6NMXP97AsPuDaM8ntox8G7v_9-ZbY6Gu-guggr7dhZ026w=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "(Translated by Google) Everything was delicious, and the staff were very friendly and welcoming. Highly recommended. We loved it.\n\nEverything was delicious, and the staff are very friendly and lovely. Highly recommended\u2014we loved it.\n\n(Original)\nTodo estuvo muy rico, las personas que atienden son muy amables y queridas. super recomendado. nos encanto.\n\nEverything was delicious, and the staff are very friendly and lovely. Highly recommended\u2014we loved it.",
+      "relativeTime": "",
+      "publishTime": "2026-09-11T01:54:51.559029Z"
+    },
+    {
       "author": "Lindsay Hansen",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjX-YoT28pNIO8lzs2d99C96cqR_e4VFWF6uAjRPGptY0NXUTir4=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1594,5 +1610,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 220
+  "totalReviews": 223
 }
