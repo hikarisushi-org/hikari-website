@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "Sofiya Burmistrova",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjW_t20AFZdNJJPvk5aLfsSOFTnnWrc4fleYu6Mr-7GDJoIPMKw=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Clean, great service, great food. I am pretty picky with sushi and I can honestly say that I was not disappointed by one thing that I ordered (we ordered a lot). Everything was fresh, the owner is lovely.",
+      "relativeTime": "",
+      "publishTime": "2026-09-12T23:36:02.337135Z"
+    },
+    {
+      "author": "Jesse C",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLmpiI2zr-UlCy94kpnSG1ts_uk81mQrHOV48p7IlPVsYAmmA=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Great food!",
+      "relativeTime": "",
+      "publishTime": "2026-09-12T21:48:01.966957Z"
+    },
+    {
       "author": "Kayla Linn",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocIqHqzYnzc397x1_NLVYG8m2K8Hi8eltHeWC8MjHBN9WubF2g=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1610,5 +1626,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 223
+  "totalReviews": 225
 }
