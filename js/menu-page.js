@@ -110,12 +110,6 @@ const menuData = {
         "img": "assets/images/menu/appetizers/crab_rangoons.png"
       },
       {
-        "name": "Garlic Shrimp",
-        "price": "$12",
-        "desc": "Butterflied shrimp served with sweet chili sauce.",
-        "img": "assets/images/menu/appetizers/garlic_shrimp.png"
-      },
-      {
         "name": "Chicken Karaage",
         "price": "$8",
         "desc": "Japanese fried chicken served with sauce.",
