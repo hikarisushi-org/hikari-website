@@ -529,7 +529,11 @@ function renderMenu() {
   container.innerHTML = '';
   allItems = [];
 
-  Object.keys(menuData).forEach(category => {
+  const categories = isMenuPage
+    ? Object.keys(menuData)
+    : [currentFilter === 'all' ? 'most-ordered' : currentFilter];
+
+  categories.forEach(category => {
     const categoryData = menuData[category];
     const section = document.createElement('div');
     section.className = 'menu-category-section';
@@ -759,7 +763,11 @@ function setupFilters() {
       filters.forEach(f => f.classList.remove('active'));
       filter.classList.add('active');
       currentFilter = filter.dataset.filter;
-      applyFilter();
+      if (isMenuPage) {
+        applyFilter();
+      } else {
+        renderMenu();
+      }
     });
   });
 }

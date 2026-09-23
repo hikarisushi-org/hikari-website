@@ -28,7 +28,7 @@ NEXT ACTION: Begin the approval-gated Phase 3 mobile-first homepage and `/menu` 
 
 - Branch: `codex/website-improvements`, based on current `origin/main`. Latest committed checkpoint before the current media work: `a57a756`.
 - Phase 1 analytics implementation is committed. Five focused tests and 111 theme tests pass; browser diagnostic proof passed for order, reservation, and directions events. The Square business baseline is recorded; GA4 needs the account that can access property `G-SH54LFXHJ3`.
-- Phase 2 is complete locally: 260 generated AVIF/WebP variants, 297/406 KiB optimized hero videos, self-hosted fonts, and single-source hero selection. Three mobile Lighthouse runs scored 87/88/88 with median LCP 3.83 seconds and CLS 0. Media validation, five analytics tests, 111 theme tests, syntax checks, and desktop browser proof pass.
+- Phase 2 is complete locally: 260 generated AVIF/WebP variants, 297/406 KiB optimized hero videos, self-hosted fonts, single-source hero selection, and a six-card homepage initial menu while `/menu` retains the full catalog. The final three mobile Lighthouse runs scored 77/89/88 with median performance 88, LCP 3.83 seconds, CLS 0, and 1.13 MiB transferred. Media validation, five analytics tests, 111 theme tests, syntax checks, and browser proof pass.
 - The only unrelated working-tree item remains untracked `assets/images/july-4-hero.png`; leave it untouched.
 - The checklist is served only on the Mac mini's Tailscale interface at `http://100.124.197.26:6420/tracker` so Joel's other tailnet computer can keep it open in the right Browser panel. The dedicated server exposes only the tracker file; background session `18818` must remain running.
 

@@ -8,10 +8,10 @@ The optimized local build passes the Phase 2 lab gate.
 
 | Run | Performance | LCP | CLS | Transferred bytes |
 |---:|---:|---:|---:|---:|
-| 1 | 87 | 3.98 s | 0 | 1,185,994 |
-| 2 | 88 | 3.83 s | 0 | 947,175 |
-| 3 | 88 | 3.83 s | 0 | 1,012,614 |
-| **Median** | **88** | **3.83 s** | **0** | **1,012,614** |
+| 1 | 77 | 5.74 s | 0 | 1,186,293 |
+| 2 | 89 | 3.75 s | 0 | 1,231,644 |
+| 3 | 88 | 3.83 s | 0 | 947,301 |
+| **Median** | **88** | **3.83 s** | **0** | **1,186,293** |
 
 Gate: median performance at least 85, LCP at most 4.0 seconds, and CLS 0.
 
@@ -23,8 +23,9 @@ Method: Lighthouse 13.5.0 mobile preset, three fresh headless Chrome runs agains
 - Kept one viewport-selected hero element rather than two simultaneous autoplay videos.
 - Self-hosted the Latin Inter and Playfair Display WOFF2 files and preloaded the two initial fonts, removing the render-blocking Google Fonts stylesheet and its variable network delay.
 - Retained the 260 responsive AVIF/WebP food-image variants, intrinsic sizing, and lazy loading from the media-delivery checkpoint.
+- Limited the homepage's initial menu DOM to the six verified Most Popular dishes; the standalone `/menu` retains the full catalog, and homepage filters render another category only when selected.
 
-In the median run, the largest single transfer was Google Analytics at 192,377 bytes. The selected portrait video transferred 131,260 bytes during the measured page load. Total transfer was down from the earlier 4.4 MiB local runs to a 0.97 MiB median.
+The selected portrait video was the largest variable transfer, ranging from a partial request to its full 415,616-byte file. Median total transfer was 1.13 MiB, down from the earlier 4.4 MiB local runs. The slower first run is retained rather than discarded; the three-run median still clears the gate.
 
 ## Verification boundary
 

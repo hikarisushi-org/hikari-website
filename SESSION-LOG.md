@@ -2,7 +2,7 @@
 
 ## 2026-09-23 — Implement responsive media delivery
 
-- Completed the Phase 2 performance gate after the image checkpoint: re-encoded the hero reels to 297 KiB landscape and 406 KiB portrait files, self-hosted critical fonts, and made theme JSON fetch without stale cache. Three final mobile Lighthouse runs scored 87/88/88; median LCP 3.83 seconds, CLS 0, and transfer 0.97 MiB. Saved proof in `11-MOBILE-PERFORMANCE-VERIFICATION.md`.
+- Completed the Phase 2 performance gate after the image checkpoint: re-encoded the hero reels to 297 KiB landscape and 406 KiB portrait files, self-hosted critical fonts, made theme JSON fetch without stale cache, and reduced the homepage's initial menu from the full catalog to six featured cards. The final three mobile Lighthouse runs scored 77/89/88; median performance 88, LCP 3.83 seconds, CLS 0, and transfer 1.13 MiB. Saved proof in `11-MOBILE-PERFORMANCE-VERIFICATION.md`.
 - Generated 320/640 px AVIF and WebP variants for all 60 active menu images and 640/1280 px variants for five homepage food images. All 260 outputs validate and total 4.26 MiB versus 115.86 MiB of source material.
 - Wired responsive `<picture>` markup, `srcset`, `sizes`, intrinsic dimensions, lazy loading, and asynchronous decoding into the shared menu renderer and homepage shell. Browser proof selected 320 px AVIF menu cards and 1280 px AVIF homepage imagery while preserving layout.
 - Replaced the two simultaneous hero videos with one orientation-aware element. Desktop browser proof loaded only the landscape MP4; reduced-motion and data-saver guards are enforced by the media validator. Added asset versioning after browser caching initially retained an older script.
