@@ -264,7 +264,7 @@
       <div class="progress-number" aria-live="polite">0 / 0</div>
     </section>
 
-    <p class="current-focus"><strong>Current focus:</strong> Phase 2 — mobile performance. <span>Square's four-week baseline is recorded; GA4 is waiting on access to the Hikari property.</span></p>
+    <p class="current-focus"><strong>Current focus:</strong> Phase 2 — mobile performance gate. <span>Responsive images and single-source hero delivery are complete; next is the median of three mobile runs.</span></p>
 
     <section class="phase-list" aria-label="Implementation phases">
       <details data-phase open>
@@ -300,10 +300,10 @@
           <span class="status active">In progress</span>
         </summary>
         <ul class="tasks">
-          <li class="task"><input id="p2-1" type="checkbox" disabled><label for="p2-1"><strong>Inventory active homepage and menu media</strong><span>Separate current assets from unused and historical files.</span></label></li>
-          <li class="task"><input id="p2-2" type="checkbox" disabled><label for="p2-2"><strong>Generate responsive WebP and AVIF images</strong><span>Deliver display-sized sources instead of multi-megabyte PNG cards.</span></label></li>
-          <li class="task"><input id="p2-3" type="checkbox" disabled><label for="p2-3"><strong>Fix responsive image loading</strong><span>Add dimensions, <code>srcset</code>, <code>sizes</code>, and intentional lazy/eager loading.</span></label></li>
-          <li class="task"><input id="p2-4" type="checkbox" disabled><label for="p2-4"><strong>Load one correct hero source</strong><span>Prevent the hidden landscape video from playing on mobile; respect reduced motion.</span></label></li>
+          <li class="task"><input id="p2-1" type="checkbox" checked disabled><label for="p2-1"><strong>Inventory active homepage and menu media</strong><span>60 current menu sources, six homepage shell images, two hero videos, and the historical boundary are recorded.</span></label></li>
+          <li class="task"><input id="p2-2" type="checkbox" checked disabled><label for="p2-2"><strong>Generate responsive WebP and AVIF images</strong><span>260 validated variants cover all 60 menu and five homepage food sources at 4.26 MiB total.</span></label></li>
+          <li class="task"><input id="p2-3" type="checkbox" checked disabled><label for="p2-3"><strong>Fix responsive image loading</strong><span>Picture sources, <code>srcset</code>, <code>sizes</code>, dimensions, and intentional lazy loading are wired and browser-verified.</span></label></li>
+          <li class="task"><input id="p2-4" type="checkbox" checked disabled><label for="p2-4"><strong>Load one correct hero source</strong><span>One orientation-aware video loads; desktop browser proof selected only landscape, with reduced-motion and data-saver guards.</span></label></li>
           <li class="task"><input id="p2-5" type="checkbox" disabled><label for="p2-5"><strong>Pass the mobile performance gate</strong><span>Median of three runs targets score ≥85, LCP ≤4.0s, and CLS 0.</span></label></li>
         </ul>
       </details>

@@ -3,26 +3,58 @@
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ---- Hero Video Autoplay ----
-  const heroVideo = document.querySelector('.hero-video');
-  if (heroVideo) {
-    // Force play the video (handles browser autoplay policies)
+  // ---- Hero Media ----
+  const heroVideo = document.querySelector('video.hero-video');
+  const mobileHero = window.matchMedia('(max-width: 768px)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const saveData = Boolean(window.navigator?.connection?.saveData);
+  let heroSources = heroVideo ? {
+    landscape: heroVideo.dataset.landscapeSrc,
+    portrait: heroVideo.dataset.portraitSrc
+  } : null;
+
+  function stopHeroVideo() {
+    if (!heroVideo) return;
+    heroVideo.pause();
+    heroVideo.removeAttribute('src');
+    heroVideo.dataset.activeSrc = '';
+    heroVideo.load();
+  }
+
+  function loadHeroVideo() {
+    if (!heroVideo || !heroSources) return;
+    if (reducedMotion.matches || saveData) {
+      stopHeroVideo();
+      return;
+    }
+
+    const nextSrc = mobileHero.matches ? heroSources.portrait : heroSources.landscape;
+    if (!nextSrc || heroVideo.dataset.activeSrc === nextSrc) return;
+
+    heroVideo.src = nextSrc;
+    heroVideo.dataset.activeSrc = nextSrc;
+    heroVideo.load();
     const playPromise = heroVideo.play();
-    
-    if (playPromise !== undefined) {
-      playPromise.then(() => {
-        // Autoplay started successfully
-        console.log('Hero video playing');
-      }).catch(error => {
-        // Autoplay was prevented - try playing on user interaction
-        console.warn('Hero video autoplay prevented:', error);
-        document.addEventListener('click', function playOnClick() {
-          heroVideo.play();
-          document.removeEventListener('click', playOnClick);
-        }, { once: true });
-      });
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {});
     }
   }
+
+  window.HikariHeroMedia = {
+    setVideoPath(path) {
+      heroSources = { landscape: path, portrait: path };
+      loadHeroVideo();
+    },
+    setVideoSources(sources) {
+      heroSources = sources;
+      loadHeroVideo();
+    },
+    stop: stopHeroVideo
+  };
+
+  loadHeroVideo();
+  mobileHero.addEventListener('change', loadHeroVideo);
+  reducedMotion.addEventListener('change', loadHeroVideo);
 
   // ---- Navbar scroll effect ----
   const nav = document.getElementById('nav');

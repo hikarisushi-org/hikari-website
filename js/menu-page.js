@@ -583,6 +583,50 @@ function renderMenu() {
   updateMyListBadge();
 }
 
+function getResponsiveMenuSources(src) {
+  const match = src.match(/^assets\/images\/menu\/(.+)\.(?:png|jpe?g)$/i);
+  if (!match) return null;
+
+  const base = `assets/images/generated/menu/${match[1]}`;
+  return {
+    avif: `${base}-320.avif 320w, ${base}-640.avif 640w`,
+    webp: `${base}-320.webp 320w, ${base}-640.webp 640w`
+  };
+}
+
+function createResponsiveMenuPicture(item, onError) {
+  const picture = document.createElement('picture');
+  const sources = getResponsiveMenuSources(item.img);
+  const sizes = '(max-width: 767px) calc(50vw - 18px), (max-width: 1023px) calc(33vw - 24px), 280px';
+
+  if (sources) {
+    const avif = document.createElement('source');
+    avif.type = 'image/avif';
+    avif.srcset = sources.avif;
+    avif.sizes = sizes;
+    picture.appendChild(avif);
+
+    const webp = document.createElement('source');
+    webp.type = 'image/webp';
+    webp.srcset = sources.webp;
+    webp.sizes = sizes;
+    picture.appendChild(webp);
+  }
+
+  const img = document.createElement('img');
+  img.src = item.img;
+  img.alt = item.name;
+  img.className = 'menu-page-item-img';
+  img.loading = 'lazy';
+  img.decoding = 'async';
+  img.width = 640;
+  img.height = 640;
+  img.onerror = onError;
+  picture.appendChild(img);
+
+  return picture;
+}
+
 // Create menu item element (card format)
 function createMenuItem(item, category, index) {
   const div = document.createElement('div');
@@ -593,16 +637,11 @@ function createMenuItem(item, category, index) {
 
   // Only show image if available
   if (item.img) {
-    const img = document.createElement('img');
-    img.src = item.img;
-    img.alt = item.name;
-    img.className = 'menu-page-item-img';
-    img.loading = 'lazy';
-    img.onerror = function() {
-      this.parentElement.classList.add('no-image');
-      this.style.display = 'none';
-    };
-    div.appendChild(img);
+    const picture = createResponsiveMenuPicture(item, function() {
+      div.classList.add('no-image');
+      picture.style.display = 'none';
+    });
+    div.appendChild(picture);
   } else {
     // No image - text only card
     div.classList.add('no-image');

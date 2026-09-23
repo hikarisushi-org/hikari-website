@@ -1,10 +1,18 @@
 # Session Log
 
+## 2026-09-23 — Implement responsive media delivery
+
+- Generated 320/640 px AVIF and WebP variants for all 60 active menu images and 640/1280 px variants for five homepage food images. All 260 outputs validate and total 4.26 MiB versus 115.86 MiB of source material.
+- Wired responsive `<picture>` markup, `srcset`, `sizes`, intrinsic dimensions, lazy loading, and asynchronous decoding into the shared menu renderer and homepage shell. Browser proof selected 320 px AVIF menu cards and 1280 px AVIF homepage imagery while preserving layout.
+- Replaced the two simultaneous hero videos with one orientation-aware element. Desktop browser proof loaded only the landscape MP4; reduced-motion and data-saver guards are enforced by the media validator. Added asset versioning after browser caching initially retained an older script.
+- Verification: media validator passes, five analytics tests pass, all 111 theme tests pass, JavaScript syntax checks pass, and `git diff --check` passes. No production deployment occurred. Next: run three mobile performance tests and record the median.
+
 ## 2026-09-23 — Record the Square business baseline
 
 - Used the last 28 complete days, August 26 through September 22, and filtered Square's Sales summary to the `Hikari Sushi` online-store channel.
 - Verified 15 completed online orders and $602.90 net online sales; calculated $40.19 average order value from the same period. A September 18 return is reflected in net sales and was not treated as another completed sale.
 - The signed-in Google account opened the Analytics “Start measuring” screen and had no accessible Hikari property. No account/property was created and no GA4 values were inferred. Phase 1 remains 4/5 while work advances to the non-dependent Phase 2 media inventory.
+- Completed the Phase 2 source inventory: the 60 active menu images weigh 115.30 MiB, and the shared renderer currently places all of them on both homepage and `/menu`. Documented the six homepage shell images, two hero video sources, 42 unreferenced menu assets, and the exact optimization boundary.
 
 ## 2026-09-23 — Start Phase 1 with a live right-panel tracker
 
