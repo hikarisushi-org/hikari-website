@@ -1,5 +1,13 @@
 # Session Log
 
+## 2026-09-23 — Prove one Square item path
+
+- Selected Fire Cracker from the approved popular-dish set and captured its live Square item ID.
+- Found that an item-only URL can lose store context in a clean session; the explicit location + item URL reliably opens the product on desktop and at 390 x 844 mobile.
+- Verified current identity, photo, $15 price, Regular variation, 20% discount, pickup and delivery availability, current fees/totals, cart visibility, mobile checkout action, and payment entry without entering personal/payment data or submitting an order.
+- Updated the analytics parameter test to use the proven URL and `item_name: Fire Cracker`; all focused analytics tests pass.
+- Recorded the Square decision as Pass. Next: Joel approves or revises the Phase 3 design, then Phase 5 can implement the approved site and reuse verified item links.
+
 ## 2026-09-23 — Create the Phase 3 design preview
 
 - Improved the tracker so one page now shows the exact current work, what it is waiting on, what comes next, the independent GA4 blocker, and a direct preview link. Completed and blocked phase badges were corrected.

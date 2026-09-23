@@ -7,6 +7,18 @@ Format: newest first. Link measurements to `SPECS.md`; link resume state to `REA
 
 ---
 
+## 2026-09-23 — Keep Square and use verified location-aware item links
+
+**Decision:** Keep Square as Hikari's ordering provider. A featured dish may link directly only after its live URL is verified with both the Square location and item identifiers. General order actions continue to open the Square menu.
+
+**Why:** Fire Cracker opened reliably in clean desktop and mobile sessions at `?location=LMCJ08MMKDHCA&item=A5BIIXCE5ILZWRZCDTY7A4KY`. The item-only form lost store context during clean-session fulfillment selection. The explicit location-aware form preserved the correct item, photo, price, Regular variation, 20% discount, pickup/delivery availability, fees, cart, and payment entry without DOM scripting or checkout injection.
+
+**Boundary:** Do not guess or reuse item IDs for the other featured dishes. Fire Cracker has no optional modifiers configured, so the site must not imply choices Square does not offer. No production link is wired until the Phase 3 design is approved.
+
+[Detailed Phase 4 proof](results/2026-09-23-website-audit/13-SQUARE-ITEM-PATH-PROOF.md).
+
+---
+
 ## 2026-09-23 — Advance performance work while GA4 access is blocked
 
 **Decision:** Use August 26 through September 22 as the comparable 28-day pre-launch window. Record only authenticated provider values: Square shows 15 completed online-store orders, $602.90 net online sales, and $40.19 average order value.

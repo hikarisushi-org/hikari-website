@@ -375,17 +375,17 @@
 
     <section class="working-now" aria-labelledby="working-now-title">
       <p class="now-label"><span class="now-dot" aria-hidden="true"></span>Working now</p>
-      <h2 id="working-now-title">Phase 3: reviewing the new homepage and menu direction</h2>
-      <p class="now-summary">The responsive preview is finished and verified. Work is currently paused at the approval gate so the visual direction is settled before Square deep-link testing or production redesign begins.</p>
+      <h2 id="working-now-title">Phase 5 is waiting on design approval</h2>
+      <p class="now-summary">The Fire Cracker Square path is proven on desktop and mobile. The next implementation step is the approved website build, which starts after Joel approves or revises the private Phase 3 design.</p>
       <div class="now-grid">
-        <div class="now-fact"><strong>Waiting on</strong><span>Joel's approval or revision notes</span></div>
-        <div class="now-fact"><strong>Next after approval</strong><span>Phase 4: one-item Square proof</span></div>
-        <div class="now-fact"><strong>Separate blocker</strong><span>GA4 property access; does not block design</span></div>
+        <div class="now-fact"><strong>Completed</strong><span>Fire Cracker direct link, pickup, delivery, fees, discount, cart, and measurement</span></div>
+        <div class="now-fact"><strong>Waiting on Joel</strong><span>Approve or revise the Phase 3 visual direction</span></div>
+        <div class="now-fact"><strong>Separate blocker</strong><span>GA4 property access for the four-week baseline</span></div>
       </div>
       <div class="now-actions">
-        <a class="now-button" href="http://100.124.197.26:6421/preview?view=home">Open the current preview</a>
-        <a class="now-link" href="#phase-3">See the active checklist</a>
-        <time class="now-updated" datetime="2026-09-23T15:55:00-06:00">Updated September 23 at 3:55 PM</time>
+        <a class="now-button" href="http://100.124.197.26:6421/preview">Review the design preview</a>
+        <a class="now-link" href="#phase-4">See the completed Square proof</a>
+        <time class="now-updated" datetime="2026-09-23T16:07:00-06:00">Updated September 23 at 4:07 PM</time>
       </div>
     </section>
 
@@ -431,7 +431,7 @@
         </ul>
       </details>
 
-      <details data-phase open id="phase-3">
+      <details data-phase id="phase-3">
         <summary>
           <span class="phase-heading"><span class="phase-number">3</span><span class="phase-title">Mobile-first design preview</span></span>
           <span class="status active">Approval needed</span>
@@ -444,23 +444,23 @@
         </ul>
       </details>
 
-      <details data-phase>
+      <details data-phase id="phase-4">
         <summary>
           <span class="phase-heading"><span class="phase-number">4</span><span class="phase-title">One-item Square proof</span></span>
-          <span class="status queued">Queued</span>
+          <span class="status complete">Complete</span>
         </summary>
         <ul class="tasks">
-          <li class="task"><input id="p4-1" type="checkbox" disabled><label for="p4-1"><strong>Select one representative live item</strong><span>Use an approved popular dish with real choices or modifiers.</span></label></li>
-          <li class="task"><input id="p4-2" type="checkbox" disabled><label for="p4-2"><strong>Prove the most direct stable Square destination</strong><span>No brittle storefront scripting or checkout injection.</span></label></li>
-          <li class="task"><input id="p4-3" type="checkbox" disabled><label for="p4-3"><strong>Test pickup and delivery on mobile and desktop</strong><span>Verify identity, photo, price, modifiers, availability, discount, fees, and cart.</span></label></li>
-          <li class="task"><input id="p4-4" type="checkbox" disabled><label for="p4-4"><strong>Record the Square path decision</strong><span>Item link, honest menu/category handoff, or separate storefront evaluation.</span></label></li>
+          <li class="task"><input id="p4-1" type="checkbox" checked disabled><label for="p4-1"><strong>Select one representative live item</strong><span>Fire Cracker is live with its actual Regular variation; Square has no optional modifiers configured for it.</span></label></li>
+          <li class="task"><input id="p4-2" type="checkbox" checked disabled><label for="p4-2"><strong>Prove the most direct stable Square destination</strong><span>The location-aware item URL opens Fire Cracker directly in a clean session without storefront scripting.</span></label></li>
+          <li class="task"><input id="p4-3" type="checkbox" checked disabled><label for="p4-3"><strong>Test pickup and delivery on mobile and desktop</strong><span>Identity, photo, price, variation, availability, 20% discount, fees, cart, and payment entry are verified.</span></label></li>
+          <li class="task"><input id="p4-4" type="checkbox" checked disabled><label for="p4-4"><strong>Record the Square path decision</strong><span>Pass: reuse verified location-aware item links; keep general actions on the Square menu.</span></label></li>
         </ul>
       </details>
 
-      <details data-phase>
+      <details data-phase open>
         <summary>
           <span class="phase-heading"><span class="phase-number">5</span><span class="phase-title">Approved website build</span></span>
-          <span class="status queued">Queued</span>
+          <span class="status active">Approval needed</span>
         </summary>
         <ul class="tasks">
           <li class="task"><input id="p5-1" type="checkbox" disabled><label for="p5-1"><strong>Implement the approved homepage hierarchy</strong><span>Featured dishes replace the full catalog on the homepage.</span></label></li>

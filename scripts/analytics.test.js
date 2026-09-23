@@ -46,16 +46,16 @@ test('ignores unrelated and lookalike destinations', () => {
 
 test('builds useful non-personal event parameters', () => {
   const link = makeLink(
-    'https://hikarisushi-online.square.site/product/flares-of-hikari/1',
+    'https://hikarisushi-online.square.site/?location=LMCJ08MMKDHCA&item=A5BIIXCE5ILZWRZCDTY7A4KY#Y7DXG5VB4X6CYFEBQ6ZUD7DX',
     'featured_dish',
-    'Flares of Hikari'
+    'Fire Cracker'
   );
 
   assert.deepEqual(analytics.buildEventParameters(link, { pathname: '/menu' }), {
     page_path: '/menu',
     cta_placement: 'featured_dish',
     link_url: link.href,
-    item_name: 'Flares of Hikari'
+    item_name: 'Fire Cracker'
   });
 });
 

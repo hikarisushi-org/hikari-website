@@ -6,6 +6,7 @@ All notable changes to this repo will be documented here.
 
 ### Changed
 
+- Proved a stable location-aware Square deep link for Fire Cracker, verified pickup and delivery carts on desktop and mobile through payment entry, and updated the featured-dish analytics test to use the live URL and item name. No order, Square setting, deployment, or production page changed.
 - Added a prominent “Working now” panel to the roadmap tracker with the exact active gate, waiting party, next phase, independent blocker, last-updated time, and a direct link to the current preview.
 - Replaced multi-megabyte menu image delivery with 260 generated AVIF/WebP variants, responsive picture selection, intrinsic dimensions, and intentional lazy loading across the shared menu and homepage food imagery. Replaced two simultaneous hero videos with one orientation-aware source that respects reduced motion and data saver; added cache-busted asset URLs and repeatable media validation.
 - Re-encoded the current hero reels to 297 KiB landscape and 406 KiB portrait H.264 sources, self-hosted and preloaded critical Inter/Playfair Display fonts, disabled stale theme-JSON caching, and limited the homepage's initial menu render to six featured dishes while preserving the full `/menu` catalog. The final optimized build passed three mobile Lighthouse runs at a median 88 performance, 3.83-second LCP, zero CLS, and 1.13 MiB transferred.
