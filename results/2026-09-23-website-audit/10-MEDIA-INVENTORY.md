@@ -62,6 +62,7 @@ Phase 2 should therefore:
 - The shared menu renderer now emits responsive `<picture>` markup with `srcset`, `sizes`, 640×640 intrinsic dimensions, lazy loading, and asynchronous decoding.
 - Homepage about/gallery imagery now uses responsive AVIF/WebP sources, intrinsic dimensions, and intentional lazy loading.
 - The two simultaneous hero video elements were replaced by one orientation-aware video. It loads one landscape or portrait MP4 and stays poster-only for reduced-motion or data-saver users.
+- The remote 2.40/3.53 MiB hero files were re-encoded locally to 297 KiB landscape and 406 KiB portrait H.264 sources. Inter and Playfair Display are self-hosted to remove the render-blocking external font stylesheet.
 - `node scripts/validate-media.mjs` verifies all active variants, signatures, source-relative file weight, the single hero element, and its preference guards.
 
 Browser proof on the local build selected 320 px AVIF menu cards, 1280 px AVIF homepage images, and only the landscape hero MP4 at desktop width. The mobile performance gate remains separate and requires three runs.

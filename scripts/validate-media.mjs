@@ -7,6 +7,7 @@ const root = process.cwd();
 const sourceText = await readFile(path.join(root, 'js/menu-page.js'), 'utf8');
 const indexText = await readFile(path.join(root, 'index.html'), 'utf8');
 const mainText = await readFile(path.join(root, 'js/main.js'), 'utf8');
+const defaultThemeText = await readFile(path.join(root, 'themes/default.json'), 'utf8');
 const sourcePaths = [...new Set(
   [...sourceText.matchAll(/assets\/images\/menu\/[^"']+\.(?:png|jpe?g)/gi)].map((match) => match[0])
 )].sort();
@@ -17,6 +18,15 @@ const homeSourcePaths = [
   'assets/images/sushi_making.webp',
   'assets/images/sushi_eight.webp',
   'assets/images/sushi_platter_ai.webp'
+];
+const heroVideoPaths = [
+  'assets/video/generated/hero-daily-landscape-960.mp4',
+  'assets/video/generated/hero-daily-portrait-540.mp4'
+];
+const fontPaths = [
+  'assets/fonts/inter-latin.woff2',
+  'assets/fonts/playfair-display-latin.woff2',
+  'assets/fonts/playfair-display-italic-latin.woff2'
 ];
 const sourceSpecs = [
   ...sourcePaths.map((sourcePath) => ({ sourcePath, widths: [320, 640], group: 'menu' })),
@@ -40,6 +50,38 @@ if (!/data-landscape-src=/.test(heroVideos[0] || '') || !/data-portrait-src=/.te
 }
 if (!/prefers-reduced-motion:\s*reduce/.test(mainText) || !/saveData/.test(mainText)) {
   errors.push('Hero controller must respect reduced motion and data saver preferences.');
+}
+
+for (const heroVideoPath of heroVideoPaths) {
+  try {
+    const heroStat = await stat(path.join(root, heroVideoPath));
+    if (heroStat.size > 600 * 1024) {
+      errors.push(`Hero video exceeds 600 KiB budget: ${heroVideoPath}`);
+    }
+    const header = await readFile(path.join(root, heroVideoPath));
+    if (!header.subarray(0, 32).includes(Buffer.from('ftyp'))) {
+      errors.push(`Invalid MP4 signature: ${heroVideoPath}`);
+    }
+  } catch {
+    errors.push(`Missing optimized hero video: ${heroVideoPath}`);
+  }
+  if (!indexText.includes(heroVideoPath) || !defaultThemeText.includes(heroVideoPath)) {
+    errors.push(`Hero source must match in index.html and the default theme: ${heroVideoPath}`);
+  }
+}
+
+for (const fontPath of fontPaths) {
+  try {
+    const header = await readFile(path.join(root, fontPath));
+    if (header.subarray(0, 4).toString() !== 'wOF2') {
+      errors.push(`Invalid WOFF2 signature: ${fontPath}`);
+    }
+  } catch {
+    errors.push(`Missing self-hosted font: ${fontPath}`);
+  }
+}
+if (/fonts\.googleapis\.com/.test(indexText)) {
+  errors.push('Homepage must not depend on render-blocking Google Fonts CSS.');
 }
 
 function outputPath(spec, width, extension) {
@@ -98,4 +140,4 @@ console.log(`Active sources: ${sourceSpecs.length} (${sourcePaths.length} menu +
 console.log(`Responsive variants: ${generatedCount}`);
 console.log(`Original source weight: ${(originalBytes / 1048576).toFixed(2)} MiB`);
 console.log(`Generated variant weight: ${(generatedBytes / 1048576).toFixed(2)} MiB`);
-console.log('Hero delivery: one orientation-aware video with reduced-motion and data-saver guards');
+console.log('Hero delivery: one orientation-aware video, two optimized sources under 600 KiB, and preference guards');

@@ -22,13 +22,13 @@ Audit limits: the signed-in Google account has no accessible Hikari Analytics pr
 
 ## Next action
 
-NEXT ACTION: Run three mobile performance tests against the optimized local build and record the median score, LCP, and CLS. Responsive image and hero delivery are implemented and browser-verified; the [media inventory](results/2026-09-23-website-audit/10-MEDIA-INVENTORY.md) records the 260 generated variants and proof boundary. The [right-panel tracker](results/2026-09-23-website-audit/website-improvement-tracker.html) shows 12 of 34 complete. GA4 remains access-blocked; production visual implementation and publication remain approval-gated.
+NEXT ACTION: Begin the approval-gated Phase 3 mobile-first homepage and `/menu` design preview. Phase 2 passed its three-run mobile lab gate at a median 88 performance, 3.83-second LCP, and zero layout shift. [Performance proof](results/2026-09-23-website-audit/11-MOBILE-PERFORMANCE-VERIFICATION.md). The [right-panel tracker](results/2026-09-23-website-audit/website-improvement-tracker.html) shows 13 of 34 complete. GA4 remains access-blocked; production visual implementation and publication remain approval-gated.
 
 ### Current implementation handoff — September 23, 2026
 
 - Branch: `codex/website-improvements`, based on current `origin/main`. Latest committed checkpoint before the current media work: `a57a756`.
 - Phase 1 analytics implementation is committed. Five focused tests and 111 theme tests pass; browser diagnostic proof passed for order, reservation, and directions events. The Square business baseline is recorded; GA4 needs the account that can access property `G-SH54LFXHJ3`.
-- Phase 2 media delivery now has 260 generated AVIF/WebP variants (4.26 MiB total), responsive picture selection and intrinsic sizing, and a single orientation-aware hero video. Media validation, five analytics tests, 111 theme tests, syntax checks, and desktop browser proof pass. The remaining Phase 2 gate is three mobile performance runs.
+- Phase 2 is complete locally: 260 generated AVIF/WebP variants, 297/406 KiB optimized hero videos, self-hosted fonts, and single-source hero selection. Three mobile Lighthouse runs scored 87/88/88 with median LCP 3.83 seconds and CLS 0. Media validation, five analytics tests, 111 theme tests, syntax checks, and desktop browser proof pass.
 - The only unrelated working-tree item remains untracked `assets/images/july-4-hero.png`; leave it untouched.
 - The checklist is served only on the Mac mini's Tailscale interface at `http://100.124.197.26:6420/tracker` so Joel's other tailnet computer can keep it open in the right Browser panel. The dedicated server exposes only the tracker file; background session `18818` must remain running.
 

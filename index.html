@@ -13,9 +13,9 @@
   <meta name="p:domain_verify" content="c8bc80a0b1f210950ccc6623b3602dfa"/>
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css?v=1">
   <link rel="stylesheet" href="css/theme-animations.css">
   <link rel="stylesheet" href="css/style.css?v=6">
   <link rel="stylesheet" href="css/menu-page.css?v=2">
@@ -124,7 +124,7 @@
 
   <!-- Hero -->
   <section class="hero" id="hero">
-    <video class="hero-video" id="hero-video" muted loop playsinline preload="metadata" poster="assets/images/sushi_platter_1.webp" data-landscape-src="https://media.hikarisojo.com/hero-daily-landscape.mp4" data-portrait-src="https://media.hikarisojo.com/hero-daily-portrait.mp4" aria-hidden="true"></video>
+    <video class="hero-video" id="hero-video" muted loop playsinline preload="metadata" poster="assets/images/sushi_platter_1.webp" data-landscape-src="assets/video/generated/hero-daily-landscape-960.mp4" data-portrait-src="assets/video/generated/hero-daily-portrait-540.mp4" aria-hidden="true"></video>
     <div class="hero-content">
       <div class="theme-badge" aria-hidden="true"></div>
       <p class="hero-tag">Modern Japanese Kitchen</p>
@@ -367,7 +367,7 @@
   </div>
 
   <script src="js/site-actions.js"></script>
-  <script src="js/theme-loader.js?v=2"></script>
+  <script src="js/theme-loader.js?v=3"></script>
   <script src="js/main.js?v=2"></script>
   <script src="js/menu-page.js?v=2"></script>
 </body>
