@@ -1,0 +1,117 @@
+{
+  "menuCardCountNote": "Initial .menu-item selector did not match the implementation; its zero result is not a count of actual menu cards. The standalone /menu was inspected separately and rendered 67 cards, including repeated popular items.",
+  "orderLinks": [
+    {
+      "target": "_blank",
+      "text": "Order Online",
+      "url": "https://hikarisushi-online.square.site/"
+    },
+    {
+      "target": "_blank",
+      "text": "Order Online",
+      "url": "https://hikarisushi-online.square.site/"
+    },
+    {
+      "target": "_blank",
+      "text": "Order Online",
+      "url": "https://hikarisushi-online.square.site/"
+    },
+    {
+      "target": "_blank",
+      "text": "Order Online",
+      "url": "https://hikarisushi-online.square.site/"
+    }
+  ],
+  "styles": [
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "font": "Inter, -apple-system, \"system-ui\", sans-serif",
+      "radius": "0px",
+      "rect": {
+        "h": 21.7578125,
+        "w": 260.984375,
+        "x": 57.0078125,
+        "y": 183.96875
+      },
+      "size": "13.6px",
+      "text": "MODERN JAPANESE KITCHEN"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "font": "\"Playfair Display\", Georgia, serif",
+      "radius": "0px",
+      "rect": {
+        "h": 44,
+        "w": 260.984375,
+        "x": 57.0078125,
+        "y": 221.7265625
+      },
+      "size": "40px",
+      "text": "Hikari Sushi"
+    },
+    {
+      "background": "rgb(26, 138, 132)",
+      "color": "rgb(255, 255, 255)",
+      "font": "Inter, -apple-system, \"system-ui\", sans-serif",
+      "radius": "50px",
+      "rect": {
+        "h": 52.3203125,
+        "w": 260.984375,
+        "x": 57.0078125,
+        "y": 289.7265625
+      },
+      "size": "15.2px",
+      "text": "Order Online"
+    },
+    {
+      "background": "rgb(201, 106, 100)",
+      "color": "rgb(255, 255, 255)",
+      "font": "Inter, -apple-system, \"system-ui\", sans-serif",
+      "radius": "50px",
+      "rect": {
+        "h": 52.3203125,
+        "w": 260.984375,
+        "x": 57.0078125,
+        "y": 358.046875
+      },
+      "size": "15.2px",
+      "text": "Reservations"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "font": "Inter, -apple-system, \"system-ui\", sans-serif",
+      "radius": "50px",
+      "rect": {
+        "h": 56.3203125,
+        "w": 260.984375,
+        "x": 57.0078125,
+        "y": 426.3671875
+      },
+      "size": "15.2px",
+      "text": "View Menu"
+    }
+  ],
+  "videos": [
+    {
+      "display": "none",
+      "paused": false,
+      "readyState": 4,
+      "src": "https://media.hikarisojo.com/hero-daily-landscape.mp4"
+    },
+    {
+      "display": "block",
+      "paused": true,
+      "readyState": 0,
+      "src": "https://media.hikarisojo.com/hero-daily-portrait.mp4"
+    }
+  ],
+  "viewport": {
+    "height": 844,
+    "pageHeight": 17756,
+    "scrollWidth": 375,
+    "width": 390
+  }
+}

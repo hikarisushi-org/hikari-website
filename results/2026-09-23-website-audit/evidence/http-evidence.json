@@ -1,0 +1,753 @@
+{
+  "capturedAt": "2026-09-23T06:51:04.183Z",
+  "method": "Uncached Node fetch, no JavaScript rendering. Timings are single local HTTP observations, not Lighthouse or Core Web Vitals.",
+  "pages": [
+    {
+      "id": "hikari-home",
+      "url": "https://hikarisojo.com/",
+      "finalUrl": "https://hikarisojo.com/",
+      "status": 200,
+      "headersMs": 226,
+      "totalMs": 230,
+      "decodedBytes": 16709,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": "public,max-age=0,must-revalidate",
+        "server": "Netlify",
+        "content-encoding": "br",
+        "x-robots-tag": null
+      },
+      "title": "Hikari Sushi | Modern Japanese Kitchen in South Jordan, UT",
+      "meta": [
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "name": "description",
+          "content": "Hikari Sushi — Modern Japanese Kitchen in South Jordan, Utah. Fresh sushi, premium rolls, and vibrant flavors. Open Monday through Saturday. Closed Sundays."
+        },
+        {
+          "name": "keywords",
+          "content": "sushi, japanese food, south jordan, utah, hikari sushi, rolls, sashimi, nigiri"
+        },
+        {
+          "property": "og:title",
+          "content": "Hikari Sushi | Modern Japanese Kitchen"
+        },
+        {
+          "property": "og:description",
+          "content": "Fresh sushi, premium rolls, and vibrant flavors in South Jordan, UT."
+        },
+        {
+          "property": "og:image",
+          "content": "assets/images/sushi_row.webp"
+        },
+        {
+          "property": "og:type",
+          "content": "restaurant"
+        },
+        {
+          "name": "p:domain_verify",
+          "content": "c8bc80a0b1f210950ccc6623b3602dfa"
+        }
+      ],
+      "links": [
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "href": "assets/images/favicon.png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "assets/images/favicon.png"
+        },
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "href": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap",
+          "rel": "stylesheet"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "css/theme-animations.css"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "css/style.css?v=5"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "css/menu-page.css"
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Hikari Sushi"
+        },
+        {
+          "tag": "h2",
+          "text": "The Experience Comes First"
+        },
+        {
+          "tag": "h2",
+          "text": "Where Light Meets Flavor"
+        },
+        {
+          "tag": "h2",
+          "text": "Fresh Rolls, Bold Flavors"
+        },
+        {
+          "tag": "h2",
+          "text": "The Art of Sushi"
+        },
+        {
+          "tag": "h2",
+          "text": "Come Say Hello"
+        },
+        {
+          "tag": "h2",
+          "text": ""
+        }
+      ],
+      "scripts": [
+        {
+          "attributes": {
+            "type": "application/ld+json"
+          },
+          "bytes": 1975
+        },
+        {
+          "attributes": {
+            "src": "https://www.googletagmanager.com/gtag/js?id=G-SH54LFXHJ3"
+          },
+          "bytes": 0
+        },
+        {
+          "attributes": {},
+          "bytes": 732,
+          "conversionSnippet": "\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('js', new Date());\n    gtag('config', 'G-SH54LFXHJ3');\n\n    // Conversion tracking\n    document.addEventListener('click', function(e) {\n      var link = e.target.closest('a');\n      if (!link) return;\n      if (link.href && (link.href.indexOf('order.online') !== -1 || link.href.indexOf('cash.app/order/') !== -1)) {\n        gtag('event', 'click_order_online');\n      } else if (link.href && link.href.indexOf('carbonaraapp.com') !== -1) {\n        gtag('event', 'click_reservations');\n      } else if (link.href && link.href.indexOf('google.com/maps/dir') !== -1) {\n        gtag('event', 'click_directions');\n      }\n    });\n  "
+        },
+        {
+          "attributes": {
+            "src": "js/theme-loader.js"
+          },
+          "bytes": 0
+        },
+        {
+          "attributes": {
+            "src": "js/main.js"
+          },
+          "bytes": 0
+        },
+        {
+          "attributes": {
+            "src": "js/menu-page.js"
+          },
+          "bytes": 0
+        }
+      ],
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          "name": "Hikari Sushi",
+          "description": "Modern Japanese Kitchen in South Jordan, Utah. Fresh sushi, premium rolls, and vibrant flavors.",
+          "url": "https://hikarisojo.com",
+          "telephone": "+1-385-866-3746",
+          "servesCuisine": [
+            "Japanese",
+            "Sushi"
+          ],
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "10468 South Redwood Road",
+            "addressLocality": "South Jordan",
+            "addressRegion": "UT",
+            "postalCode": "84095",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.5611557,
+            "longitude": -111.9419397
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Monday",
+              "opens": "16:30",
+              "closes": "21:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "11:00",
+              "closes": "15:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "16:30",
+              "closes": "21:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "11:00",
+              "closes": "21:00"
+            }
+          ],
+          "openingHours": [
+            "Mo 16:30-21:00",
+            "Tu-Fr 11:00-15:00",
+            "Tu-Fr 16:30-21:00",
+            "Sa 11:00-21:00"
+          ],
+          "specialOpeningHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "validFrom": "2026-07-04",
+              "validThrough": "2026-07-04",
+              "opens": "11:00",
+              "closes": "15:00"
+            }
+          ],
+          "hasMenu": {
+            "@type": "Menu",
+            "url": "https://hikarisojo.com/#menu"
+          },
+          "acceptsReservations": "True",
+          "image": "https://hikarisojo.com/assets/images/sushi_row.webp"
+        }
+      ],
+      "anchors": [
+        {
+          "href": "#hero",
+          "class": "nav-logo",
+          "text": ""
+        },
+        {
+          "href": "#about",
+          "text": "About"
+        },
+        {
+          "href": "#menu",
+          "text": "Menu"
+        },
+        {
+          "href": "#gallery",
+          "text": "Gallery"
+        },
+        {
+          "href": "#reviews",
+          "text": "Reviews"
+        },
+        {
+          "href": "#location",
+          "text": "Visit"
+        },
+        {
+          "href": "https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "btn btn-reserve btn-sm",
+          "text": "Reservations"
+        },
+        {
+          "href": "https://hikarisushi-online.square.site/",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "btn btn-order btn-sm",
+          "text": "Order Online"
+        },
+        {
+          "href": "https://hikarisushi-online.square.site/",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "btn btn-order",
+          "text": "Order Online"
+        },
+        {
+          "href": "https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "btn btn-reserve",
+          "text": "Reservations"
+        },
+        {
+          "href": "#menu",
+          "class": "btn btn-outline",
+          "text": "View Menu"
+        },
+        {
+          "href": "https://www.google.com/maps/place/?q=place_id:ChIJZV0qzpqHUocR4SuU3IlrTsg",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "reviews-cta-btn",
+          "text": "Read All Reviews on Google &rarr;"
+        },
+        {
+          "href": "#menu",
+          "class": "btn btn-primary",
+          "text": "Explore the Menu"
+        },
+        {
+          "href": "tel:+13858663746",
+          "text": "(385) 866-3746"
+        },
+        {
+          "href": "https://hikarisushi-online.square.site/",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "btn btn-order",
+          "text": "Order Online"
+        },
+        {
+          "href": "https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "btn btn-reserve",
+          "text": "Reservations"
+        },
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=Hikari+Sushi,+10468+S+Redwood+Rd,+South+Jordan,+UT+84095",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "btn btn-primary",
+          "text": "Get Directions"
+        },
+        {
+          "href": "#about",
+          "text": "About"
+        },
+        {
+          "href": "#menu",
+          "text": "Menu"
+        },
+        {
+          "href": "#gallery",
+          "text": "Gallery"
+        },
+        {
+          "href": "#location",
+          "text": "Visit"
+        },
+        {
+          "href": "tel:+13858663746",
+          "text": "(385) 866-3746"
+        },
+        {
+          "href": "https://hikarisushi-online.square.site/",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "btn btn-order btn-sm",
+          "text": "Order Online"
+        },
+        {
+          "href": "https://reservation.carbonaraapp.com/United-States/South-Jordan/Hikari-Sushi",
+          "target": "_blank",
+          "rel": "noopener",
+          "class": "btn btn-reserve btn-sm",
+          "text": "Reservations"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/logo.webp",
+          "alt": "Hikari Sushi logo",
+          "class": "nav-logo-img"
+        },
+        {
+          "src": "assets/images/sushi_making.webp",
+          "alt": "Chef preparing sushi rolls with eel sauce at Hikari Sushi"
+        },
+        {
+          "src": "assets/images/sushi_row.webp",
+          "alt": "A row of beautifully arranged sushi rolls",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/images/sushi_platter_1.webp",
+          "alt": "Sushi platter with assorted rolls",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/images/sushi_making.webp",
+          "alt": "Chef preparing sushi with eel sauce",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/images/sushi_eight.webp",
+          "alt": "Eight meticulously crafted sushi rolls",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/images/sushi_platter_ai.webp",
+          "alt": "Premium sushi platter presentation",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/images/logo.webp",
+          "alt": "Hikari Sushi",
+          "class": "footer-logo"
+        },
+        {
+          "src": "",
+          "alt": "",
+          "class": "menu-modal-img",
+          "id": "modal-img"
+        }
+      ],
+      "video": [
+        "<video class=\"hero-video hero-video--landscape\" autoplay muted loop playsinline poster=\"assets/images/sushi_platter_1.webp\">",
+        "<source src=\"https://media.hikarisojo.com/hero-daily-landscape.mp4\" type=\"video/mp4\">",
+        "<video class=\"hero-video hero-video--portrait\" autoplay muted loop playsinline poster=\"assets/images/sushi_platter_1.webp\">",
+        "<source src=\"https://media.hikarisojo.com/hero-daily-portrait.mp4\" type=\"video/mp4\">"
+      ],
+      "menuNamesInInitialHTML": {
+        "gyoza": false,
+        "flaresOfHikari": false,
+        "butterChicken": false
+      }
+    },
+    {
+      "id": "hikari-menu",
+      "url": "https://hikarisojo.com/menu",
+      "finalUrl": "https://hikarisojo.com/menu",
+      "status": 200,
+      "headersMs": 398,
+      "totalMs": 398,
+      "decodedBytes": 5733,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": "public,max-age=0,must-revalidate",
+        "server": "Netlify",
+        "content-encoding": "br",
+        "x-robots-tag": null
+      },
+      "title": "Menu | Hikari Sushi",
+      "meta": [
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "name": "description",
+          "content": "Browse our full menu of fresh sushi, premium rolls, and Japanese cuisine."
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://hikarisojo.com/menu"
+        },
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "href": "assets/images/favicon.png"
+        },
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "href": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap",
+          "rel": "stylesheet"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "css/style.css"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "css/menu-page.css"
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h2",
+          "text": ""
+        },
+        {
+          "tag": "h2",
+          "text": "My Picks"
+        }
+      ],
+      "scripts": [
+        {
+          "attributes": {
+            "src": "https://www.googletagmanager.com/gtag/js?id=G-SH54LFXHJ3"
+          },
+          "bytes": 0
+        },
+        {
+          "attributes": {},
+          "bytes": 162
+        },
+        {
+          "attributes": {
+            "src": "js/menu-page.js"
+          },
+          "bytes": 0
+        }
+      ],
+      "schema": [],
+      "anchors": [
+        {
+          "href": "/",
+          "class": "menu-home-link",
+          "text": "Full Site"
+        },
+        {
+          "href": "tel:+13858663746",
+          "text": "(385) 866-3746"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/logo.webp",
+          "alt": "Hikari Sushi",
+          "class": "menu-logo"
+        },
+        {
+          "src": "assets/images/logo.webp",
+          "alt": "Hikari Sushi",
+          "class": "menu-brand-logo"
+        },
+        {
+          "src": "",
+          "alt": "",
+          "class": "menu-modal-img",
+          "id": "modal-img"
+        }
+      ],
+      "video": [],
+      "menuNamesInInitialHTML": {
+        "gyoza": false,
+        "flaresOfHikari": false,
+        "butterChicken": false
+      }
+    },
+    {
+      "id": "hikari-robots",
+      "url": "https://hikarisojo.com/robots.txt",
+      "finalUrl": "https://hikarisojo.com/robots.txt",
+      "status": 404,
+      "headersMs": 214,
+      "totalMs": 214,
+      "decodedBytes": 3449,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public,max-age=0,must-revalidate",
+        "server": "Netlify",
+        "content-encoding": "br",
+        "x-robots-tag": null
+      },
+      "body": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Page not found</title>\n    <style>\n      :root {\n        --colorRgbFacetsTeal600: 2 128 125;\n        --colorTealAction: var(--colorRgbFacetsTeal600);\n        --colorRgbFacetsNeutralLight200: 233 235 237;\n        --colorHr: var(--colorRgbFacetsNeutralLight200);\n        --colorRgbFacetsNeutralLight700: 53 58 62;\n        --colorGrayDarkest: var(--colorRgbFacetsNeutralLight700);\n        --colorGrayLighter: var(--colorRgbFacetsNeutralLight200);\n        --colorText: var(--colorGrayDarkest);\n        --effectShadowLightShallow: 0 1px 10px 0 rgb(53 58 62 / 6%),\n          0 2px 4px 0 rgb(53 58 62 / 8%);\n        --colorRgbFacetsNeutralDark900: 6 11 16;\n      }\n      body {\n        font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\",\n          Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\",\n          \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n        background: white;\n        overflow: hidden;\n        margin: 0;\n        padding: 0;\n        line-height: 1.5;\n        color: rgb(var(--colorText));\n      }\n\n      @media (prefers-color-scheme: dark) {\n        body {\n          background: rgb(var(--colorRgbFacetsNeutralDark900));\n        }\n      }\n\n      h1 {\n        margin: 0;\n        font-size: 1.375rem;\n        line-height: 1;\n      }\n\n      h1 + p {\n        margin-top: 8px;\n      }\n\n      .main {\n        position: relative;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: center;\n        height: 100vh;\n        width: 100vw;\n      }\n\n      .card {\n        position: relative;\n        width: 75%;\n        max-width: 364px;\n        padding: 24px;\n        background: white;\n        border-radius: 8px;\n        box-shadow: var(--effectShadowLightShallow);\n        border: 1px solid rgb(var(--colorGrayLighter));\n      }\n\n      a {\n        margin: 0;\n        font-weight: 600;\n        color: rgb(var(--colorTealAction));\n        text-decoration-skip-ink: all;\n        text-decoration-thickness: 1px;\n        text-underline-offset: 2px;\n        text-decoration-color: rgb(var(--colorTealAction) / 0.5);\n        transition: text-decoration-color 0.15s ease-in-out;\n      }\n\n      a:hover,\n      a:focus-visible {\n        text-decoration-color: rgb(var(--colorTealAction));\n      }\n\n      p:last-of-type {\n        margin-bottom: 0;\n      }\n\n      hr {\n        border: 0;\n        height: 1px;\n        background: rgb(var(--colorHr));\n        margin-top: 16px;\n        margin-bottom: 16px;\n      }\n\n      .your-site {\n        font-size: 0.875rem;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"main\">\n      <div class=\"card\">\n        <h1>Page not found</h1>\n        <p>\n          Looks like you’ve followed a broken link or entered a URL that doesn’t\n          exist on this site.\n        </p>\n        <hr />\n        <p class=\"your-site\">\n          If this is your site, and you weren’t expecting a 404 for this path,\n          please visit Netlify’s\n          <a\n            href=\"https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125?utm_source=404page&utm_campaign=community_tracking\"\n            >“page not found” support guide</a\n          >\n          for troubleshooting tips.\n        </p>\n      </div>\n    </div>\n  </body>\n</html>\n"
+    },
+    {
+      "id": "hikari-sitemap",
+      "url": "https://hikarisojo.com/sitemap.xml",
+      "finalUrl": "https://hikarisojo.com/sitemap.xml",
+      "status": 200,
+      "headersMs": 318,
+      "totalMs": 319,
+      "decodedBytes": 229,
+      "headers": {
+        "content-type": "application/xml",
+        "cache-control": "public,max-age=0,must-revalidate",
+        "server": "Netlify",
+        "content-encoding": null,
+        "x-robots-tag": null
+      },
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url>\n    <loc>https://hikarisojo.com/</loc>\n    <lastmod>2026-05-19</lastmod>\n    <priority>1.0</priority>\n  </url>\n</urlset>\n"
+    },
+    {
+      "id": "saffron-home",
+      "url": "https://saffronvalleysouthjordan.com/",
+      "finalUrl": "https://saffronvalleysouthjordan.com/",
+      "status": 403,
+      "headersMs": 235,
+      "totalMs": 236,
+      "decodedBytes": 5398,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": null,
+        "server": "cloudflare",
+        "content-encoding": "zstd",
+        "x-robots-tag": null
+      },
+      "title": "Just a moment...",
+      "meta": [
+        {
+          "http-equiv": "Content-Type",
+          "content": "text/html; charset=UTF-8"
+        },
+        {
+          "http-equiv": "X-UA-Compatible",
+          "content": "IE=Edge"
+        },
+        {
+          "name": "robots",
+          "content": "noindex,nofollow"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width,initial-scale=1"
+        },
+        {
+          "http-equiv": "content-security-policy",
+          "content": "default-src &#39;none&#39;; script-src &#39;nonce-TnBNVGZm5TYr5MHPmRX0r4&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;"
+        },
+        {
+          "http-equiv": "refresh",
+          "content": "360"
+        }
+      ],
+      "links": [],
+      "headings": [],
+      "scripts": [
+        {
+          "attributes": {
+            "nonce": "TnBNVGZm5TYr5MHPmRX0r4"
+          },
+          "bytes": 2991
+        }
+      ],
+      "schema": [],
+      "anchors": [],
+      "images": [],
+      "video": [],
+      "menuNamesInInitialHTML": {
+        "gyoza": false,
+        "flaresOfHikari": false,
+        "butterChicken": false
+      }
+    },
+    {
+      "id": "saffron-menu",
+      "url": "https://saffronvalleysouthjordan.com/menu",
+      "finalUrl": "https://saffronvalleysouthjordan.com/menu",
+      "status": 403,
+      "headersMs": 230,
+      "totalMs": 231,
+      "decodedBytes": 5431,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": null,
+        "server": "cloudflare",
+        "content-encoding": "zstd",
+        "x-robots-tag": null
+      },
+      "title": "Just a moment...",
+      "meta": [
+        {
+          "http-equiv": "Content-Type",
+          "content": "text/html; charset=UTF-8"
+        },
+        {
+          "http-equiv": "X-UA-Compatible",
+          "content": "IE=Edge"
+        },
+        {
+          "name": "robots",
+          "content": "noindex,nofollow"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width,initial-scale=1"
+        },
+        {
+          "http-equiv": "content-security-policy",
+          "content": "default-src &#39;none&#39;; script-src &#39;nonce-eQ11dJZ2zYv8GYD47uRqkw&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;"
+        },
+        {
+          "http-equiv": "refresh",
+          "content": "360"
+        }
+      ],
+      "links": [],
+      "headings": [],
+      "scripts": [
+        {
+          "attributes": {
+            "nonce": "eQ11dJZ2zYv8GYD47uRqkw"
+          },
+          "bytes": 3024
+        }
+      ],
+      "schema": [],
+      "anchors": [],
+      "images": [],
+      "video": [],
+      "menuNamesInInitialHTML": {
+        "gyoza": false,
+        "flaresOfHikari": false,
+        "butterChicken": false
+      }
+    },
+    {
+      "id": "saffron-robots",
+      "url": "https://saffronvalleysouthjordan.com/robots.txt",
+      "finalUrl": "https://saffronvalleysouthjordan.com/robots.txt",
+      "status": 403,
+      "headersMs": 221,
+      "totalMs": 222,
+      "decodedBytes": 5449,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": null,
+        "server": "cloudflare",
+        "content-encoding": "zstd",
+        "x-robots-tag": null
+      },
+      "body": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-fI03sFjqOovcq5sAEVOiag&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+\");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style><meta http-equiv=\"refresh\" content=\"360\"></head><body><div class=\"main-wrapper\" role=\"main\"><div class=\"main-content\"><noscript><div class=\"h2\"><span id=\"challenge-error-text\">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script nonce=\"fI03sFjqOovcq5sAEVOiag\">(function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'M5lowiDS2D641LkX44qAcPoI3maIq6rwGJYjzFMxLhQ-1790146263-1.2.1.1-3emlcJAesLgFtDozPIaAmeED6yXfL.DH0xQALEZ7EwTW0u0gJNRDwuad8MO9WjAV',cITimeS: '1790146263',cN: 'fI03sFjqOovcq5sAEVOiag',cRay: 'a3f79e65ff6996f5',cTplB: '0',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:\"/robots.txt?__cf_chl_tk=W2B53T2Bhhn_XQZB35y_TcJ3kWslMmWnveiXcWxpdLk-1790146263-1.0.1.1-VGMW0XnZkUiCVs1IAJaf1PX_zuTmRM8YqPBtt4tyOE0\",cvId: '3',cZone: 'saffronvalleysouthjordan.com',fa:\"/robots.txt?__cf_chl_f_tk=W2B53T2Bhhn_XQZB35y_TcJ3kWslMmWnveiXcWxpdLk-1790146263-1.0.1.1-VGMW0XnZkUiCVs1IAJaf1PX_zuTmRM8YqPBtt4tyOE0\",md: 'o9E6z2OjVc2zzHcSBY_VjBYJP.8iCsePlANzzYQTa3w-1790146263-1.2.1.1-HkmG81FToH42.D8iCx9tkEdwxow0HQQc6PDFz9wGljXTgBDv8kdfV64YdIxV3NFCUEgOOnmiRVtgHQK.kxbCGKIdeqHChyMoojj0IJhq09hOcy83k0GpkvLKVtCkXvLVc5dyrw9jbvzuSgMCw8eGUVQ.PgTfFHkEfaIJH.5sX9f0XI.aRImC9dABBhXYEwkMwKhNepfvxOlqMr1co.P0AKydRiibYZckXVnHu8IdB3ZwWIF.BjEXfAJ.F1qC0fs.pKYxlv6ZNPZjcPy9AH8QeVzRS6ShsOLrzAHttMgbz1f0WP.njKgnpswznWTAOxPoYOBUdmAmMwywq7IRHazheTktyIQnZSdc5RbEnEJzSI16c1m_jWPIVwS7hSMc1xvmuDS8uE2MWpoDPOklwB9fESHTlN3sXrL_NZNhElXsR676xjFP89G7TTj2Z.mZL00GlQ2U8UJ124Ez8e1Pvqew7W1LK_zgMt0MF_eXSn1DrktsF9TRIpdBCSyhRrtV8HiaAyGNheOGmxjADJ5E5QToC5qghCXZ1OWnjY_7JJNaNtncjiMkUkq_YBWf.WIP20ndVoxNFUeaipxqvYq8ZfAD4DAZ.8M42kuWBCT8FtB7kApQEMhKp0fAzjpN6o5wQ_ghESO.XOslmnKOOmRQQFStiho5wECWnTQ95sjGRG2C82cttXNCaSxEqcSNuadgWBWwewe8CEkiHiwFjzNuhArsu_e44FFuvNZZ00dc2EVrj_JU_gcPIU_GGI.R5bh3rxRVhrjWfTsXOc_oD4PVBdHoaZubtgYoBhpG6gpbss1PHZTTiTbmN648n5iiVxoUK8Fcc0qjER.mqZObpH83io54roTfm2H7i9Vo6x7kpEhx3DEjSHtwPNE_a84iHHMZ7M5E_wq2BW2SUN3_X0TJ1d1NL8f6wynsJB0OVc5TE69tm2MVPOvI8_2Z0m4Qq2yIPu.RBMfvB8crN5rZHmWGQVOWPWOX5pIqCEpIT46WyC1IxUyYPFOs7X.rRZYXqfXaf0wN63QimCpHvWjmj6WPDaMuadRor2uIh1X2Ycg.zTq0xo4',mdrd: '5RScIQRo.NeII4gBmlEbjhi2CwlnJo78wKKf5LjMv2c-1790146263-1.2.1.1-wubr57ZH4cBXHXhNXPFf6baQ9Ug7gxceubXwM77PhY9hjms6.ND5mWiq8KaqoTLkLSfdblcMkHB9jBzCkzcbXuOcud7B7LVjIqSqkA0Ws3P7n._OlQFjpBjKpGiO4l_KPvcHwZ0_VmUORVftxIMKSVgnIDhkYCkpU8pLFPwDr4S0Y91xAZ1xfYQQRXQVE46T5IWnQ.bfwHS6c3ZP9FrSeNfjlU5fsyh2hTpOTiy7FnUo7oQyYCA26dn1BxRq8vbinuHPD5tNabNimYst2Yxl3Q',};var a = document.createElement('script');a.nonce = 'fI03sFjqOovcq5sAEVOiag';a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a3f79e65ff6996f5';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"/robots.txt?__cf_chl_rt_tk=W2B53T2Bhhn_XQZB35y_TcJ3kWslMmWnveiXcWxpdLk-1790146263-1.0.1.1-VGMW0XnZkUiCVs1IAJaf1PX_zuTmRM8YqPBtt4tyOE0\"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>"
+    },
+    {
+      "id": "saffron-sitemap",
+      "url": "https://saffronvalleysouthjordan.com/sitemap.xml",
+      "finalUrl": "https://saffronvalleysouthjordan.com/sitemap.xml",
+      "status": 403,
+      "headersMs": 227,
+      "totalMs": 228,
+      "decodedBytes": 5452,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": null,
+        "server": "cloudflare",
+        "content-encoding": "zstd",
+        "x-robots-tag": null
+      },
+      "body": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-Hnt97GI3S1b4KkhCIlFQrn&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+\");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style><meta http-equiv=\"refresh\" content=\"360\"></head><body><div class=\"main-wrapper\" role=\"main\"><div class=\"main-content\"><noscript><div class=\"h2\"><span id=\"challenge-error-text\">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script nonce=\"Hnt97GI3S1b4KkhCIlFQrn\">(function(){window._cf_chl_opt = {cFPWv: 'b',cH: '9NuN9pltaWHbFXOqbmFaE3QIi3Gv8e_qpN2wSSh_msU-1790146264-1.2.1.1-Vij2ysLsyu1PuRlppvEb.e6q3s5.CL_7iCyUBYrzjyzUrCEl_KOVm8WPNeP9OEPL',cITimeS: '1790146264',cN: 'Hnt97GI3S1b4KkhCIlFQrn',cRay: 'a3f79e65fdb899e4',cTplB: '0',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:\"/sitemap.xml?__cf_chl_tk=VrsZ1_ZS38oG0aLA.6E94WJowUVNkgPCp0kF8pPUPa0-1790146264-1.0.1.1-Wt8UoSQDnIo75iWK5NIrac5_jhthiNTayKmGX3DUMbA\",cvId: '3',cZone: 'saffronvalleysouthjordan.com',fa:\"/sitemap.xml?__cf_chl_f_tk=VrsZ1_ZS38oG0aLA.6E94WJowUVNkgPCp0kF8pPUPa0-1790146264-1.0.1.1-Wt8UoSQDnIo75iWK5NIrac5_jhthiNTayKmGX3DUMbA\",md: 'cm_FiMQq.HtFRSck6dhmVTpn5WAw4_4irH3MO44UnoU-1790146264-1.2.1.1-kWIQJiaS6G8I90nIRQ_P0a06aPGcs5QToQpBv_4cX8ixDygXblShyWZTbGrzGcBNReJl1ZSbIahWs3plypxgRewLDU_PpeI34WL0uf7_9lTwBmrS96HS_M10og_ZZBCVsAwT1uZOwoR0lXi1qo8EU9e4JYXdfkThbXjlY0lq_jpcyfpc_eO6EpQWnagdE8hPw6HcxwQvFYUhellzrEibynTf6tr4qj1eT6f_RCHtdE6Nnkeqqi5xd5LWHxTfqEeQzTavG50M2b18MDk9z9x0i4wd_eSti0R.tGXfddzncGhwpFWSRIpMPkvibp4Una3E5xbio059GzFG7IvdWAF62vezNnneqh3xyEgaKIVY28S7RvyKG9ZZu2t.sL8mHqh96t3O0O7FCFuv_.6u53CWKbc9JzNDVFxuM9_3cxX7Pq9xlt8dB.kQuygXsXV0KZYGuJ8VfqpW8rs1k_PjxoWBVDddYvqw8Kx7x03AVzNPLG49HEk4hlkIEK7U57WlI3xRXb6zLEV9Q8e4q5VSWA.FUkqxjxUFZLZcttc2nJTNSvBm_dotTiTemEzGP.S1AGHymEIXg_n3aObN8S1w.laY7xiJ.M2KeRq4MbJqlG81ThbjyFhyfuT15kPMqAk_3MKG4BCvM6MBhor2iXz8Nrzbi3FtdFp8jbUDqRekIaUkrfVYRGfuYvr_IWjsn_CgAFDR7OdHyK8BRXfV9ymYo6eg4Anq3di_FqqLaHcbEIRFBBmlIEiOS8ma5fOLa5hGotOMWlCiAOKxTntK8UDuKVssmAYjnZQA3infsVPLip7KT5dlpOhE31D8NAUukyHDzynU5r3Yc2wfrv6xNagzzZbXwGtAgi_hl7u.TZusRBJ4xUAEUWbY6ao4Vt2gCko6A3GqXCg4qfrnFid9dc49vmRYlqNZUJfboaYFZA007lwddPsnYujOJAo1MebVUDq0gQlF47fW5tgMo.Q7ZRFb5TBsC6yEtRrfF5JSSRqzXDONRpb0a6qo3clx4zEFyIDzoOnOxOku0il4HXIQ_bcPMGALcT2b0KQ04jMYN.VguZ.WNYk',mdrd: 'AigAh7lS3oySjx4d9qkILC1UQ2tjkjf3DmyGTUPjzWA-1790146264-1.2.1.1-a.FjENP5MRGnrHIiMCV1G8IDnPWUDKNzFhJHQSUoMU2TZh_DM7Cp4gyjBM4HOnmaOI3R6dY4jxJx8rDVeWPQI7NhcxNVCLIHWOB8qegtLuJdX2XXi31VRv3TMMCpZYvLmYM_fQr73ztQ9A2Pm1L00uyNATyXbImKgLL.Wuk7MfA149ir6VLjCDKm985hPhlGWI7lzTfUd5VZAQI_SNXjhmFY84pF82Qo4P6qqZdQV7H4kLgbZ2XtDaEr1A1G8rrifaNXJSqayTGcD1y5pCftMw',};var a = document.createElement('script');a.nonce = 'Hnt97GI3S1b4KkhCIlFQrn';a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a3f79e65fdb899e4';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"/sitemap.xml?__cf_chl_rt_tk=VrsZ1_ZS38oG0aLA.6E94WJowUVNkgPCp0kF8pPUPa0-1790146264-1.0.1.1-Wt8UoSQDnIo75iWK5NIrac5_jhthiNTayKmGX3DUMbA\"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>"
+    }
+  ]
+}

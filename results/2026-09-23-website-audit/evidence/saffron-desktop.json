@@ -1,0 +1,755 @@
+{
+  "elements": [
+    {
+      "alt": "",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 672,
+        "w": 1265,
+        "x": 0,
+        "y": 0
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": null,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "28px",
+      "lineHeight": "33.6px",
+      "radius": "0px",
+      "rect": {
+        "h": 33.59375,
+        "w": 1201,
+        "x": 32,
+        "y": 380.015625
+      },
+      "tag": "H1",
+      "text": "Best Indian Food in South Jordan",
+      "weight": "600"
+    },
+    {
+      "alt": null,
+      "background": "rgb(204, 132, 46)",
+      "color": "rgb(26, 26, 26)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "radius": "10px",
+      "rect": {
+        "h": 48,
+        "w": 141.28125,
+        "x": 32,
+        "y": 584
+      },
+      "tag": "A",
+      "text": "Order online",
+      "weight": "400"
+    },
+    {
+      "alt": "Saffron Valley – Five Locations, One Kitchen Philosophy",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 632.5,
+        "w": 632.5,
+        "x": 0,
+        "y": 672
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": null,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "font": "Lora, \"Lora Fallback: Georgia\", \"Lora Fallback: Times New Roman\", Georgia, \"Times New Roman\"",
+      "fontSize": "28px",
+      "lineHeight": "35px",
+      "radius": "0px",
+      "rect": {
+        "h": 70,
+        "w": 448,
+        "x": 724.75,
+        "y": 881.25
+      },
+      "tag": "H2",
+      "text": "Saffron Valley – Five Locations, One Kitchen Philosophy",
+      "weight": "600"
+    },
+    {
+      "alt": null,
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(13, 13, 13)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "radius": "10px",
+      "rect": {
+        "h": 48,
+        "w": 159.3671875,
+        "x": 724.75,
+        "y": 1047.25
+      },
+      "tag": "A",
+      "text": "View the Menu",
+      "weight": "400"
+    },
+    {
+      "alt": "Regional Indian Cooking, No Shortcuts",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 632.5,
+        "w": 632.5,
+        "x": 632.5,
+        "y": 1304.5
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": null,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 13, 13)",
+      "font": "Lora, \"Lora Fallback: Georgia\", \"Lora Fallback: Times New Roman\", Georgia, \"Times New Roman\"",
+      "fontSize": "28px",
+      "lineHeight": "35px",
+      "radius": "0px",
+      "rect": {
+        "h": 70,
+        "w": 448,
+        "x": 92.25,
+        "y": 1501.75
+      },
+      "tag": "H2",
+      "text": "Regional Indian Cooking, No Shortcuts",
+      "weight": "600"
+    },
+    {
+      "alt": null,
+      "background": "rgb(204, 132, 46)",
+      "color": "rgb(26, 26, 26)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "radius": "10px",
+      "rect": {
+        "h": 48,
+        "w": 144.171875,
+        "x": 92.25,
+        "y": 1691.75
+      },
+      "tag": "A",
+      "text": "Order Online",
+      "weight": "400"
+    },
+    {
+      "alt": null,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 13, 13)",
+      "font": "Lora, \"Lora Fallback: Georgia\", \"Lora Fallback: Times New Roman\", Georgia, \"Times New Roman\"",
+      "fontSize": "28px",
+      "lineHeight": "35px",
+      "radius": "0px",
+      "rect": {
+        "h": 35,
+        "w": 240.6171875,
+        "x": 512.1875,
+        "y": 2001
+      },
+      "tag": "H2",
+      "text": "From Our Kitchen",
+      "weight": "600"
+    },
+    {
+      "alt": "A large thali platter filled with various Indian dishes, including rice, curries, and naan.",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 400.328125,
+        "w": 400.328125,
+        "x": 16,
+        "y": 2068
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": "Indian curry with rice, garnished with peppers and carrots, served in copper bowls on a wooden table.",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 400.3359375,
+        "w": 400.3359375,
+        "x": 432.328125,
+        "y": 2068
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": "Chicken curry in a dark bowl, garnished with red and green peppers, with naan bread.",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 400.3359375,
+        "w": 400.3359375,
+        "x": 848.6640625,
+        "y": 2068
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": "Tandoori chicken, naan, and rice in a wooden bowl, with three dipping sauces on a wooden table.",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 400.328125,
+        "w": 400.328125,
+        "x": 16,
+        "y": 2484.3359375
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": "A large platter of chicken biryani with raita, cutlery, and a yellow napkin on a wooden table.",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 400.3359375,
+        "w": 400.3359375,
+        "x": 432.328125,
+        "y": 2484.3359375
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": "A white plate with idli, vada, and three bowls of sambar and chutney on a banana leaf.",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 400.3359375,
+        "w": 400.3359375,
+        "x": 848.6640625,
+        "y": 2484.3359375
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": null,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "tag": "H2",
+      "text": "Image gallery",
+      "weight": "400"
+    },
+    {
+      "alt": null,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "tag": "P",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": "",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": "Chef's Specials – Freshly Crafted Every Day!",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 374,
+        "w": 632.5,
+        "x": 632.5,
+        "y": 2948.671875
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": null,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 13, 13)",
+      "font": "Lora, \"Lora Fallback: Georgia\", \"Lora Fallback: Times New Roman\", Georgia, \"Times New Roman\"",
+      "fontSize": "28px",
+      "lineHeight": "35px",
+      "radius": "0px",
+      "rect": {
+        "h": 70,
+        "w": 448,
+        "x": 92.25,
+        "y": 2996.671875
+      },
+      "tag": "H2",
+      "text": "Chef's Specials – Freshly Crafted Every Day!",
+      "weight": "600"
+    },
+    {
+      "alt": "All You Can Eat Daily Indian Buffet",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 446,
+        "w": 632.5,
+        "x": 0,
+        "y": 3322.671875
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": null,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(26, 26, 26)",
+      "font": "Lora, \"Lora Fallback: Georgia\", \"Lora Fallback: Times New Roman\", Georgia, \"Times New Roman\"",
+      "fontSize": "28px",
+      "lineHeight": "35px",
+      "radius": "0px",
+      "rect": {
+        "h": 70,
+        "w": 448,
+        "x": 724.75,
+        "y": 3370.671875
+      },
+      "tag": "H2",
+      "text": "All You Can Eat Daily Indian Buffet",
+      "weight": "600"
+    },
+    {
+      "alt": "Fast, Fresh, Budget-Friendly, & Authentic Indian Food",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 398,
+        "w": 632.5,
+        "x": 632.5,
+        "y": 3768.671875
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    },
+    {
+      "alt": null,
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 13, 13)",
+      "font": "Lora, \"Lora Fallback: Georgia\", \"Lora Fallback: Times New Roman\", Georgia, \"Times New Roman\"",
+      "fontSize": "28px",
+      "lineHeight": "35px",
+      "radius": "0px",
+      "rect": {
+        "h": 70,
+        "w": 448,
+        "x": 92.25,
+        "y": 3816.671875
+      },
+      "tag": "H2",
+      "text": "Fast, Fresh, Budget-Friendly, & Authentic Indian Food",
+      "weight": "600"
+    },
+    {
+      "alt": "Indian Catering for Any Occasion",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "rect": {
+        "h": 632.5,
+        "w": 632.5,
+        "x": 0,
+        "y": 4166.671875
+      },
+      "tag": "IMG",
+      "text": "",
+      "weight": "400"
+    }
+  ],
+  "schema": [
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US",
+          "addressLocality": "South Jordan",
+          "addressRegion": "UT",
+          "postalCode": "84095",
+          "streetAddress": "1098 S Jordan Pkwy W STE 102"
+        },
+        "areaServed": [
+          "Lampton",
+          "South Jordan",
+          "Sandy",
+          "Crescent",
+          "Endot",
+          "West Jordan",
+          "Riverton Siding",
+          "Riverton",
+          "White City",
+          "Midvale",
+          "Welby",
+          "Jordan",
+          "Draper",
+          "Peruvian Park",
+          "Murray",
+          "Olivers",
+          "Bennion",
+          "Bluffdale",
+          "Herriman",
+          "Cottonwood Heights"
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.5615233,
+          "longitude": -111.9227775
+        },
+        "hasMenu": "https://saffronvalleysouthjordan.com/menu",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "itemListElement": [
+            "Indian Food",
+            "Buffet",
+            "Indian Takeaway",
+            "Fried Rice",
+            "Butter Chicken",
+            "Spring Rolls",
+            "Chicken Tikka Masala",
+            "Saag Paneer",
+            "Chicken Noodle",
+            "Biryani",
+            "Basmati Rice",
+            "Dosa",
+            "Gulab Jamun",
+            "Naan",
+            "Raita",
+            "Tandoori Chicken",
+            "Dal",
+            "Vindaloo",
+            "Jalebi",
+            "Paratha",
+            "Pakora",
+            "Lassi",
+            "Rogan Josh",
+            "Masala Chai",
+            "Masala Dosa",
+            "Chutneys",
+            "Curry",
+            "Kebab",
+            "Gobi Manchurian",
+            "Garlic Naan",
+            "Butter Naan",
+            "Vegetable Biryani",
+            "Vegetable Pulao",
+            "Lamb Biryani",
+            "Lamb Rogan Josh",
+            "Chaat",
+            "Roti",
+            "Hakka Noodles",
+            "Malai Kofta",
+            "Puri",
+            "Chicken Tikka",
+            "Samosa",
+            "Paneer Makhani",
+            "Aloo Methi",
+            "Tadka",
+            "Pani Puri",
+            "Bhel Puri",
+            "Dahi Puri",
+            "Veg Fried Rice",
+            "Samosa Chaat",
+            "Payasam",
+            "Sambar",
+            "Gobi",
+            "Lunch",
+            "Dinner",
+            "Takeout",
+            "Delivery",
+            "Hyderabadi Biryani",
+            "Paneer Tikka",
+            "Chole Bhature",
+            "Idli",
+            "Korma",
+            "Mango Lassi",
+            "Indo-chinese Food",
+            "Chilli Chicken",
+            "Curry Leaf Chicken",
+            "Guntur Chicken",
+            "Village Style Mutton Curry",
+            "Royal Karam Dosa",
+            "Halal",
+            "Vegetarian Indian Restaurant",
+            "Vegan Indian Food",
+            "Lunch Box",
+            "Regional Chef’s Specials",
+            "Lunch Buffet",
+            "Lunch Specials",
+            "Family Friendly Restaurant",
+            "Catering",
+            "North Indian Food",
+            "South Indian Food",
+            "Indian Dessert",
+            "Chicken Biryani"
+          ]
+        },
+        "logo": "https://static-content.owner.com/funnel/images/bce06ee8-8604-438c-a00c-30b171dc1b3d?v=4408156255",
+        "name": "Saffron Valley - South Jordan",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:30",
+            "dayOfWeek": "https://schema.org/Sunday",
+            "opens": "11:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": "https://schema.org/Sunday",
+            "opens": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "14:30",
+            "dayOfWeek": "https://schema.org/Tuesday",
+            "opens": "11:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "22:00",
+            "dayOfWeek": "https://schema.org/Tuesday",
+            "opens": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "14:30",
+            "dayOfWeek": "https://schema.org/Wednesday",
+            "opens": "11:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "22:00",
+            "dayOfWeek": "https://schema.org/Wednesday",
+            "opens": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "14:30",
+            "dayOfWeek": "https://schema.org/Thursday",
+            "opens": "11:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "22:00",
+            "dayOfWeek": "https://schema.org/Thursday",
+            "opens": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "14:30",
+            "dayOfWeek": "https://schema.org/Friday",
+            "opens": "11:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "22:00",
+            "dayOfWeek": "https://schema.org/Friday",
+            "opens": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:30",
+            "dayOfWeek": "https://schema.org/Saturday",
+            "opens": "11:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "22:00",
+            "dayOfWeek": "https://schema.org/Saturday",
+            "opens": "17:00"
+          }
+        ],
+        "potentialAction": {
+          "@type": "OrderAction",
+          "deliveryMethod": [
+            "https://schema.org/OnSitePickup",
+            "https://schema.org/ParcelService"
+          ],
+          "target": {
+            "@type": "EntryPoint",
+            "actionPlatform": [
+              "https://schema.org/DesktopWebPlatform",
+              "https://schema.org/MobileWebPlatform"
+            ],
+            "urlTemplate": "https://saffronvalleysouthjordan.com/menu"
+          }
+        },
+        "priceRange": "$$$",
+        "servesCuisine": [
+          "Indian",
+          "Buffet",
+          "Indian-takeaway"
+        ],
+        "telephone": "(801) 438-4823",
+        "url": "https://saffronvalleysouthjordan.com/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "inLanguage": "en",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We are known for Royal Karam Dosa, Basmati Rice, Masala Chai, Paneer Makhani, Saag Paneer, Guntur Chicken, North Indian Food, Gulab Jamun, Garlic Naan, Kebab, Chicken Tikka, Vegetable Pulao, Buffet, Indian Takeaway, Lunch Specials, Curry Leaf Chicken, Indo-chinese Food, Lunch Box, Rogan Josh, Vegan Indian Food, Jalebi, Naan, Chutneys, Chicken Biryani, Chilli Chicken, Indian Dessert, Halal, Gobi Manchurian, Hyderabadi Biryani, Regional Chef’s Specials, Korma, Dosa, Butter Chicken, Dal, Hakka Noodles, Vegetable Biryani, Chicken Tikka Masala, Puri, Lamb Biryani, Sambar, Idli, Aloo Methi, Family Friendly Restaurant, Chaat, Bhel Puri, Pani Puri, Biryani, Paneer Tikka, Lassi, Raita, Veg Fried Rice, Lamb Rogan Josh, Curry, Village Style Mutton Curry, Paratha, Samosa Chaat, Vegetarian Indian Restaurant, Gobi, Lunch Buffet, Samosa, Dahi Puri, Spring Rolls, Fried Rice, Chicken Noodle, Payasam, Tadka, Pakora, South Indian Food, Tandoori Chicken, Butter Naan, Vindaloo, Chole Bhature, Masala Dosa, Malai Kofta, Mango Lassi, Roti, and Catering"
+            },
+            "name": "What are you known for?"
+          },
+          {
+            "@type": "Question",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We serve Lunch and Dinner"
+            },
+            "name": "What meals do you serve?"
+          },
+          {
+            "@type": "Question",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer Delivery and Takeout"
+            },
+            "name": "Do you offer delivery or takeout?"
+          },
+          {
+            "@type": "Question",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We are located in South Jordan, UT at 1098 S Jordan Pkwy W STE 102"
+            },
+            "name": "Where are you located?"
+          },
+          {
+            "@type": "Question",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We serve the following areas: Lampton, South Jordan, Sandy, Crescent, Endot, West Jordan, Riverton Siding, Riverton, White City, Midvale, Welby, Jordan, Draper, Peruvian Park, Murray, Olivers, Bennion, Bluffdale, Herriman, Cottonwood Heights"
+            },
+            "name": "What areas do you serve?"
+          }
+        ],
+        "url": "https://saffronvalleysouthjordan.com/"
+      }
+    ]
+  ],
+  "viewport": {
+    "height": 720,
+    "pageHeight": 9970,
+    "width": 1280
+  }
+}

@@ -1,0 +1,69 @@
+- button "Continue Shopping":
+- banner:
+  - img "Hikari Sushi"
+- heading "Your cart" [level=1]
+- banner:
+  - heading "Your order (1 item)" [level=2]
+- button "Flares Of Hikari Flares Of Hikari $15.00 $12.00 $12.00 Online Order - 20% off Remove item":
+  - status
+  - img "Flares Of Hikari"
+  - heading "Flares Of Hikari" [level=3]
+  - paragraph: $15.00 $12.00
+  - paragraph: $12.00
+  - paragraph: Online Order - 20% off
+  - button "Decrease quantity" [disabled]:
+  - spinbutton "Current value 1. Click to edit manually.": "1"
+  - button "Increase quantity":
+  - button "Remove item":
+- button "Add more items":
+  - generic: Add more items
+- banner:
+  - heading "How to get it" [level=2]
+  - button "Edit how you'll get your order":
+    - generic: Edit
+- paragraph:
+  - text: "Pickup: 10468 S Redwood Rd South Jordan, UT"
+- paragraph:
+  - text: "Today: 11:15 AM - 2:45 PM"
+- banner:
+  - heading "Add a tip" [level=2]
+- group "Tip amount options":
+  - button "10% $1.50" [pressed]:
+    - strong: 10%
+    - generic: $1.50
+  - button "15% $2.25":
+    - strong: 15%
+    - generic: $2.25
+  - button "20% $3.00":
+    - strong: 20%
+    - generic: $3.00
+  - button "Other":
+    - strong: Other
+- textbox "Add gift card"
+- generic: Subtotal
+- generic: $15.00
+- generic: Online Order - 20% off
+- generic: "-$3.00"
+- generic: Estimated taxes (Utah)
+- generic: $0.89
+- generic: Tip (10%)
+- generic: $1.50
+- generic: Estimated order total
+- generic: $14.39
+- generic: Total savings
+- generic: $3.00
+- generic: Additional taxes and fees will be calculated at checkout
+- button "Continue to payment":
+  - generic: Continue to payment
+- generic: Secure checkout by Square
+- img "CashApp"
+- img "Apple Pay"
+- img "Google Pay"
+- img "Visa"
+- img "Mastercard"
+- img "American Express"
+- img "Discover"
+- img "JCB"
+- button "Phone with notification Text us":
+  - img "Phone with notification"
+  - paragraph: Text us

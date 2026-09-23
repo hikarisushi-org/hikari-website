@@ -1,0 +1,56 @@
+{
+  "hero": [
+    {
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "line": "24px",
+      "size": "16px",
+      "tag": "DIV",
+      "text": "Best Indian Food in South JordanGround Fresh Daily. Scratch-Cooked Since 2011.Order online",
+      "weight": "400"
+    },
+    {
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "line": "24px",
+      "size": "16px",
+      "tag": "DIV",
+      "text": "Best Indian Food in South JordanGround Fresh Daily. Scratch-Cooked Since 2011.Order online",
+      "weight": "400"
+    },
+    {
+      "font": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "line": "24px",
+      "size": "16px",
+      "tag": "DIV",
+      "text": "Best Indian Food in South JordanGround Fresh Daily. Scratch-Cooked Since 2011.",
+      "weight": "400"
+    },
+    {
+      "font": "Lora, \"Lora Fallback: Georgia\", \"Lora Fallback: Times New Roman\", Georgia, \"Times New Roman\", -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "line": "67.2px",
+      "size": "56px",
+      "tag": "SPAN",
+      "text": "Ground Fresh Daily. Scratch-Cooked Since 2011.",
+      "weight": "600"
+    }
+  ],
+  "sectionStyles": [
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "heading": "Saffron Valley – Five Locations, One Kitchen Philosophy",
+      "padding": "0px",
+      "parentTag": "DIV"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "heading": "Regional Indian Cooking, No Shortcuts",
+      "padding": "0px",
+      "parentTag": "DIV"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "heading": "From Our Kitchen",
+      "padding": "0px",
+      "parentTag": "DIV"
+    }
+  ]
+}

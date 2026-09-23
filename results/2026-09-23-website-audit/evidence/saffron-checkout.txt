@@ -1,0 +1,59 @@
+- link "Skip to main":
+  - /url: "#main"
+  - generic: Skip to main
+- main:
+  - link "Menu":
+    - /url: /menu
+    - text: Menu
+  - heading "Checkout" [level=1]
+  - region "Order summary":
+    - heading "Order summary" [level=2]
+    - list:
+      - paragraph: Subtotal
+      - generic: $18.00
+      - button "More information about Taxes & fees":
+        - paragraph: Taxes & fees
+      - generic: $2.48
+      - list:
+        - paragraph: Taxes
+        - generic: $1.58
+        - paragraph: Service fee
+        - paragraph: $0.90
+        - paragraph: Our online provider charges a service fee. This helps cover costs related to your order including 24/7 support.
+      - paragraph: Tip
+      - generic: $3.60
+    - button "Add coupon or gift card"
+    - paragraph
+    - separator
+    - paragraph: Total
+    - status: $24.08
+  - paragraph: Butter Chicken (GF)
+  - paragraph: Mild, White Basmati Rice
+  - button "Remove item Butter Chicken (GF), Mild, White Basmati Rice":
+  - generic: "Quantity Butter Chicken (GF), Mild, White Basmati Rice: 1"
+  - generic: "1"
+  - button "Increase quantity Butter Chicken (GF), Mild, White Basmati Rice":
+  - paragraph: $18.00
+  - heading "Pickup details" [level=2]
+  - paragraph:
+    - text: Pick up from
+    - link "1098 S Jordan Pkwy W STE 102, South Jordan":
+      - /url: https://www.google.com/maps/search/?api=1&query=1098%20S%20Jordan%20Pkwy%20W%20%23102%2C%20South%20Jordan%2C%20UT%2084095%2C%20USA&query_place_id=ChIJUzNOnDyGUocRY6ObAoC9wdo
+  - paragraph:
+    - text: Today by 11:30 AM
+  - button "You’re saving $5.04 by ordering directly from us vs. other websites":
+    - generic: You’re saving $5.04 by ordering directly from us vs. other websites
+  - paragraph: Based on aggregate menu price comparisons plus a standard service fee; prices and fees may vary by item, customer, and over time. Excludes delivery fees.
+  - heading "Tip" [level=2]
+  - group "Tip options":
+    - radio "$1.80 10%":
+      - paragraph: $1.80
+      - paragraph: 10%
+    - radio "$2.70 15%":
+      - paragraph: $2.70
+      - paragraph: 15%
+    - radio "$3.60 20%" [checked]:
+      - paragraph: $3.60
+      - paragraph: 20%
+    - button "Other tip amount, opens dialog":
+      - paragraph: Other

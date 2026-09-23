@@ -1,0 +1,77 @@
+# Project State
+
+## Current status
+
+Completed a bounded live comparison of Hikari and Saffron Valley / Owner on September 23, 2026. [Start with the audit](results/2026-09-23-website-audit/README.md); design measurements, screenshots and source evidence are included.
+
+Follow-up: inspected Hikari’s authenticated Square Plus / Order Online editor. Joel then explicitly authorized practical ordering-flow improvements. Published: main banner hidden, compact mobile/desktop item layout, announcement pop-up inactive (discount unchanged). [Change record and verification](results/2026-09-23-website-audit/04-SQUARE-LIVE-IMPROVEMENTS.md).
+
+Square presentation changes are live. The custom website menu was later changed only to remove Garlic Shrimp; its hosting, prices, discounts, fees, fulfillment and Square POS/KDS/provider integrations were not changed. Existing unrelated work is preserved. A sticky-header experiment was reverted because it did not provide the expected cart access on the ordering template; the original Reveal on scroll up setting is restored and published.
+
+The Square photo sync covered all 60 individually matchable website entries at the time of the audit. Garlic Shrimp was subsequently removed from the website menu and Square's `Online – Website & Profile` channel; its Square catalog/POS record remains, but its delivery-app visibility was later disabled for menu parity. The current website menu therefore has 59 individually matchable items plus the generic Canned Soda category image. Crab Rangoon was switched from stock-count tracking at -25 to Square's prepared-food availability tracking and now appears as Available on the public ordering menu. Both live menus were checked. Ten Square-only/utility catalog rows still lack authoritative current-website images. [Photo-sync inventory](results/2026-09-23-website-audit/05-SQUARE-PHOTO-SYNC.md).
+
+The current website menu was inventoried (60 unique entries) and reconciled with the public Square Online menu. Eleven missing online dishes were enabled using the already-synced website photos; six Square-only dishes were hidden from the website channel without deleting their catalog/POS records. Their delivery-app visibility was disabled in the later parity pass. Square Online now displays all eleven and none of the six. Mango Sticky Rice required correcting shipping-only fulfillment and an erroneous -26 stock count; the public listing now appears without an out-of-stock label. Joel excluded both salads and mochi from Square Online; he explicitly asked to leave the two no-longer-offered salad listings on the website for now. [Full menu and change record](results/2026-09-23-website-audit/06-MENU-RECONCILIATION.md).
+
+Follow-up item parity is now configured across Square Online, DoorDash, Uber Eats, and Grubhub: 14 website-matched items were enabled on all delivery apps; nine extras, including Garlic Shrimp, were disabled there. Stray Square Online visibility was also cleared from six catalog/exception items. Square showed fresh sync timestamps for all three apps, and representative changes appeared on each live app menu. POS records and platform-specific prices were preserved. [Delivery-app change record and verification](results/2026-09-23-website-audit/07-DELIVERY-APP-MENU-PARITY.md).
+
+Verified real pickup and delivery carts through payment entry without submitting an order. Both retained the 20% discount. The native mobile View order button stays visible after adding food. The temporary test item was removed. Physical KDS/courier dispatch was not exercised. Initial delivery quote versus cart fees remains inconsistent and needs Square clarification if pursued.
+
+Key findings: mobile lab performance 61 vs 93; oversized menu images; the custom order-click event misses the current Square links; standalone /menu is a dine-in picks experience, not an online cart. Owner's uplift figures remain vendor claims, not an established result for Hikari.
+
+Audit limits: no private analytics/sales data; Square payment continuation met automated verification; no complete Saffron crawl because direct HTTP requests were challenged.
+
+## Next action
+
+NEXT ACTION: Review the [remaining implementation plan](results/2026-09-23-website-audit/08-REMAINING-IMPLEMENTATION-PLAN.md), then begin its first checkpoint: preserve the dirty checkout, create an isolated `codex/` implementation branch/worktree from current `origin/main`, repair order-click measurement, and establish the repeatable mobile performance baseline. Joel wants all unfinished audit recommendations addressed, but production visual implementation and publication remain approval-gated. Preserve `/menu` and the working Square operational path.
+
+### Immediate-continuation handoff — September 23, 2026
+
+- Branch: `main`, with no local commits ahead of `origin/main`. No background agents or in-flight browser transactions. The seven-file close-out does not commit or publish anything.
+- Uncommitted paths (exact `git status --short --untracked-files=all` list before this close-out):
+
+```text
+ M CHANGELOG.md
+ M DECISION-LOG.md
+ M SPECS.md
+ M js/menu-page.js
+?? ACTION-ITEMS.md
+?? PROJECT-STATE.md
+?? SESSION-LOG.md
+?? assets/images/july-4-hero.png
+?? results/2026-09-23-website-audit/01-DESIGN-REFERENCE.md
+?? results/2026-09-23-website-audit/02-EVIDENCE-AND-SEO.md
+?? results/2026-09-23-website-audit/03-SQUARE-CUSTOMIZATION.md
+?? results/2026-09-23-website-audit/04-SQUARE-LIVE-IMPROVEMENTS.md
+?? results/2026-09-23-website-audit/05-SQUARE-PHOTO-SYNC.md
+?? results/2026-09-23-website-audit/06-MENU-RECONCILIATION.md
+?? results/2026-09-23-website-audit/07-DELIVERY-APP-MENU-PARITY.md
+?? results/2026-09-23-website-audit/README.md
+?? results/2026-09-23-website-audit/evidence/collect-http.mjs
+?? results/2026-09-23-website-audit/evidence/hikari-mobile.json
+?? results/2026-09-23-website-audit/evidence/hikari-pagespeed-desktop.txt
+?? results/2026-09-23-website-audit/evidence/hikari-pagespeed-mobile.txt
+?? results/2026-09-23-website-audit/evidence/hikari-square-cart.txt
+?? results/2026-09-23-website-audit/evidence/http-evidence.json
+?? results/2026-09-23-website-audit/evidence/saffron-checkout.txt
+?? results/2026-09-23-website-audit/evidence/saffron-desktop.json
+?? results/2026-09-23-website-audit/evidence/saffron-extra-styles.json
+?? results/2026-09-23-website-audit/evidence/saffron-pagespeed-desktop.txt
+?? results/2026-09-23-website-audit/evidence/saffron-pagespeed-mobile.txt
+?? results/2026-09-23-website-audit/screenshots/README.md
+?? results/2026-09-23-website-audit/screenshots/hikari-desktop-hero.jpg
+?? results/2026-09-23-website-audit/screenshots/hikari-mobile-hero.jpg
+?? results/2026-09-23-website-audit/screenshots/hikari-mobile-menu.jpg
+?? results/2026-09-23-website-audit/screenshots/hikari-square-cart.jpg
+?? results/2026-09-23-website-audit/screenshots/hikari-square-entry.jpg
+?? results/2026-09-23-website-audit/screenshots/hikari-square-promotion.jpg
+?? results/2026-09-23-website-audit/screenshots/saffron-checkout.jpg
+?? results/2026-09-23-website-audit/screenshots/saffron-desktop-full.jpg
+?? results/2026-09-23-website-audit/screenshots/saffron-desktop-hero.jpg
+?? results/2026-09-23-website-audit/screenshots/saffron-desktop-menu.jpg
+?? results/2026-09-23-website-audit/screenshots/saffron-desktop-sections.jpg
+?? results/2026-09-23-website-audit/screenshots/saffron-item-upsells.jpg
+?? results/2026-09-23-website-audit/screenshots/saffron-mobile-hero.jpg
+?? results/2026-09-23-website-audit/screenshots/saffron-mobile-menu.jpg
+?? results/2026-09-23-website-audit/screenshots/square-after-desktop-delivery.png
+?? results/2026-09-23-website-audit/screenshots/square-after-mobile-delivery.png
+```

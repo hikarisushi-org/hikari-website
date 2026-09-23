@@ -1,0 +1,627 @@
+- banner:
+  - link "PageSpeed Insights logo PageSpeed Insights":
+    - /url: ./
+    - img "PageSpeed Insights logo"
+    - generic: PageSpeed Insights
+  - button "Copy Link":
+    - generic: Copy Link
+  - generic: Docs
+  - link "Docs":
+    - /url: https://developers.google.com/speed/docs/insights/v5/about
+- generic: This site uses cookies from Google to deliver its services and to analyze traffic.
+- generic: Learn More.
+- link "Learn More.":
+  - /url: https://policies.google.com/technologies/cookies
+- button "Ok, Got it.":
+  - generic: Ok, Got it.
+- generic: Report from Sep 23, 2026, 12:54:41 AM
+- textbox:
+  - /placeholder: Enter a web page URL
+  - text: https://hikarisojo.com/
+- paragraph: Enter a valid URL
+- button "Analyze":
+  - generic: Analyze
+- tablist:
+  - tab "Mobile" [selected]:
+    - generic: smartphone
+    - generic: Mobile
+  - tab "Desktop":
+    - generic: computer
+    - generic: Desktop
+- tabpanel "Mobile":
+  - generic: Discover what your real users are experiencing
+  - button "button":
+  - generic: No Data
+  - separator
+  - generic: Diagnose performance issues
+  - article:
+    - link "61 Performance":
+      - /url: "#performance"
+      - generic: "61"
+      - generic: Performance
+    - link "90 Accessibility":
+      - /url: "#accessibility"
+      - generic: "90"
+      - generic: Accessibility
+    - link "100 Best Practices":
+      - /url: "#best-practices"
+      - generic: "100"
+      - generic: Best Practices
+    - link "100 SEO":
+      - /url: "#seo"
+      - generic: "100"
+      - generic: SEO
+    - link "2/2 Agentic Browsing":
+      - /url: "#agentic-browsing"
+      - generic: 2/2
+      - generic: Agentic Browsing
+    - text: Values are estimated and may vary. The
+    - link "performance score is calculated":
+      - /url: https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/?utm_source=lighthouse&utm_medium=lr
+    - text: directly from these metrics.
+    - link "See calculator.":
+      - /url: https://googlechrome.github.io/lighthouse/scorecalc/#FCP=3706&LCP=9851&TBT=197&CLS=0&SI=5397&TTI=10243&device=mobile&version=13.5.0
+    - generic: 0–49
+    - generic: 50–89
+    - generic: 90–100
+    - img "Final Screenshot"
+    - checkbox "Toggle the display of metric descriptions"
+    - generic: Metrics
+    - generic: Expand view
+    - generic: First Contentful Paint
+    - generic: 3.7 s
+    - generic: Largest Contentful Paint
+    - generic: 9.9 s
+    - generic: Total Blocking Time
+    - generic: 200 ms
+    - generic: Cumulative Layout Shift
+    - generic: "0"
+    - generic: Speed Index
+    - generic: 5.4 s
+    - list:
+      - listitem: Captured at Sep 23, 2026, 12:54 AM MDT
+      - listitem: Emulated Moto G Power with Lighthouse 13.5.0
+      - listitem: Single page session
+      - listitem: Initial page load
+      - listitem: Slow 4G throttling
+      - listitem: Using HeadlessChromium 153.0.8010.36 with lr
+    - button "View Treemap"
+    - img "Screenshot"
+    - img "Screenshot"
+    - img "Screenshot"
+    - img "Screenshot"
+    - img "Screenshot"
+    - img "Screenshot"
+    - img "Screenshot"
+    - img "Screenshot"
+    - generic: "Show audits relevant to:"
+    - radio "All" [checked]
+    - generic: All
+    - radio "FCP"
+    - generic "First Contentful Paint": FCP
+    - radio "LCP"
+    - generic "Largest Contentful Paint": LCP
+    - radio "TBT"
+    - generic "Total Blocking Time": TBT
+    - radio "CLS"
+    - generic "Cumulative Layout Shift": CLS
+    - generic: Insights
+    - generic "Render-blocking requests —Est savings of 1,050 ms":
+      - generic: Render-blocking requests
+      - text: —Est savings of 1,050 ms
+    - generic "Improve image delivery —Est savings of 6,517 KiB" [active]:
+      - generic: Improve image delivery
+      - text: —Est savings of 6,517 KiB
+    - text: Reducing the download time of images can improve the perceived load time of the page and LCP.
+    - link "Learn more about optimizing image size":
+      - /url: https://developer.chrome.com/docs/performance/insights/image-delivery?utm_source=lighthouse&utm_medium=lr
+    - generic "Relevant to Largest Contentful Paint": LCP
+    - generic "Relevant to First Contentful Paint": FCP
+    - generic "This audit does not contribute to the overall category score.": Unscored
+    - checkbox "Show 3rd-party resources (4)" [checked]
+    - text: Show 3rd-party resources (4)
+    - table:
+      - rowgroup:
+        - row "URL Resource Size Est Savings":
+          - columnheader
+          - columnheader "URL":
+            - generic: URL
+          - columnheader "Resource Size":
+            - generic: Resource Size
+          - columnheader "Est Savings":
+            - generic: Est Savings
+      - rowgroup:
+        - row "hikarisojo.com 1st party 6,623.4 KiB 6,427.0 KiB":
+          - cell "hikarisojo.com 1st party":
+            - generic: hikarisojo.com
+            - generic: 1st party
+          - cell
+          - cell "6,623.4 KiB":
+            - generic "6,782,371 bytes": 6,623.4 KiB
+          - cell "6,427.0 KiB":
+            - generic "6,581,273 bytes": 6,427.0 KiB
+        - row "Island Heatwave <img src=\"assets/images/menu/sushi/island_heatwave.png\" alt=\"Island Heatwave\" class=\"menu-page-item-img\" loading=\"lazy\"> …sushi/island_heatwave.png(hikarisojo.com) 2,180.3 KiB 2,155.6 KiB":
+          - cell "Island Heatwave <img src=\"assets/images/menu/sushi/island_heatwave.png\" alt=\"Island Heatwave\" class=\"menu-page-item-img\" loading=\"lazy\">":
+            - generic "div.menu-category-section > div.menu-items-grid > div.menu-page-item > img.menu-page-item-img":
+              - generic: Island Heatwave
+              - generic: <img src="assets/images/menu/sushi/island_heatwave.png" alt="Island Heatwave" class="menu-page-item-img" loading="lazy">
+          - cell "…sushi/island_heatwave.png(hikarisojo.com)":
+            - generic "https://hikarisojo.com/assets/images/menu/sushi/island_heatwave.png":
+              - link "…sushi/island_heatwave.png":
+                - /url: https://hikarisojo.com/assets/images/menu/sushi/island_heatwave.png
+              - text: (hikarisojo.com)
+          - cell "2,180.3 KiB":
+            - generic "2,232,592 bytes": 2,180.3 KiB
+          - cell "2,155.6 KiB":
+            - generic "2,207,296 bytes": 2,155.6 KiB
+        - row "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size. 2,017.7 KiB":
+          - cell
+          - cell "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.":
+            - generic: Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+          - cell
+          - cell "2,017.7 KiB":
+            - generic "2,066,162 bytes": 2,017.7 KiB
+        - row "This image file is larger than it needs to be (999x1000) for its displayed dimensions (493x308). Use responsive images to reduce the image download size. 1,848.9 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (999x1000) for its displayed dimensions (493x308). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (999x1000) for its displayed dimensions (493x308). Use responsive images to reduce the image download size.
+          - cell
+          - cell "1,848.9 KiB":
+            - generic "1,893,250 bytes": 1,848.9 KiB
+        - row "Flares of Hikari <img src=\"assets/images/menu/sushi/flares_of_hikari.png\" alt=\"Flares of Hikari\" class=\"menu-page-item-img\" loading=\"lazy\"> …sushi/flares_of_hikari.png(hikarisojo.com) 1,992.3 KiB 1,967.6 KiB":
+          - cell "Flares of Hikari <img src=\"assets/images/menu/sushi/flares_of_hikari.png\" alt=\"Flares of Hikari\" class=\"menu-page-item-img\" loading=\"lazy\">":
+            - generic "div.menu-category-section > div.menu-items-grid > div.menu-page-item > img.menu-page-item-img":
+              - generic: Flares of Hikari
+              - generic: <img src="assets/images/menu/sushi/flares_of_hikari.png" alt="Flares of Hikari" class="menu-page-item-img" loading="lazy">
+          - cell "…sushi/flares_of_hikari.png(hikarisojo.com)":
+            - generic "https://hikarisojo.com/assets/images/menu/sushi/flares_of_hikari.png":
+              - link "…sushi/flares_of_hikari.png":
+                - /url: https://hikarisojo.com/assets/images/menu/sushi/flares_of_hikari.png
+              - text: (hikarisojo.com)
+          - cell "1,992.3 KiB":
+            - generic "2,040,163 bytes": 1,992.3 KiB
+          - cell "1,967.6 KiB":
+            - generic "2,014,867 bytes": 1,967.6 KiB
+        - row "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size. 1,829.8 KiB":
+          - cell
+          - cell "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.":
+            - generic: Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+          - cell
+          - cell "1,829.8 KiB":
+            - generic "1,873,733 bytes": 1,829.8 KiB
+        - row "This image file is larger than it needs to be (999x1000) for its displayed dimensions (493x308). Use responsive images to reduce the image download size. 1,689.5 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (999x1000) for its displayed dimensions (493x308). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (999x1000) for its displayed dimensions (493x308). Use responsive images to reduce the image download size.
+          - cell
+          - cell "1,689.5 KiB":
+            - generic "1,730,069 bytes": 1,689.5 KiB
+        - row "Gyoza <img src=\"assets/images/menu/appetizers/gyoza.png\" alt=\"Gyoza\" class=\"menu-page-item-img\" loading=\"lazy\"> …appetizers/gyoza.png(hikarisojo.com) 1,423.0 KiB 1,407.5 KiB":
+          - cell "Gyoza <img src=\"assets/images/menu/appetizers/gyoza.png\" alt=\"Gyoza\" class=\"menu-page-item-img\" loading=\"lazy\">":
+            - generic "div.menu-category-section > div.menu-items-grid > div.menu-page-item > img.menu-page-item-img":
+              - generic: Gyoza
+              - generic: <img src="assets/images/menu/appetizers/gyoza.png" alt="Gyoza" class="menu-page-item-img" loading="lazy">
+          - cell "…appetizers/gyoza.png(hikarisojo.com)":
+            - generic "https://hikarisojo.com/assets/images/menu/appetizers/gyoza.png":
+              - link "…appetizers/gyoza.png":
+                - /url: https://hikarisojo.com/assets/images/menu/appetizers/gyoza.png
+              - text: (hikarisojo.com)
+          - cell "1,423.0 KiB":
+            - generic "1,457,142 bytes": 1,423.0 KiB
+          - cell "1,407.5 KiB":
+            - generic "1,441,331 bytes": 1,407.5 KiB
+        - row "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size. 1,252.3 KiB":
+          - cell
+          - cell "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.":
+            - generic: Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+          - cell
+          - cell "1,252.3 KiB":
+            - generic "1,282,379 bytes": 1,252.3 KiB
+        - row "This image file is larger than it needs to be (1024x1024) for its displayed dimensions (308x308). Use responsive images to reduce the image download size. 1,294.3 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (1024x1024) for its displayed dimensions (308x308). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (1024x1024) for its displayed dimensions (308x308). Use responsive images to reduce the image download size.
+          - cell
+          - cell "1,294.3 KiB":
+            - generic "1,325,315 bytes": 1,294.3 KiB
+        - row "Misty Harbor <img src=\"assets/images/menu/sushi/misty_harbor_zoom.png\" alt=\"Misty Harbor\" class=\"menu-page-item-img\" loading=\"lazy\"> …sushi/misty_harbor_zoom.png(hikarisojo.com) 630.7 KiB 615.2 KiB":
+          - cell "Misty Harbor <img src=\"assets/images/menu/sushi/misty_harbor_zoom.png\" alt=\"Misty Harbor\" class=\"menu-page-item-img\" loading=\"lazy\">":
+            - generic "div.menu-category-section > div.menu-items-grid > div.menu-page-item > img.menu-page-item-img":
+              - generic: Misty Harbor
+              - generic: <img src="assets/images/menu/sushi/misty_harbor_zoom.png" alt="Misty Harbor" class="menu-page-item-img" loading="lazy">
+          - cell "…sushi/misty_harbor_zoom.png(hikarisojo.com)":
+            - generic "https://hikarisojo.com/assets/images/menu/sushi/misty_harbor_zoom.png":
+              - link "…sushi/misty_harbor_zoom.png":
+                - /url: https://hikarisojo.com/assets/images/menu/sushi/misty_harbor_zoom.png
+              - text: (hikarisojo.com)
+          - cell "630.7 KiB":
+            - generic "645,812 bytes": 630.7 KiB
+          - cell "615.2 KiB":
+            - generic "630,001 bytes": 615.2 KiB
+        - row "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size. 536.7 KiB":
+          - cell
+          - cell "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.":
+            - generic: Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+          - cell
+          - cell "536.7 KiB":
+            - generic "549,545 bytes": 536.7 KiB
+        - row "This image file is larger than it needs to be (760x760) for its displayed dimensions (308x308). Use responsive images to reduce the image download size. 527.1 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (760x760) for its displayed dimensions (308x308). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (760x760) for its displayed dimensions (308x308). Use responsive images to reduce the image download size.
+          - cell
+          - cell "527.1 KiB":
+            - generic "539,745 bytes": 527.1 KiB
+        - row "Chef preparing sushi rolls with eel sauce at Hikari Sushi <img src=\"assets/images/sushi_making.webp\" alt=\"Chef preparing sushi rolls with eel sauce at Hikari Sushi\"> …images/sushi_making.webp(hikarisojo.com) 204.4 KiB 159.3 KiB":
+          - cell "Chef preparing sushi rolls with eel sauce at Hikari Sushi <img src=\"assets/images/sushi_making.webp\" alt=\"Chef preparing sushi rolls with eel sauce at Hikari Sushi\">":
+            - generic "div.container > div.about-grid > div.about-image > img":
+              - generic: Chef preparing sushi rolls with eel sauce at Hikari Sushi
+              - generic: <img src="assets/images/sushi_making.webp" alt="Chef preparing sushi rolls with eel sauce at Hikari Sushi">
+          - cell "…images/sushi_making.webp(hikarisojo.com)":
+            - generic "https://hikarisojo.com/assets/images/sushi_making.webp":
+              - link "…images/sushi_making.webp":
+                - /url: https://hikarisojo.com/assets/images/sushi_making.webp
+              - text: (hikarisojo.com)
+          - cell "204.4 KiB":
+            - generic "209,300 bytes": 204.4 KiB
+          - cell "159.3 KiB":
+            - generic "163,113 bytes": 159.3 KiB
+        - row "This image file is larger than it needs to be (1400x1751) for its displayed dimensions (637x849). Use responsive images to reduce the image download size. 159.3 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (1400x1751) for its displayed dimensions (637x849). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (1400x1751) for its displayed dimensions (637x849). Use responsive images to reduce the image download size.
+          - cell
+          - cell "159.3 KiB":
+            - generic "163,113 bytes": 159.3 KiB
+        - row "Hikari Sushi logo <img src=\"assets/images/logo.webp\" alt=\"Hikari Sushi logo\" class=\"nav-logo-img\"> …images/logo.webp(hikarisojo.com) 81.2 KiB 80.5 KiB":
+          - cell "Hikari Sushi logo <img src=\"assets/images/logo.webp\" alt=\"Hikari Sushi logo\" class=\"nav-logo-img\">":
+            - generic "nav#nav > div.nav-inner > a.nav-logo > img.nav-logo-img":
+              - generic: Hikari Sushi logo
+              - generic: <img src="assets/images/logo.webp" alt="Hikari Sushi logo" class="nav-logo-img">
+          - cell "…images/logo.webp(hikarisojo.com)":
+            - generic "https://hikarisojo.com/assets/images/logo.webp":
+              - link "…images/logo.webp":
+                - /url: https://hikarisojo.com/assets/images/logo.webp
+              - text: (hikarisojo.com)
+          - cell "81.2 KiB":
+            - generic "83,156 bytes": 81.2 KiB
+          - cell "80.5 KiB":
+            - generic "82,394 bytes": 80.5 KiB
+        - row "This image file is larger than it needs to be (1024x1024) for its displayed dimensions (98x98). Use responsive images to reduce the image download size. 80.5 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (1024x1024) for its displayed dimensions (98x98). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (1024x1024) for its displayed dimensions (98x98). Use responsive images to reduce the image download size.
+          - cell
+          - cell "80.5 KiB":
+            - generic "82,394 bytes": 80.5 KiB
+        - row "body > section#hero > video.hero-video <video class=\"hero-video hero-video--portrait\" autoplay=\"\" muted=\"\" loop=\"\" playsinline=\"\" poster=\"assets/images/sushi_platter_1.webp\"> …images/sushi_platter_1.webp(hikarisojo.com) 111.5 KiB 41.3 KiB":
+          - cell "body > section#hero > video.hero-video <video class=\"hero-video hero-video--portrait\" autoplay=\"\" muted=\"\" loop=\"\" playsinline=\"\" poster=\"assets/images/sushi_platter_1.webp\">":
+            - generic "body > section#hero > video.hero-video":
+              - generic: body > section#hero > video.hero-video
+              - generic: <video class="hero-video hero-video--portrait" autoplay="" muted="" loop="" playsinline="" poster="assets/images/sushi_platter_1.webp">
+          - cell "…images/sushi_platter_1.webp(hikarisojo.com)":
+            - generic "https://hikarisojo.com/assets/images/sushi_platter_1.webp":
+              - link "…images/sushi_platter_1.webp":
+                - /url: https://hikarisojo.com/assets/images/sushi_platter_1.webp
+              - text: (hikarisojo.com)
+          - cell "111.5 KiB":
+            - generic "114,206 bytes": 111.5 KiB
+          - cell "41.3 KiB":
+            - generic "42,271 bytes": 41.3 KiB
+        - row "This image file is larger than it needs to be (1049x1866) for its displayed dimensions (962x1282). Use responsive images to reduce the image download size. 41.3 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (1049x1866) for its displayed dimensions (962x1282). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (1049x1866) for its displayed dimensions (962x1282). Use responsive images to reduce the image download size.
+          - cell
+          - cell "41.3 KiB":
+            - generic "42,271 bytes": 41.3 KiB
+        - row "Other Google APIs/SDKs utility 94.0 KiB 90.1 KiB":
+          - cell "Other Google APIs/SDKs utility":
+            - generic: Other Google APIs/SDKs
+            - generic: utility
+          - cell
+          - cell "94.0 KiB":
+            - generic "96,262 bytes": 94.0 KiB
+          - cell "90.1 KiB":
+            - generic "92,310 bytes": 90.1 KiB
+        - row "Ena Rojo <img src=\"https://lh3.googleusercontent.com/a-/ALV-UjVf-CvuB7SlIAMV46Jw1YKoka1LsuIRY…\" alt=\"Ena Rojo\" class=\"review-card-avatar\" loading=\"lazy\"> /a-/ALV-UjVf-…=s120-c-rp-mo-br100(lh3.googleusercontent.com) 30.1 KiB 29.1 KiB":
+          - cell "Ena Rojo <img src=\"https://lh3.googleusercontent.com/a-/ALV-UjVf-CvuB7SlIAMV46Jw1YKoka1LsuIRY…\" alt=\"Ena Rojo\" class=\"review-card-avatar\" loading=\"lazy\">":
+            - generic "div#reviews-track > div.review-card > div.review-card-header > img.review-card-avatar":
+              - generic: Ena Rojo
+              - generic: <img src="https://lh3.googleusercontent.com/a-/ALV-UjVf-CvuB7SlIAMV46Jw1YKoka1LsuIRY…" alt="Ena Rojo" class="review-card-avatar" loading="lazy">
+          - cell "/a-/ALV-UjVf-…=s120-c-rp-mo-br100(lh3.googleusercontent.com)":
+            - generic "https://lh3.googleusercontent.com/a-/ALV-UjVf-CvuB7SlIAMV46Jw1YKoka1LsuIRYBnAwhRVe1kgpSOAj7IsaQ=s120-c-rp-mo-br100":
+              - link "/a-/ALV-UjVf-…=s120-c-rp-mo-br100":
+                - /url: https://lh3.googleusercontent.com/a-/ALV-UjVf-CvuB7SlIAMV46Jw1YKoka1LsuIRYBnAwhRVe1kgpSOAj7IsaQ=s120-c-rp-mo-br100
+              - text: (lh3.googleusercontent.com)
+          - cell "30.1 KiB":
+            - generic "30,772 bytes": 30.1 KiB
+          - cell "29.1 KiB":
+            - generic "29,784 bytes": 29.1 KiB
+        - row "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size. 27.7 KiB":
+          - cell
+          - cell "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.":
+            - generic: Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+          - cell
+          - cell "27.7 KiB":
+            - generic "28,372 bytes": 27.7 KiB
+        - row "This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size. 17.7 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size.
+          - cell
+          - cell "17.7 KiB":
+            - generic "18,102 bytes": 17.7 KiB
+        - row "Mary Bryan <img src=\"https://lh3.googleusercontent.com/a-/ALV-UjVwr4nbMM-Z5pAzVOVHhL1C6ZDlIugQb…\" alt=\"Mary Bryan\" class=\"review-card-avatar\" loading=\"lazy\"> /a-/ALV-UjVwr…=s120-c-rp-mo-br100(lh3.googleusercontent.com) 28.9 KiB 28.0 KiB":
+          - cell "Mary Bryan <img src=\"https://lh3.googleusercontent.com/a-/ALV-UjVwr4nbMM-Z5pAzVOVHhL1C6ZDlIugQb…\" alt=\"Mary Bryan\" class=\"review-card-avatar\" loading=\"lazy\">":
+            - generic "div#reviews-track > div.review-card > div.review-card-header > img.review-card-avatar":
+              - generic: Mary Bryan
+              - generic: <img src="https://lh3.googleusercontent.com/a-/ALV-UjVwr4nbMM-Z5pAzVOVHhL1C6ZDlIugQb…" alt="Mary Bryan" class="review-card-avatar" loading="lazy">
+          - cell "/a-/ALV-UjVwr…=s120-c-rp-mo-br100(lh3.googleusercontent.com)":
+            - generic "https://lh3.googleusercontent.com/a-/ALV-UjVwr4nbMM-Z5pAzVOVHhL1C6ZDlIugQbbXuvQoyUeydtpJ8ZtiG=s120-c-rp-mo-br100":
+              - link "/a-/ALV-UjVwr…=s120-c-rp-mo-br100":
+                - /url: https://lh3.googleusercontent.com/a-/ALV-UjVwr4nbMM-Z5pAzVOVHhL1C6ZDlIugQbbXuvQoyUeydtpJ8ZtiG=s120-c-rp-mo-br100
+              - text: (lh3.googleusercontent.com)
+          - cell "28.9 KiB":
+            - generic "29,635 bytes": 28.9 KiB
+          - cell "28.0 KiB":
+            - generic "28,647 bytes": 28.0 KiB
+        - row "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size. 26.6 KiB":
+          - cell
+          - cell "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.":
+            - generic: Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+          - cell
+          - cell "26.6 KiB":
+            - generic "27,235 bytes": 26.6 KiB
+        - row "This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size. 17.0 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size.
+          - cell
+          - cell "17.0 KiB":
+            - generic "17,433 bytes": 17.0 KiB
+        - row "Eric Sholtis <img src=\"https://lh3.googleusercontent.com/a-/ALV-UjWre9-jCagHI-2NFQ7MUmbKMMXUtagWM…\" alt=\"Eric Sholtis\" class=\"review-card-avatar\" loading=\"lazy\"> /a-/ALV-UjWre…=s120-c-rp-mo-br100(lh3.googleusercontent.com) 27.8 KiB 26.8 KiB":
+          - cell "Eric Sholtis <img src=\"https://lh3.googleusercontent.com/a-/ALV-UjWre9-jCagHI-2NFQ7MUmbKMMXUtagWM…\" alt=\"Eric Sholtis\" class=\"review-card-avatar\" loading=\"lazy\">":
+            - generic "div#reviews-track > div.review-card > div.review-card-header > img.review-card-avatar":
+              - generic: Eric Sholtis
+              - generic: <img src="https://lh3.googleusercontent.com/a-/ALV-UjWre9-jCagHI-2NFQ7MUmbKMMXUtagWM…" alt="Eric Sholtis" class="review-card-avatar" loading="lazy">
+          - cell "/a-/ALV-UjWre…=s120-c-rp-mo-br100(lh3.googleusercontent.com)":
+            - generic "https://lh3.googleusercontent.com/a-/ALV-UjWre9-jCagHI-2NFQ7MUmbKMMXUtagWMAmblyLMJLbZzAhYo7-T=s120-c-rp-mo-br100":
+              - link "/a-/ALV-UjWre…=s120-c-rp-mo-br100":
+                - /url: https://lh3.googleusercontent.com/a-/ALV-UjWre9-jCagHI-2NFQ7MUmbKMMXUtagWMAmblyLMJLbZzAhYo7-T=s120-c-rp-mo-br100
+              - text: (lh3.googleusercontent.com)
+          - cell "27.8 KiB":
+            - generic "28,478 bytes": 27.8 KiB
+          - cell "26.8 KiB":
+            - generic "27,490 bytes": 26.8 KiB
+        - row "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size. 25.5 KiB":
+          - cell
+          - cell "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.":
+            - generic: Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+          - cell
+          - cell "25.5 KiB":
+            - generic "26,078 bytes": 25.5 KiB
+        - row "This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size. 16.4 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size.
+          - cell
+          - cell "16.4 KiB":
+            - generic "16,753 bytes": 16.4 KiB
+        - row "Dayna Stevenson <img src=\"https://lh3.googleusercontent.com/a/ACg8ocJtMYpMZJ8oRl8F7c7vQb3vcUJai_cksE…\" alt=\"Dayna Stevenson\" class=\"review-card-avatar\" loading=\"lazy\"> /a/ACg8ocJtM…=s120-c-rp-mo-ba12-br100(lh3.googleusercontent.com) 7.2 KiB 6.2 KiB":
+          - cell "Dayna Stevenson <img src=\"https://lh3.googleusercontent.com/a/ACg8ocJtMYpMZJ8oRl8F7c7vQb3vcUJai_cksE…\" alt=\"Dayna Stevenson\" class=\"review-card-avatar\" loading=\"lazy\">":
+            - generic "div#reviews-track > div.review-card > div.review-card-header > img.review-card-avatar":
+              - generic: Dayna Stevenson
+              - generic: <img src="https://lh3.googleusercontent.com/a/ACg8ocJtMYpMZJ8oRl8F7c7vQb3vcUJai_cksE…" alt="Dayna Stevenson" class="review-card-avatar" loading="lazy">
+          - cell "/a/ACg8ocJtM…=s120-c-rp-mo-ba12-br100(lh3.googleusercontent.com)":
+            - generic "https://lh3.googleusercontent.com/a/ACg8ocJtMYpMZJ8oRl8F7c7vQb3vcUJai_cksEu4j_hQMEitwoxeMA=s120-c-rp-mo-ba12-br100":
+              - link "/a/ACg8ocJtM…=s120-c-rp-mo-ba12-br100":
+                - /url: https://lh3.googleusercontent.com/a/ACg8ocJtMYpMZJ8oRl8F7c7vQb3vcUJai_cksEu4j_hQMEitwoxeMA=s120-c-rp-mo-ba12-br100
+              - text: (lh3.googleusercontent.com)
+          - cell "7.2 KiB":
+            - generic "7,377 bytes": 7.2 KiB
+          - cell "6.2 KiB":
+            - generic "6,389 bytes": 6.2 KiB
+        - row "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size. 4.9 KiB":
+          - cell
+          - cell "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.":
+            - generic: Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+          - cell
+          - cell "4.9 KiB":
+            - generic "4,977 bytes": 4.9 KiB
+        - row "This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size. 4.2 KiB":
+          - cell
+          - cell "This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size.":
+            - generic: This image file is larger than it needs to be (120x120) for its displayed dimensions (77x77). Use responsive images to reduce the image download size.
+          - cell
+          - cell "4.2 KiB":
+            - generic "4,340 bytes": 4.2 KiB
+    - generic "Forced reflow":
+      - generic: Forced reflow
+    - generic "LCP request discovery":
+      - generic: LCP request discovery
+    - generic "Network dependency tree":
+      - generic: Network dependency tree
+    - generic "Use efficient cache lifetimes —Est savings of 4,188 KiB":
+      - generic: Use efficient cache lifetimes
+      - text: —Est savings of 4,188 KiB
+    - generic "Optimize DOM size":
+      - generic: Optimize DOM size
+    - generic "LCP breakdown":
+      - generic: LCP breakdown
+    - generic "3rd parties":
+      - generic: 3rd parties
+    - text: These insights are also available in the Chrome DevTools Performance Panel -
+    - link "record a trace":
+      - /url: https://developer.chrome.com/docs/devtools/performance/reference?utm_source=lighthouse&utm_medium=lr
+    - text: to view more detailed information.
+    - generic: Diagnostics
+    - generic "Reduce unused JavaScript —Est savings of 76 KiB":
+      - generic: Reduce unused JavaScript
+      - text: —Est savings of 76 KiB
+    - generic "Image elements do not have explicit width and height":
+      - text: Image elements do not have explicit
+      - code: width
+      - text: and
+      - code: height
+    - generic "Minify JavaScript —Est savings of 2 KiB":
+      - generic: Minify JavaScript
+      - text: —Est savings of 2 KiB
+    - generic "Avoid enormous network payloads —Total size was 13,142 KiB":
+      - generic: Avoid enormous network payloads
+      - text: —Total size was 13,142 KiB
+    - generic "Avoid long main-thread tasks —3 long tasks found":
+      - generic: Avoid long main-thread tasks
+      - text: —3 long tasks found
+    - text: More information about the performance of your application. These numbers don't
+    - link "directly affect":
+      - /url: https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/?utm_source=lighthouse&utm_medium=lr
+    - text: the Performance score.
+    - generic "Passed audits (13) Show":
+      - generic: Passed audits (13)
+      - generic: Show
+    - text: — —
+    - heading "90 Accessibility" [level=2]:
+      - generic: "90"
+      - generic: Accessibility
+    - text: These checks highlight opportunities to
+    - link "improve the accessibility of your web app":
+      - /url: https://developer.chrome.com/docs/lighthouse/accessibility/?utm_source=lighthouse&utm_medium=lr
+    - text: . Automatic detection can only detect a subset of issues and does not guarantee the accessibility of your web app, so
+    - link "manual testing":
+      - /url: https://web.dev/articles/how-to-review?utm_source=lighthouse&utm_medium=lr
+    - text: is also encouraged.
+    - generic: Contrast
+    - generic "Background and foreground colors do not have a sufficient contrast ratio.":
+      - generic: Background and foreground colors do not have a sufficient contrast ratio.
+    - generic: These are opportunities to improve the legibility of your content.
+    - generic: Best practices
+    - generic "Touch targets do not have sufficient size or spacing.":
+      - generic: Touch targets do not have sufficient size or spacing.
+    - generic: These items highlight common accessibility best practices.
+    - generic: Navigation
+    - generic "Heading elements are not in a sequentially-descending order":
+      - generic: Heading elements are not in a sequentially-descending order
+    - generic: These are opportunities to improve keyboard navigation in your application.
+    - generic: Audio and video
+    - generic "<video> elements contain a <track> element with [kind=\"captions\"]":
+      - code: <video>
+      - text: elements contain a
+      - code: <track>
+      - text: element with
+      - code: "[kind=\"captions\"]"
+    - generic: These are opportunities to provide alternative content for audio and video. This may improve the experience for users with hearing or vision impairments.
+    - generic "Additional items to manually check (10) Show":
+      - generic: Additional items to manually check (10)
+      - generic: Show
+    - text: These items address areas which an automated testing tool cannot cover. Learn more in our guide on
+    - link "conducting an accessibility review":
+      - /url: https://web.dev/articles/how-to-review?utm_source=lighthouse&utm_medium=lr
+    - text: .
+    - generic "Passed audits (19) Show":
+      - generic: Passed audits (19)
+      - generic: Show
+    - generic "Not applicable (40) Show":
+      - generic: Not applicable (40)
+      - generic: Show
+    - heading "100 Best Practices" [level=2]:
+      - generic: "100"
+      - generic: Best Practices
+    - generic: Trust and Safety
+    - generic "Ensure CSP is effective against XSS attacks":
+      - generic: Ensure CSP is effective against XSS attacks
+    - generic "Use a strong HSTS policy":
+      - generic: Use a strong HSTS policy
+    - generic "Ensure proper origin isolation with COOP":
+      - generic: Ensure proper origin isolation with COOP
+    - generic "Mitigate clickjacking with XFO or CSP":
+      - generic: Mitigate clickjacking with XFO or CSP
+    - generic "Mitigate DOM-based XSS with Trusted Types":
+      - generic: Mitigate DOM-based XSS with Trusted Types
+    - generic: Browser Compatibility
+    - generic "Baseline Features":
+      - generic: Baseline Features
+    - generic "Passed audits (13) Show":
+      - generic: Passed audits (13)
+      - generic: Show
+    - generic "Not applicable (2) Show":
+      - generic: Not applicable (2)
+      - generic: Show
+    - heading "100 SEO" [level=2]:
+      - generic: "100"
+      - generic: SEO
+    - text: These checks ensure that your page is following basic search engine optimization advice. There are many additional factors Lighthouse does not score here that may affect your search ranking, including performance on
+    - link "Core Web Vitals":
+      - /url: https://web.dev/explore/vitals?utm_source=lighthouse&utm_medium=lr
+    - text: .
+    - link "Learn more about Google Search Essentials":
+      - /url: https://support.google.com/webmasters/answer/35769
+    - text: .
+    - generic "Additional items to manually check (1) Hide":
+      - generic: Additional items to manually check (1)
+      - generic: Hide
+    - generic "Structured data is valid":
+      - generic: Structured data is valid
+    - generic: Run these additional validators on your site to check additional SEO best practices.
+    - generic "Passed audits (8) Show":
+      - generic: Passed audits (8)
+      - generic: Show
+    - generic "Not applicable (2) Show":
+      - generic: Not applicable (2)
+      - generic: Show
+    - heading "2/2 Agentic Browsing" [level=2]:
+      - generic: 2/2
+      - generic: Agentic Browsing
+    - text: These checks ensure high-quality,
+    - link "browsable websites for AI agents":
+      - /url: https://goo.gle/lighthouse-agentic-web
+    - text: and validate the correctness of WebMCP integrations. This category is still under development and subject to change.
+    - generic "Passed audits (2) Show":
+      - generic: Passed audits (2)
+      - generic: Show
+    - text: — —
+    - generic "Not applicable (5) Show":
+      - generic: Not applicable (5)
+      - generic: Show
+- text: — — — — — — — — — — —
+- contentinfo:
+  - generic: More on PageSpeed Insights
+  - link "What's new":
+    - /url: https://developers.google.com/speed/docs/insights/release_notes
+  - link "Documentation":
+    - /url: https://developers.google.com/speed/docs/insights/v5/about
+  - link "Learn about Web Performance":
+    - /url: https://developers.google.com/speed
+  - link "Ask questions on Stack Overflow":
+    - /url: https://stackoverflow.com/questions/tagged/pagespeed-insights
+  - link "Mailing list":
+    - /url: https://groups.google.com/g/pagespeed-insights-discuss
+  - generic: Related Content
+  - link "Updates":
+    - /url: https://developer.chrome.com/blog
+  - link "Web Fundamentals":
+    - /url: https://developers.google.com/focus/web-development
+  - link "Case Studies":
+    - /url: https://web.dev/case-studies
+  - link "Podcasts":
+    - /url: https://web.dev/shows
+  - generic: Connect
+  - link "Twitter":
+    - /url: https://twitter.com/ChromiumDev
+  - link "Youtube":
+    - /url: https://www.youtube.com/user/ChromeDevelopers
+  - link "Google Developers Logo":
+    - /url: https://developers.google.com/
+    - img "Google Developers Logo"
+  - link "Chrome":
+    - /url: https://developer.chrome.com/
+  - link "Firebase":
+    - /url: https://firebase.google.com/
+  - link "All products":
+    - /url: https://developers.google.com/products/
+  - link "Terms and Privacy Policy":
+    - /url: https://policies.google.com/
+  - text: For details, see the
+  - link "Google Developers Site Policies":
+    - /url: https://developers.google.com/terms/site-policies
+  - text: .

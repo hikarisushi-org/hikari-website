@@ -2,6 +2,24 @@
 
 All notable changes to this repo will be documented here.
 
+## 2026-09-23
+
+### Changed
+
+- Aligned item visibility across Square Online, DoorDash, Uber Eats, and Grubhub: 14 website-matched items enabled on all delivery apps, nine non-menu items disabled there, and six stray Square website-channel settings removed. Preserved POS records and prices. [Live verification and limits](results/2026-09-23-website-audit/07-DELIVERY-APP-MENU-PARITY.md).
+- Reconciled Square Online ordering with the current website menu: enabled 11 missing dishes using the previously synced website photos, hid six Square-only dishes from the website channel, corrected Mango Sticky Rice's shipping-only fulfillment and -26 stock count, and verified public visibility/orderability. Kept salads and mochi off Square Online per Joel; left website salad listings unchanged at his request. [Menu inventory and verification](results/2026-09-23-website-audit/06-MENU-RECONCILIATION.md).
+- Removed Garlic Shrimp from the live Hikari website menu and deselected only its Square `Online – Website & Profile` channel, preserving POS and delivery-app channels. Switched Crab Rangoon (6pcs) from stock-count tracking (-25) to availability tracking so it is orderable. Verified both public menus; no price or recipe changes.
+- Corrected the live Square `Teriyaki Chicken Bento Box` customer-facing description to say chicken rather than salmon; verified the saved text after reopening the item. No price, modifier, photo, availability, menu, or channel setting changed.
+- Synced current website menu photos into matching live Square items, replaced older item primaries where needed, and audited catalog thumbnail coverage. All 60 matchable website menu entries now have images; Square-only missing-photo gaps are documented separately. No pricing, menu assignment, modifiers, availability, channels, or integrations changed. See [photo inventory](results/2026-09-23-website-audit/05-SQUARE-PHOTO-SYNC.md).
+- Published native Square Online ordering improvements after Joel’s approval: hid the oversized main banner, selected compact photo-and-description item cards, and deactivated the blocking 20% announcement without changing the discount.
+- Verified live pickup and delivery through payment entry, mobile fixed View order behavior, and desktop layout; removed the temporary cart item. Restored the original header setting after a sticky-header experiment did not improve cart access. Saved [results and limitations](results/2026-09-23-website-audit/04-SQUARE-LIVE-IMPROVEMENTS.md).
+
+### Added
+
+- Phased implementation plan for every unfinished website-audit recommendation: analytics, mobile performance, design, a one-item Square proof, static-first implementation, SEO/accessibility, release verification, and post-launch measurement. The plan explicitly excludes already-completed Square, catalog, menu-parity, and review-rotation work.
+- Square-hosted ordering customization follow-up: supported controls, checkout limits, account-specific unknowns, and a bounded editor inspection recommendation. No settings changed.
+- Bounded Hikari / Saffron Valley / Owner comparison in `results/2026-09-23-website-audit/`: recommendation, measured design reference, SEO/vendor-evidence notes, screenshots and PageSpeed evidence. Analysis only; live website and ordering configuration unchanged.
+
 ## 2026-08-20
 
 ### Changed
