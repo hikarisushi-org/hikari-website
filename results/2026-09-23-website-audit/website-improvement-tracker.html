@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hikari Website Improvement Tracker</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4f7f6;
+      --surface: #ffffff;
+      --surface-soft: #eaf2f0;
+      --text: #152522;
+      --muted: #60726e;
+      --line: #d7e2df;
+      --teal: #0d665d;
+      --teal-soft: #dceeea;
+      --coral: #e66f5b;
+      --gold: #b58227;
+      --shadow: 0 14px 36px rgba(19, 55, 49, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1715;
+        --surface: #17211f;
+        --surface-soft: #1d2d29;
+        --text: #f0f7f5;
+        --muted: #a6b9b4;
+        --line: #2d403b;
+        --teal: #66c8ba;
+        --teal-soft: #1b3934;
+        --coral: #ff8d79;
+        --gold: #e5b75d;
+        --shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(circle at top right, color-mix(in srgb, var(--coral) 12%, transparent), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font: 15px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(920px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 28px 0 64px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 6vw, 54px);
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      line-height: 1.04;
+    }
+
+    .lede {
+      max-width: 670px;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: center;
+      margin: 26px 0 16px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .summary strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .progress-track {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--surface-soft);
+    }
+
+    .progress-fill {
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--teal), var(--coral));
+      transition: width 240ms ease;
+    }
+
+    .progress-number {
+      min-width: 92px;
+      text-align: right;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .current-focus {
+      margin: 0 0 22px;
+      padding: 12px 16px;
+      border-left: 4px solid var(--coral);
+      background: color-mix(in srgb, var(--coral) 9%, var(--surface));
+      color: var(--text);
+    }
+
+    .current-focus span {
+      color: var(--muted);
+    }
+
+    .phase-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: 0 8px 24px rgba(19, 55, 49, 0.045);
+    }
+
+    details[open] { box-shadow: var(--shadow); }
+
+    summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      padding: 17px 18px;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .phase-heading {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .phase-number {
+      display: grid;
+      flex: 0 0 32px;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--teal-soft);
+      color: var(--teal);
+      font-weight: 800;
+    }
+
+    .phase-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    .status {
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .status.complete { background: var(--teal-soft); color: var(--teal); }
+    .status.active { background: color-mix(in srgb, var(--coral) 16%, var(--surface)); color: var(--coral); }
+    .status.queued { background: var(--surface-soft); color: var(--muted); }
+
+    .tasks {
+      margin: 0;
+      padding: 0 18px 18px;
+      border-top: 1px solid var(--line);
+      list-style: none;
+    }
+
+    .task {
+      display: grid;
+      grid-template-columns: 24px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .task:last-child { border-bottom: 0; }
+
+    .task input {
+      width: 18px;
+      height: 18px;
+      margin: 2px 0 0;
+      accent-color: var(--teal);
+      opacity: 1;
+    }
+
+    .task label { min-width: 0; }
+    .task label strong { display: block; font-weight: 650; }
+    .task label span { display: block; margin-top: 2px; color: var(--muted); font-size: 13px; }
+    .task input:checked + label strong { color: var(--muted); text-decoration: line-through; }
+
+    footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 560px) {
+      main { width: min(100% - 18px, 920px); padding-top: 20px; }
+      .summary { grid-template-columns: 1fr; gap: 12px; }
+      .progress-number { min-width: 0; text-align: left; font-size: 22px; }
+      summary { padding: 15px 14px; }
+      .tasks { padding: 0 14px 14px; }
+      .status { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Hikari Sushi · Website roadmap</p>
+      <h1>Improvement tracker</h1>
+      <p class="lede">A live checklist for the unfinished audit work. Items are checked only after their proof gate passes.</p>
+    </header>
+
+    <section class="summary" aria-label="Overall progress">
+      <div>
+        <strong>Overall progress</strong>
+        <div class="progress-track" role="progressbar" aria-label="Roadmap completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="progress-number" aria-live="polite">0 / 0</div>
+    </section>
+
+    <p class="current-focus"><strong>Current focus:</strong> Phase 1 — measurement foundation. <span>Record the measurement boundary and establish the comparable baseline.</span></p>
+
+    <section class="phase-list" aria-label="Implementation phases">
+      <details data-phase open>
+        <summary>
+          <span class="phase-heading"><span class="phase-number">0</span><span class="phase-title">Safe project foundation</span></span>
+          <span class="status complete">Complete</span>
+        </summary>
+        <ul class="tasks">
+          <li class="task"><input id="p0-1" type="checkbox" checked disabled><label for="p0-1"><strong>Approve the remaining-work roadmap</strong><span>Completed Square, catalog, parity, availability, and review-rotation work excluded.</span></label></li>
+          <li class="task"><input id="p0-2" type="checkbox" checked disabled><label for="p0-2"><strong>Create the implementation branch</strong><span><code>codex/website-improvements</code> is based on current <code>origin/main</code>.</span></label></li>
+          <li class="task"><input id="p0-3" type="checkbox" checked disabled><label for="p0-3"><strong>Commit the audit and implementation plan</strong><span>Commit <code>6830325</code>; unrelated July 4 image remains untouched.</span></label></li>
+          <li class="task"><input id="p0-4" type="checkbox" checked disabled><label for="p0-4"><strong>Create the live progress tracker</strong><span>This board is the visible project checklist.</span></label></li>
+        </ul>
+      </details>
+
+      <details data-phase open>
+        <summary>
+          <span class="phase-heading"><span class="phase-number">1</span><span class="phase-title">Measurement foundation</span></span>
+          <span class="status active">In progress</span>
+        </summary>
+        <ul class="tasks">
+          <li class="task"><input id="p1-1" type="checkbox" checked disabled><label for="p1-1"><strong>Repair Square order-click detection</strong><span>All current Square ordering links are recognized.</span></label></li>
+          <li class="task"><input id="p1-2" type="checkbox" checked disabled><label for="p1-2"><strong>Add useful event parameters</strong><span>Page, CTA placement, destination, and featured item support added.</span></label></li>
+          <li class="task"><input id="p1-3" type="checkbox" checked disabled><label for="p1-3"><strong>Protect reservation and directions tracking</strong><span>Focused tests prove one correct event per intentional click.</span></label></li>
+          <li class="task"><input id="p1-4" type="checkbox" checked disabled><label for="p1-4"><strong>Verify analytics events in the browser</strong><span>Observable browser proof passed for order, reservation, and directions CTAs.</span></label></li>
+          <li class="task"><input id="p1-5" type="checkbox" disabled><label for="p1-5"><strong>Record the measurement boundary and baseline</strong><span>Separate GA4 link clicks from completed Square orders and sales.</span></label></li>
+        </ul>
+      </details>
+
+      <details data-phase>
+        <summary>
+          <span class="phase-heading"><span class="phase-number">2</span><span class="phase-title">Mobile performance</span></span>
+          <span class="status queued">Queued</span>
+        </summary>
+        <ul class="tasks">
+          <li class="task"><input id="p2-1" type="checkbox" disabled><label for="p2-1"><strong>Inventory active homepage and menu media</strong><span>Separate current assets from unused and historical files.</span></label></li>
+          <li class="task"><input id="p2-2" type="checkbox" disabled><label for="p2-2"><strong>Generate responsive WebP and AVIF images</strong><span>Deliver display-sized sources instead of multi-megabyte PNG cards.</span></label></li>
+          <li class="task"><input id="p2-3" type="checkbox" disabled><label for="p2-3"><strong>Fix responsive image loading</strong><span>Add dimensions, <code>srcset</code>, <code>sizes</code>, and intentional lazy/eager loading.</span></label></li>
+          <li class="task"><input id="p2-4" type="checkbox" disabled><label for="p2-4"><strong>Load one correct hero source</strong><span>Prevent the hidden landscape video from playing on mobile; respect reduced motion.</span></label></li>
+          <li class="task"><input id="p2-5" type="checkbox" disabled><label for="p2-5"><strong>Pass the mobile performance gate</strong><span>Median of three runs targets score ≥85, LCP ≤4.0s, and CLS 0.</span></label></li>
+        </ul>
+      </details>
+
+      <details data-phase>
+        <summary>
+          <span class="phase-heading"><span class="phase-number">3</span><span class="phase-title">Mobile-first design preview</span></span>
+          <span class="status queued">Queued</span>
+        </summary>
+        <ul class="tasks">
+          <li class="task"><input id="p3-1" type="checkbox" disabled><label for="p3-1"><strong>Create the mobile homepage preview</strong><span>390 × 844 with clear ordering hierarchy and persistent CTA.</span></label></li>
+          <li class="task"><input id="p3-2" type="checkbox" disabled><label for="p3-2"><strong>Create the desktop homepage preview</strong><span>1280 × 720 with the same hierarchy and Hikari identity.</span></label></li>
+          <li class="task"><input id="p3-3" type="checkbox" disabled><label for="p3-3"><strong>Create the updated /menu direction</strong><span>Keep dine-in browsing, filters, search, advisories, and visible online ordering.</span></label></li>
+          <li class="task"><input id="p3-4" type="checkbox" disabled><label for="p3-4"><strong>Approve featured dishes and copy</strong><span>Use owner-confirmed items, photos, prices, service facts, and CTA treatment.</span></label></li>
+        </ul>
+      </details>
+
+      <details data-phase>
+        <summary>
+          <span class="phase-heading"><span class="phase-number">4</span><span class="phase-title">One-item Square proof</span></span>
+          <span class="status queued">Queued</span>
+        </summary>
+        <ul class="tasks">
+          <li class="task"><input id="p4-1" type="checkbox" disabled><label for="p4-1"><strong>Select one representative live item</strong><span>Use an approved popular dish with real choices or modifiers.</span></label></li>
+          <li class="task"><input id="p4-2" type="checkbox" disabled><label for="p4-2"><strong>Prove the most direct stable Square destination</strong><span>No brittle storefront scripting or checkout injection.</span></label></li>
+          <li class="task"><input id="p4-3" type="checkbox" disabled><label for="p4-3"><strong>Test pickup and delivery on mobile and desktop</strong><span>Verify identity, photo, price, modifiers, availability, discount, fees, and cart.</span></label></li>
+          <li class="task"><input id="p4-4" type="checkbox" disabled><label for="p4-4"><strong>Record the Square path decision</strong><span>Item link, honest menu/category handoff, or separate storefront evaluation.</span></label></li>
+        </ul>
+      </details>
+
+      <details data-phase>
+        <summary>
+          <span class="phase-heading"><span class="phase-number">5</span><span class="phase-title">Approved website build</span></span>
+          <span class="status queued">Queued</span>
+        </summary>
+        <ul class="tasks">
+          <li class="task"><input id="p5-1" type="checkbox" disabled><label for="p5-1"><strong>Implement the approved homepage hierarchy</strong><span>Featured dishes replace the full catalog on the homepage.</span></label></li>
+          <li class="task"><input id="p5-2" type="checkbox" disabled><label for="p5-2"><strong>Pre-render core /menu content</strong><span>Keep a single canonical menu data source with progressive enhancement.</span></label></li>
+          <li class="task"><input id="p5-3" type="checkbox" disabled><label for="p5-3"><strong>Preserve current site capabilities</strong><span>Themes, reviews, My Picks, reservations, directions, hours, and advisories.</span></label></li>
+          <li class="task"><input id="p5-4" type="checkbox" disabled><label for="p5-4"><strong>Verify the Netlify deploy preview</strong><span>Regression-check both viewports and every operational link before production.</span></label></li>
+        </ul>
+      </details>
+
+      <details data-phase>
+        <summary>
+          <span class="phase-heading"><span class="phase-number">6</span><span class="phase-title">SEO and accessibility</span></span>
+          <span class="status queued">Queued</span>
+        </summary>
+        <ul class="tasks">
+          <li class="task"><input id="p6-1" type="checkbox" disabled><label for="p6-1"><strong>Align canonical, sitemap, robots, and menu schema</strong><span>All routes and structured data should agree on <code>/menu</code>.</span></label></li>
+          <li class="task"><input id="p6-2" type="checkbox" disabled><label for="p6-2"><strong>Add useful menu metadata and initial HTML</strong><span>Clear H1, South Jordan title/description, and crawlable core menu content.</span></label></li>
+          <li class="task"><input id="p6-3" type="checkbox" disabled><label for="p6-3"><strong>Keep local information accurate and useful</strong><span>Hours, visit, pickup/delivery, reservations, and confirmed lunch information.</span></label></li>
+          <li class="task"><input id="p6-4" type="checkbox" disabled><label for="p6-4"><strong>Pass accessibility review</strong><span>Headings, contrast, targets, keyboard, focus, modals, carousel, alt text, and motion.</span></label></li>
+        </ul>
+      </details>
+
+      <details data-phase>
+        <summary>
+          <span class="phase-heading"><span class="phase-number">7</span><span class="phase-title">Release and measurement</span></span>
+          <span class="status queued">Queued</span>
+        </summary>
+        <ul class="tasks">
+          <li class="task"><input id="p7-1" type="checkbox" disabled><label for="p7-1"><strong>Complete pre-release verification</strong><span>Validators, links, console, media, reviews, themes, and Square journeys.</span></label></li>
+          <li class="task"><input id="p7-2" type="checkbox" disabled><label for="p7-2"><strong>Complete Joel's physical-phone review</strong><span>Production publishing remains approval-gated.</span></label></li>
+          <li class="task"><input id="p7-3" type="checkbox" disabled><label for="p7-3"><strong>Publish with rollback identified</strong><span>Verify the live site, analytics, reviews, ordering, metadata, and crawl files.</span></label></li>
+          <li class="task"><input id="p7-4" type="checkbox" disabled><label for="p7-4"><strong>Compare four weeks before and after</strong><span>Use comparable weekdays and separate clicks, orders, sales, and average order value.</span></label></li>
+        </ul>
+      </details>
+    </section>
+
+    <footer>Last updated September 23, 2026 · Source of truth: remaining implementation plan</footer>
+  </main>
+
+  <script>
+    function updateProgress() {
+      const items = Array.from(document.querySelectorAll('.task input[type="checkbox"]'));
+      const done = items.filter((item) => item.checked).length;
+      const percent = items.length ? Math.round((done / items.length) * 100) : 0;
+      const fill = document.querySelector('.progress-fill');
+      const track = document.querySelector('.progress-track');
+      const number = document.querySelector('.progress-number');
+
+      fill.style.width = percent + '%';
+      track.setAttribute('aria-valuenow', String(percent));
+      number.textContent = done + ' / ' + items.length;
+    }
+
+    updateProgress();
+  </script>
+</body>
+</html>

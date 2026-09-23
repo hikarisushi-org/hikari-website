@@ -1,5 +1,16 @@
 # SPECS
 
+## Website measurement contract — September 23, 2026
+
+- `click_order_online` means a customer clicked from Hikari to `hikarisushi-online.square.site`; it is not a completed order or sale.
+- `click_reservations` tracks the Carbonara reservation destination. `click_directions` tracks the Google Maps directions destination.
+- Each event includes `page_path`, `cta_placement`, and `link_url`. A future featured-dish CTA may also include `item_name`.
+- Current placements are `navigation`, `hero`, `visit`, and `footer`.
+- Completed orders, net online sales, and average order value come from Square. Organic visits and unique order-link clickers come from GA4.
+- Keep the first-party module under the neutral `js/site-actions.js` filename and load it with the existing bottom-of-page script pattern. Browser verification showed tracking-like filenames and the deferred head placement were not observable in the test surface; do not claim analytics completion from unit tests alone.
+
+See [measurement boundary and baseline](results/2026-09-23-website-audit/09-MEASUREMENT-BASELINE.md).
+
 ## Menu content policy — September 23, 2026
 
 - Use the current Hikari website menu as the item-presence baseline for Square Online, DoorDash, Uber Eats, and Grubhub, except for Joel's explicit exclusions.

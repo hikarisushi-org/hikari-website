@@ -6,6 +6,7 @@ All notable changes to this repo will be documented here.
 
 ### Changed
 
+- Repaired CTA measurement for the current Square ordering domain while preserving reservation and directions events. Added page/placement/destination parameters, a browser diagnostic mode, and focused tests; no production deployment yet.
 - Aligned item visibility across Square Online, DoorDash, Uber Eats, and Grubhub: 14 website-matched items enabled on all delivery apps, nine non-menu items disabled there, and six stray Square website-channel settings removed. Preserved POS records and prices. [Live verification and limits](results/2026-09-23-website-audit/07-DELIVERY-APP-MENU-PARITY.md).
 - Reconciled Square Online ordering with the current website menu: enabled 11 missing dishes using the previously synced website photos, hid six Square-only dishes from the website channel, corrected Mango Sticky Rice's shipping-only fulfillment and -26 stock count, and verified public visibility/orderability. Kept salads and mochi off Square Online per Joel; left website salad listings unchanged at his request. [Menu inventory and verification](results/2026-09-23-website-audit/06-MENU-RECONCILIATION.md).
 - Removed Garlic Shrimp from the live Hikari website menu and deselected only its Square `Online – Website & Profile` channel, preserving POS and delivery-app channels. Switched Crab Rangoon (6pcs) from stock-count tracking (-25) to availability tracking so it is orderable. Verified both public menus; no price or recipe changes.
@@ -16,6 +17,8 @@ All notable changes to this repo will be documented here.
 
 ### Added
 
+- Right-panel HTML implementation tracker with 34 proof-gated roadmap items; 8 are currently complete.
+- Measurement record separating GA4 link behavior from Square orders/sales and preserving the September 23 mobile performance baseline.
 - Phased implementation plan for every unfinished website-audit recommendation: analytics, mobile performance, design, a one-item Square proof, static-first implementation, SEO/accessibility, release verification, and post-launch measurement. The plan explicitly excludes already-completed Square, catalog, menu-parity, and review-rotation work.
 - Square-hosted ordering customization follow-up: supported controls, checkout limits, account-specific unknowns, and a bounded editor inspection recommendation. No settings changed.
 - Bounded Hikari / Saffron Valley / Owner comparison in `results/2026-09-23-website-audit/`: recommendation, measured design reference, SEO/vendor-evidence notes, screenshots and PageSpeed evidence. Analysis only; live website and ordering configuration unchanged.

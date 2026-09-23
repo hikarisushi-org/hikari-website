@@ -7,6 +7,16 @@ Format: newest first. Link measurements to `SPECS.md`; link resume state to `REA
 
 ---
 
+## 2026-09-23 — Treat Hikari CTA clicks and Square sales as separate measures
+
+**Decision:** Track current Square, Carbonara reservation, and Google directions links through one first-party module. Every tracked event includes its page and placement; featured-item support may add the verified item name later. A Hikari-to-Square click is not a completed order or a sale.
+
+**Verification rule:** Keep the module under a neutral first-party filename and use the site's proven bottom-of-page loading pattern. During browser testing, tracking-like filenames and the deferred head position were not observable even though focused tests passed. Completion therefore requires browser-observable event proof, not just unit tests.
+
+**Evidence:** Five focused tests and browser diagnostics passed for `click_order_online`, `click_reservations`, and `click_directions`. Business baseline values remain open until authenticated GA4/Square reporting is queried. [Measurement record](results/2026-09-23-website-audit/09-MEASUREMENT-BASELINE.md).
+
+---
+
 ## 2026-09-23 — Plan all unfinished website-audit improvements as one gated roadmap
 
 **Direction:** Joel wants to tackle every unfinished audit recommendation while excluding work already completed in Square, menu parity, catalog photos, availability corrections, and daily review rotation.

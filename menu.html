@@ -15,12 +15,6 @@
 
   <!-- Existing site analytics: records /menu page views without a QR redirect. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SH54LFXHJ3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SH54LFXHJ3');
-  </script>
 </head>
 <body class="menu-page">
 
@@ -132,6 +126,7 @@
   <!-- Onboarding Finger (separate from overlay for proper z-index stacking) -->
   <div class="onboarding-finger" id="onboarding-finger" style="display: none;">👇</div>
 
+  <script src="js/site-actions.js"></script>
   <script src="js/menu-page.js"></script>
 </body>
 </html>

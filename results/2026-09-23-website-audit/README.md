@@ -57,6 +57,7 @@ Record four comparable weeks before launch and four after: organic visits, uniqu
 
 ## Supporting files
 
+- [Measurement boundary, browser proof, and baseline](09-MEASUREMENT-BASELINE.md)
 - [Plan for all remaining website improvements](08-REMAINING-IMPLEMENTATION-PLAN.md)
 - [Delivery-app item parity and live verification](07-DELIVERY-APP-MENU-PARITY.md)
 - [Full website menu and Square Online reconciliation](06-MENU-RECONCILIATION.md)

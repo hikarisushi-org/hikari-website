@@ -3,14 +3,15 @@
 ## Open
 
 - [ ] Execute the approved remaining website roadmap in order: measurement, mobile media performance, design preview, one-item Square proof, static-first implementation, SEO/accessibility, and approval-gated release. Completed Square/menu/review-rotation work is excluded. [Implementation plan](results/2026-09-23-website-audit/08-REMAINING-IMPLEMENTATION-PLAN.md).
+- [ ] Complete the Phase 1 business baseline from authenticated GA4 and Square reporting: four comparable pre-launch weeks for organic visits, unique order-link clickers, completed online orders, net online sales, and average order value. [Measurement record](results/2026-09-23-website-audit/09-MEASUREMENT-BASELINE.md).
 - [ ] If those POS-only dishes are to be sold online again, obtain current, item-verified photos for Cowboy Crunch, Diamond, Hikari Fire Crunch, Lava Volcano Roll, Rainbow Roll, and Red Ruby. Do not substitute unused local assets without item confirmation. See [photo inventory](results/2026-09-23-website-audit/05-SQUARE-PHOTO-SYNC.md).
 - [ ] Joel spot-checks the [published Square ordering flow](https://hikarisushi-online.square.site/) and matching DoorDash, Uber Eats, and Grubhub menus on his phone.
 - [ ] If prioritized, ask Square why the initial delivery quote differs from delivery plus service charge in the cart; no fee settings changed during this work.
-- [ ] Review the [website audit](results/2026-09-23-website-audit/README.md) and authorize a design/implementation direction.
 - [ ] If proceeding, prove one menu item through the chosen ordering provider and verify order-click/sale measurement before expanding the redesign.
 
 ## Resolved
 
+- [x] Reviewed the audit and approved a gated plan for every unfinished recommendation. Created a right-panel HTML tracker and completed/browser-verified the Phase 1 CTA event implementation for Square ordering, reservations, and directions. Business reporting baseline remains separately open. September 23, 2026.
 - [x] Aligned Square Online and delivery-app item selection: enabled 14 website-matched items on DoorDash, Uber Eats, and Grubhub; disabled nine extras; cleared six stray website-channel settings. All three Square delivery channels resynced, and representative adds/removals were checked on the live app menus. Catalog/POS records and prices preserved. [Change record](results/2026-09-23-website-audit/07-DELIVERY-APP-MENU-PARITY.md). September 23, 2026.
 - [x] Inventoried all 60 unique current website menu entries and reconciled Square Online: enabled 11 missing orderable dishes with their website photos, hid six Square-only dishes from the website channel while preserving catalog/POS/delivery-app records, and verified public visibility. Corrected Mango Sticky Rice fulfillment and erroneous -26 stock count; final public listing no longer showed Out of stock. Joel excluded salads and mochi from Square Online and asked to leave salad listings on the website. [Full menu and change record](results/2026-09-23-website-audit/06-MENU-RECONCILIATION.md). September 23, 2026.
 - [x] Removed Garlic Shrimp from the live website menu and Square online ordering only; preserved its Square catalog/POS/delivery-app channels. Verified both public menus. September 23, 2026.
