@@ -133,6 +133,110 @@
       color: var(--muted);
     }
 
+    .working-now {
+      position: relative;
+      overflow: hidden;
+      margin: 0 0 24px;
+      padding: 22px;
+      border: 1px solid color-mix(in srgb, var(--coral) 42%, var(--line));
+      border-radius: 18px;
+      background: color-mix(in srgb, var(--coral) 7%, var(--surface));
+      box-shadow: var(--shadow);
+    }
+
+    .working-now::after {
+      content: "";
+      position: absolute;
+      top: -58px;
+      right: -44px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--coral) 12%, transparent);
+      pointer-events: none;
+    }
+
+    .now-label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 10px;
+      color: var(--coral);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .now-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--coral);
+      box-shadow: 0 0 0 5px color-mix(in srgb, var(--coral) 14%, transparent);
+    }
+
+    .working-now h2 {
+      margin: 0;
+      max-width: 680px;
+      font: 500 clamp(24px, 4vw, 34px)/1.12 Georgia, "Times New Roman", serif;
+      letter-spacing: -0.025em;
+    }
+
+    .now-summary {
+      max-width: 720px;
+      margin: 10px 0 18px;
+      color: var(--muted);
+    }
+
+    .now-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      margin: 0 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--line);
+    }
+
+    .now-fact {
+      min-width: 0;
+      padding: 12px 13px;
+      background: var(--surface);
+    }
+
+    .now-fact strong,
+    .now-fact span { display: block; }
+    .now-fact strong { margin-bottom: 3px; font-size: 12px; }
+    .now-fact span { color: var(--muted); font-size: 13px; }
+
+    .now-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .now-button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      padding: 0 16px;
+      background: var(--coral);
+      color: #fff;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .now-link { color: var(--teal); font-weight: 700; }
+
+    .now-updated {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     .phase-list {
       display: grid;
       gap: 14px;
@@ -243,6 +347,11 @@
       summary { padding: 15px 14px; }
       .tasks { padding: 0 14px 14px; }
       .status { display: none; }
+      .working-now { padding: 18px 16px; }
+      .now-grid { grid-template-columns: 1fr; }
+      .now-actions { align-items: stretch; }
+      .now-button { width: 100%; }
+      .now-updated { width: 100%; margin-left: 0; }
     }
   </style>
 </head>
@@ -264,7 +373,21 @@
       <div class="progress-number" aria-live="polite">0 / 0</div>
     </section>
 
-    <p class="current-focus"><strong>Current focus:</strong> Phase 3 approval. <span>The responsive homepage and menu preview are open at the private review URL; featured dishes, copy, and CTA treatment await Joel's decision.</span></p>
+    <section class="working-now" aria-labelledby="working-now-title">
+      <p class="now-label"><span class="now-dot" aria-hidden="true"></span>Working now</p>
+      <h2 id="working-now-title">Phase 3: reviewing the new homepage and menu direction</h2>
+      <p class="now-summary">The responsive preview is finished and verified. Work is currently paused at the approval gate so the visual direction is settled before Square deep-link testing or production redesign begins.</p>
+      <div class="now-grid">
+        <div class="now-fact"><strong>Waiting on</strong><span>Joel's approval or revision notes</span></div>
+        <div class="now-fact"><strong>Next after approval</strong><span>Phase 4: one-item Square proof</span></div>
+        <div class="now-fact"><strong>Separate blocker</strong><span>GA4 property access; does not block design</span></div>
+      </div>
+      <div class="now-actions">
+        <a class="now-button" href="http://100.124.197.26:6421/preview?view=home">Open the current preview</a>
+        <a class="now-link" href="#phase-3">See the active checklist</a>
+        <time class="now-updated" datetime="2026-09-23T15:55:00-06:00">Updated September 23 at 3:55 PM</time>
+      </div>
+    </section>
 
     <section class="phase-list" aria-label="Implementation phases">
       <details data-phase>
@@ -283,7 +406,7 @@
       <details data-phase open>
         <summary>
           <span class="phase-heading"><span class="phase-number">1</span><span class="phase-title">Measurement foundation</span></span>
-          <span class="status active">In progress</span>
+          <span class="status active">Access blocked</span>
         </summary>
         <ul class="tasks">
           <li class="task"><input id="p1-1" type="checkbox" checked disabled><label for="p1-1"><strong>Repair Square order-click detection</strong><span>All current Square ordering links are recognized.</span></label></li>
@@ -297,7 +420,7 @@
       <details data-phase>
         <summary>
           <span class="phase-heading"><span class="phase-number">2</span><span class="phase-title">Mobile performance</span></span>
-          <span class="status active">In progress</span>
+          <span class="status complete">Complete</span>
         </summary>
         <ul class="tasks">
           <li class="task"><input id="p2-1" type="checkbox" checked disabled><label for="p2-1"><strong>Inventory active homepage and menu media</strong><span>60 current menu sources, six homepage shell images, two hero videos, and the historical boundary are recorded.</span></label></li>
@@ -308,10 +431,10 @@
         </ul>
       </details>
 
-      <details data-phase open>
+      <details data-phase open id="phase-3">
         <summary>
           <span class="phase-heading"><span class="phase-number">3</span><span class="phase-title">Mobile-first design preview</span></span>
-          <span class="status queued">Queued</span>
+          <span class="status active">Approval needed</span>
         </summary>
         <ul class="tasks">
           <li class="task"><input id="p3-1" type="checkbox" checked disabled><label for="p3-1"><strong>Create the mobile homepage preview</strong><span>Food-first mobile hierarchy, six dishes, and persistent order action are rendered and visually checked.</span></label></li>

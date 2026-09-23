@@ -2,6 +2,7 @@
 
 ## 2026-09-23 — Create the Phase 3 design preview
 
+- Improved the tracker so one page now shows the exact current work, what it is waiting on, what comes next, the independent GA4 blocker, and a direct preview link. Completed and blocked phase badges were corrected.
 - Used the frontend-design workflow to define a Hikari-specific direction around the meaning of light: mist-white space, deep teal structure, coral reserved for ordering, real food photography, and restrained Playfair/Inter typography.
 - Built one switchable responsive artifact for the homepage and `/menu`. It uses the six current Most Popular dishes with verified photos/prices, shortens the homepage path, keeps the menu dine-in-first, and does not imply unproven Square item deep links.
 - Visually inspected the desktop homepage at 1280×720, mobile homepage at the target breakpoint, and both menu layouts. Browser-tested the view switcher at the private Tailscale URL.
