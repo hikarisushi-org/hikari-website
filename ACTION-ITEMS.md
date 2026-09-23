@@ -2,6 +2,7 @@
 
 ## Open
 
+- [ ] Joel reviews the private [mobile-first design preview](http://100.124.197.26:6421/preview) and approves or revises the hierarchy, headline/supporting copy, six featured dishes, coral order treatment, and teal/mist direction. Nothing in the preview is published.
 - [ ] Execute the approved remaining website roadmap in order: measurement, mobile media performance, design preview, one-item Square proof, static-first implementation, SEO/accessibility, and approval-gated release. Completed Square/menu/review-rotation work is excluded. [Implementation plan](results/2026-09-23-website-audit/08-REMAINING-IMPLEMENTATION-PLAN.md).
 - [ ] Finish the GA4 half of the Phase 1 business baseline after obtaining access to the Hikari Analytics property. Square is complete for Aug. 26–Sept. 22: 15 completed online orders, $602.90 net online sales, and $40.19 average order value. [Measurement record](results/2026-09-23-website-audit/09-MEASUREMENT-BASELINE.md).
 - [ ] If those POS-only dishes are to be sold online again, obtain current, item-verified photos for Cowboy Crunch, Diamond, Hikari Fire Crunch, Lava Volcano Roll, Rainbow Roll, and Red Ruby. Do not substitute unused local assets without item confirmation. See [photo inventory](results/2026-09-23-website-audit/05-SQUARE-PHOTO-SYNC.md).
@@ -11,6 +12,7 @@
 
 ## Resolved
 
+- [x] Created and visually checked the responsive Phase 3 homepage and `/menu` direction, including the requested 1280×720 desktop and mobile breakpoint behavior. The private switchable preview uses verified dishes/prices and preserves the dine-in menu/online-ordering boundary. [Preview notes](results/2026-09-23-website-audit/12-DESIGN-PREVIEW-NOTES.md). September 23, 2026.
 - [x] Passed the Phase 2 mobile performance gate on the optimized local build: three Lighthouse runs scored 87/88/88, with median LCP 3.83 seconds, CLS 0, and 0.97 MiB transferred. Optimized both hero videos and self-hosted critical fonts to remove the remaining media and external-font delays. [Verification](results/2026-09-23-website-audit/11-MOBILE-PERFORMANCE-VERIFICATION.md). September 23, 2026.
 - [x] Generated and validated 260 responsive AVIF/WebP variants for all 60 active menu images and five homepage food images (4.26 MiB combined), wired responsive picture selection and intrinsic dimensions, and replaced the dual autoplay hero videos with one orientation-aware source that respects reduced motion and data saver. Browser proof selected 320 px AVIF menu cards, 1280 px AVIF homepage images, and one landscape hero source on desktop. September 23, 2026.
 - [x] Inventoried active homepage and `/menu` media: 60 current menu sources total 115.30 MiB; the shared renderer adds all 60 to both pages; six homepage shell images and two remote hero videos are also documented. Separated 42 unreferenced menu assets and other seasonal/history files from optimization scope. [Media inventory](results/2026-09-23-website-audit/10-MEDIA-INVENTORY.md). September 23, 2026.

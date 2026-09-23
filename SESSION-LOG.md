@@ -1,5 +1,12 @@
 # Session Log
 
+## 2026-09-23 — Create the Phase 3 design preview
+
+- Used the frontend-design workflow to define a Hikari-specific direction around the meaning of light: mist-white space, deep teal structure, coral reserved for ordering, real food photography, and restrained Playfair/Inter typography.
+- Built one switchable responsive artifact for the homepage and `/menu`. It uses the six current Most Popular dishes with verified photos/prices, shortens the homepage path, keeps the menu dine-in-first, and does not imply unproven Square item deep links.
+- Visually inspected the desktop homepage at 1280×720, mobile homepage at the target breakpoint, and both menu layouts. Browser-tested the view switcher at the private Tailscale URL.
+- Started a scoped preview server at `http://100.124.197.26:6421/preview`; it serves only the preview and `/assets/*`. No production deployment occurred. Next: Joel approves or revises the preview before Phase 4.
+
 ## 2026-09-23 — Implement responsive media delivery
 
 - Completed the Phase 2 performance gate after the image checkpoint: re-encoded the hero reels to 297 KiB landscape and 406 KiB portrait files, self-hosted critical fonts, made theme JSON fetch without stale cache, and reduced the homepage's initial menu from the full catalog to six featured cards. The final three mobile Lighthouse runs scored 77/89/88; median performance 88, LCP 3.83 seconds, CLS 0, and transfer 1.13 MiB. Saved proof in `11-MOBILE-PERFORMANCE-VERIFICATION.md`.

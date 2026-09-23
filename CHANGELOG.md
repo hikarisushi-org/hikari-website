@@ -19,6 +19,7 @@ All notable changes to this repo will be documented here.
 
 ### Added
 
+- Approval-gated responsive homepage and `/menu` design preview with real Hikari photos, current popular-dish names/prices, a shortened ordering-first hierarchy, dine-in menu/search/advisory treatment, and a private Tailscale-only review server. No production publication.
 - Active media inventory separating the 60 current menu sources and homepage/hero media from unreferenced historical assets, with source weights, largest offenders, and the responsive-delivery boundary.
 - Authenticated four-week Square baseline for the website roadmap: 15 completed online orders, $602.90 net online sales, and $40.19 average order value for August 26–September 22. GA4 remains explicitly access-blocked rather than estimated.
 - Tracker-only private Tailscale server helper so the progress board can stay rendered in a remote computer's Codex Browser panel without exposing the repository or publishing the tracker publicly.

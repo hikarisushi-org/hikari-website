@@ -22,13 +22,14 @@ Audit limits: the signed-in Google account has no accessible Hikari Analytics pr
 
 ## Next action
 
-NEXT ACTION: Begin the approval-gated Phase 3 mobile-first homepage and `/menu` design preview. Phase 2 passed its three-run mobile lab gate at a median 88 performance, 3.83-second LCP, and zero layout shift. [Performance proof](results/2026-09-23-website-audit/11-MOBILE-PERFORMANCE-VERIFICATION.md). The [right-panel tracker](results/2026-09-23-website-audit/website-improvement-tracker.html) shows 13 of 34 complete. GA4 remains access-blocked; production visual implementation and publication remain approval-gated.
+NEXT ACTION: Joel reviews the private Phase 3 preview at `http://100.124.197.26:6421/preview` and approves or revises the hierarchy, exact six featured dishes, headline/supporting copy, coral order treatment, and teal/mist direction. [Preview notes](results/2026-09-23-website-audit/12-DESIGN-PREVIEW-NOTES.md). The [right-panel tracker](results/2026-09-23-website-audit/website-improvement-tracker.html) shows 16 of 34 complete. Phase 4 and production visual implementation remain approval-gated; GA4 remains access-blocked.
 
 ### Current implementation handoff — September 23, 2026
 
 - Branch: `codex/website-improvements`, based on current `origin/main`. Latest committed checkpoint before the current media work: `a57a756`.
 - Phase 1 analytics implementation is committed. Five focused tests and 111 theme tests pass; browser diagnostic proof passed for order, reservation, and directions events. The Square business baseline is recorded; GA4 needs the account that can access property `G-SH54LFXHJ3`.
 - Phase 2 is complete locally: 260 generated AVIF/WebP variants, 297/406 KiB optimized hero videos, self-hosted fonts, single-source hero selection, and a six-card homepage initial menu while `/menu` retains the full catalog. The final three mobile Lighthouse runs scored 77/89/88 with median performance 88, LCP 3.83 seconds, CLS 0, and 1.13 MiB transferred. Media validation, five analytics tests, 111 theme tests, syntax checks, and browser proof pass.
+- Phase 3 preview work is complete pending Joel's approval: a responsive switchable homepage and menu direction is served privately on Tailscale port 6421. Desktop and mobile visual checks pass; the switcher works in the remote browser. Preview server session `31095` must remain running during review.
 - The only unrelated working-tree item remains untracked `assets/images/july-4-hero.png`; leave it untouched.
 - The checklist is served only on the Mac mini's Tailscale interface at `http://100.124.197.26:6420/tracker` so Joel's other tailnet computer can keep it open in the right Browser panel. The dedicated server exposes only the tracker file; background session `18818` must remain running.
 
