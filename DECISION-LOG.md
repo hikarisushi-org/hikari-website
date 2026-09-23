@@ -7,6 +7,14 @@ Format: newest first. Link measurements to `SPECS.md`; link resume state to `REA
 
 ---
 
+## 2026-09-23 — Advance performance work while GA4 access is blocked
+
+**Decision:** Use August 26 through September 22 as the comparable 28-day pre-launch window. Record only authenticated provider values: Square shows 15 completed online-store orders, $602.90 net online sales, and $40.19 average order value.
+
+**GA4 boundary:** The signed-in Google account has no accessible Hikari Analytics property and opens the “Start measuring” setup screen. Do not create a new property or infer historical traffic from the page tag. Leave the Phase 1 baseline item open, preserve the exact access dependency, and proceed with Phase 2 work that does not depend on GA4.
+
+---
+
 ## 2026-09-23 — Treat Hikari CTA clicks and Square sales as separate measures
 
 **Decision:** Track current Square, Carbonara reservation, and Google directions links through one first-party module. Every tracked event includes its page and placement; featured-item support may add the verified item name later. A Hikari-to-Square click is not a completed order or a sale.

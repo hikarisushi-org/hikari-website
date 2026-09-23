@@ -18,16 +18,16 @@ Verified real pickup and delivery carts through payment entry without submitting
 
 Key findings: mobile lab performance 61 vs 93; oversized menu images; standalone /menu is a dine-in picks experience, not an online cart. Owner's uplift figures remain vendor claims, not an established result for Hikari. On branch `codex/website-improvements`, Square order-click detection and the existing reservation/directions events are repaired and browser-verified but not published.
 
-Audit limits: no private analytics/sales data; Square payment continuation met automated verification; no complete Saffron crawl because direct HTTP requests were challenged.
+Audit limits: the signed-in Google account has no accessible Hikari Analytics property, so organic visits and historical order-click users remain unavailable. Square payment continuation met automated verification; no complete Saffron crawl because direct HTTP requests were challenged.
 
 ## Next action
 
-NEXT ACTION: Complete Phase 1 by obtaining the comparable four-week GA4/Square business baseline documented in [measurement notes](results/2026-09-23-website-audit/09-MEASUREMENT-BASELINE.md), then begin Phase 2 media inventory and repeatable mobile performance runs. The [right-panel tracker](results/2026-09-23-website-audit/website-improvement-tracker.html) shows 8 of 34 items complete. Production visual implementation and publication remain approval-gated.
+NEXT ACTION: Continue Phase 2 with the active homepage/menu media inventory and repeatable mobile performance runs. The Square half of the pre-launch baseline is recorded for Aug. 26–Sept. 22 (15 orders, $602.90 net sales, $40.19 AOV); GA4 remains access-blocked. The [right-panel tracker](results/2026-09-23-website-audit/website-improvement-tracker.html) remains at 8 of 34 complete until the full Phase 1 proof gate passes. Production visual implementation and publication remain approval-gated.
 
 ### Current implementation handoff — September 23, 2026
 
-- Branch: `codex/website-improvements`, based on current `origin/main`. Audit/plan commit: `6830325`.
-- Phase 1 analytics work is uncommitted pending its final baseline item. Five focused tests and 111 theme tests pass; browser diagnostic proof passed for order, reservation, and directions events.
+- Branch: `codex/website-improvements`, based on current `origin/main`. Latest checkpoint commit before this baseline update: `a0a4ff2`.
+- Phase 1 analytics implementation is committed. Five focused tests and 111 theme tests pass; browser diagnostic proof passed for order, reservation, and directions events. The Square business baseline is recorded; GA4 needs the account that can access property `G-SH54LFXHJ3`.
 - The only unrelated working-tree item remains untracked `assets/images/july-4-hero.png`; leave it untouched.
 - The checklist is served only on the Mac mini's Tailscale interface at `http://100.124.197.26:6420/tracker` so Joel's other tailnet computer can keep it open in the right Browser panel. The dedicated server exposes only the tracker file; background session `18818` must remain running.
 

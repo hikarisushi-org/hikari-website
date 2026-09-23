@@ -1,5 +1,11 @@
 # Session Log
 
+## 2026-09-23 — Record the Square business baseline
+
+- Used the last 28 complete days, August 26 through September 22, and filtered Square's Sales summary to the `Hikari Sushi` online-store channel.
+- Verified 15 completed online orders and $602.90 net online sales; calculated $40.19 average order value from the same period. A September 18 return is reflected in net sales and was not treated as another completed sale.
+- The signed-in Google account opened the Analytics “Start measuring” screen and had no accessible Hikari property. No account/property was created and no GA4 values were inferred. Phase 1 remains 4/5 while work advances to the non-dependent Phase 2 media inventory.
+
 ## 2026-09-23 — Start Phase 1 with a live right-panel tracker
 
 - Created a persistent HTML checklist for all 34 roadmap proof items, opened it in the Codex right panel, and checked only completed work. The board currently shows 8 of 34 complete and Phase 1 active.

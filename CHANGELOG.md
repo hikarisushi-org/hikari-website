@@ -17,6 +17,7 @@ All notable changes to this repo will be documented here.
 
 ### Added
 
+- Authenticated four-week Square baseline for the website roadmap: 15 completed online orders, $602.90 net online sales, and $40.19 average order value for August 26–September 22. GA4 remains explicitly access-blocked rather than estimated.
 - Tracker-only private Tailscale server helper so the progress board can stay rendered in a remote computer's Codex Browser panel without exposing the repository or publishing the tracker publicly.
 - Right-panel HTML implementation tracker with 34 proof-gated roadmap items; 8 are currently complete.
 - Measurement record separating GA4 link behavior from Square orders/sales and preserving the September 23 mobile performance baseline.

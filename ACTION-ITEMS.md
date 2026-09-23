@@ -3,7 +3,7 @@
 ## Open
 
 - [ ] Execute the approved remaining website roadmap in order: measurement, mobile media performance, design preview, one-item Square proof, static-first implementation, SEO/accessibility, and approval-gated release. Completed Square/menu/review-rotation work is excluded. [Implementation plan](results/2026-09-23-website-audit/08-REMAINING-IMPLEMENTATION-PLAN.md).
-- [ ] Complete the Phase 1 business baseline from authenticated GA4 and Square reporting: four comparable pre-launch weeks for organic visits, unique order-link clickers, completed online orders, net online sales, and average order value. [Measurement record](results/2026-09-23-website-audit/09-MEASUREMENT-BASELINE.md).
+- [ ] Finish the GA4 half of the Phase 1 business baseline after obtaining access to the Hikari Analytics property. Square is complete for Aug. 26–Sept. 22: 15 completed online orders, $602.90 net online sales, and $40.19 average order value. [Measurement record](results/2026-09-23-website-audit/09-MEASUREMENT-BASELINE.md).
 - [ ] If those POS-only dishes are to be sold online again, obtain current, item-verified photos for Cowboy Crunch, Diamond, Hikari Fire Crunch, Lava Volcano Roll, Rainbow Roll, and Red Ruby. Do not substitute unused local assets without item confirmation. See [photo inventory](results/2026-09-23-website-audit/05-SQUARE-PHOTO-SYNC.md).
 - [ ] Joel spot-checks the [published Square ordering flow](https://hikarisushi-online.square.site/) and matching DoorDash, Uber Eats, and Grubhub menus on his phone.
 - [ ] If prioritized, ask Square why the initial delivery quote differs from delivery plus service charge in the cart; no fee settings changed during this work.

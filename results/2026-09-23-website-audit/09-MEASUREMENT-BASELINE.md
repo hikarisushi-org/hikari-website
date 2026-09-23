@@ -48,16 +48,20 @@ One comparable PageSpeed run from September 23, 2026:
 
 This is the implementation baseline, not a sales result. Phase 2 should record the median of three comparable mobile runs after media changes.
 
-## Business baseline still required
+## Business baseline status
 
-The four-week business baseline remains open because authenticated GA4 and Square reporting have not yet been queried in this phase. Record these for the four comparable weeks immediately preceding publication:
+The comparable pre-launch window is the last 28 complete days before this work: **August 26 through September 22, 2026**. Authenticated Square reporting was queried on September 23 with the report filtered to the `Hikari Sushi` online-store channel (`hikarisushi-online.square.site`).
 
 | Metric | Baseline period | Value |
 |---|---|---:|
-| Organic visits | Pending launch date | Pending |
-| Unique order-link clickers | Pending launch date | Pending |
-| Completed online orders | Pending launch date | Pending |
-| Net online sales | Pending launch date | Pending |
-| Average order value | Pending launch date | Pending |
+| Organic visits | Aug. 26–Sept. 22, 2026 | Blocked — the signed-in Google account opens Analytics setup and has no accessible Hikari property |
+| Unique order-link clickers | Aug. 26–Sept. 22, 2026 | Blocked — the signed-in Google account opens Analytics setup and has no accessible Hikari property |
+| Completed online orders | Aug. 26–Sept. 22, 2026 | 15 |
+| Net online sales | Aug. 26–Sept. 22, 2026 | $602.90 |
+| Average order value | Aug. 26–Sept. 22, 2026 | $40.19 |
+
+Square order count is the sum of the closed-order drilldown counts in the filtered Gross sales row. Average order value is `$602.90 / 15`, rounded to cents. The one September 18 return is reflected in net sales and was not counted as an additional completed sale.
+
+GA4 remains the only missing source. The authenticated `joel.arcos@gmail.com` session showed the Google Analytics “Start measuring” setup screen rather than a Hikari property. No analytics account or property was created, and no value was inferred from the page tag. Complete those two rows after the account that owns or can access property `G-SH54LFXHJ3` is available.
 
 Use the same weekdays for the post-launch comparison and annotate promotions, closures, menu changes, or unusual traffic. If volume is low, extend the observation window instead of claiming a lift from a small sample.
