@@ -3,6 +3,7 @@
 ## 2026-09-23 — Start Phase 1 with a live right-panel tracker
 
 - Created a persistent HTML checklist for all 34 roadmap proof items, opened it in the Codex right panel, and checked only completed work. The board currently shows 8 of 34 complete and Phase 1 active.
+- Because Joel is viewing the Codex task from another computer, replaced the host-only localhost view with a dedicated tracker-only HTTP server bound to the Mac mini's private Tailscale IP. Verified `http://100.124.197.26:6420/tracker` returns the rendered tracker; no other project route is served.
 - Replaced the stale URL condition with a testable first-party CTA module covering current Square, Carbonara reservations, and Google directions destinations. Added page, placement, destination, and optional item parameters to separate Hikari link clicks from Square sales.
 - Five focused tests pass. Browser diagnostic proof observed `click_order_online` from `hero`, `click_reservations` from `visit`, and `click_directions` from `visit`. All 111 theme tests still pass.
 - Browser verification exposed that tracking-like script filenames and the deferred head position were not observable in the test surface. Kept a neutral `site-actions.js` filename, used the site's proven bottom-script pattern, and recorded a rule not to treat unit tests alone as analytics completion.

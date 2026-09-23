@@ -29,7 +29,7 @@ NEXT ACTION: Complete Phase 1 by obtaining the comparable four-week GA4/Square b
 - Branch: `codex/website-improvements`, based on current `origin/main`. Audit/plan commit: `6830325`.
 - Phase 1 analytics work is uncommitted pending its final baseline item. Five focused tests and 111 theme tests pass; browser diagnostic proof passed for order, reservation, and directions events.
 - The only unrelated working-tree item remains untracked `assets/images/july-4-hero.png`; leave it untouched.
-- The checklist is served locally at `http://127.0.0.1:6419/results/2026-09-23-website-audit/website-improvement-tracker.html` and is open in the right panel.
+- The checklist is served only on the Mac mini's Tailscale interface at `http://100.124.197.26:6420/tracker` so Joel's other tailnet computer can keep it open in the right Browser panel. The dedicated server exposes only the tracker file; background session `18818` must remain running.
 
 ### Previous immediate-continuation handoff — before branch setup
 

@@ -17,6 +17,7 @@ All notable changes to this repo will be documented here.
 
 ### Added
 
+- Tracker-only private Tailscale server helper so the progress board can stay rendered in a remote computer's Codex Browser panel without exposing the repository or publishing the tracker publicly.
 - Right-panel HTML implementation tracker with 34 proof-gated roadmap items; 8 are currently complete.
 - Measurement record separating GA4 link behavior from Square orders/sales and preserving the September 23 mobile performance baseline.
 - Phased implementation plan for every unfinished website-audit recommendation: analytics, mobile performance, design, a one-item Square proof, static-first implementation, SEO/accessibility, release verification, and post-launch measurement. The plan explicitly excludes already-completed Square, catalog, menu-parity, and review-rotation work.
