@@ -1,5 +1,12 @@
 # Session Log
 
+## 2026-09-23 — Make the restaurant menu QR-only
+
+- Joel clarified that `/menu` must be completely isolated: guests access it only through QR codes on restaurant tables.
+- Removed the Restaurant menu navigation link, featured-section CTA, explanatory copy, and FAQ reference from the private homepage preview.
+- Updated the roadmap and project records to remove `/menu` from website navigation, CTAs, sitemap, structured data, and search indexing while preserving direct QR access.
+- Next: Joel reviews the corrected homepage preview; Phase 5 implements the public website without any route to the restaurant menu.
+
 ## 2026-09-23 — Correct the restaurant-menu boundary
 
 - Joel clarified that `/menu` replaces paper menus in the restaurant and is not part of the website redesign.

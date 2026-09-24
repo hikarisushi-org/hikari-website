@@ -22,7 +22,7 @@ Audit limits: the signed-in Google account has no accessible Hikari Analytics pr
 
 Phase 4 is complete. A clean browser session reliably opens Fire Cracker when the Square URL includes both `location=LMCJ08MMKDHCA` and `item=A5BIIXCE5ILZWRZCDTY7A4KY`. Desktop and 390 x 844 mobile proof covered the current photo, $15 price, Regular variation, 20% discount, pickup and delivery availability, cart fees/totals, sticky mobile checkout action, and payment entry without submitting an order. [Square item-path proof](results/2026-09-23-website-audit/13-SQUARE-ITEM-PATH-PROOF.md).
 
-Product boundary correction: `/menu` is the restaurant's operational menu used instead of paper menus, not part of the public website redesign. Preserve that route and its existing behavior as a separate tool. The redesigned homepage should link to it as **Restaurant menu** and keep **Order online** as a distinct Square action.
+Product boundary correction: `/menu` is the restaurant's QR-only operational menu used instead of paper menus. Preserve the direct route and behavior, but keep it completely isolated from the public website: no navigation link, CTA, FAQ, sitemap entry, structured-data reference, or other discovery surface. Square remains the website's distinct **Order online** action.
 
 ## Next action
 

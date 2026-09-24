@@ -376,7 +376,7 @@
     <section class="working-now" aria-labelledby="working-now-title">
       <p class="now-label"><span class="now-dot" aria-hidden="true"></span>Working now</p>
       <h2 id="working-now-title">Phase 5 is waiting on design approval</h2>
-      <p class="now-summary">The Fire Cracker Square path is proven, and the preview now covers the homepage only. The existing restaurant menu remains a separate tool used instead of paper menus and is excluded from the website redesign.</p>
+      <p class="now-summary">The Fire Cracker Square path is proven, and the preview now covers the homepage only. The restaurant menu is QR-only: the website will not link to, mention, or expose it through discovery surfaces.</p>
       <div class="now-grid">
         <div class="now-fact"><strong>Completed</strong><span>Fire Cracker direct link, pickup, delivery, fees, discount, cart, and measurement</span></div>
         <div class="now-fact"><strong>Waiting on Joel</strong><span>Approve or revise the homepage visual direction</span></div>
@@ -385,7 +385,7 @@
       <div class="now-actions">
         <a class="now-button" href="http://100.124.197.26:6421/preview">Review the design preview</a>
         <a class="now-link" href="#phase-4">See the completed Square proof</a>
-        <time class="now-updated" datetime="2026-09-23T23:00:00-06:00">Updated September 23 at 11:00 PM</time>
+        <time class="now-updated" datetime="2026-09-23T23:04:00-06:00">Updated September 23 at 11:04 PM</time>
       </div>
     </section>
 
@@ -439,7 +439,7 @@
         <ul class="tasks">
           <li class="task"><input id="p3-1" type="checkbox" checked disabled><label for="p3-1"><strong>Create the mobile homepage preview</strong><span>Food-first mobile hierarchy, six dishes, and persistent order action are rendered and visually checked.</span></label></li>
           <li class="task"><input id="p3-2" type="checkbox" checked disabled><label for="p3-2"><strong>Create the desktop homepage preview</strong><span>The 1280 × 720 split hero and shortened page hierarchy are rendered and visually checked.</span></label></li>
-          <li class="task"><input id="p3-3" type="checkbox" checked disabled><label for="p3-3"><strong>Confirm the restaurant-menu boundary</strong><span><code>/menu</code> stays a separate in-house tool used instead of paper menus; the homepage only links to it.</span></label></li>
+          <li class="task"><input id="p3-3" type="checkbox" checked disabled><label for="p3-3"><strong>Confirm the QR-only menu boundary</strong><span><code>/menu</code> stays completely isolated from the website and is accessed only from table QR codes.</span></label></li>
           <li class="task"><input id="p3-4" type="checkbox" disabled><label for="p3-4"><strong>Approve featured dishes and copy</strong><span>Use owner-confirmed items, photos, prices, service facts, and CTA treatment.</span></label></li>
         </ul>
       </details>
@@ -464,8 +464,8 @@
         </summary>
         <ul class="tasks">
           <li class="task"><input id="p5-1" type="checkbox" disabled><label for="p5-1"><strong>Implement the approved homepage hierarchy</strong><span>Featured dishes replace the full catalog on the homepage.</span></label></li>
-          <li class="task"><input id="p5-2" type="checkbox" disabled><label for="p5-2"><strong>Preserve the separate restaurant menu</strong><span>Keep <code>/menu</code> isolated and operational; do not merge or redesign its catalog, filters, or My Picks behavior.</span></label></li>
-          <li class="task"><input id="p5-3" type="checkbox" disabled><label for="p5-3"><strong>Preserve current site capabilities</strong><span>Themes, reviews, My Picks, reservations, directions, hours, and advisories.</span></label></li>
+          <li class="task"><input id="p5-2" type="checkbox" disabled><label for="p5-2"><strong>Isolate the QR-only restaurant menu</strong><span>Keep <code>/menu</code> operational but remove every website link, mention, CTA, and discovery path to it.</span></label></li>
+          <li class="task"><input id="p5-3" type="checkbox" disabled><label for="p5-3"><strong>Preserve current website capabilities</strong><span>Themes, reviews, reservations, directions, hours, advisories, and ordering actions.</span></label></li>
           <li class="task"><input id="p5-4" type="checkbox" disabled><label for="p5-4"><strong>Verify the Netlify deploy preview</strong><span>Regression-check both viewports and every operational link before production.</span></label></li>
         </ul>
       </details>
@@ -476,7 +476,7 @@
           <span class="status queued">Queued</span>
         </summary>
         <ul class="tasks">
-          <li class="task"><input id="p6-1" type="checkbox" disabled><label for="p6-1"><strong>Align homepage canonical, sitemap, robots, and schema</strong><span>Keep <code>hasMenu</code> pointing to the separate restaurant-menu tool.</span></label></li>
+          <li class="task"><input id="p6-1" type="checkbox" disabled><label for="p6-1"><strong>Align homepage canonical, sitemap, robots, and schema</strong><span>Exclude the QR-only menu from discovery surfaces and keep its direct route available.</span></label></li>
           <li class="task"><input id="p6-2" type="checkbox" disabled><label for="p6-2"><strong>Add useful homepage metadata and initial HTML</strong><span>Clear H1, South Jordan title/description, and crawlable restaurant content.</span></label></li>
           <li class="task"><input id="p6-3" type="checkbox" disabled><label for="p6-3"><strong>Keep local information accurate and useful</strong><span>Hours, visit, pickup/delivery, reservations, and confirmed lunch information.</span></label></li>
           <li class="task"><input id="p6-4" type="checkbox" disabled><label for="p6-4"><strong>Pass accessibility review</strong><span>Headings, contrast, targets, keyboard, focus, modals, carousel, alt text, and motion.</span></label></li>

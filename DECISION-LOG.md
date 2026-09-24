@@ -9,11 +9,11 @@ Format: newest first. Link measurements to `SPECS.md`; link resume state to `REA
 
 ## 2026-09-23 — Exclude the restaurant menu from the website redesign
 
-**Decision:** Treat `https://hikarisojo.com/menu` as a separate operational restaurant menu used in place of paper menus. Preserve its URL and behavior, link to it clearly from the homepage, and do not merge or redesign it as part of the public website project.
+**Decision:** Treat `https://hikarisojo.com/menu` as a QR-only operational restaurant menu used in place of paper menus. Preserve direct access and existing behavior, but keep it completely isolated from the public website: no link, mention, CTA, sitemap entry, structured-data reference, or search indexing.
 
 **Why:** Joel clarified the product boundary after reviewing the combined preview. Restaurant-menu browsing and online ordering solve different jobs: `/menu` supports guests in the dining room, while Square handles pickup, delivery, cart, and payment.
 
-**Design consequence:** The private preview is homepage-only. Navigation says **Restaurant menu** for `/menu` and **Order online** for Square. Phase 5 and Phase 6 target the public homepage while regression-checking, but not rebuilding, the menu tool.
+**Design consequence:** The private preview is homepage-only and contains no `/menu` path. **Order online** goes to Square. Phase 5 removes website-originated menu discovery; Phase 6 applies QR-only discovery controls while regression-checking direct menu access.
 
 ---
 

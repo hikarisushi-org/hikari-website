@@ -6,6 +6,7 @@ All notable changes to this repo will be documented here.
 
 ### Changed
 
+- Tightened the restaurant-menu boundary: removed all `/menu` links and references from the private homepage preview and specified QR-only access with no website navigation, CTA, sitemap, or structured-data discovery path.
 - Corrected the redesign boundary after owner clarification: `/menu` remains the separate restaurant menu used instead of paper menus. Removed its obsolete redesign from the private preview and changed homepage actions to label and link it as Restaurant menu, distinct from Square ordering.
 - Proved a stable location-aware Square deep link for Fire Cracker, verified pickup and delivery carts on desktop and mobile through payment entry, and updated the featured-dish analytics test to use the live URL and item name. No order, Square setting, deployment, or production page changed.
 - Added a prominent “Working now” panel to the roadmap tracker with the exact active gate, waiting party, next phase, independent blocker, last-updated time, and a direct link to the current preview.

@@ -6,7 +6,7 @@ Private review URL: `http://100.124.197.26:6421/preview`
 
 The preview now covers the public-facing homepage only. It is not published and does not change the production site.
 
-Joel clarified that `/menu` is the operational restaurant menu used in place of paper menus, not a page inside the website redesign. The redesign therefore links to it but does not merge, restyle, restructure, or replace it.
+Joel clarified that `/menu` is the operational restaurant menu used in place of paper menus and must be completely isolated from the public website. Guests reach it only through the QR codes on restaurant tables. The redesign therefore contains no navigation, CTA, FAQ, schema, sitemap, or other discoverability path to `/menu`.
 
 ## Direction
 
@@ -24,14 +24,14 @@ The preview uses the current address, phone, hours, reservation destination, Squ
 
 ## Restaurant-menu boundary
 
-The existing `/menu` experience remains a separate restaurant tool and operational source for in-house guests. The homepage uses a clear **Restaurant menu** link rather than presenting the menu as a website section. Square remains the separate source for online availability, pickup, delivery, and checkout.
+The existing `/menu` experience remains a separate QR-only restaurant tool for in-house guests. The homepage does not mention or link to it. Square remains the public website's only menu-like action for online availability, pickup, delivery, and checkout.
 
 ## Verification
 
 - Desktop homepage visually inspected at the requested 1280×720 viewport.
 - Mobile homepage rendered with Lighthouse mobile emulation at 412×823, covering the requested 390×844 breakpoint behavior.
 - The obsolete `/menu` redesign and homepage/menu switcher were removed after the product boundary was clarified.
-- The homepage's Restaurant menu actions point to the existing live `/menu` tool.
+- The homepage contains no link or reference to `/menu`; the preview's popular-dish action goes to Square ordering.
 - The preview server exposes only `/preview` and `/assets/*`; a repository document request returns 404.
 
 ## Approval needed
