@@ -1,5 +1,14 @@
 # SPECS
 
+## Homepage design direction — September 23, 2026
+
+- Keep the homepage food-first: an asymmetric hero, alternating food-and-copy panels, a six-photo `From our kitchen` gallery, restaurant-character panels, reviews, and visit information.
+- The kitchen gallery contains photography only beneath its heading: no visible item names, prices, descriptions, or per-photo actions.
+- Restaurant-character panels may explain real Hikari experiences such as sharing sushi, weekday lunch, and reservations; do not invent promotions, buffet service, prices, or unverified restaurant claims.
+- General ordering CTAs open the Square storefront. A dish-specific CTA may use a Square deep link only after its location and item identifiers pass the existing clean-session proof gate.
+- Preserve Hikari's mist, teal, coral, Playfair, and Inter visual identity; Saffron Valley is a structural reference, not a brand or layout to copy.
+- Keep the QR-only restaurant menu completely absent from homepage navigation, copy, CTAs, metadata, and discovery surfaces.
+
 ## Website measurement contract — September 23, 2026
 
 - `click_order_online` means a customer clicked from Hikari to `hikarisushi-online.square.site`; it is not a completed order or sale.

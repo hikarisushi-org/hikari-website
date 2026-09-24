@@ -1,5 +1,13 @@
 # Session Log
 
+## 2026-09-23 — Refine the homepage’s food-first story
+
+- Joel identified the strongest parts of the Saffron Valley homepage: alternating dish-and-copy panels, a text-free six-photo kitchen gallery, and additional restaurant-character panels instead of an on-page catalog.
+- Rebuilt the private Hikari preview around those patterns while retaining Hikari’s own mist, teal, coral, Playfair, and Inter direction. Added two food/story features, six unlabelled kitchen photographs, and three restaurant-character panels.
+- Routed the Fire Cracker feature through its proven location-aware Square URL; all general ordering actions continue to Square, reservations continue to Carbonara, and the QR-only restaurant menu remains absent.
+- Updated the right-panel tracker’s current-work summary and verified the revised preview at 1280 × 720 and 390 × 844. Five analytics tests and 111 theme checks pass; no production deployment occurred.
+- Next: Joel reviews the refreshed preview and approves or revises the copy and selected photographs before Phase 5 implementation.
+
 ## 2026-09-23 — Make the restaurant menu QR-only
 
 - Joel clarified that `/menu` must be completely isolated: guests access it only through QR codes on restaurant tables.

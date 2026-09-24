@@ -13,12 +13,12 @@ Joel clarified that `/menu` is the operational restaurant menu used in place of 
 - **Visual idea:** Hikari means light. Luminous mist-white space and food photography carry that idea; deep teal provides structure and coral is reserved for ordering.
 - **Palette:** ink `#173330`, Hikari teal `#216F68`, deep teal `#0F4844`, coral `#E6675A`, mist `#EDF5F1`, white `#FFFFFF`.
 - **Type:** self-hosted Playfair Display for the expressive food-led headlines; Inter for navigation, prices, and practical information.
-- **Layout:** an asymmetric split hero on desktop; food first, then message on mobile. Content stays left aligned and the path is shortened to hero, six dishes, trust, one story, and visit information.
-- **Restraint:** the coral action and the hero split are the memorable treatments. Repeated decorative labels, generic rounded-card grids, and scattered entrance animation are omitted.
+- **Layout:** an asymmetric split hero followed by alternating food-and-story panels, a six-photo kitchen gallery with no catalog text, and three restaurant-character panels. Food leads on desktop and mobile; copy stays left aligned.
+- **Restraint:** the coral action and dense kitchen photo grid are the memorable treatments. The page avoids a browsable restaurant catalog, pricing grid, repeated decorative labels, and scattered entrance animation.
 
 ## Real content used
 
-The six preview dishes are the current `Most Popular` set from the website, with existing verified photos and prices: Gyoza, Flares of Hikari, Misty Harbor, Island Heatwave, Fire Cracker, and Naruto Roll.
+The kitchen gallery uses six existing Hikari food photographs without names, prices, descriptions, or per-item links. The first feature panel uses the verified Fire Cracker photo, description, and direct Square item path; general ordering actions use the Square storefront.
 
 The preview uses the current address, phone, hours, reservation destination, Square ordering destination, 5.0 rating display, and 160+ review count. The sample review sentence is explicitly labeled as placement copy; production continues to use the live daily review feed.
 
@@ -36,4 +36,4 @@ The existing `/menu` experience remains a separate QR-only restaurant tool for i
 
 ## Approval needed
 
-Joel should approve or revise the homepage hierarchy, headline/supporting copy, the six featured dishes, coral order treatment, and the teal/mist visual direction before production redesign work proceeds.
+Joel should approve or revise the homepage hierarchy, food photography, alternating feature copy, coral order treatment, and the teal/mist visual direction before production redesign work proceeds.

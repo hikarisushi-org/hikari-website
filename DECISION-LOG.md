@@ -7,6 +7,16 @@ Format: newest first. Link measurements to `SPECS.md`; link resume state to `REA
 
 ---
 
+## 2026-09-23 — Let food photography replace an on-page catalog
+
+**Decision:** Shape the public homepage around alternating food-and-story panels, a six-photo `From our kitchen` gallery with no visible item names, prices, descriptions, or per-photo links, and a second set of panels describing Hikari's restaurant experience.
+
+**Why:** Joel identified these patterns on Saffron Valley as more enticing than a conventional menu grid. The page should create appetite and explain why to visit Hikari; current availability, selection, and checkout belong to Square.
+
+**Hikari translation:** Keep the existing mist, teal, coral, Playfair, and Inter direction rather than copying Saffron Valley's black/orange treatment. Use the verified Fire Cracker location-aware Square URL for its feature and the general Square storefront for other order actions. Reservations remain distinct. The QR-only restaurant menu remains absent from navigation, copy, CTAs, and discovery surfaces.
+
+---
+
 ## 2026-09-23 — Exclude the restaurant menu from the website redesign
 
 **Decision:** Treat `https://hikarisojo.com/menu` as a QR-only operational restaurant menu used in place of paper menus. Preserve direct access and existing behavior, but keep it completely isolated from the public website: no link, mention, CTA, sitemap entry, structured-data reference, or search indexing.
