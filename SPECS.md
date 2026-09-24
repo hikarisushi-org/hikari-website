@@ -31,6 +31,6 @@ See [full menu and Square reconciliation](results/2026-09-23-website-audit/06-ME
 - Final native configuration: main banner hidden; compact list-style item cards; announcement pop-up inactive; original Reveal on scroll up header behavior retained.
 - Preserve the existing 20% discount. Native mobile View order appears after adding food; no custom checkout/API delivery implementation is in scope for this pass.
 - Verification: mobile 390 × 844 and desktop 1365 × 900 browser views; representative pickup and delivery through payment entry only. A completed order, driver dispatch and KDS receipt require separately authorized operational testing.
-- Main-site rebuild/new technology remains an option for later work; preserve the permanent `/menu` address.
+- Main-site rebuild/new technology remains an option for later work. The permanent `/menu` route is a separate operational restaurant menu used instead of paper menus; preserve its address and behavior, and exclude it from the website redesign.
 
 See [published change record](results/2026-09-23-website-audit/04-SQUARE-LIVE-IMPROVEMENTS.md) for exact observations and limits.

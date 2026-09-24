@@ -20,7 +20,7 @@ This plan covers only unfinished findings from the audit. It does not repeat the
 ## Working constraints
 
 - Keep Square as the ordering, cart, payment, fulfillment, POS, KDS, and delivery-integration system unless the one-item proof establishes a material blocker.
-- Preserve the permanent `/menu` URL because existing QR codes and links may use it.
+- Treat `/menu` as the separate operational restaurant menu used instead of paper menus. Preserve its URL and behavior, link to it clearly, and exclude it from the website redesign.
 - Do not replace the dine-in `My Picks` behavior with an online cart without an explicit product decision.
 - Do not change prices, discounts, fees, hours, menu facts, fulfillment, or provider integrations as part of the website build.
 - Use confirmed Hikari photos and facts. Do not infer item identity from filenames.
@@ -69,7 +69,7 @@ This plan covers only unfinished findings from the audit. It does not repeat the
 
 ### Work
 
-Create one reviewable homepage and `/menu` direction at the audit viewports: 390 × 844 mobile and 1280 × 720 desktop.
+Create one reviewable homepage direction at the audit viewports: 390 × 844 mobile and 1280 × 720 desktop.
 
 The homepage preview should include:
 
@@ -81,7 +81,7 @@ The homepage preview should include:
 6. Visit information: current hours, address, phone, directions, reservations, and useful ordering questions.
 7. A persistent mobile order strip that does not cover content and is hidden or adapted appropriately when it would duplicate Square's own cart control.
 
-The `/menu` preview should keep the dine-in browsing purpose clear, retain filters/search/advisories, expose online ordering, and add a real page heading.
+Do not redesign `/menu`. Show only how the homepage distinguishes the separate Restaurant menu from Square's Order online path.
 
 ### Approval gate
 
@@ -109,8 +109,8 @@ The `/menu` preview should keep the dine-in browsing purpose clear, retain filte
 ### Work
 
 1. Implement the approved homepage hierarchy and persistent mobile order action.
-2. Remove the full catalog from the homepage; show only approved featured dishes and link normal navigation to `/menu`.
-3. Keep menu content in one canonical data source and generate or pre-render core item names, categories, descriptions, and prices into initial HTML. JavaScript may enhance filters, search, modals, and `My Picks`, but should not be the only source of menu text.
+2. Remove the full catalog from the homepage; show only approved featured dishes and link normal navigation to the separate restaurant menu at `/menu`.
+3. Preserve `/menu` as its own operational restaurant tool. Do not merge its catalog, filters, modals, or `My Picks` behavior into the website build.
 4. Preserve the theme system, current review rotation, reservations, directions, hours, consumer advisory, and existing operational links.
 5. Apply the proven Phase 4 Square handoff consistently. Do not claim item-level ordering where the proof found only menu-level support.
 6. Keep the implementation static-first. Introduce a framework only if the proven ordering requirement needs it; visual preference alone is not enough reason.
@@ -118,7 +118,7 @@ The `/menu` preview should keep the dine-in browsing purpose clear, retain filte
 ### Proof gate
 
 - A Netlify deploy preview works at mobile and desktop sizes before any production push.
-- Homepage, `/menu`, reservations, directions, reviews, seasonal themes, and every ordering CTA pass regression checks.
+- Homepage, the existing restaurant-menu link and tool, reservations, directions, reviews, seasonal themes, and every ordering CTA pass regression checks.
 - No Square, POS, fulfillment, KDS, price, discount, or delivery-app setting changes are part of the deploy.
 
 ## Phase 6 — SEO, local content, and accessibility
@@ -126,18 +126,18 @@ The `/menu` preview should keep the dine-in browsing purpose clear, retain filte
 ### Work
 
 1. Add a homepage self-canonical.
-2. Make `/menu` a normal navigation link and include it in `sitemap.xml`.
-3. Add a clear “Hikari Sushi Menu” H1 and a useful South Jordan page title/description.
-4. Update restaurant structured data so `hasMenu` points to `/menu`; retain only accurate restaurant facts and validate the result.
+2. Keep `/menu` as a clearly labeled Restaurant menu navigation link without redesigning the menu tool.
+3. Add a useful South Jordan homepage title/description and crawlable restaurant content.
+4. Keep restaurant structured data's `hasMenu` reference pointed to the separate `/menu` tool; retain only accurate restaurant facts and validate the result.
 5. Add a simple `robots.txt` that permits crawling and advertises the sitemap.
 6. Ensure useful location, hours, pickup/delivery, reservation, and confirmed lunch information is accessible in normal page content. Do not generate thin city or dish pages.
 7. Fix heading order, text/button contrast, touch-target sizing, keyboard navigation, visible focus, modal semantics/focus handling, carousel controls, alt text, and reduced-motion behavior.
 
 ### Proof gate
 
-- Core menu names exist in the initial `/menu` HTML with JavaScript disabled.
-- Canonical, sitemap, robots, title, H1, and structured-data URLs agree on `/menu`.
-- Automated accessibility checks have no critical violations, and keyboard-only review completes navigation, filters, menu modal, reviews, and all CTAs.
+- Core homepage content exists in initial HTML with JavaScript disabled.
+- Homepage canonical, sitemap, robots, title, H1, and structured data agree, while `hasMenu` continues to reference the separate restaurant-menu tool.
+- Automated accessibility checks have no critical violations, and keyboard-only review completes homepage navigation, reviews, the restaurant-menu link, and all CTAs.
 - No confirmed restaurant fact differs among visible content and structured data.
 
 ## Phase 7 — Release and measurement
@@ -153,7 +153,7 @@ The `/menu` preview should keep the dine-in browsing purpose clear, retain filte
 ### Release
 
 1. Publish through the existing Netlify/GitHub workflow with rollback identified.
-2. Verify the live homepage, `/menu`, analytics events, review feed, ordering links, structured data, sitemap, and `robots.txt`.
+2. Verify the live homepage, the preserved restaurant-menu link/tool, analytics events, review feed, ordering links, structured data, sitemap, and `robots.txt`.
 3. Record the deployed commit and live verification results.
 
 ### Post-release evaluation

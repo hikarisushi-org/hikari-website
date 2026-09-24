@@ -6,6 +6,7 @@ All notable changes to this repo will be documented here.
 
 ### Changed
 
+- Corrected the redesign boundary after owner clarification: `/menu` remains the separate restaurant menu used instead of paper menus. Removed its obsolete redesign from the private preview and changed homepage actions to label and link it as Restaurant menu, distinct from Square ordering.
 - Proved a stable location-aware Square deep link for Fire Cracker, verified pickup and delivery carts on desktop and mobile through payment entry, and updated the featured-dish analytics test to use the live URL and item name. No order, Square setting, deployment, or production page changed.
 - Added a prominent “Working now” panel to the roadmap tracker with the exact active gate, waiting party, next phase, independent blocker, last-updated time, and a direct link to the current preview.
 - Replaced multi-megabyte menu image delivery with 260 generated AVIF/WebP variants, responsive picture selection, intrinsic dimensions, and intentional lazy loading across the shared menu and homepage food imagery. Replaced two simultaneous hero videos with one orientation-aware source that respects reduced motion and data saver; added cache-busted asset URLs and repeatable media validation.

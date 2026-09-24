@@ -7,6 +7,16 @@ Format: newest first. Link measurements to `SPECS.md`; link resume state to `REA
 
 ---
 
+## 2026-09-23 — Exclude the restaurant menu from the website redesign
+
+**Decision:** Treat `https://hikarisojo.com/menu` as a separate operational restaurant menu used in place of paper menus. Preserve its URL and behavior, link to it clearly from the homepage, and do not merge or redesign it as part of the public website project.
+
+**Why:** Joel clarified the product boundary after reviewing the combined preview. Restaurant-menu browsing and online ordering solve different jobs: `/menu` supports guests in the dining room, while Square handles pickup, delivery, cart, and payment.
+
+**Design consequence:** The private preview is homepage-only. Navigation says **Restaurant menu** for `/menu` and **Order online** for Square. Phase 5 and Phase 6 target the public homepage while regression-checking, but not rebuilding, the menu tool.
+
+---
+
 ## 2026-09-23 — Keep Square and use verified location-aware item links
 
 **Decision:** Keep Square as Hikari's ordering provider. A featured dish may link directly only after its live URL is verified with both the Square location and item identifiers. General order actions continue to open the Square menu.

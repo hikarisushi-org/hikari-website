@@ -1,5 +1,13 @@
 # Session Log
 
+## 2026-09-23 — Correct the restaurant-menu boundary
+
+- Joel clarified that `/menu` replaces paper menus in the restaurant and is not part of the website redesign.
+- Removed the menu-direction switch and mockup from the private preview; the artifact now reviews only the homepage.
+- Relabeled homepage links as Restaurant menu and kept Square's Order online path distinct.
+- Updated the roadmap, tracker, preview notes, current state, and decision record so Phase 5 preserves `/menu` as a separate operational tool rather than rebuilding it.
+- Next: Joel reviews the corrected homepage-only preview and approves or revises its design direction.
+
 ## 2026-09-23 — Prove one Square item path
 
 - Selected Fire Cracker from the approved popular-dish set and captured its live Square item ID.
