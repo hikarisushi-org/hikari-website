@@ -1,6 +1,22 @@
 {
   "reviews": [
     {
+      "author": "Tiffani Parker",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjXsp8HEji7OWpLaUVE9yLG5pPaZYDNDOS1qoD684BHcJE5HPITK=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "Everything was so good. Firefly roll is top notch. Presentation was amazing and the rolls were fresh and tasty. Definitely coming back.",
+      "relativeTime": "",
+      "publishTime": "2026-09-26T00:35:18.348062Z"
+    },
+    {
+      "author": "sunshine Williams",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocJWI7dOZRt3W4Uc_pEHOcwxzofZFlkMGtNa8MSlj-db9brr0A=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "All I have to say is WOW! If you want delicious, fresh and fun flavors this is the place for you. The small vibe made the whole experience very special. You will feel like a VIP with quick service and friendly staff. I highly recommend this spot if you are looking for amazing sushi and attentive staff. Best playboy roll I\u2019ve ever had.",
+      "relativeTime": "",
+      "publishTime": "2026-09-25T23:56:40.249525Z"
+    },
+    {
       "author": "Sofiya Burmistrova",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjW_t20AFZdNJJPvk5aLfsSOFTnnWrc4fleYu6Mr-7GDJoIPMKw=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1626,5 +1642,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 226
+  "totalReviews": 228
 }
