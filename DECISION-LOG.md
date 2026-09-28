@@ -20,3 +20,7 @@ Format: newest first. Link measurements to `SPECS.md`; link resume state to `REA
 **Decision:** Adopt workspace standard: README (+ § Pick up here), CHANGELOG, DECISION-LOG, SPECS.
 
 **Why:** Uniform layout across Hikari/Lumen projects — no hunting for where why/what/now/specs live.
+
+## 2026-09-27 — Approved design recovery
+
+The September 26 review-sync commit triggered a main-branch Netlify build containing the older site, replacing the direct approved release. Restore the saved approved deploy immediately, then reconcile byte-verified public files into current main while preserving the newest reviews and function code. Production must be reproducible from main; direct-only deployments are not a durable release.

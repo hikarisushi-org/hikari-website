@@ -26,8 +26,8 @@
     "badgeText": null,
     "heroImageKey": null,
     "heroVideoSources": {
-      "landscape": "https://media.hikarisojo.com/hero-daily-landscape.mp4",
-      "portrait": "https://media.hikarisojo.com/hero-daily-portrait.mp4"
+      "landscape": "assets/video/generated/hero-daily-landscape-960.mp4",
+      "portrait": "assets/video/generated/hero-daily-portrait-540.mp4"
     }
   },
   "floatingElements": null,

@@ -120,7 +120,9 @@ class ThemeLoader {
     this._applyLogo(theme.content && theme.content.logoImageKey);
 
     // Hero media swap: themed video, default reels, or static image(s).
-    if (theme.content && theme.content.heroVideoPath) {
+    if (document.querySelector('[data-fixed-hero]')) {
+      // The approved homepage hero stays fixed, independent of seasonal media.
+    } else if (theme.content && theme.content.heroVideoPath) {
       this._applyHeroVideo(theme.content.heroVideoPath);
     } else if (theme.content && theme.content.heroVideoSources) {
       this._applyHeroVideoSources(theme.content.heroVideoSources);
@@ -166,6 +168,7 @@ class ThemeLoader {
     }
 
     // Hide video, insert image
+    if (window.HikariHeroMedia) window.HikariHeroMedia.stop();
     document.querySelectorAll('.hero-video').forEach(v => {
       v.style.display = 'none';
     });
@@ -184,6 +187,7 @@ class ThemeLoader {
     if (videos.length === 0) return;
 
     // Hide both videos since we're using a static image.
+    if (window.HikariHeroMedia) window.HikariHeroMedia.stop();
     videos.forEach(v => {
       v.style.display = 'none';
     });
@@ -202,39 +206,38 @@ class ThemeLoader {
   }
 
   _applyHeroVideo(videoPath) {
-    const videos = Array.from(document.querySelectorAll('.hero-video'));
-    if (videos.length === 0) return;
+    const video = document.querySelector('video.hero-video');
+    if (!video) return;
 
     const existingImg = document.querySelector('.hero-image');
     if (existingImg) existingImg.remove();
 
-    videos.forEach(video => {
+    if (window.HikariHeroMedia) {
+      window.HikariHeroMedia.setVideoPath(videoPath);
+    } else {
       this._setHeroVideoSource(video, videoPath);
-    });
+    }
   }
 
   _applyHeroVideoSources(sources) {
-    const landscape = document.querySelector('.hero-video--landscape');
-    const portrait = document.querySelector('.hero-video--portrait');
-    if (!landscape && !portrait) return;
+    const video = document.querySelector('video.hero-video');
+    if (!video) return;
 
     const existingImg = document.querySelector('.hero-image');
     if (existingImg) existingImg.remove();
 
-    if (landscape && sources.landscape) {
-      this._setHeroVideoSource(landscape, sources.landscape);
+    if (window.HikariHeroMedia) {
+      window.HikariHeroMedia.setVideoSources(sources);
+      return;
     }
-    if (portrait && sources.portrait) {
-      this._setHeroVideoSource(portrait, sources.portrait);
-    }
+
+    const usePortrait = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    this._setHeroVideoSource(video, usePortrait ? sources.portrait : sources.landscape);
   }
 
   _setHeroVideoSource(video, videoPath) {
     video.style.display = '';
-    const source = video.querySelector('source');
-    if (source) {
-      source.src = videoPath;
-    }
+    video.src = videoPath;
     try {
       video.load();
       const playPromise = video.play();
@@ -309,7 +312,7 @@ class ThemeLoader {
   }
 
   async _fetch(url) {
-    const res = await fetch(url);
+    const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) throw new Error(`Failed to fetch ${url}`);
     return res.json();
   }

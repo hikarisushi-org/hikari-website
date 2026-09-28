@@ -255,3 +255,9 @@ For website issues or feature requests, contact the development team or open an 
 | [CHANGELOG.md](./CHANGELOG.md) | What changed |
 | [DECISION-LOG.md](./DECISION-LOG.md) | Why |
 | [SPECS.md](./SPECS.md) | Specs & measurements |
+
+## Production release source
+
+Netlify builds `main` with `node scripts/build-site.mjs` and publishes only `dist/`. The approved homepage, responsive assets, QR-only menu and analytics must remain committed on that branch. The daily Google review sync commits `data/reviews.json` to `main` and triggers the same build. Never rely on a direct deployment whose source is absent from `main`.
+
+Checks: `node --test scripts/analytics.test.js`, `node scripts/validate-themes.js`, and `node scripts/verify-release.cjs https://hikarisojo.com --production` (requires Playwright and Chrome).

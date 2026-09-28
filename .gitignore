@@ -28,3 +28,7 @@ PROJECT-PULSE.md
 .codex/
 .skillshare/
 .claude/skills/
+
+# Generated public release output and local browser evidence
+dist/
+results/deployment-recovery-proof/

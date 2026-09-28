@@ -30,3 +30,7 @@ All notable changes to this repo will be documented here.
 
 ### Changed
 - **Hamburger Day hero layout**: Hides the standard hero badge/tagline/title/subtitle for this theme so the promo artwork isn’t covered; keeps CTA buttons visible.
+
+## 2026-09-27 — Approved design recovery
+
+Restored the approved homepage and committed its complete public source/build configuration to main so scheduled review syncs preserve the design.

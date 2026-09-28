@@ -1,0 +1,52 @@
+<script>
+/* Hikari handoff marker v1. No new tag, pageview, or purchase event. */
+(function () {
+  'use strict';
+  if (location.hostname !== 'hikarisushi-online.square.site') return;
+  var key = 'hikari_journey_v1';
+  var lifetime = 30 * 60 * 1000;
+  var marker = null;
+  var timer;
+  var lastValue;
+  var entry = new URL(location.href).searchParams.get('hikari_entry');
+  var referrer;
+  try { referrer = new URL(document.referrer); } catch (_) {}
+  var navigation = performance.getEntriesByType('navigation')[0];
+  var isNewNavigation = navigation && navigation.type === 'navigate';
+  var fromHikari = referrer && (referrer.origin === 'https://hikarisojo.com' || referrer.origin === 'https://www.hikarisojo.com');
+  var fromSquare = referrer && referrer.origin === location.origin;
+  function forget() {
+    marker = null;
+    try { sessionStorage.removeItem(key); } catch (_) {}
+  }
+  try { marker = JSON.parse(sessionStorage.getItem(key)); } catch (_) {}
+  // Reload/back-forward never renew a marker from a stale URL or referrer.
+  if (isNewNavigation && fromHikari && (entry === 'public_website' || entry === 'qr_menu')) {
+    marker = { value: entry, expires: Date.now() + lifetime };
+    try { sessionStorage.setItem(key, JSON.stringify(marker)); } catch (_) {}
+  } else if (isNewNavigation && !fromSquare) {
+    // A fresh direct, external, or unmarked Hikari visit is not a handoff.
+    forget();
+  }
+  function apply() {
+    clearTimeout(timer);
+    var now = Date.now();
+    if (!marker || !['public_website', 'qr_menu'].includes(marker.value) ||
+        !Number.isFinite(marker.expires) || marker.expires <= now || marker.expires > now + lifetime) {
+      forget();
+    }
+    var value = marker ? marker.value : 'unknown';
+    if (value !== lastValue) {
+      window.dataLayer = window.dataLayer || [];
+      // Queue behind the native tag if its gtag function is not initialized yet.
+      var send = window.gtag || function () { window.dataLayer.push(arguments); };
+      send('set', { hikari_journey: value });
+      lastValue = value;
+    }
+    if (marker) timer = setTimeout(apply, marker.expires - now);
+  }
+  apply();
+  window.addEventListener('pageshow', apply);
+  document.addEventListener('visibilitychange', apply);
+})();
+</script>
