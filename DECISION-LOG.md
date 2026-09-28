@@ -24,3 +24,7 @@ Format: newest first. Link measurements to `SPECS.md`; link resume state to `REA
 ## 2026-09-27 — Approved design recovery
 
 The September 26 review-sync commit triggered a main-branch Netlify build containing the older site, replacing the direct approved release. Restore the saved approved deploy immediately, then reconcile byte-verified public files into current main while preserving the newest reviews and function code. Production must be reproducible from main; direct-only deployments are not a durable release.
+
+
+### 2026-09-28 — Approved customer QR menu release
+Owner explicitly approved replacing the live /menu with the reviewed continuous menu. Promoted approved UI from preview commit 0a88911 onto current production main, preserving existing site analytics, QR URL and canonical menu content. Build derives data/customer-menu.json from the existing js/menu-page.js menu block, enriching photo presentation from data/menu-presentation.json. Existing homepage unchanged. Build, 9 analytics tests, 3 menu integration checks, all photo paths, 60-row rendering, rapid category jumps and full-width detail/return verified locally. Deployment verification follows publication.

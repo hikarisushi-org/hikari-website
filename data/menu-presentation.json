@@ -1,0 +1,302 @@
+{
+  "assets/images/menu/appetizers/gyoza.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/gyoza-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/flares_of_hikari.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/flares_of_hikari-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 400
+  },
+  "assets/images/menu/sushi/misty_harbor_zoom.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/misty_harbor_zoom-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/island_heatwave.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/island_heatwave-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 400
+  },
+  "assets/images/menu/sushi/firecracker_roll.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/firecracker_roll-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 390
+  },
+  "assets/images/menu/sushi/naruto.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/naruto-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/appetizers/edamame_salted.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/edamame_salted-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 579
+  },
+  "assets/images/menu/appetizers/edamame_spicy.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/edamame_spicy-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 590
+  },
+  "assets/images/menu/appetizers/parmesan_edamame.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/parmesan_edamame-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 569
+  },
+  "assets/images/menu/appetizers/small_shrimp_&_veggie_tempura.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/small_shrimp_&_veggie_tempura-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/appetizers/shrimp_&_veggie_tempura.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/shrimp_&_veggie_tempura-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/appetizers/jalapeno_bomb.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/jalapeno_bomb-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/appetizers/sushi_nachos.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/sushi_nachos-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/appetizers/crab_rangoons.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/crab_rangoons-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/appetizers/chicken-karaage__square.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/chicken-karaage__square-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/appetizers/miso.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/miso-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/appetizers/sunrise_salad.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/sunrise_salad-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 590
+  },
+  "assets/images/menu/appetizers/sweet_summer_salad.png": {
+    "previewImage": "/assets/images/generated/menu/appetizers/sweet_summer_salad-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 590
+  },
+  "assets/images/menu/sushi/california_roll.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/california_roll-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/alaskan__square.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/alaskan__square-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 512
+  },
+  "assets/images/menu/sushi/spicy_tuna_roll.jpg": {
+    "previewImage": "/assets/images/generated/menu/sushi/spicy_tuna_roll-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/spicy_salmon.jpg": {
+    "previewImage": "/assets/images/generated/menu/sushi/spicy_salmon-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/philly.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/philly-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/tempura_shrimp_roll.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/tempura_shrimp_roll-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/spicy_hamachi.jpg": {
+    "previewImage": "/assets/images/generated/menu/sushi/spicy_hamachi-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/forest_roll.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/forest_roll-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 239
+  },
+  "assets/images/menu/sushi/veggie_roll.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/veggie_roll-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/sweet_potato_roll.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/sweet_potato_roll-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/hot_cheetos.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/hot_cheetos-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/hikari_delight.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/hikari_delight-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/emerald_dragon.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/emerald_dragon-640.webp",
+    "imageWidth": 478,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/strawberry_blossom.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/strawberry_blossom-640.webp",
+    "imageWidth": 478,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/illuminated_fire_tuna.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/illuminated_fire_tuna-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/citrus_mango_dream.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/citrus_mango_dream-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/avocado_king.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/avocado_king-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/forbidden_roll.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/forbidden_roll-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/cowboy_roll.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/cowboy_roll-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/salmon_sunrise.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/salmon_sunrise-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/playboy.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/playboy-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/yaki_maguro.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/yaki_maguro-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/firefly_fussion_2.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/firefly_fussion_2-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/fire_spicy_tuna.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/fire_spicy_tuna-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/monument.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/monument-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/sunfire_crunch.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/sunfire_crunch-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 360
+  },
+  "assets/images/menu/sushi/sunburst__square.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/sunburst__square-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 512
+  },
+  "assets/images/menu/sushi/las_vegas_close_up.jpg": {
+    "previewImage": "/assets/images/generated/menu/sushi/las_vegas_close_up-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/nigiri.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/nigiri-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/sashimi_new.png": {
+    "previewImage": "/assets/images/generated/menu/sushi/sashimi_new-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/sushi/hand_rolls_2_16x9_print.jpg": {
+    "previewImage": "/assets/images/generated/menu/sushi/hand_rolls_2_16x9_print-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 400
+  },
+  "assets/images/menu/bowls/poke_bowl.png": {
+    "previewImage": "/assets/images/generated/menu/bowls/poke_bowl-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/bowls/chirashi_bowl.png": {
+    "previewImage": "/assets/images/generated/menu/bowls/chirashi_bowl-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/bowls/teriyaki_chicken.png": {
+    "previewImage": "/assets/images/generated/menu/bowls/teriyaki_chicken-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 590
+  },
+  "assets/images/menu/bowls/teriyaki_salmon.png": {
+    "previewImage": "/assets/images/generated/menu/bowls/teriyaki_salmon-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 590
+  },
+  "assets/images/menu/food/bento_salmon.png": {
+    "previewImage": "/assets/images/generated/menu/food/bento_salmon-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/food/bento-teriyaki-chicken__square.png": {
+    "previewImage": "/assets/images/generated/menu/food/bento-teriyaki-chicken__square-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/desserts/mochi.png": {
+    "previewImage": "/assets/images/generated/menu/desserts/mochi-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 590
+  },
+  "assets/images/menu/desserts/mango_sticky_rice.png": {
+    "previewImage": "/assets/images/generated/menu/desserts/mango_sticky_rice-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 373
+  },
+  "assets/images/menu/drinks/strawberry_spritz.png": {
+    "previewImage": "/assets/images/generated/menu/drinks/strawberry_spritz-640.webp",
+    "imageWidth": 600,
+    "imageHeight": 640
+  },
+  "assets/images/menu/drinks/canned_soda.JPG": {
+    "previewImage": "/assets/images/generated/menu/drinks/canned_soda-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/drinks/ramune.png": {
+    "previewImage": "/assets/images/generated/menu/drinks/ramune-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 513
+  }
+}

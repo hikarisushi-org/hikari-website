@@ -29,3 +29,20 @@ const preview = process.argv.includes('--preview') || process.env.CONTEXT === 'd
 fs.writeFileSync(path.join(out, '_headers'), `${preview ? '/*\n  X-Robots-Tag: noindex, nofollow\n' : ''}/menu\n  X-Robots-Tag: noindex, nofollow\n/menu.html\n  X-Robots-Tag: noindex, nofollow\n`);
 fs.writeFileSync(path.join(out, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: https://hikarisojo.com/sitemap.xml\n');
 console.log(`Built ${copied.size} public files/directories into ${out}; preview=${preview}`);
+
+// Keep customer menu content in sync with the existing menu editor's source.
+const sourceMenu = fs.readFileSync(path.join(root, 'js/menu-page.js'), 'utf8');
+const menuMatch = sourceMenu.match(/const menuData = ([\s\S]*?);\s*\/\/ MENU-DATA:END/);
+if (!menuMatch) throw new Error('Canonical menu data block missing');
+const customerMenu = JSON.parse(menuMatch[1]);
+const presentation = JSON.parse(fs.readFileSync(path.join(root, 'data/menu-presentation.json'), 'utf8'));
+for (const group of Object.values(customerMenu)) {
+  for (const item of group.items) {
+    Object.assign(item, presentation[item.img] || {previewImage: '/' + item.img});
+    const photoPath = item.previewImage.replace(/^\//, '');
+    if (!fs.existsSync(path.join(root, photoPath))) throw new Error('Missing menu photo: ' + photoPath);
+    copy(photoPath);
+  }
+}
+fs.mkdirSync(path.join(out, 'data'), {recursive: true});
+fs.writeFileSync(path.join(out, 'data/customer-menu.json'), JSON.stringify(customerMenu));

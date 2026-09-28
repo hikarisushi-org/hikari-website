@@ -34,3 +34,7 @@ All notable changes to this repo will be documented here.
 ## 2026-09-27 — Approved design recovery
 
 Restored the approved homepage and committed its complete public source/build configuration to main so scheduled review syncs preserve the design.
+
+
+### 2026-09-28 — Approved customer QR menu release
+Owner explicitly approved replacing the live /menu with the reviewed continuous menu. Promoted approved UI from preview commit 0a88911 onto current production main, preserving existing site analytics, QR URL and canonical menu content. Build derives data/customer-menu.json from the existing js/menu-page.js menu block, enriching photo presentation from data/menu-presentation.json. Existing homepage unchanged. Build, 9 analytics tests, 3 menu integration checks, all photo paths, 60-row rendering, rapid category jumps and full-width detail/return verified locally. Deployment verification follows publication.

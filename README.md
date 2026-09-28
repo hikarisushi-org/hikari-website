@@ -261,3 +261,7 @@ For website issues or feature requests, contact the development team or open an 
 Netlify builds `main` with `node scripts/build-site.mjs` and publishes only `dist/`. The approved homepage, responsive assets, QR-only menu and analytics must remain committed on that branch. The daily Google review sync commits `data/reviews.json` to `main` and triggers the same build. Never rely on a direct deployment whose source is absent from `main`.
 
 Checks: `node --test scripts/analytics.test.js`, `node scripts/validate-themes.js`, and `node scripts/verify-release.cjs https://hikarisojo.com --production` (requires Playwright and Chrome).
+
+
+### Customer QR menu
+The approved customer menu is served at `/menu`. Update dish content in the `MENU-DATA` block of `js/menu-page.js`; `node scripts/build-site.mjs` generates `dist/data/customer-menu.json`. `data/menu-presentation.json` maps original image paths to optimized photos and intrinsic dimensions. Run `node --test scripts/customer-menu.test.mjs` after building.
