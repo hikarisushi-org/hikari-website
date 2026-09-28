@@ -26,3 +26,9 @@
 - [x] Inspect authenticated Square Plus / Order Online controls; after Joel’s explicit approval, publish banner/popup/menu improvements and verify pickup and delivery through payment entry. Temporary guest item removed; no paid order or operational integration changes. See [live change record](results/2026-09-23-website-audit/04-SQUARE-LIVE-IMPROVEMENTS.md).
 - [x] Research Square Online storefront versus checkout customization, including plan gates and custom-delivery integration limits. September 23, 2026; no Square changes.
 - [x] Compare Hikari and Saffron Valley / Owner: desktop/mobile design, ordering, SEO, performance, and vendor versus independent evidence. Saved September 23, 2026; no production changes.
+
+
+## 2026-09-27 — Owner-approved QR menu checkpoint
+
+- [x] Owner approved checkpoint for private customer QR menu, including thumbnail transitions and final browser-toolbar sizing correction.
+- [ ] Before production integration, reconcile the preview against current main and recheck live menu data; deployment requires separate authorization.

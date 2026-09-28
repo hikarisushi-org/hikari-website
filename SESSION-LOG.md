@@ -128,3 +128,8 @@
 - Scope stayed analysis-only. Rebuild/new technology may be considered; no account system, app or broad test infrastructure is implied. No production files or deployments changed.
 - Follow-up delivery research confirmed Owner's documented DoorDash/Uber courier options and automatic driver assignment; Saffron's specific provider remains unverified. Added primary help-center sources to the evidence report.
 - Next: Joel reviews the audit; a visual preview and one-item ordering proof require a subsequent implementation request.
+
+
+## 2026-09-27 — Owner-approved QR menu checkpoint
+
+Saved owner-approved QR menu checkpoint after iterative phone review. Browser tests covered photo handoff geometry, simulated viewport height reduction, close cleanup, repeat opening, narrow layouts and menu position preservation. All 60 snapshot image dependencies are tracked; inline script syntax checked. Stage only preview artifacts and this checkpoint note in project records; leave unrelated homepage, analytics, deployment and earlier mixed documentation edits outside the commit.

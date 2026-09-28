@@ -89,3 +89,8 @@ NEXT ACTION: Joel reviews the revised homepage-only Phase 3 preview at `http://1
 ?? results/2026-09-23-website-audit/screenshots/square-after-desktop-delivery.png
 ?? results/2026-09-23-website-audit/screenshots/square-after-mobile-delivery.png
 ```
+
+
+## 2026-09-27 — Owner-approved QR menu checkpoint
+
+Owner approved the private customer-menu preview checkpoint. Current artifact: results/2026-09-27-qr-menu-concepts/continuous.html; phone wrapper: mobile-preview.html. Continuous navigation, readable typography, 28px thumbnails and direct full-screen photo transitions are accepted. Browser-toolbar sizing correction reviewed with owner response “perfect.” No production release authorized; next work starts from this checkpoint.

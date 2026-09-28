@@ -158,3 +158,8 @@ Evidence and limitations: [audit](results/2026-09-23-website-audit/README.md).
 **Decision:** Adopt workspace standard: README (+ § Pick up here), CHANGELOG, DECISION-LOG, SPECS.
 
 **Why:** Uniform layout across Hikari/Lumen projects — no hunting for where why/what/now/specs live.
+
+
+## 2026-09-27 — Owner-approved QR menu checkpoint
+
+Owner accepted the current private menu design and requested a commit. Keep compact text rows with thumbnail anchors; remove row morph effects. Preserve full-screen details and 300ms direct image transitions. Browser-toolbar-driven viewport changes require a frozen small-viewport photo cap and stable scrollbar space. This checkpoint does not authorize pushing or deploying.

@@ -62,3 +62,8 @@ All notable changes to this repo will be documented here.
 
 ### Changed
 - **Hamburger Day hero layout**: Hides the standard hero badge/tagline/title/subtitle for this theme so the promo artwork isn’t covered; keeps CTA buttons visible.
+
+
+## 2026-09-27 — Owner-approved QR menu checkpoint
+
+Checkpoint private customer QR-menu exploration: continuous category navigation, approved readable type, tiny thumbnails, full-screen dish details, direct photo transitions, scroll locking and stable photo sizing across mobile browser toolbar changes. Preserved comparison versions, snapshots and verification evidence.
