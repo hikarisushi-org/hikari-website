@@ -163,3 +163,7 @@ Evidence and limitations: [audit](results/2026-09-23-website-audit/README.md).
 ## 2026-09-27 — Owner-approved QR menu checkpoint
 
 Owner accepted the current private menu design and requested a commit. Keep compact text rows with thumbnail anchors; remove row morph effects. Preserve full-screen details and 300ms direct image transitions. Browser-toolbar-driven viewport changes require a frozen small-viewport photo cap and stable scrollbar space. This checkpoint does not authorize pushing or deploying.
+
+
+### 2026-09-28 — Approved QR preview push checkpoint
+Approved full-width dish detail, readable return hint, robust category jumps, photo-loading fallbacks, shortened Bento labels, and finishing polish saved on codex/website-improvements. Narrow layout checks covered all 60 rows; owner accepted full-width photos on iPhone. Preview only; production files excluded.

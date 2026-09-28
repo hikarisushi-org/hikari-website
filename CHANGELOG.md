@@ -67,3 +67,7 @@ All notable changes to this repo will be documented here.
 ## 2026-09-27 — Owner-approved QR menu checkpoint
 
 Checkpoint private customer QR-menu exploration: continuous category navigation, approved readable type, tiny thumbnails, full-screen dish details, direct photo transitions, scroll locking and stable photo sizing across mobile browser toolbar changes. Preserved comparison versions, snapshots and verification evidence.
+
+
+### 2026-09-28 — Approved QR preview push checkpoint
+Approved full-width dish detail, readable return hint, robust category jumps, photo-loading fallbacks, shortened Bento labels, and finishing polish saved on codex/website-improvements. Narrow layout checks covered all 60 rows; owner accepted full-width photos on iPhone. Preview only; production files excluded.

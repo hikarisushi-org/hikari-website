@@ -133,3 +133,7 @@
 ## 2026-09-27 — Owner-approved QR menu checkpoint
 
 Saved owner-approved QR menu checkpoint after iterative phone review. Browser tests covered photo handoff geometry, simulated viewport height reduction, close cleanup, repeat opening, narrow layouts and menu position preservation. All 60 snapshot image dependencies are tracked; inline script syntax checked. Stage only preview artifacts and this checkpoint note in project records; leave unrelated homepage, analytics, deployment and earlier mixed documentation edits outside the commit.
+
+
+### 2026-09-28 — Approved QR preview push checkpoint
+Approved full-width dish detail, readable return hint, robust category jumps, photo-loading fallbacks, shortened Bento labels, and finishing polish saved on codex/website-improvements. Narrow layout checks covered all 60 rows; owner accepted full-width photos on iPhone. Preview only; production files excluded.

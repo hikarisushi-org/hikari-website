@@ -32,3 +32,7 @@
 
 - [x] Owner approved checkpoint for private customer QR menu, including thumbnail transitions and final browser-toolbar sizing correction.
 - [ ] Before production integration, reconcile the preview against current main and recheck live menu data; deployment requires separate authorization.
+
+
+### 2026-09-28 — Approved QR preview push checkpoint
+Approved full-width dish detail, readable return hint, robust category jumps, photo-loading fallbacks, shortened Bento labels, and finishing polish saved on codex/website-improvements. Narrow layout checks covered all 60 rows; owner accepted full-width photos on iPhone. Preview only; production files excluded.

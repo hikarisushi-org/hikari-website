@@ -71,14 +71,43 @@
 .detail-copy h2{font-size:27px}.detail-copy p{font-size:19px}.detail-copy .warning,.detail-copy .hint{font-size:15px}
 
 dialog{margin:0 auto;padding:0;width:100%;max-width:600px;height:100dvh;max-height:100dvh;border-radius:0;overscroll-behavior:contain;padding-bottom:env(safe-area-inset-bottom);transition:none;background:#fcfdfb}
-.sheet-handle{position:sticky;top:0;z-index:2;display:flex;justify-content:center;align-items:center;width:100%;height:40px;border:0;background:#f2f5f1;touch-action:none;cursor:grab}
-.sheet-handle:focus-visible{outline:none}.sheet-handle:focus-visible:after{outline:2px solid var(--green);outline-offset:5px;border-radius:2px}
-.sheet-handle:after{content:'';width:12px;height:12px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-3px) rotate(45deg)}
-dialog.returning{overflow:hidden}dialog.dragging{transition:none;user-select:none}.detail-photo{max-height:54svh}
-dialog{transform-origin:center center;background:transparent;overflow:hidden}.detail-surface{height:100%;overflow:auto;scrollbar-gutter:stable;overscroll-behavior:contain;background:#fcfdfb}.return-photo{position:fixed;z-index:5;pointer-events:none;object-fit:contain;transform-origin:center center}dialog::backdrop{background:transparent}
+/* Dish-detail toolbar: one clear return action and the current category. */
+.detail-toolbar{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:flex-end;gap:16px;min-height:48px;padding:8px 24px;background:#fcfdfbf5;flex-shrink:0}
+.sheet-handle{display:inline-flex;align-items:center;justify-content:flex-start;gap:10px;min-height:48px;padding:8px 8px 8px 0;border:0;background:transparent;color:var(--green);font:600 17px HikariInter,Arial,sans-serif;touch-action:none;cursor:pointer;border-radius:7px}
+.sheet-handle svg{width:18px;height:18px;flex:none}
+.sheet-handle:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.detail-category{font-size:16px;line-height:1.3;color:var(--muted);text-align:right}
+dialog:focus{outline:none}dialog.returning{overflow:hidden}dialog.dragging{transition:none;user-select:none}.detail-photo{max-height:none}
+dialog{transform-origin:center center;background:transparent;overflow:hidden}.detail-surface{height:100%;display:flex;flex-direction:column;overflow:auto;scrollbar-width:none;overscroll-behavior:contain;background:#fcfdfb}.return-photo{position:fixed;z-index:5;pointer-events:none;object-fit:contain;transform-origin:center center}dialog::backdrop{background:transparent}
 .sheet-shade{position:fixed;inset:0;z-index:20;background:#19372a;opacity:0;pointer-events:none}
-.sheet-handle{min-height:44px}
+.detail-photo{flex-shrink:0;width:100%;margin:0;border-radius:0;background:#fcfdfb}
+.detail-copy{padding:27px 24px 24px;flex:1;display:flex;flex-direction:column}
+.detail-copy .topline{align-items:flex-start;gap:20px}
+.detail-copy h2{font:600 29px/1.18 HikariInter,Arial,sans-serif;letter-spacing:-.8px;margin:0;min-width:0}
+.mode-2 .detail-copy .price{font-size:24px;line-height:1.4;letter-spacing:-.6px;font-weight:600}
+.detail-copy p{font-size:19px;line-height:1.55;margin:17px 0 0;color:#486459}
+.detail-copy .warning{margin-top:14px;font-size:16px;color:#736746}
+.detail-copy .detail-return-hint{display:block;width:100%;margin-top:auto;padding:30px 0 4px;border:0;background:transparent;text-align:center;font:600 20px/1.45 HikariInter,Arial,sans-serif;color:#145b50;min-height:56px;touch-action:none}
+@media(max-width:360px){.detail-toolbar{padding-inline:20px}.detail-copy{padding-inline:20px}.detail-copy h2{font-size:27px}}
 @media(prefers-reduced-motion:reduce){dialog{transition:none}}
+.detail-surface::-webkit-scrollbar{display:none}.photo-stage{position:relative;flex-shrink:0;background:#f2f5f1}.photo-stage .detail-photo{height:auto}.photo-status{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--muted);pointer-events:none}.photo-stage:not([data-state="ready"]) .detail-photo{opacity:0}.photo-stage[data-state="ready"] .photo-status{display:none}.title-photo.failed{opacity:0}
+/* Small finishing touches, keeping the approved reading sizes and layout. */
+.browse-bar button{transition:background-color 120ms ease,box-shadow 120ms ease,transform 120ms ease;-webkit-tap-highlight-color:transparent}
+.main-categories button[aria-current=location]{background:#104c42;border-color:#104c42;box-shadow:inset 0 0 0 1px #ffffff28;font-weight:700}
+.sushi-subnav button[aria-current=location]{background:#dfece3;border-bottom-color:#104c42;color:#104c42}
+.browse-bar button:active{transform:scale(.97);box-shadow:inset 0 0 0 2px #193e3630}
+.item .topline{display:grid;grid-template-columns:28px minmax(0,1fr) max-content 8px;align-items:start;column-gap:9px}
+.item .name{min-width:0;overflow-wrap:break-word;text-wrap:pretty}
+.item .price{font-variant-numeric:tabular-nums;line-height:1.45}
+.item .chevron{line-height:1.7}
+.thumb-frame{position:relative;width:28px;height:28px;margin-top:1px;background:#edf2ed;border-radius:3px;color:#889b90;overflow:hidden}
+.thumb-frame svg{position:absolute;inset:5px;width:18px;height:18px}
+.item .thumb-frame .title-photo{position:absolute;inset:0;margin:0}
+.detail-copy{flex-shrink:0;min-width:0}
+.detail-copy h2{overflow-wrap:break-word;text-wrap:pretty}
+.detail-copy .price{font-variant-numeric:tabular-nums;flex-shrink:0}
+.detail-copy .detail-return-hint{flex-shrink:0;padding-top:36px;padding-bottom:12px}
+@media(prefers-reduced-motion:reduce){.browse-bar button{transition:none}.browse-bar button:active{transform:none}}
 </style></head><body><header><div class="brand">Hikari<small>SUSHI</small></div><div class="table-note">Your table menu<br>Take your time. Find your favorite.</div></header><main id="content"><p class="empty">Loading the menu…</p></main><footer class="advisory">* Contains raw fish. † Contains peanuts.<br>Please tell your server about any allergies.<br><br>Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.<br><br>Private concept · Menu content snapshot · Order with your server.</footer><button class="picks" hidden id="picks"><span>My picks</span><span id="pick-count"></span></button><div class="sheet-shade" aria-hidden="true"></div><dialog id="detail" aria-label="Dish details"></dialog><script>
 const mode='2';
 const THUMBNAILS_ENABLED=true; // Private experiment: small photo anchors beside dish titles.
@@ -111,9 +140,9 @@ const mainSections=[['appetizers','Appetizers'],['salads','Salads'],['sushi','Su
 function sushiContent(){return sushiSections.map(([k])=>{const items=k==='hand-rolls'?data['nigiri-sashimi'].items.filter(i=>i.name==='Hand Rolls'):k==='nigiri-sashimi'?data[k].items.filter(i=>i.name!=='Hand Rolls'):data[k].items;return section(k,items,k==='hand-rolls'?'Hand Rolls':data[k].title);}).join('');}
 function categoryLinks(){return mainSections.map(([k,title])=>`<button data-main-jump="${k}">${esc(title)}</button>`).join('');}
 function continuousMenu(){return '<div class="welcome"><h1>Explore the menu.</h1><p>Everything is here. Scroll or choose a section.</p></div><div class="browse-bar"><nav class="main-categories" aria-label="Menu categories">'+categoryLinks()+'</nav><nav class="sushi-subnav" aria-label="Sushi sections" hidden>'+sushiSections.map(([k,title])=>`<button data-sushi-jump="${k}">${k==='tempura-fried'?'Tempura<br>Fried':title}</button>`).join('')+'</nav></div>'+mainSections.map(([k,title])=>k==='sushi'?'<div class="menu-group" id="group-sushi"><div class="group-title"><span>ROLLS · NIGIRI · SASHIMI</span><h2>Sushi</h2></div>'+sushiContent()+'</div>':`<div class="menu-group" id="group-${k}">${section(k,data[k].items)}</div>`).join('');}
-let scrollFrame=0,navObserver;
+let scrollFrame=0,navObserver,navigationJump=null,jumpSettleTimer=0;
 function updatePosition(){
- if(menuScrollLock)return;
+ if(menuScrollLock||navigationJump)return;
  const bar=content.querySelector('.browse-bar');if(!bar)return;
  let current=mainSections[0];
  for(const entry of mainSections){if(document.getElementById('group-'+entry[0]).getBoundingClientRect().top<=bar.offsetHeight+24)current=entry;}
@@ -122,10 +151,42 @@ function updatePosition(){
  let active=sushiSections[0][0];for(const [k] of sushiSections){if(document.getElementById('section-'+k).getBoundingClientRect().top<=bar.offsetHeight+24)active=k;}
  sub.querySelectorAll('button').forEach(b=>{if(b.dataset.sushiJump===active)b.setAttribute('aria-current','location');else b.removeAttribute('aria-current');});
 }
-window.addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;updatePosition();});},{passive:true});
+function finishNavigationJump(expected=navigationJump){
+ if(!expected||navigationJump!==expected||menuScrollLock)return;
+ const target=document.getElementById(navigationJump.id),bar=content.querySelector('.browse-bar');
+ // Keep the nav's destination layout stable until scrolling has actually finished.
+ const delta=target.getBoundingClientRect().top-bar.offsetHeight;
+ navigationJump=null;clearTimeout(jumpSettleTimer);
+ if(Math.abs(delta)>1)scrollTo({top:scrollY+delta,behavior:'instant'});
+ updatePosition();
+}
+window.addEventListener('scroll',()=>{
+ if(navigationJump){clearTimeout(jumpSettleTimer);const expected=navigationJump;jumpSettleTimer=setTimeout(()=>finishNavigationJump(expected),140);return;}
+ if(!scrollFrame)scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;updatePosition();});
+},{passive:true});
+function stopNavigationJump(){
+ clearTimeout(jumpSettleTimer);
+ if(navigationJump){navigationJump=null;scrollTo({top:scrollY,behavior:'instant'});}
+}
+function cancelNavigationJump(e){
+ if(!navigationJump||e.target.closest?.('.browse-bar'))return;
+ stopNavigationJump();updatePosition();
+}
+window.addEventListener('touchstart',cancelNavigationJump,{passive:true});
+window.addEventListener('wheel',cancelNavigationJump,{passive:true});
 function setupContinuous(){
  navObserver?.disconnect();const bar=content.querySelector('.browse-bar');if(!bar)return;
- function jump(id,isSushi){content.querySelector('.sushi-subnav').hidden=!isSushi;const target=document.getElementById(id);target.tabIndex=-1;target.focus({preventScroll:true});const top=scrollY+target.getBoundingClientRect().top-bar.offsetHeight;scrollTo({top,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
+ function jump(id,isSushi){
+  stopNavigationJump();navigationJump={id};const expected=navigationJump;
+  const sub=content.querySelector('.sushi-subnav');sub.hidden=!isSushi;
+  const target=document.getElementById(id),mainKey=target.closest('.menu-group').id.replace('group-','');
+  content.querySelectorAll('[data-main-jump]').forEach(b=>{if(b.dataset.mainJump===mainKey)b.setAttribute('aria-current','location');else b.removeAttribute('aria-current');});
+  if(isSushi)sub.querySelectorAll('button').forEach(b=>{if('section-'+b.dataset.sushiJump===id||(id==='group-sushi'&&b.dataset.sushiJump===sushiSections[0][0]))b.setAttribute('aria-current','location');else b.removeAttribute('aria-current');});
+  target.tabIndex=-1;target.focus({preventScroll:true});
+  const top=scrollY+target.getBoundingClientRect().top-bar.offsetHeight;
+  scrollTo({top,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+  jumpSettleTimer=setTimeout(()=>finishNavigationJump(expected),180);
+ }
  content.querySelectorAll('[data-main-jump]').forEach(b=>b.onclick=()=>{const key=b.dataset.mainJump;jump('group-'+key,key==='sushi');});
  content.querySelectorAll('[data-sushi-jump]').forEach(b=>b.onclick=()=>jump('section-'+b.dataset.sushiJump,true));
  navObserver=new ResizeObserver(()=>document.body.style.setProperty('--browse-height',bar.offsetHeight+'px'));navObserver.observe(bar);updatePosition();
@@ -134,14 +195,26 @@ let data,category=mode==='3'?'most-ordered':null,photo=false,query='',saved=new 
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const flags=i=>(i.raw?' *':'')+(i.peanuts?' †':'');
 const match=i=>(i.name+' '+i.desc).toLowerCase().includes(query);
-function row(i){return `<button class="item" data-dish="${esc(i.name)}" aria-label="View ${esc(i.name)} details, ${esc(i.price)}">${photo&&mode==='3'?`<img loading="lazy" src="${esc(i.previewImage)}" alt="${esc(i.name)}">`:''}<span class="topline">${THUMBNAILS_ENABLED?`<img class="title-photo" src="${esc(i.previewImage)}" alt="" width="28" height="28" loading="lazy" decoding="async">`:""}<span class="name">${esc(i.name)}<span class="flags">${flags(i)}</span></span><span class="price">${esc(i.price)}</span><span class="chevron" aria-hidden="true">›</span></span><span class="desc">${esc(i.desc)}</span></button>`}
+function displayDishName(i){return ({'Teriyaki Salmon Bento Box':'Teriyaki Salmon','Teriyaki Chicken Bento Box':'Teriyaki Chicken'})[i.name]||i.name;}
+function row(i){return `<button class="item" data-dish="${esc(i.name)}" aria-label="View ${esc(i.name)} details, ${esc(i.price)}">${photo&&mode==='3'?`<img loading="lazy" src="${esc(i.previewImage)}" alt="${esc(i.name)}">`:''}<span class="topline">${THUMBNAILS_ENABLED?`<span class="thumb-frame" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m4 18 5-5 3 3 4-6 4 8"/></svg><img class="title-photo" src="${esc(i.previewImage)}" alt="" width="28" height="28" loading="lazy" decoding="async"></span>`:""}<span class="name">${esc(displayDishName(i))}<span class="flags">${flags(i)}</span></span><span class="price">${esc(i.price)}</span><span class="chevron" aria-hidden="true">›</span></span><span class="desc">${esc(i.desc)}</span></button>`}
 function section(k,items,title=data[k]?.title){return `<section class="section" id="section-${k}"><h2>${esc(title)}<span>${items.length} ${items.length===1?'dish':'dishes'}</span></h2><div class="${photo&&mode==='3'?'photo-grid':'rows'}">${items.map(row).join('')}</div></section>`}
 function renderNav(){}
 function render(){
- content.innerHTML=continuousMenu();setupContinuous();content.querySelectorAll('[data-dish]').forEach(b=>b.onclick=()=>openDish(b.dataset.dish,b));
+ content.innerHTML=continuousMenu();content.querySelectorAll('.title-photo').forEach(img=>{img.onerror=()=>img.classList.add('failed');if(img.complete&&!img.naturalWidth)img.classList.add('failed');});setupContinuous();content.querySelectorAll('[data-dish]').forEach(b=>b.onclick=()=>openDish(b.dataset.dish,b));
 }
 function getDish(name){return Object.values(data).flatMap(s=>s.items).find(i=>i.name===name)}
-function openDish(name,trigger){if(dialog.open)return;lastTrigger=trigger;sheetSource=trigger?.querySelector('.title-photo')?.getBoundingClientRect();const i=getDish(name);dialog.innerHTML=`<div class="detail-surface"><button class="sheet-handle" aria-label="Close dish details"></button><img class="detail-photo" src="${esc(i.previewImage)}" alt="${esc(i.name)}"><div class="detail-copy"><div class="topline"><h2>${esc(i.name)}</h2><span class="price">${esc(i.price)}</span></div><p>${esc(i.desc)}</p>${i.raw?'<p class="warning">Contains raw fish.</p>':''}${i.peanuts?'<p class="warning">Contains peanuts.</p>':''}<button class="save" ${PICKS_ENABLED?'':'hidden disabled'}>${saved.has(name)?'Remove from my picks':'Save to my picks'}</button><p class="hint" ${PICKS_ENABLED?'':'hidden'}>Keep a shortlist to share with your server.</p></div></div>`;dialog.querySelector('.sheet-handle').onclick=()=>dismissSheet();dialog.querySelector('.save').onclick=e=>{if(!PICKS_ENABLED)return;saved.has(name)?saved.delete(name):saved.set(name,i);e.target.textContent=saved.has(name)?'Remove from my picks':'Save to my picks';updatePicks()};const thumb=trigger?.querySelector('.title-photo'),detailPhoto=dialog.querySelector('.detail-photo');if(thumb?.naturalWidth){detailPhoto.width=thumb.naturalWidth;detailPhoto.height=thumb.naturalHeight;detailPhoto.style.height='auto';}dialog.style.transform='';lockMenuScroll();dialog.showModal();stabilizePhotoSize();dialog.querySelector('.detail-surface').scrollTop=0;dialog.querySelector('.sheet-handle').focus({preventScroll:true});animateSheetOpen();}
+function dishCategory(name){return Object.entries(data).find(([key,group])=>key!=='most-ordered'&&group.items.some(i=>i.name===name))?.[1].title||'Menu';}
+function openDish(name,trigger){if(dialog.open)return;stopNavigationJump();lastTrigger=trigger;sheetSource=trigger?.querySelector('.title-photo')?.getBoundingClientRect();const i=getDish(name);dialog.innerHTML=`<div class="detail-surface"><div class="detail-toolbar"><span class="detail-category">${esc(dishCategory(name))}</span></div><div class="photo-stage" data-state="loading"><img class="detail-photo" width="${i.imageWidth||640}" height="${i.imageHeight||640}" alt="${esc(i.name)}"><span class="photo-status" role="status">Loading photo…</span></div><div class="detail-copy"><div class="topline"><h2>${esc(displayDishName(i))}</h2><span class="price">${esc(i.price)}</span></div><p>${esc(i.desc)}</p>${i.raw?'<p class="warning">Contains raw fish.</p>':''}${i.peanuts?'<p class="warning">Contains peanuts.</p>':''}<button class="save" ${PICKS_ENABLED?'':'hidden disabled'}>${saved.has(name)?'Remove from my picks':'Save to my picks'}</button><p class="hint" ${PICKS_ENABLED?'':'hidden'}>Keep a shortlist to share with your server.</p><button class="detail-return-hint" aria-label="Return to menu">Swipe down to return to the menu</button></div></div>`;dialog.querySelector('.detail-return-hint').onclick=()=>dismissSheet();dialog.querySelector('.save').onclick=e=>{if(!PICKS_ENABLED)return;saved.has(name)?saved.delete(name):saved.set(name,i);e.target.textContent=saved.has(name)?'Remove from my picks':'Save to my picks';updatePicks()};const thumb=trigger?.querySelector('.title-photo'),detailPhoto=dialog.querySelector('.detail-photo');prepareDetailPhoto(detailPhoto,i.previewImage);if(thumb?.naturalWidth){detailPhoto.width=thumb.naturalWidth;detailPhoto.height=thumb.naturalHeight;detailPhoto.style.height='auto';}dialog.style.transform='';lockMenuScroll();dialog.showModal();stabilizePhotoSize();dialog.querySelector('.detail-surface').scrollTop=0;dialog.tabIndex=-1;dialog.focus({preventScroll:true});animateSheetOpen();}
+let photoLoadTimer=0;
+function prepareDetailPhoto(img,src){
+ clearTimeout(photoLoadTimer);
+ const stage=img.parentElement,status=stage.querySelector('.photo-status');
+ let loadTimer=0;const settle=state=>{clearTimeout(loadTimer);stage.dataset.state=state;status.textContent=state==='error'?'Photo unavailable':'';};
+ img.onload=()=>settle('ready');img.onerror=()=>settle('error');
+ photoLoadTimer=loadTimer=setTimeout(()=>{if(stage.dataset.state==='loading')status.textContent='Photo is taking longer to load…';},5000);
+ img.src=src;
+ if(img.complete)settle(img.naturalWidth?'ready':'error');
+}
 function updatePicks(){document.querySelector('#picks').hidden=!PICKS_ENABLED||!saved.size;document.querySelector('#pick-count').textContent=saved.size+' saved';}
 function openPicks(){if(!PICKS_ENABLED)return;lastTrigger=document.querySelector('#picks');dialog.innerHTML='<button class="close" aria-label="Close my picks">×</button><div class="detail-copy"><h2>My picks</h2><p>Show this list to your server when you’re ready.</p>'+[...saved.values()].map(i=>`<div class="pick-row"><span>${esc(i.name)}<br><small>${esc(i.price)}</small></span><button data-remove="${esc(i.name)}" aria-label="Remove ${esc(i.name)}">Remove</button></div>`).join('')+'<p class="hint">This is a reminder, not an order. Saved for this preview session only.</p></div>';dialog.querySelector('.close').onclick=()=>dismissSheet();dialog.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{saved.delete(b.dataset.remove);updatePicks();b.closest('.pick-row').remove();if(!saved.size)dismissSheet()});lockMenuScroll();dialog.showModal();}
 let menuScrollLock=null,sheetSource=null;
@@ -194,8 +267,8 @@ function makePhotoGhost(photo,rect){
  Object.assign(photoGhost.style,{left:rect.left+'px',top:rect.top+'px',width:rect.width+'px',height:rect.height+'px'});
  dialog.append(photoGhost);photo.style.visibility='hidden';return photoGhost;
 }
-// Mobile browser bars change dvh during opening. Freeze the small-viewport cap in pixels
-// so the animated copy and underlying image cannot diverge when browser chrome expands.
+// Size photos from width and intrinsic aspect ratio only. A viewport-height cap
+// would letterbox tall photos on phones and change their size with browser chrome.
 let photoLayoutWidth=0;
 function stabilizePhotoSize(){
  const photo=dialog.querySelector('.detail-photo');if(!photo)return;
@@ -264,15 +337,15 @@ function endPull(cancelled=false){
  if(dismiss){dismissSheet(velocity);return;}
  dialog.style.transform='';sheetMotion=dialog.animate([{transform:from},{transform:'translateY(0) scale(1)'}],{duration:motionDuration(300),easing:'cubic-bezier(.2,.8,.2,1)'});fadeShade(.48,300);
 }
-dialog.addEventListener('touchstart',e=>{if(e.touches.length!==1){endPull(true);return;}if((dialog.querySelector('.detail-surface')?.scrollTop||0)<=0||e.target.closest('.sheet-handle'))beginPull(e.touches[0].clientX,e.touches[0].clientY);},{passive:true});
+dialog.addEventListener('touchstart',e=>{if(e.touches.length!==1){endPull(true);return;}if((dialog.querySelector('.detail-surface')?.scrollTop||0)<=0||e.target.closest('.detail-return-hint, .detail-photo'))beginPull(e.touches[0].clientX,e.touches[0].clientY);},{passive:true});
 dialog.addEventListener('touchmove',e=>{if(e.touches.length!==1){endPull(true);return;}if(movePull(e.touches[0].clientX,e.touches[0].clientY))e.preventDefault();},{passive:false});
 dialog.addEventListener('touchend',()=>endPull());
 dialog.addEventListener('touchcancel',()=>endPull(true));
-dialog.addEventListener('pointerdown',e=>{if(e.pointerType!=='touch'&&e.button===0&&e.target.closest('.sheet-handle')){beginPull(e.clientX,e.clientY);e.target.setPointerCapture(e.pointerId);}});
+dialog.addEventListener('pointerdown',e=>{if(e.pointerType!=='touch'&&e.button===0&&e.target.closest('.detail-return-hint, .detail-photo')){beginPull(e.clientX,e.clientY);e.target.setPointerCapture(e.pointerId);}});
 dialog.addEventListener('pointermove',e=>{if(e.pointerType!=='touch')movePull(e.clientX,e.clientY);});
 dialog.addEventListener('pointerup',e=>{if(e.pointerType!=='touch')endPull();});
 dialog.addEventListener('pointercancel',e=>{if(e.pointerType!=='touch')endPull(true);});
 dialog.addEventListener('click',e=>{if(performance.now()<suppressClickUntil){e.preventDefault();e.stopImmediatePropagation();}},{capture:true});
-dialog.addEventListener('close',()=>{pullStart=null;pullDistance=0;pullActive=false;sheetClosing=false;clearPhotoMotion();sheetMotion?.cancel();shadeMotion?.cancel();const surface=dialog.querySelector('.detail-surface');if(surface)surface.style.transform='';shade.style.opacity=0;dialog.classList.remove('dragging','returning');dialog.style.transform='';});
+dialog.addEventListener('close',()=>{clearTimeout(photoLoadTimer);pullStart=null;pullDistance=0;pullActive=false;sheetClosing=false;clearPhotoMotion();sheetMotion?.cancel();shadeMotion?.cancel();const surface=dialog.querySelector('.detail-surface');if(surface)surface.style.transform='';shade.style.opacity=0;dialog.classList.remove('dragging','returning');dialog.style.transform='';});
 dialog.addEventListener('close',unlockMenuScroll);dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dismissSheet()}});document.querySelector('#picks').onclick=openPicks;fetch('menu-snapshot.json').then(r=>{if(!r.ok)throw Error('Menu unavailable');return r.json()}).then(d=>{data=d;renderNav();render()}).catch(()=>content.innerHTML='<p class="empty">The preview could not load its menu. Please refresh.</p>');
 </script></body></html>

@@ -7,9 +7,13 @@ Owner approved this checkpoint after reviewing the thumbnail transitions and bro
 - `continuous.html`: continuous 60-dish menu; all eight main categories remain visible, with Sushi subsection jumps.
 - `mobile-preview.html`: interactive phone-width preview. `index.html` and `sample.html` preserve earlier comparisons.
 - Approved large type: 20px dish names, 18px descriptions, 19px prices. Compact 28px photo thumbnails sit beside titles.
-- Full-screen details open from and return directly to the thumbnail in 300ms. Swipe down, top chevron, or Escape dismisses; menu position is preserved. No row morph or delayed landing effects.
+- Full-screen details open from and return directly to the thumbnail in 300ms. Swipe down, tap the readable return hint, or press Escape to dismiss; menu position is preserved. No row morph or delayed landing effects.
 - Search is removed; My picks is disabled behind its flag.
-- Photo sizing uses a small-viewport cap frozen in pixels while open and stable scrollbar space. This prevents the animation target changing as mobile browser bars expand. Width/orientation changes recalculate the cap.
+- Photos fill the detail width at their intrinsic proportions, without a viewport-height cap or side margins. Browser-toolbar height changes cannot resize the photo. Intrinsic dimensions reserve space during loading; slow and failed loads have status messages.
+
+## September 28 finishing checkpoint
+
+Stronger selected and pressed category states; latest-tap navigation retargeting; aligned title/price columns; thumbnail placeholders; shortened Bento labels; full-width details with readable return hint. Browser checks found no overflow or title/price collision in all 60 rows at narrow width. Long-description spacing and loading/error state checks passed; owner approved the full-width photo on iPhone. No production changes are included.
 
 ## Run and verify
 

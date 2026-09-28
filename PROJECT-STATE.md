@@ -94,3 +94,7 @@ NEXT ACTION: Joel reviews the revised homepage-only Phase 3 preview at `http://1
 ## 2026-09-27 — Owner-approved QR menu checkpoint
 
 Owner approved the private customer-menu preview checkpoint. Current artifact: results/2026-09-27-qr-menu-concepts/continuous.html; phone wrapper: mobile-preview.html. Continuous navigation, readable typography, 28px thumbnails and direct full-screen photo transitions are accepted. Browser-toolbar sizing correction reviewed with owner response “perfect.” No production release authorized; next work starts from this checkpoint.
+
+
+### 2026-09-28 — Approved QR preview push checkpoint
+Approved full-width dish detail, readable return hint, robust category jumps, photo-loading fallbacks, shortened Bento labels, and finishing polish saved on codex/website-improvements. Narrow layout checks covered all 60 rows; owner accepted full-width photos on iPhone. Preview only; production files excluded.
