@@ -1,6 +1,6 @@
-# Latest release preparation — 2026-10-01
+# Latest release — 2026-10-01
 
-Approved hero sunrise integrated from a clean origin/main base; build and live verification pending. Owner authorized publication.
+Approved hero sunrise published via main commit a9a1e63. Live HTML/CSS exactly match the build. Desktop and390px live browser checks passed, including stroke width, active animation, loaded hero photo and no mobile overflow. Build and12 analytics/menu tests passed. Physical-phone and OS reduced-motion retests not performed. Previous production source af52b99 is the rollback reference.
 
 
 

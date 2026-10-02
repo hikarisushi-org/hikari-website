@@ -6,3 +6,5 @@ Owner explicitly approved replacing the live /menu with the reviewed continuous 
 ## 2026-10-01 — Approved animated hero sunrise
 
 Replaced the small static hero sunrise with the approved Quiet dawn SVG: sequential rays, a gentle staggered wave swell, and a two-unit raised sun. Increased stroke width from 3 to 3.75 for clarity at hero size. Plays once in under four seconds; reduced-motion users see the finished mark. Hero copy, photography, ordering, reviews and QR menu preserved. Owner explicitly authorized commit, push and production publication.
+
+Release verification: a9a1e63 pushed to origin/main; hikarisojo.com serves exact built HTML and CSS. Desktop/390px rendering,3.75px strokes, active wave CSS, hero image and order destination checked; all12 existing analytics/menu tests passed. No physical-device or OS reduced-motion retest.
