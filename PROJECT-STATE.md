@@ -1,3 +1,7 @@
+# Latest release preparation — 2026-10-01
+
+Approved hero sunrise integrated from a clean origin/main base; build and live verification pending. Owner authorized publication.
+
 
 
 ### 2026-09-28 — Approved customer QR menu release
