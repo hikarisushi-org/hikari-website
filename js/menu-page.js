@@ -424,7 +424,7 @@ const menuData = {
       {
         "name": "Teriyaki Chicken",
         "price": "$12",
-        "desc": "Chicken glazed in a sweet savory sauce over white rice, served with steamed broccoli, cauliflower, and carrots.",
+        "desc": "Tender chicken glazed in sweet-savory teriyaki sauce over white rice, served with a fresh side salad.",
         "img": "assets/images/menu/bowls/teriyaki_chicken_2026-10-03.png"
       },
       {
