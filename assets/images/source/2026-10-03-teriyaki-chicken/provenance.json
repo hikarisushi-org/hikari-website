@@ -1,0 +1,18 @@
+{
+  "approved_on": "2026-10-03",
+  "notes": "Owner selected AI-edited high-angle menu image with visible rice and warmer lighting. Originals preserved unchanged. Alternate angle is the original second photograph.",
+  "files": {
+    "approved-menu-master.png": {
+      "sha256": "dec8f91e3c65d59f383a53ca7c8aa2978ac82c29601080be047d5d9125f590c7",
+      "source": "/Users/samanthashiro/.codex/generated_images/01a10367-0f40-7901-8707-904fd7d60770/exec-5774c395-db86-482a-bc26-d202c9898320.png"
+    },
+    "original-high-angle.jpeg": {
+      "sha256": "3c398ba9cd849259f5efabeac2d99ca21ba085d22c7cc66047c7e444197fe4ff",
+      "source": "/Users/samanthashiro/.codex/attachments/a01b82c3-ef2f-409e-a720-227372c1a07b/FE48B119-DCE3-4AAC-9D67-7972B7F46CEF_4_5005_c.jpeg"
+    },
+    "original-alternate-angle.jpeg": {
+      "sha256": "7b6673b44809a7b54f8874204b65c8ab97318fbd8af4e93753b0ce85a4ca1255",
+      "source": "/Users/samanthashiro/.codex/attachments/6bbe2e6e-3b81-449e-ae90-ba7c53b2bc04/9DC09088-B831-4664-A24D-A1DB99AA5616_4_5005_c.jpeg"
+    }
+  }
+}
