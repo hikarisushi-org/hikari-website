@@ -1,0 +1,47 @@
+const {chromium}=require('playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+(async()=>{
+ const browser=await chromium.launch({channel:'chrome',headless:true});
+ const live=process.argv.includes('--live');
+ const source=fs.readFileSync('js/homepage.js','utf8');
+ const errors=[];
+ const context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
+ // Exercise the production hostname/bootstrap but never send test events to Google.
+ await context.route(/https:\/\/[^/]*(?:google-analytics|googletagmanager)\.com\//,r=>r.fulfill({status:200,body:''}));
+ if(!live)await context.route('**/js/homepage.js',r=>r.fulfill({contentType:'application/javascript',body:source}));
+ const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+ const events=()=>page.evaluate(()=>Array.from(window.dataLayer||[]).filter(x=>x[0]==='event').map(x=>({name:x[1],...x[2]})));
+ const count=async name=>(await events()).filter(e=>e.name===name).length;
+ await page.goto('https://hikarisojo.com/',{waitUntil:'networkidle'});
+ assert.equal(await count('favorites_view'),0,'below fold is not a view');
+ await page.locator('.spotlight-stage').scrollIntoViewIfNeeded();await page.waitForTimeout(1200);
+ assert.equal(await count('favorites_view'),1);assert.equal(await count('view_item_list'),1);
+ assert.equal(await count('select_item'),0,'default roll is not a selection');
+ await page.locator('.spotlight-menu button').nth(2).click();await page.waitForTimeout(1200);
+ let e=(await events()).filter(e=>e.name==='select_item');
+ assert.equal(e.length,1);assert.equal(e[0].items[0].item_name,'Playboy');assert.equal(e[0].cta_placement,'favorites_roll_selector');
+ await page.evaluate(()=>scrollTo(0,0));await page.locator('.spotlight-stage').scrollIntoViewIfNeeded();await page.waitForTimeout(1200);
+ assert.equal(await count('favorites_view'),1,'section view deduped');assert.equal(await count('view_item_list'),2,'roll views deduped');
+ await page.setViewportSize({width:390,height:844});await page.waitForTimeout(500);
+ assert.equal(await count('select_item'),1,'resize is not interaction');
+ await page.getByRole('button',{name:'Next sushi roll',exact:true}).click();await page.waitForTimeout(500);
+ e=(await events()).filter(e=>e.name==='select_item');assert.equal(e.length,2);assert.equal(e[1].cta_placement,'favorites_arrow');assert.equal(e[1].items[0].item_name,'Strawberry Blossom');
+ await page.close();
+ const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'});
+ await mobile.route(/https:\/\/[^/]*(?:google-analytics|googletagmanager)\.com\//,r=>r.fulfill({status:200,body:''}));
+ if(!live)await mobile.route('**/js/homepage.js',r=>r.fulfill({contentType:'application/javascript',body:source}));
+ const mp=await mobile.newPage();mp.on('pageerror',e=>errors.push(e.message));
+ await mp.goto('https://hikarisojo.com/',{waitUntil:'networkidle'});await mp.locator('.spotlight-stage').scrollIntoViewIfNeeded();await mp.waitForTimeout(1200);
+ const box=await mp.locator('.spotlight-stage').boundingBox();const cdp=await mobile.newCDPSession(mp);
+ const y=Math.round(box.y+box.height/2);
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:320,y}]});
+ for(let x=300;x>=60;x-=20){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y}]});await mp.waitForTimeout(30);}
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await mp.waitForTimeout(1500);
+ const swipes=await mp.evaluate(()=>Array.from(dataLayer).filter(x=>x[0]==='event'&&x[1]==='select_item').map(x=>x[2]));
+ assert.equal(swipes.length,1,'one settled swipe, not intermediate scroll events');assert.equal(swipes[0].cta_placement,'favorites_swipe');assert(swipes[0].items[0].item_name);
+ assert.equal(await mp.locator('.spotlight-slide.is-active').count(),1);
+ assert.deepEqual(errors,[]);
+ console.log(JSON.stringify({status:'PASS',live,checks:['offscreen exclusion','one-second section/roll visibility','view deduplication','default/resize exclusion','named desktop selection','arrow distinction','native touch swipe settles once','no browser errors'],swipeRoll:swipes[0].items[0].item_name}));
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1);});

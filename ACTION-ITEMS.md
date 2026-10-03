@@ -5,3 +5,8 @@ Owner explicitly approved replacing the live /menu with the reviewed continuous 
 
 - [x] Integrate owner-approved Quiet dawn hero animation with 25% stronger strokes.
 - [x] Verified production publication: exact live HTML/CSS match and desktop/mobile browser checks.
+
+
+## October 3, 2026 — Favorites tracking
+- [x] Implement and browser-test favorites visibility/swipes/named selections.
+- [ ] Verify published tracking and later inspect genuine GA data; historical engagement cannot be recovered.
