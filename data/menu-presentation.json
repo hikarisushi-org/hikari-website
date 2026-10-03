@@ -254,11 +254,6 @@
     "imageWidth": 640,
     "imageHeight": 640
   },
-  "assets/images/menu/bowls/teriyaki_salmon.png": {
-    "previewImage": "/assets/images/generated/menu/bowls/teriyaki_salmon-640.webp",
-    "imageWidth": 640,
-    "imageHeight": 590
-  },
   "assets/images/menu/food/bento_salmon.png": {
     "previewImage": "/assets/images/generated/menu/food/bento_salmon-640.webp",
     "imageWidth": 640,
@@ -296,6 +291,11 @@
   },
   "assets/images/menu/bowls/teriyaki_chicken_2026-10-03.png": {
     "previewImage": "/assets/images/generated/menu/bowls/teriyaki_chicken_2026-10-03-640.webp",
+    "imageWidth": 640,
+    "imageHeight": 640
+  },
+  "assets/images/menu/bowls/teriyaki_salmon_2026-10-03.png": {
+    "previewImage": "/assets/images/generated/menu/bowls/teriyaki_salmon_2026-10-03-640.webp",
     "imageWidth": 640,
     "imageHeight": 640
   }

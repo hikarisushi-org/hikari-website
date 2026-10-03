@@ -430,8 +430,8 @@ const menuData = {
       {
         "name": "Teriyaki Salmon",
         "price": "$14",
-        "desc": "Salmon glazed in a sweet savory sauce over white rice, served with steamed broccoli, cauliflower, and carrots.",
-        "img": "assets/images/menu/bowls/teriyaki_salmon.png"
+        "desc": "Salmon glazed in sweet-savory teriyaki sauce over white rice, served with a fresh side salad.",
+        "img": "assets/images/menu/bowls/teriyaki_salmon_2026-10-03.png"
       }
     ]
   },
