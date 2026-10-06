@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "John Kurtz",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocILgH9NbNjR0Ope6TCHb0LBnNgIQ_Dt8eBnwNLMVUyXjBzbPw=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "My 6 year old and I loved this hole in the wall, definitely a little hidden, which made it our own little secret dinner.  While we didn't try the sushi, the miso, gyoza, and edamame beans were a big hit with her.  Her favorite was the tempura shrimp and sweet potato.  I was a little hesitant her age given the food, but couldn't have been more wrong. The people inside were all very nice and attentive, nothing but smiles and good service.  Give it a try, continue buying local and stop by this awesome family establishment!",
+      "relativeTime": "",
+      "publishTime": "2026-10-06T01:28:08.176386Z"
+    },
+    {
       "author": "Brett Heyland",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocLuAXGv3ElsEyxw_s8BWeDQ_HE_D9v63SJVvIPjWeY4xLJlbQ=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1650,5 +1658,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 229
+  "totalReviews": 230
 }
