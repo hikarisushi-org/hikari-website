@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Chandler",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjU2RqUj6JV3vhytNX1lHrSCWamfYuiPQe9HtLGDArYVPFuZrNuw=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "This place was wonderful. The food was excellent and the staff were incredibly nice and welcoming. The food was very fresh and I loved the menu. It has everything you would like from a sushi place. This is going to be my new go-to spot!",
+      "relativeTime": "",
+      "publishTime": "2026-10-10T22:32:44.923607Z"
+    },
+    {
       "author": "John Kurtz",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocILgH9NbNjR0Ope6TCHb0LBnNgIQ_Dt8eBnwNLMVUyXjBzbPw=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -34,7 +42,7 @@
     },
     {
       "author": "Sofiya Burmistrova",
-      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjW_t20AFZdNJJPvk5aLfsSOFTnnWrc4fleYu6Mr-7GDJoIPMKw=s120-c-rp-mo-br100",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjW_t20AFZdNJJPvk5aLfsSOFTnnWrc4fleYu6Mr-7GDJoIPMKw=s120-c-rp-mo-ba12-br100",
       "rating": 5,
       "text": "Clean, great service, great food. I am pretty picky with sushi and I can honestly say that I was not disappointed by one thing that I ordered (we ordered a lot). Everything was fresh, the owner is lovely.",
       "relativeTime": "",
@@ -1658,5 +1666,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 230
+  "totalReviews": 231
 }
