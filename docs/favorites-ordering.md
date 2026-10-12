@@ -27,3 +27,7 @@ The dashboard's `lib/website_ga.py` checks an exact transaction/item pair in one
 Live controls passed: real transaction/correct item = 1; same transaction/wrong item = 0; existing Mango selection = 17 users; existing general order link = 30 users (October 3–11). All three native Favorite item/order pairs in that period were checked successfully; none showed the entire earlier Favorites sequence. This is not a claim that those guests never browsed Favorites. The first genuine purchase through the new direct button still needs observation; a non-purchase test cannot prove payment attribution.
 
 Checks: `node --test scripts/analytics.test.js scripts/favorites-order.test.cjs`, `node scripts/build-site.mjs`; dashboard backend and actual-data rendering checks. The original dirty website checkout is preserved. Release uses the isolated production-based checkout, with baseline live HTML/JS/CSS equality checked first. Prior production rollback deployment: `6acbb40daef43d000841748e`.
+
+## Publication
+
+Released in commit `e1f4ce0` and production Netlify deployment `6acd0a149ae2261fa0b19fed`. Live HTML/JS/CSS and the unchanged QR menu match the built artifacts. A fresh published phone-viewport test confirmed swipe to Mango, named order button, Google linker/journey parameters on the handoff, and the correct Mango item after Square's fulfillment prompt. Dashboard deployed files match source; actual-data runtime rendering and local service health pass. First genuine new-button purchase remains unobserved.
