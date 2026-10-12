@@ -79,6 +79,13 @@
       parameters.item_name = link.dataset.orderItem;
     }
 
+    // The destination's catalog ID is the identity of the item being ordered.
+    // These event parameters can be joined to an exact paid Square order.
+    if (destination && destination.hostname === 'hikarisushi-online.square.site' && destination.searchParams.has('item')) {
+      parameters.item_id = destination.searchParams.get('item');
+      if (link.dataset.itemListId) parameters.item_list_id = link.dataset.itemListId;
+    }
+
     return parameters;
   }
 

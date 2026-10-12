@@ -1,5 +1,10 @@
 # Changelog
 
+## October 12, 2026
+
+- Favorites order links follow the current roll; phone carousel has a visible named order button.
+- Exact catalog ID/name added to existing order-click measurement; general order links preserved.
+
 All notable changes to this repo will be documented here.
 
 ## 2026-08-20

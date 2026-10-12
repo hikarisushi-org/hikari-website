@@ -1,5 +1,9 @@
 
 
+## October 12, 2026 — Favorites to paid roll
+
+Implemented the authorized end-to-end item flow using an isolated production checkout. Verified all five public item links, desktop Mango through payment entry, and phone-viewport swipe/button routing; no order placed. Dashboard checks three real item/order pairs and distinguishes unobserved paths. Unit/build and actual-data rendering checks passed. First genuine new-button purchase remains unobserved. Details: docs/favorites-ordering.md.
+
 ### 2026-09-28 — Approved customer QR menu release
 Owner explicitly approved replacing the live /menu with the reviewed continuous menu. Promoted approved UI from preview commit 0a88911 onto current production main, preserving existing site analytics, QR URL and canonical menu content. Build derives data/customer-menu.json from the existing js/menu-page.js menu block, enriching photo presentation from data/menu-presentation.json. Existing homepage unchanged. Build, 9 analytics tests, 3 menu integration checks, all photo paths, 60-row rendering, rapid category jumps and full-width detail/return verified locally. Deployment verification follows publication.
 

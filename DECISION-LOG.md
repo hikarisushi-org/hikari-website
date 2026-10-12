@@ -1,5 +1,9 @@
 # Hikari Website — Decision Log
 
+## October 12, 2026 — Favorites item identity
+
+Use location plus exact catalog item for navigation, and native GA purchase transaction plus Square catalog variation for paid-item proof. The phone layout had hidden the Favorites CTA; show one named action below its carousel. Google rejected custom-event item_list_id in segment filters; the existing linkUrl plus registered placement provides a working direct-click identity without new visitor data or schema. Separate earlier browsing evidence from a direct roll-order click. See docs/favorites-ordering.md.
+
 Captures the **reasoning, findings, and decisions** from work sessions — the "why" behind the work.
 `CHANGELOG.md` records what changed; this file records discussions and conclusions so context isn't lost between sessions.
 

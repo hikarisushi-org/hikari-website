@@ -1,5 +1,9 @@
 # Latest release — 2026-10-01
 
+## October 12, 2026 — Favorites ordering
+
+Favorites direct links and paid-item measurement implemented and verified before release. All five Square item links verified; desktop Mango path reached payment entry; phone viewport swipe and named order button opened Mango. See docs/favorites-ordering.md. First genuine purchase through the new button remains the only end-to-end payment evidence gate; no test purchase was created.
+
 Approved hero sunrise published via main commit a9a1e63. Live HTML/CSS exactly match the build. Desktop and390px live browser checks passed, including stroke width, active animation, loaded hero photo and no mobile overflow. Build and12 analytics/menu tests passed. Physical-phone and OS reduced-motion retests not performed. Previous production source af52b99 is the rollback reference.
 
 

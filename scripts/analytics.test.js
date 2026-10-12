@@ -55,7 +55,8 @@ test('builds useful non-personal event parameters', () => {
     page_path: '/menu',
     cta_placement: 'featured_dish',
     link_url: link.href.split('#')[0],
-    item_name: 'Fire Cracker'
+    item_name: 'Fire Cracker',
+    item_id: 'A5BIIXCE5ILZWRZCDTY7A4KY'
   });
 });
 

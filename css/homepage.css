@@ -171,3 +171,12 @@ html[data-panel]:not([data-panel=green]) .spotlight-menu button[aria-pressed=tru
 .sweets-story .concept-action{aspect-ratio:1}
 .sweets-story .concept-action img{object-position:center}
 @media(max-width:760px){.sweets-story .editorial-grid{grid-template-columns:1fr;grid-template-rows:auto;gap:12px}.sweets-story .concept-lead,.sweets-story .concept-detail,.sweets-story .concept-action{grid-column:1;grid-row:auto}.sweets-story .concept-lead{aspect-ratio:4/5}}
+
+/* The selected roll's order action remains visible below the phone carousel. */
+@media(max-width:760px){
+  .favorites-head{flex-wrap:wrap;gap:12px}
+  .favorites-head [data-favorite-order]{display:inline-flex;min-height:44px}
+  .favorites .favorite-order-mobile{display:flex;align-items:center;justify-content:center;min-height:48px;width:100%;margin-top:20px;padding:12px 16px;border-radius:4px;background:var(--ink);color:var(--paper);text-align:center;text-decoration:none}
+  .favorites .favorite-order-mobile::after{display:none}
+  .favorites .favorite-order-mobile:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+}

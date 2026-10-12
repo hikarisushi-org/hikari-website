@@ -22,6 +22,8 @@
     const buttons=[...spotlight.querySelectorAll('.spotlight-menu button')];
     const slides=[...spotlight.querySelectorAll('.spotlight-slide')];
     const stage=spotlight.querySelector('.spotlight-stage');
+    const orderLink=spotlight.closest('section').querySelector('[data-favorite-order]');
+    const orderHome=orderLink&&orderLink.parentElement;
     const mobile=matchMedia('(max-width:760px)');
     const controls=document.createElement('div');
     controls.className='spotlight-controls';
@@ -72,6 +74,18 @@
     stage.addEventListener('wheel',event=>{if(Math.abs(event.deltaX)>Math.abs(event.deltaY)&&!interaction)markInteraction('swipe');},{passive:true});
     const select=index=>{
       active=index;
+      // Keep the real anchor current before click, keyboard or open-in-new-tab.
+      // Preserve Google's linker and our existing journey parameters.
+      if(orderLink){
+        const roll=item(index);
+        const destination=new URL(orderLink.href);
+        destination.searchParams.set('location','LMCJ08MMKDHCA');
+        destination.searchParams.set('item',slides[index].dataset.squareItem);
+        orderLink.href=destination.href;
+        orderLink.dataset.orderItem=roll.item_name;
+        orderLink.setAttribute('aria-label',`Order ${roll.item_name}`);
+        orderLink.textContent=mobile.matches?`Order ${roll.item_name}`:'Order this roll';
+      }
       buttons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
       slides.forEach((slide,i)=>slide.classList.toggle('is-active',i===index));
       counter.textContent=`${index+1} of ${slides.length}`;
@@ -105,6 +119,11 @@
     });
     const sync=()=>{
       interaction=null;clearTimeout(settleTimer);
+      if(orderLink){
+        (mobile.matches?spotlight:orderHome).append(orderLink);
+        orderLink.classList.toggle('favorite-order-mobile',mobile.matches);
+        orderLink.textContent=mobile.matches?`Order ${item(active).item_name}`:'Order this roll';
+      }
       stage.tabIndex=mobile.matches?0:-1;
       stage.setAttribute('aria-label',mobile.matches?'Most ordered sushi. Swipe or use arrow keys to browse.':'Most ordered sushi');
       if(mobile.matches)requestAnimationFrame(()=>stage.scrollTo({left:position(active),behavior:'instant'}));
