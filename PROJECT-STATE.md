@@ -1,6 +1,10 @@
+# Kitchen gallery live — October 12, 2026
+
+Six named gallery links and separate exact paid-dish tracking are deployed and verified. First genuine gallery purchase remains unobserved. Next: check its exact paid Square item when it occurs.
+
 # Current gallery update — October 12, 2026
 
-Six dish-specific gallery links verified in preview and prepared for publication. Dashboard independently checks gallery clicks against exact paid items. Production publication awaits explicit confirmation after automatic approval review blocked push. Next: deploy after approval, then observe first genuine gallery purchase.
+Six dish-specific gallery links verified in preview and prepared for publication. Dashboard independently checks gallery clicks against exact paid items. Publication completed after explicit confirmation. Next: observe first genuine gallery purchase.
 
 # Latest release — 2026-10-01
 

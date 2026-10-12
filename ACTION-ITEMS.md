@@ -1,7 +1,12 @@
+# Kitchen gallery
+
+- [x] Publish six verified dish links and deploy independent gallery purchase reporting with explicit approval.
+- [ ] Observe first genuine gallery purchase; same-session and exact paid-item proof required.
+
 # Kitchen gallery ordering
 
 - [x] Verify all six catalog destinations and narrow layout.
-- [ ] Publish after explicit approval.
+- [x] Publish after explicit approval.
 - [ ] Observe first genuine gallery-link purchase and exact paid-item match.
 
 
