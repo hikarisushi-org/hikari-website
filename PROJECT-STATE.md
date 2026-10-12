@@ -1,3 +1,7 @@
+# Current gallery update — October 12, 2026
+
+Six dish-specific gallery links verified in preview and prepared for publication. Dashboard independently checks gallery clicks against exact paid items. Production publication awaits explicit confirmation after automatic approval review blocked push. Next: deploy after approval, then observe first genuine gallery purchase.
+
 # Latest release — 2026-10-01
 
 ## October 12, 2026 — Favorites ordering

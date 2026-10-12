@@ -180,3 +180,7 @@ html[data-panel]:not([data-panel=green]) .spotlight-menu button[aria-pressed=tru
   .favorites .favorite-order-mobile::after{display:none}
   .favorites .favorite-order-mobile:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 }
+
+/* Named ordering actions stay visible below kitchen photos at every width. */
+.gallery-dish{margin:0;min-width:0}.gallery-dish picture{display:block}.gallery-dish figcaption{padding:14px 2px 8px}.gallery-dish h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:23px;line-height:1.2;margin:0 0 4px;overflow-wrap:anywhere}.gallery-dish .text-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px}.gallery-dish .text-link:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+@media(max-width:760px){.photo-grid{row-gap:20px}.gallery-dish h3{font-size:19px;min-height:2.4em}.gallery-dish figcaption{padding-top:12px}.gallery-dish .text-link{font-size:13px}}

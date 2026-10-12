@@ -1,3 +1,9 @@
+# Kitchen gallery ordering
+
+- [x] Verify all six catalog destinations and narrow layout.
+- [ ] Publish after explicit approval.
+- [ ] Observe first genuine gallery-link purchase and exact paid-item match.
+
 
 
 ## October 12, 2026 — Favorites flow

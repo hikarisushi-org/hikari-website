@@ -51,3 +51,11 @@ Replaced the small static hero sunrise with the approved Quiet dawn SVG: sequent
 
 ## October 3, 2026 — Favorites tracking
 Added production favorites section/roll visibility and per-roll exploration measurement, distinguishing touch swipes, arrow controls, keyboard and named selectors. No visual changes.
+
+## October 12, 2026 — Kitchen gallery ordering prepared
+
+Added named direct Square links below all six kitchen photos, retaining the existing grid and imagery. Exact item/variation IDs come from the live catalog; the existing menu identifies the sashimi photo as Sashimi Platter. Gallery uses placement `kitchen-gallery` and list `homepage_kitchen`, separate from Favorites. All six public destinations opened correctly through PiKVM. Desktop, 400px and 320px browser layouts passed; the 320px platter action opened the correct item. No purchase submitted.
+
+Validation: 14 website unit checks, 111 theme checks, build; 36 dashboard backend/export checks and actual-data rendering. Live GA checked all five existing gallery dish/order pairs with no errors; none showed a gallery journey. First genuine post-release gallery purchase remains unobserved.
+
+Publication pending: automatic approval review rejected production push, requiring explicit approval for public website and live dashboard deployment. Source and preview are ready.
