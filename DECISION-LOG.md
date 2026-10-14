@@ -60,3 +60,11 @@ Next: observe the first genuine post-release gallery-link purchase and exact pai
 ## 2026-10-14 — Isolate the mail-tool information pages
 
 Prepared the private Gmail tool pages under a separate Hikari path with no restaurant navigation link. The pages explicitly say the tool runs separately from the website. This uses the existing owned domain for Google OAuth disclosure while making the public connection to Hikari clear. Publication awaits Joel’s contact choice and approval.
+
+## 2026-10-14 — Hikari hosts the OAuth information pages
+
+Joel approved `hikarisojo.com/mail-research/` and `hello@hikarisojo.com` for
+the separate private mail utility's public homepage, privacy policy, and terms.
+The pages say the utility runs on the operator's Mac and is separate from the
+restaurant website. Keep them outside restaurant navigation; their purpose is
+accurate Google OAuth disclosure and an owner-controlled public contact.

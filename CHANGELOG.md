@@ -71,3 +71,11 @@ Next: observe the first genuine post-release gallery-link purchase and exact pai
 ## 2026-10-14 — Mail research pages prepared
 
 Added a draft `/mail-research/` route with app homepage, privacy, terms, and isolated styling to the production build. Nothing published.
+
+## 2026-10-14 — Mail research information pages published
+
+Published the `/mail-research/` homepage, privacy policy, terms, and isolated
+stylesheet from commit `beaf8ce` on `main`. The privacy copy describes the
+actual macOS Keychain grant store. All three public routes and CSS return 200;
+Netlify pretty-URL rewriting changes link markup but preserves approved text.
+The restaurant homepage and menu remain byte-identical to the tested build.

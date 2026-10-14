@@ -1,6 +1,6 @@
-# Mail research pages — approved for publication, October 14, 2026
+# Mail research pages live — October 14, 2026
 
-Joel approved the existing Hikari domain and `hello@hikarisojo.com` contact for the private read-only Gmail tool's `/mail-research/` homepage, privacy, and terms pages. The pages are prepared in a separate review branch and have not yet been published. The privacy copy reflects current macOS Keychain storage. Build, 12 existing website checks, and local narrow-browser review passed. Next: publish the approved pages from current `main` and verify the live routes and existing restaurant pages.
+Joel approved the existing Hikari domain and `hello@hikarisojo.com` contact for the private read-only Gmail tool. The `/mail-research/` homepage, privacy, and terms pages are published from `main` commit `beaf8ce`. All three routes and the stylesheet return HTTP 200 from Netlify; published page text matches the approved build. Netlify rewrites links to its pretty URL form, so HTML bytes differ while content is unchanged. The restaurant homepage and `/menu` exactly match the tested build and return HTTP 200. Build, 12 existing website checks, and local narrow-browser review passed. The separate Google OAuth project now uses these live URLs.
 
 # Kitchen gallery live — October 12, 2026
 

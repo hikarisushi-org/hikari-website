@@ -40,3 +40,13 @@ Created a clean review checkout from current origin/main and added three draft p
 Recommended the existing Hikari domain and hello@hikarisojo.com as the public contact; filled the local page draft. This is a proposal, not publication or an owner-approved contact selection.
 
 Joel then approved the Hikari domain, `hello@hikarisojo.com` contact, and production OAuth setup. Updated the page copy to describe the now-active macOS Keychain grant store. Rebuilt the site and retained the isolated review branch pending publication.
+
+## 2026-10-14 — Mail research pages released
+
+Joel approved the Hikari domain, contact address, and separate production OAuth
+setup. Updated the privacy copy after moving Gmail grants into macOS Keychain,
+then pushed the tested review branch to `main` as `beaf8ce`. Netlify served the
+three routes and stylesheet with HTTP 200. Their published text matches the
+build; Netlify rewrites relative links to pretty URLs. The restaurant homepage
+and menu return 200 and match the tested build byte for byte. The separate
+Google project uses these live URLs for its branding.
