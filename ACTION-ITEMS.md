@@ -1,8 +1,9 @@
 # Mail research page draft
 
 - [x] Prepare isolated Hikari route and verify it builds without changing restaurant navigation.
-- [ ] Confirm the proposed public contact email and model-provider disclosure before publishing.
-- [ ] Obtain Joel’s approval for public page and separate Google OAuth project; then verify live pages and account authorization.
+- [x] Confirm `hello@hikarisojo.com` and the model-provider disclosure; Joel approved the Hikari domain and separate production OAuth setup.
+- [ ] Publish the pages from current `main`; verify the live routes and unchanged restaurant site before entering them in Google Auth Platform.
+- [ ] Create the separate production Google OAuth project and reauthorize both accounts with its client.
 
 # Kitchen gallery
 

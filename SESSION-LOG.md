@@ -38,3 +38,5 @@ Next: observe the first genuine post-release gallery-link purchase and exact pai
 Created a clean review checkout from current origin/main and added three draft pages under `/mail-research/`. Site build includes the pages; all relative links and CSS targets exist. Twelve existing menu/analytics checks pass. The Hikari homepage and navigation are unchanged. The pages have not been published, and the placeholder contact address remains unresolved.
 
 Recommended the existing Hikari domain and hello@hikarisojo.com as the public contact; filled the local page draft. This is a proposal, not publication or an owner-approved contact selection.
+
+Joel then approved the Hikari domain, `hello@hikarisojo.com` contact, and production OAuth setup. Updated the page copy to describe the now-active macOS Keychain grant store. Rebuilt the site and retained the isolated review branch pending publication.
