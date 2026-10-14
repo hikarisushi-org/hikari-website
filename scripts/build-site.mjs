@@ -23,7 +23,7 @@ function copy(file) {
     for (const match of fs.readFileSync(source, 'utf8').matchAll(/(?:\/?)(assets\/[^\s"'<>?)`]+\.(?:png|webp|avif|jpg|jpeg|svg|woff2|mp4))/g)) copy(match[1]);
   }
 }
-for (const file of ['index.html', 'menu.html', 'lunch-specials.html', 'sitemap.xml', 'theme-config.json', 'themes', 'css', 'js', 'assets/fonts', 'assets/images/menu', 'assets/images/generated/menu']) copy(file);
+for (const file of ['index.html', 'menu.html', 'lunch-specials.html', 'mail-research', 'sitemap.xml', 'theme-config.json', 'themes', 'css', 'js', 'assets/fonts', 'assets/images/menu', 'assets/images/generated/menu']) copy(file);
 fs.writeFileSync(path.join(out, '_redirects'), '/menu /menu.html 200\n');
 const preview = process.argv.includes('--preview') || process.env.CONTEXT === 'deploy-preview';
 fs.writeFileSync(path.join(out, '_headers'), `${preview ? '/*\n  X-Robots-Tag: noindex, nofollow\n' : ''}/menu\n  X-Robots-Tag: noindex, nofollow\n/menu.html\n  X-Robots-Tag: noindex, nofollow\n`);

@@ -56,3 +56,7 @@ Joel explicitly approved publishing the website and dashboard after the automati
 Dashboard deploy scoped to lib/website_favorites.py, lib/website_ga.py, tabs/website_orders.py and current-month GA cache. Backup: /private/tmp/hikari-gallery-runtime-backup-20261012. Source/runtime hashes match; restarted service health 200; deployed actual-data rendering passes. Live GA checked five gallery dish/order pairs, zero verified gallery journeys, no query errors. Favorites kept separate. Checks: 14 website unit checks, 111 theme checks, 36 backend/export checks.
 
 Next: observe the first genuine post-release gallery-link purchase and exact paid Square item. No test order was placed, and no completed gallery conversion is claimed.
+
+## 2026-10-14 — Isolate the mail-tool information pages
+
+Prepared the private Gmail tool pages under a separate Hikari path with no restaurant navigation link. The pages explicitly say the tool runs separately from the website. This uses the existing owned domain for Google OAuth disclosure while making the public connection to Hikari clear. Publication awaits Joel’s contact choice and approval.

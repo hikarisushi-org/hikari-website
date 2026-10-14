@@ -1,3 +1,7 @@
+# Mail research pages — draft, October 14, 2026
+
+A separate review branch prepares `/mail-research/` homepage, privacy, and terms pages for a proposed private read-only Gmail tool. The Hikari site has not published these pages. The public contact email and Joel’s approval remain pending. Build and 12 existing website checks pass. Next: confirm page contact and app details, then review before any public release.
+
 # Kitchen gallery live — October 12, 2026
 
 Six named gallery links and separate exact paid-dish tracking are deployed and verified. First genuine gallery purchase remains unobserved. Next: check its exact paid Square item when it occurs.

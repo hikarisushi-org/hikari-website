@@ -67,3 +67,7 @@ Joel explicitly approved publishing the website and dashboard after the automati
 Dashboard deploy scoped to lib/website_favorites.py, lib/website_ga.py, tabs/website_orders.py and current-month GA cache. Backup: /private/tmp/hikari-gallery-runtime-backup-20261012. Source/runtime hashes match; restarted service health 200; deployed actual-data rendering passes. Live GA checked five gallery dish/order pairs, zero verified gallery journeys, no query errors. Favorites kept separate. Checks: 14 website unit checks, 111 theme checks, 36 backend/export checks.
 
 Next: observe the first genuine post-release gallery-link purchase and exact paid Square item. No test order was placed, and no completed gallery conversion is claimed.
+
+## 2026-10-14 — Mail research pages prepared
+
+Added a draft `/mail-research/` route with app homepage, privacy, terms, and isolated styling to the production build. Nothing published.
