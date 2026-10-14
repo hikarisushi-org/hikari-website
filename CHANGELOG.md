@@ -79,3 +79,7 @@ stylesheet from commit `beaf8ce` on `main`. The privacy copy describes the
 actual macOS Keychain grant store. All three public routes and CSS return 200;
 Netlify pretty-URL rewriting changes link markup but preserves approved text.
 The restaurant homepage and menu remain byte-identical to the tested build.
+
+## 2026-10-14 — Mail utility disclosure expanded
+
+Updated the public mail utility homepage, privacy policy, and terms to describe Gmail read, send, drafts, label changes, archive, and recoverable Trash movement. The published pages match the tested text; permanent message deletion remains excluded.

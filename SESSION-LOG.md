@@ -50,3 +50,7 @@ three routes and stylesheet with HTTP 200. Their published text matches the
 build; Netlify rewrites relative links to pretty URLs. The restaurant homepage
 and menu return 200 and match the tested build byte for byte. The separate
 Google project uses these live URLs for its branding.
+
+## 2026-10-14 — Expanded mail utility disclosure
+
+Updated the isolated `/mail-research/` pages for the full routine mailbox tool, built the site, passed the 12 existing checks, and visually reviewed all three narrow pages and links. Published from `main` commit `b9d2197`; each live route returned 200 with matching updated copy. Restaurant homepage and menu remained available.

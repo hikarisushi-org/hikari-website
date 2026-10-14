@@ -1,4 +1,6 @@
-# Mail research page draft
+# Mail research information pages
+
+- [x] Publish the full mailbox-action disclosure and verify the three live routes before expanding the production OAuth grant.
 
 - [x] Prepare isolated Hikari route and verify it builds without changing restaurant navigation.
 - [x] Confirm `hello@hikarisojo.com` and the model-provider disclosure; Joel approved the Hikari domain and separate production OAuth setup.

@@ -68,3 +68,7 @@ the separate private mail utility's public homepage, privacy policy, and terms.
 The pages say the utility runs on the operator's Mac and is separate from the
 restaurant website. Keep them outside restaurant navigation; their purpose is
 accurate Google OAuth disclosure and an owner-controlled public contact.
+
+## 2026-10-14 — Disclose full mailbox actions
+
+Joel expanded the private tool to routine Gmail mailbox actions. The public pages must describe send, draft, archive, labels, and Trash/restore before the stronger `gmail.modify` grant is authorized. Keep the mail utility separate from restaurant navigation and do not imply immediate permanent deletion.
