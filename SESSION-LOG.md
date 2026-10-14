@@ -36,3 +36,5 @@ Next: observe the first genuine post-release gallery-link purchase and exact pai
 ## 2026-10-14 — Draft Hikari-hosted OAuth pages
 
 Created a clean review checkout from current origin/main and added three draft pages under `/mail-research/`. Site build includes the pages; all relative links and CSS targets exist. Twelve existing menu/analytics checks pass. The Hikari homepage and navigation are unchanged. The pages have not been published, and the placeholder contact address remains unresolved.
+
+Recommended the existing Hikari domain and hello@hikarisojo.com as the public contact; filled the local page draft. This is a proposal, not publication or an owner-approved contact selection.

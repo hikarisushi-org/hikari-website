@@ -1,7 +1,7 @@
 # Mail research page draft
 
 - [x] Prepare isolated Hikari route and verify it builds without changing restaurant navigation.
-- [ ] Confirm public contact email and model-provider disclosure before publishing.
+- [ ] Confirm the proposed public contact email and model-provider disclosure before publishing.
 - [ ] Obtain Joel’s approval for public page and separate Google OAuth project; then verify live pages and account authorization.
 
 # Kitchen gallery

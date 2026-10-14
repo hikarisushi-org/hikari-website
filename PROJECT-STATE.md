@@ -1,6 +1,6 @@
 # Mail research pages — draft, October 14, 2026
 
-A separate review branch prepares `/mail-research/` homepage, privacy, and terms pages for a proposed private read-only Gmail tool. The Hikari site has not published these pages. The public contact email and Joel’s approval remain pending. Build and 12 existing website checks pass. Next: confirm page contact and app details, then review before any public release.
+A separate review branch prepares `/mail-research/` homepage, privacy, and terms pages for a proposed private read-only Gmail tool. The Hikari site has not published these pages. The draft proposes hello@hikarisojo.com as its public contact; Joel’s approval remains pending. Build and 12 existing website checks pass. Next: confirm page contact and app details, then review before any public release.
 
 # Kitchen gallery live — October 12, 2026
 
