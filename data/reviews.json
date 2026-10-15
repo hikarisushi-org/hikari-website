@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "David Smart",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjXL17D3Mn1PSXuGsQ2FjZU55BB8zTPWLtumn8pqF4W7tX71yUVbEg=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "Our new favorite sushi place.",
+      "relativeTime": "",
+      "publishTime": "2026-10-15T01:57:28.186331Z"
+    },
+    {
       "author": "Chandler",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjU2RqUj6JV3vhytNX1lHrSCWamfYuiPQe9HtLGDArYVPFuZrNuw=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1666,5 +1674,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 231
+  "totalReviews": 232
 }
