@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Rob T",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocIi54krtYfSRmWBXfNm149_4nYKepMjoAat6-SXc_-gKxVnlQ=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "We had a party of 15 and it could not have been a better experience. They completely took care of us and the food was delicious. Will return on my next visit to South Jordan.",
+      "relativeTime": "",
+      "publishTime": "2026-10-15T18:36:22.087861Z"
+    },
+    {
       "author": "David Smart",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjXL17D3Mn1PSXuGsQ2FjZU55BB8zTPWLtumn8pqF4W7tX71yUVbEg=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1674,5 +1682,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 232
+  "totalReviews": 234
 }
