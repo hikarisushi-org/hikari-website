@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Travis",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWnC8sfmx_FMBekIhFHooozmp1BxWVJ9IdJUMs0xMKt-cQJ6QU=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "This is our new sushi go to spot. It's a bit hidden but totally worth it. My wife and I had the avocado roll, Island heat wave, and Fire fly fusion. All of them were good, but the Fire fly was amazing!  The rolls were large and fresh. The edamame was steamed perfectly. The owner came out and spoke to us. He was very friendly and truly made the experience even better.  This is a great business to support!  We'll be back!",
+      "relativeTime": "",
+      "publishTime": "2026-10-28T01:43:13.858071Z"
+    },
+    {
       "author": "Rob T",
       "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocIi54krtYfSRmWBXfNm149_4nYKepMjoAat6-SXc_-gKxVnlQ=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1682,5 +1690,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 234
+  "totalReviews": 235
 }
