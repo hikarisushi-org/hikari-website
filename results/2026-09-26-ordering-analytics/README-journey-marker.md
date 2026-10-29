@@ -1,0 +1,25 @@
+# Hikari ordering handoff marker
+
+`square-journey-header.min.html` is the 1,425-character snippet for Square Online Settings → Tracking Tools → Add custom code → Head (the field permits 2,000 characters). `square-journey-header.html` is its readable equivalent; the same focused tests cover both. Publish through Square after adding it. These files are outside the public website build. The main website change is in `js/site-actions.js`.
+
+Order links are decorated in advance, and the click handler also adds `hikari_entry=public_website`; QR `/menu` and `/menu.html` links instead add `qr_menu`. Existing destination parameters and fragments remain intact. This is not a campaign UTM and does not replace the original traffic source. Custom click reports keep only destination origin/path and the existing `location`/`item` parameters.
+
+On Square, a new document navigation must have both an allowed marker and an HTTPS Hikari referrer. A manually entered marker URL without that referrer stays `unknown`. Strict-origin referrers identify the source host; the explicit marker distinguishes QR menu from public pages. This is evidence of a website handoff, not causal sales proof or a security boundary; copied/spoofed traffic can still defeat client-side analytics.
+
+The marker lasts at most 30 minutes from the handoff in this tab's sessionStorage. It persists through Square internal navigation but never renews on reload/back-forward from a stale URL. A fresh direct/external/unmarked Hikari document navigation clears it. Expiry timer, pageshow, and visibility changes reset the global value to `unknown`. Missing/referrer-blocked handoffs and purchases after the window are intentionally unattributed. Storage-blocked browsers retain only the current document's marker. The URL parameter remains visible to avoid interfering with Square routing; reload detection prevents stale renewal.
+
+The snippet only queues `gtag('set', {hikari_journey: ...})`; it does not load GA, configure another tag, intercept native events, or emit pageviews/purchases. It never reads customer/order form data or Square's DOM purchase event. The event-scoped GA4 custom dimension `hikari_journey` is registered for supported native events and receipt evidence. Existing historical purchases cannot be backfilled with this marker.
+
+## Live payment-page boundary and receipt fallback
+
+Live testing on September 26 disproved the original inference from an older checkout bundle: **Continue to payment navigates to a new `/s/checkout` document, and that document does not include the custom site header.** The tab's sessionStorage marker survives, but the `gtag` global parameter does not. Native `begin_checkout` still fires. Header instrumentation therefore labels storefront/cart activity only on this route; it cannot by itself label the native purchase.
+
+`square-receipt-handoff.html` is installed in Square's native **Custom tracking — Receipt** field, which explicitly supports `{orderid}`. Its exact saved text was read back, and the event-scoped GA4 custom dimension `hikari_order_id` is persisted. It reads only an unexpired existing marker and the substituted opaque order identifier, then sends `hikari_order_handoff` with `hikari_order_id`, `transaction_id`, `hikari_journey`, and the existing measurement ID. It creates no new tag, pageview, purchase, value, item payload, or customer fields. It suppresses repeat receipt events for the same order in the same tab and waits at most 9.5 seconds for the existing native `gtag` function.
+
+The collector queries the explicit custom order-ID dimension, joins it only to an existing native GA4 purchase, and then requires the Square paid-order match for website-associated revenue. A receipt marker alone is not a purchase. Conflicting public/QR evidence remains unknown; repeats do not multiply order counts. `{orderid}` can be a Square order ID or a legacy token, so unmatched tokens remain unattributed. The native checkout bundle uses `order.id` for its purchase `transaction_id`.
+
+[Square's current tracking documentation](https://squareup.com/help/us/en/article/6957-add-custom-tracking-code-to-your-website) documents site header/footer support; it does not prove receipt execution for every checkout route. The receipt settings and saved code are configuration evidence, not real-order execution evidence.
+
+**Verification status:** live storefront/cart handoff behavior and the checkout header boundary are verified. The receipt snippet's three focused tests cover valid/QR evidence, expiry/invalid-marker negatives, placeholder rejection, deduplication, and bounded native-tag waiting. A live GA4 receipt query succeeds with zero matching events so far. **A genuine receipt event matched to a native purchase and a paid Square order remains unverified.** No fabricated analytics purchase or paid test order was created.
+
+Local receipt check: `node --test results/2026-09-26-ordering-analytics/square-receipt-handoff.test.cjs`. The header/source tests remain in `scripts/analytics.test.js`; use `HIKARI_MARKER_TEST_FILE=square-journey-header.min.html` to exercise the installed minified variant.

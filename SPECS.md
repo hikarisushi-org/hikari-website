@@ -1,13 +1,27 @@
 # SPECS
 
-## Homepage design direction — September 23, 2026
+## Digital menu ownership — 2026-10-11
 
-- Keep the homepage food-first: an asymmetric hero, alternating food-and-copy panels, a six-photo `From our kitchen` gallery, restaurant-character panels, reviews, and visit information.
-- The kitchen gallery contains photography only beneath its heading: no visible item names, prices, descriptions, or per-photo actions.
-- Restaurant-character panels may explain real Hikari experiences such as sharing sushi, weekday lunch, and reservations; do not invent promotions, buffet service, prices, or unverified restaurant claims.
-- General ordering CTAs open the Square storefront. A dish-specific CTA may use a Square deep link only after its location and item identifiers pass the existing clean-session proof gate.
-- Preserve Hikari's mist, teal, coral, Playfair, and Inter visual identity; Saffron Valley is a structural reference, not a brand or layout to copy.
-- Keep the QR-only restaurant menu completely absent from homepage navigation, copy, CTAs, metadata, and discovery surfaces.
+The current release branch's js/menu-page.js MENU-DATA block owns dish content;
+menu-presentation.json supplies photo mappings and the build emits customer-menu.json.
+The Ops registry is archived history; its retired scripts cannot generate or stage
+website content. Print and ordering-channel changes retain separate approval.
+
+## Approved production design — September 25, 2026
+
+- Light modern Japanese direction; warm ivory panels (#f6f0e3), deeper ivory footer (#eee5d5), restrained warm shadows, celadon backgrounds, cranberry ordering buttons, Inter and Playfair typography. Preserve equal subtle image corners.
+- Fixed hero uses the original-proportion sushi_eight photograph with separate warm light overlay. Do not re-enable scheduled or theme-driven hero image replacement.
+- Framed near-full-width image/text food feature; six-image From our kitchen grid. Direct desktop hover enlargement, stable touch presentation, reduced-motion support, no four-arrow overlay.
+- Most ordered sequence: Firefly Fusion, Citrus Mango Dream, Playboy, Strawberry Blossom, Hot Cheetos Roll. Desktop photo/name selector; mobile native swipe cards with next-card peek, readable names, previous/next controls and counter. No autoplay.
+- Gallery: Flares close-up, gyoza on white shredded daikon tsuma (no purple flower; pink bowl retained), sashimi, karaage lemon action, Salmon Sunrise detail, hands setting down salmon bento.
+- Distinct editorial section: “Something sweet. Something refreshing.” Tall strawberry refresher lead, mochi texture detail, Ramune hand-selection moment. Do not repeat gallery imagery elsewhere.
+- Bottom story photo uses approved brighter sushi-finishing source, not the dim hand-dominated original.
+- Food-image work must follow the project skill and photo-shoot guide: texture, close-up detail, distinct photographic roles, natural geometry, responsive checks and preserved originals. AI-assisted imagery approved for this release does not authorize arbitrary changes to actual dish ingredients or proportions.
+- Purposeful interaction feedback only; respect reduced motion. No looping food movement or scroll hijacking.
+- Preserve live rotating reviews, production-only measurement and existing public ordering/reservation paths. QR-only /menu remains isolated and noindexed.
+- Publish only an explicitly authorized, verified artifact from the allowlisted dist build. Preview controls, source masters and project records must not ship.
+
+Earlier design explorations and superseded approval gates are historical; see DECISION-LOG.md, SESSION-LOG.md and the visual discovery journal.
 
 ## Website measurement contract — September 23, 2026
 
@@ -43,3 +57,17 @@ See [full menu and Square reconciliation](results/2026-09-23-website-audit/06-ME
 - Main-site rebuild/new technology remains an option for later work. The permanent `/menu` route is a QR-only operational restaurant menu used instead of paper menus. Preserve direct access and existing behavior, but do not link, mention, index, include in a sitemap, or reference it in public-site structured data.
 
 See [published change record](results/2026-09-23-website-audit/04-SQUARE-LIVE-IMPROVEMENTS.md) for exact observations and limits.
+
+## 2026-09-26 — Ordering analytics
+
+Analytics: production GA4 G-SH54LFXHJ3; domains hikarisojo.com, www.hikarisojo.com, hikarisushi-online.square.site. Parameters hikari_journey, cta_placement, hikari_order_id. Explicit handoff expires after 30 minutes in the same tab; QR menu is distinct. Receipt evidence is hikari_order_handoff, never purchase. Reconcile exact transaction IDs against paid Square orders. Reporting uses America/Denver and integer currency cents. See results/2026-09-26-ordering-analytics/IMPLEMENTATION-REPORT.md and COVERAGE.csv for definitions, evidence and limits.
+
+
+## 2026-09-28 — Approved customer QR menu
+
+- Permanent direct-access route: `https://hikarisojo.com/menu`; noindex and absent from public navigation/sitemap.
+- Continuous menu with 60 unique dishes; eight persistent main category buttons. Sushi subsection buttons jump within the list rather than filtering other items away; Nigiri & Sashimi share one button. Latest category tap wins during navigation.
+- List type: 20px names, 18px descriptions, 19px prices; thumbnails 28×28. Main buttons 15px, Sushi buttons 14px, minimum 56px height.
+- Full-screen details use proportional edge-to-edge photos, intrinsic dimensions and no viewport-height cap. Direct thumbnail opening/return is 300ms, with reduced-motion support and background scroll locking. No X or Menu button; 20px swipe-return instruction is also tappable. Detail title 29px, price 24px, description 19px.
+- Search removed; My picks retained in code but disabled. Bento display names omit redundant Bento Box, while canonical item identities remain distinct from rice bowls.
+- Production build emits `/data/customer-menu.json` from canonical `js/menu-page.js`, enriched by `data/menu-presentation.json`; missing optimized mappings fall back to original assets. Loading/error placeholders preserve image space.

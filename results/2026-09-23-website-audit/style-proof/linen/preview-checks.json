@@ -1,0 +1,137 @@
+{
+  "url": "http://100.124.197.26:6421/preview?style=linen",
+  "timestamp": "2026-09-24T14:49:41.151Z",
+  "viewports": [
+    {
+      "width": 1440,
+      "documentWidth": 1440,
+      "images": [
+        {
+          "src": "http://100.124.197.26:6421/assets/images/logo.webp",
+          "width": 1024,
+          "alt": ""
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/home/sushi_row-1280.avif",
+          "width": 691,
+          "alt": "Salmon-topped sushi with lemon and scallions on a blossom-patterned plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/island_heatwave-640.avif",
+          "width": 648,
+          "alt": "Island Heatwave roll with salmon, jalapeño and crunchy toppings, served on a plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/flares_of_hikari-640.avif",
+          "width": 432,
+          "alt": "Flares of Hikari rolls with salmon and vibrant toppings"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/appetizers/gyoza-640.avif",
+          "width": 432,
+          "alt": "Golden gyoza arranged around a flower-shaped dipping bowl"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/sashimi_new-640.avif",
+          "width": 432,
+          "alt": "Close-up of salmon, tuna and white-fish sashimi on a plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/appetizers/chicken-karaage__square-640.avif",
+          "width": 432,
+          "alt": "Crisp chicken karaage with lemon and dipping sauce"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/salmon_sunrise-640.avif",
+          "width": 432,
+          "alt": "Salmon Sunrise rolls topped with salmon, lemon and scallions"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/food/bento_salmon-640.avif",
+          "width": 432,
+          "alt": "Salmon bento with rice, rolls, gyoza and salad"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/home/sushi_platter_1-1280.avif",
+          "width": 648,
+          "alt": "A Hikari chef finishing a tray of sushi rolls with sauce"
+        }
+      ],
+      "headings": 1,
+      "brokenAnchors": [],
+      "forbiddenLinks": [],
+      "unlabelledActions": 0,
+      "externalResources": []
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "images": [
+        {
+          "src": "http://100.124.197.26:6421/assets/images/logo.webp",
+          "width": 1024,
+          "alt": ""
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/home/sushi_row-640.avif",
+          "width": 350,
+          "alt": "Salmon-topped sushi with lemon and scallions on a blossom-patterned plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/island_heatwave-640.avif",
+          "width": 350,
+          "alt": "Island Heatwave roll with salmon, jalapeño and crunchy toppings, served on a plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/flares_of_hikari-320.avif",
+          "width": 179,
+          "alt": "Flares of Hikari rolls with salmon and vibrant toppings"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/appetizers/gyoza-320.avif",
+          "width": 179,
+          "alt": "Golden gyoza arranged around a flower-shaped dipping bowl"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/sashimi_new-320.avif",
+          "width": 179,
+          "alt": "Close-up of salmon, tuna and white-fish sashimi on a plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/appetizers/chicken-karaage__square-320.avif",
+          "width": 179,
+          "alt": "Crisp chicken karaage with lemon and dipping sauce"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/salmon_sunrise-320.avif",
+          "width": 179,
+          "alt": "Salmon Sunrise rolls topped with salmon, lemon and scallions"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/food/bento_salmon-320.avif",
+          "width": 179,
+          "alt": "Salmon bento with rice, rolls, gyoza and salad"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/home/sushi_platter_1-640.avif",
+          "width": 350,
+          "alt": "A Hikari chef finishing a tray of sushi rolls with sauce"
+        }
+      ],
+      "headings": 1,
+      "brokenAnchors": [],
+      "forbiddenLinks": [],
+      "unlabelledActions": 0,
+      "externalResources": []
+    }
+  ],
+  "assertions": [
+    "Mobile navigation opens, Escape closes and restores focus; section selection closes; sticky order appears after hero; click metadata classified for order, reserve, directions.",
+    "No-JavaScript order links and native mobile navigation work; reduced motion disables drawing animation.",
+    "Private preview server does not expose QR menu or project documents."
+  ],
+  "orderHandoff": {
+    "url": "https://hikarisushi-online.square.site/#Y7DXG5VB4X6CYFEBQ6ZUD7DX",
+    "title": "Hikari Sushi"
+  }
+}

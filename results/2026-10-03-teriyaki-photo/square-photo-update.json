@@ -1,0 +1,16 @@
+{
+  "item_id": "P354KWYL7BA5ETSE2RPOXVNM",
+  "name": "Teriyaki Chicken Rice Bowl",
+  "old_image_ids": [
+    "LZTJF4M7ZLLJN5W7FRJ2YATW"
+  ],
+  "image_ids": [
+    "7BYLA4FZQ5274QKAUKOKGGUK"
+  ],
+  "new_image_id": "7BYLA4FZQ5274QKAUKOKGGUK",
+  "image_url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/700ed7953d85c99d415c80a38699d635872487bd/original.jpeg",
+  "upload_sha256": "0b213b7b97462c4c960ba4fad34f82f173e4be1de778d953b1b60fcd692f79b6",
+  "unchanged_other_item_fields": true,
+  "old_image_detached_not_deleted": true,
+  "public_detail_verified": true
+}

@@ -1,100 +1,87 @@
 # Project State
 
+## 2026-10-11 — Menu ownership documentation
+
+Resolved the local Ops/website source conflict: current digital content is the
+website MENU-DATA block; Ops generation and hook installation are retired.
+DEVELOPMENT.md now describes that release workflow. Website menu data matches
+fetched origin/main bfc1517 and was not modified; no deployment occurred.
+The existing dirty design checkout is preserved. Scoped changes are local and
+uncommitted. See ../hikari-ops/menu-data/README.md for the archive and guard checks.
+
+Latest private work (2026-10-01): three sunrise-and-waves variations of the owner-selected direction ready for comparison at port 6433, in `results/2026-10-01-hikari-motion/index.html`. Desktop and 390px browser review completed; next is owner selection among Quiet dawn, Morning tide and Painted morning. Production state below is unchanged.
+
+Updated: 2026-09-28. Session closed (done).
+
 ## Current status
 
-Completed a bounded live comparison of Hikari and Saffron Valley / Owner on September 23, 2026. [Start with the audit](results/2026-09-23-website-audit/README.md); design measurements, screenshots and source evidence are included.
+The approved customer QR menu is live at https://hikarisojo.com/menu. Production main is `af52b99`; Netlify deploy `6aba040f144ffe000820008b` is ready, published September 28 at 06:07 UTC. Homepage, QR-only visibility, analytics and canonical dish content are preserved. Previous production deployment for rollback: `6ab9b2f698c1960008494922` (`b7908a6`).
 
-Follow-up: inspected Hikari’s authenticated Square Plus / Order Online editor. Joel then explicitly authorized practical ordering-flow improvements. Published: main banner hidden, compact mobile/desktop item layout, announcement pop-up inactive (discount unchanged). [Change record and verification](results/2026-09-23-website-audit/04-SQUARE-LIVE-IMPROVEMENTS.md).
+Live HTML and generated menu data matched the release build; all 60 photos returned valid image responses. Category navigation and full-width Small Tempura opening/return were checked in the live browser, including 390×844. Build, 9 analytics tests and 3 menu integration checks passed. Owner accepted the photo layout on an actual iPhone before publication; post-deploy physical-phone retest has not been reported.
 
-Square presentation changes are live. The custom website menu was later changed only to remove Garlic Shrimp; its hosting, prices, discounts, fees, fulfillment and Square POS/KDS/provider integrations were not changed. Existing unrelated work is preserved. A sticky-header experiment was reverted because it did not provide the expected cart access on the ordering template; the original Reveal on scroll up setting is restored and published.
+## Local state and cautions
 
-The Square photo sync covered all 60 individually matchable website entries at the time of the audit. Garlic Shrimp was subsequently removed from the website menu and Square's `Online – Website & Profile` channel; its Square catalog/POS record remains, but its delivery-app visibility was later disabled for menu parity. The current website menu therefore has 59 individually matchable items plus the generic Canned Soda category image. Crab Rangoon was switched from stock-count tracking at -25 to Square's prepared-food availability tracking and now appears as Available on the public ordering menu. Both live menus were checked. Ten Square-only/utility catalog rows still lack authoritative current-website images. [Photo-sync inventory](results/2026-09-23-website-audit/05-SQUARE-PHOTO-SYNC.md).
+- Original checkout is `codex/website-improvements`, pushed through `0a88911` with no branch-local unpushed commits. Earlier unrelated homepage, analytics, assets and project-document edits remain dirty. Do not deploy this checkout as production.
+- Production release checkout: `/Users/samanthashiro/.codex/worktrees/qr-menu-release/hikari-website`, branch `codex/qr-menu-release`, clean at `af52b99`; that commit is pushed to `origin/main` (no separate release-branch push).
+- Preview servers are still listening: 6427 repository preview, 6428 temporary staged phone copy on 192.168.1.15, and 6431 release-build preview. These are session processes, not guaranteed restart-persistent services. Phone staging lives under `/var/folders/wp/d445_gz167b0yk33x3hs0w8c0000gn/T/hikari-phone-preview-dslenjl6`. Use the permanent public URL for customer access.
+- No release/build job remains pending. Close-out documentation is local and uncommitted; no additional push/deployment is authorized by session-close.
 
-The current website menu was inventoried (60 unique entries) and reconciled with the public Square Online menu. Eleven missing online dishes were enabled using the already-synced website photos; six Square-only dishes were hidden from the website channel without deleting their catalog/POS records. Their delivery-app visibility was disabled in the later parity pass. Square Online now displays all eleven and none of the six. Mango Sticky Rice required correcting shipping-only fulfillment and an erroneous -26 stock count; the public listing now appears without an out-of-stock label. Joel excluded both salads and mochi from Square Online; he explicitly asked to leave the two no-longer-offered salad listings on the website for now. [Full menu and change record](results/2026-09-23-website-audit/06-MENU-RECONCILIATION.md).
+**NEXT ACTION:** Resume only newly requested work from current `origin/main`, preferably the existing release checkout; do not re-release the older dirty preview branch.
 
-Follow-up item parity is now configured across Square Online, DoorDash, Uber Eats, and Grubhub: 14 website-matched items were enabled on all delivery apps; nine extras, including Garlic Shrimp, were disabled there. Stray Square Online visibility was also cleared from six catalog/exception items. Square showed fresh sync timestamps for all three apps, and representative changes appeared on each live app menu. POS records and platform-specific prices were preserved. [Delivery-app change record and verification](results/2026-09-23-website-audit/07-DELIVERY-APP-MENU-PARITY.md).
+## Other project context
 
-Verified real pickup and delivery carts through payment entry without submitting an order. Both retained the 20% discount. The native mobile View order button stays visible after adding food. The temporary test item was removed. Physical KDS/courier dispatch was not exercised. Initial delivery quote versus cart fees remains inconsistent and needs Square clarification if pursued.
+Approved homepage design and original assets remain preserved; the seasonal hero automation was previously disabled. Historical homepage/review recovery details remain in SESSION-LOG.md and DECISION-LOG.md. Business/access follow-ups remain in ACTION-ITEMS.md.
 
-Key findings: mobile lab performance 61 vs 93; oversized menu images; standalone /menu is a dine-in picks experience, not an online cart. Owner's uplift figures remain vendor claims, not an established result for Hikari. On branch `codex/website-improvements`, Square order-click detection and the existing reservation/directions events are repaired and browser-verified but not published.
+## Ordering analytics handoff
 
-Audit limits: the signed-in Google account has no accessible Hikari Analytics property, so organic visits and historical order-click users remain unavailable. Square payment continuation met automated verification; no complete Saffron crawl because direct HTTP requests were challenged.
+Implemented the practical ordering measurement system in the existing dashboard. Live GA4, Square and Google Ads collectors, exact GA transaction-to-Square matching, day/week/month views, financial definitions, CSV downloads, DoorDash official financial/marketing reports, and manual Uber/Grubhub statement imports. Private caches retain only whitelisted reporting fields. No new roles, enterprise service, paid orders, campaigns or promotions.
 
-Phase 4 is complete. A clean browser session reliably opens Fire Cracker when the Square URL includes both `location=LMCJ08MMKDHCA` and `item=A5BIIXCE5ILZWRZCDTY7A4KY`. Desktop and 390 x 844 mobile proof covered the current photo, $15 price, Regular variation, 20% discount, pickup and delivery availability, cart fees/totals, sticky mobile checkout action, and payment entry without submitting an order. [Square item-path proof](results/2026-09-23-website-audit/13-SQUARE-ITEM-PATH-PROOF.md).
+Website production deploy `6ab76537d007357abec5c0ec` changes analytics links only. Live HTML/CSS preserved. GA cross-domain rules and three event dimensions saved; browser verified decorated links and adopted client/session IDs. Square storefront marker works, but /s/checkout does not include custom header. A receipt-only evidence event is saved and readable; a genuine receipt/native purchase/paid Square match remains awaiting data.
 
-Product boundary correction: `/menu` is the restaurant's QR-only operational menu used instead of paper menus. Preserve the direct route and behavior, but keep it completely isolated from the public website: no navigation link, CTA, FAQ, sitemap entry, structured-data reference, or other discovery surface. Square remains the website's distinct **Order online** action.
+Square connected-channel totals and marketplace settlement stay separate. Grubhub's signed cancellation exposes a paid-canceled Square record; Uber pending adjustments and payout cohorts differ. Source, courier, fulfillment and payment are independent. Reports never equate a click or referral with causal sales.
 
-## Next action
-
-NEXT ACTION: Joel reviews the revised homepage-only Phase 3 preview at `http://100.124.197.26:6421/preview` and approves or revises the alternating food/story panels, six-photo text-free kitchen gallery, restaurant-character panels, copy, and food photography. [Preview notes](results/2026-09-23-website-audit/12-DESIGN-PREVIEW-NOTES.md). The [right-panel tracker](results/2026-09-23-website-audit/website-improvement-tracker.html) shows 20 of 34 complete. Phase 5 production implementation remains approval-gated; GA4 remains access-blocked.
-
-### Current implementation handoff — September 23, 2026
-
-- Branch: `codex/website-improvements`, based on current `origin/main`. Latest committed checkpoint before the current media work: `a57a756`.
-- Phase 1 analytics implementation is committed. Five focused tests and 111 theme tests pass; browser diagnostic proof passed for order, reservation, and directions events. The Square business baseline is recorded; GA4 needs the account that can access property `G-SH54LFXHJ3`.
-- Phase 2 is complete locally: 260 generated AVIF/WebP variants, 297/406 KiB optimized hero videos, self-hosted fonts, single-source hero selection, and a six-card homepage initial menu while `/menu` retains the full catalog. The final three mobile Lighthouse runs scored 77/89/88 with median performance 88, LCP 3.83 seconds, CLS 0, and 1.13 MiB transferred. Media validation, five analytics tests, 111 theme tests, syntax checks, and browser proof pass.
-- Phase 3 preview work is complete pending Joel's approval: the responsive homepage now uses alternating food/story panels, a six-photo gallery without catalog text or prices, and restaurant-character panels. The earlier `/menu` preview was removed after Joel clarified that the restaurant menu is a separate operational tool. Preview server session `31095` must remain running during review.
-- Phase 4 is complete: Fire Cracker's location-aware Square item URL passed clean-session desktop/mobile, pickup/delivery cart, fee/discount, payment-entry, and click-measurement proof. Other featured dishes still require their own verified Square item IDs before direct links are wired.
-- The only unrelated working-tree item remains untracked `assets/images/july-4-hero.png`; leave it untouched.
-- The checklist is served only on the Mac mini's Tailscale interface at `http://100.124.197.26:6420/tracker` so Joel's other tailnet computer can keep it open in the right Browser panel. The dedicated server exposes only the tracker file; background session `18818` must remain running.
-
-### Previous immediate-continuation handoff — before branch setup
-
-- Branch: `main`, with no local commits ahead of `origin/main`. No background agents or in-flight browser transactions. The seven-file close-out does not commit or publish anything.
-- Uncommitted paths (exact `git status --short --untracked-files=all` list before this close-out):
-
-```text
- M CHANGELOG.md
- M DECISION-LOG.md
- M SPECS.md
- M js/menu-page.js
-?? ACTION-ITEMS.md
-?? PROJECT-STATE.md
-?? SESSION-LOG.md
-?? assets/images/july-4-hero.png
-?? results/2026-09-23-website-audit/01-DESIGN-REFERENCE.md
-?? results/2026-09-23-website-audit/02-EVIDENCE-AND-SEO.md
-?? results/2026-09-23-website-audit/03-SQUARE-CUSTOMIZATION.md
-?? results/2026-09-23-website-audit/04-SQUARE-LIVE-IMPROVEMENTS.md
-?? results/2026-09-23-website-audit/05-SQUARE-PHOTO-SYNC.md
-?? results/2026-09-23-website-audit/06-MENU-RECONCILIATION.md
-?? results/2026-09-23-website-audit/07-DELIVERY-APP-MENU-PARITY.md
-?? results/2026-09-23-website-audit/README.md
-?? results/2026-09-23-website-audit/evidence/collect-http.mjs
-?? results/2026-09-23-website-audit/evidence/hikari-mobile.json
-?? results/2026-09-23-website-audit/evidence/hikari-pagespeed-desktop.txt
-?? results/2026-09-23-website-audit/evidence/hikari-pagespeed-mobile.txt
-?? results/2026-09-23-website-audit/evidence/hikari-square-cart.txt
-?? results/2026-09-23-website-audit/evidence/http-evidence.json
-?? results/2026-09-23-website-audit/evidence/saffron-checkout.txt
-?? results/2026-09-23-website-audit/evidence/saffron-desktop.json
-?? results/2026-09-23-website-audit/evidence/saffron-extra-styles.json
-?? results/2026-09-23-website-audit/evidence/saffron-pagespeed-desktop.txt
-?? results/2026-09-23-website-audit/evidence/saffron-pagespeed-mobile.txt
-?? results/2026-09-23-website-audit/screenshots/README.md
-?? results/2026-09-23-website-audit/screenshots/hikari-desktop-hero.jpg
-?? results/2026-09-23-website-audit/screenshots/hikari-mobile-hero.jpg
-?? results/2026-09-23-website-audit/screenshots/hikari-mobile-menu.jpg
-?? results/2026-09-23-website-audit/screenshots/hikari-square-cart.jpg
-?? results/2026-09-23-website-audit/screenshots/hikari-square-entry.jpg
-?? results/2026-09-23-website-audit/screenshots/hikari-square-promotion.jpg
-?? results/2026-09-23-website-audit/screenshots/saffron-checkout.jpg
-?? results/2026-09-23-website-audit/screenshots/saffron-desktop-full.jpg
-?? results/2026-09-23-website-audit/screenshots/saffron-desktop-hero.jpg
-?? results/2026-09-23-website-audit/screenshots/saffron-desktop-menu.jpg
-?? results/2026-09-23-website-audit/screenshots/saffron-desktop-sections.jpg
-?? results/2026-09-23-website-audit/screenshots/saffron-item-upsells.jpg
-?? results/2026-09-23-website-audit/screenshots/saffron-mobile-hero.jpg
-?? results/2026-09-23-website-audit/screenshots/saffron-mobile-menu.jpg
-?? results/2026-09-23-website-audit/screenshots/square-after-desktop-delivery.png
-?? results/2026-09-23-website-audit/screenshots/square-after-mobile-delivery.png
-```
+Next: verify real receipt evidence; browser and supported merchant export work is complete. Detailed status table: results/2026-09-26-ordering-analytics/COVERAGE.csv. Keep the pre-existing dirty design tree intact.
 
 
-## 2026-09-27 — Owner-approved QR menu checkpoint
+## Latest analytics verification — September 26, 09:55 Denver
 
-Owner approved the private customer-menu preview checkpoint. Current artifact: results/2026-09-27-qr-menu-concepts/continuous.html; phone wrapper: mobile-preview.html. Continuous navigation, readable typography, 28px thumbnails and direct full-screen photo transitions are accepted. Browser-toolbar sizing correction reviewed with owner response “perfect.” No production release authorized; next work starts from this checkpoint.
+Browser restored. Grubhub deposits and Uber funnel/ads/offers imports are implemented, deployed and live-browser verified. Forty-metric report includes portal-only Grubhub customer/promotions and exact unsupported fields. Runtime AppTest passed. Receipt execution remains awaiting genuine data; two-hour follow-up continues only for that evidence. No customer purchase was created.
 
 
-### 2026-09-28 — Approved QR preview push checkpoint
-Approved full-width dish detail, readable return hint, robust category jumps, photo-loading fallbacks, shortened Bento labels, and finishing polish saved on codex/website-improvements. Narrow layout checks covered all 60 rows; owner accepted full-width photos on iPhone. Preview only; production files excluded.
+## 2026-10-01 — Keep Tailscale motion preview running
+
+Preview failure was confirmed: no listener on 6433, and local/Tailscale HTTP requests failed. Installed user LaunchAgent `com.hikari.motion-preview` with KeepAlive, bound only to `100.124.197.26:6433`. Direct external-volume serving under launchd returned 404; serving an identical copy at `~/.local/share/hikari-motion-preview` restored HTTP 200. Browser freshly loaded all three concepts via Tailscale. Future source edits MUST sync the concept folder to that serving directory. The Mac must remain awake, logged in, and connected to Tailscale; access from the other computer remains user-unverified.
+
+Latest refinement: Quiet dawn rays animate sequentially; served copy synced and verified. Next: owner reviews motion.
+
+Current selection: Quiet dawn with sequential rays, now the only concept displayed at the Tailscale preview. Owner approved this direction; no live deployment requested.
+
+Wave research completed (2026-10-01): recommend improved curve spacing and one subtle swell after the rays, then rest. Research only; preview unchanged.
+
+Latest preview: smoother wave spacing and one finite staggered swell implemented and synced to persistent Tailscale service; next owner reviews motion.
+
+Independent motion review: retain current animation; no material defects. Optional sun/wave spacing refinement and preview status cleanup noted. No changes applied.
+
+Latest: private current-homepage hero integration ready at http://100.124.197.26:6433/homepage.html; desktop/mobile browser checked. Source in motion preview folder, serving copy synchronized; production unchanged. Await owner review.
+
+2026-10-01 release: owner-approved hero sunrise with25% stronger strokes published from clean managed worktree /Users/samanthashiro/.codex/worktrees/hikari-hero-sunrise/hikari-website at a9a1e63; exact live HTML/CSS and desktop/mobile browser verified. Original dirty checkout remains unreleased.
+
+## 2026-10-03 — Teriyaki chicken photo release
+
+Owner-approved photo published to the website/QR menu in `431f4f0` on main. Live `/menu.html` was verified in desktop (1440px) and mobile (390px) Chromium; the fetched 640px WebP SHA-256 matches the release file. The canonical menu photo now uses a dated filename with square dimensions. Original working-copy unrelated changes were preserved.
+
+Approved master, upload JPEG and both untouched original angles: `assets/images/source/2026-10-03-teriyaki-chicken/`. Release worktree: `/Users/samanthashiro/.codex/worktrees/hikari-teriyaki-photo/hikari-website`.
+
+Square Online now displays the approved photo on the public exact rice-bowl item; old image association detached without deleting the asset. DoorDash accepted the 1600x900 landscape derivative and reports Photo pending review. Grubhub's POS-managed merchant menu has automatically synced the approved photo from Square; customer-view verification is still pending. Uber saved password was rejected and email verification is required; no direct Uber change verified. Records are in results/2026-10-03-teriyaki-photo/. The landscape derivative is archived alongside the approved square master and both originals.
+
+Next: complete Uber account verification, then verify customer-facing marketplace photos after sync/moderation. Existing dish description mentions steamed vegetables while the photo shows salad/cucumber; wording unchanged pending owner clarification.
+
+
+## 2026-10-03 — Approved description release
+
+Approved rice-bowl description released in 9a780f9: Tender chicken glazed in sweet-savory teriyaki sauce over white rice, served with a fresh side salad. Live website JS and Uber public menu verified; Square catalog readback verified with all non-description fields unchanged; DoorDash saved/reloaded item and Grubhub synced merchant item verified. User also confirmed photos look correct across delivery apps. Customer-facing DoorDash/Grubhub description checks remain distinct from merchant verification.
+
+
+## 2026-10-03 — Salmon bowl release
+
+Published owner-approved jasmine-rice salmon image and fresh-side-salad description in 398764d. Website desktop1440/mobile390 detail inspected; build and 9 analytics tests passed. Square exact rice-bowl item CNJNTCWWEUNX4VDSQACF2A2N updated with image B62ZRFHCZZORZF2AE2D5F7BC; public detail visually verified; unrelated fields preserved. Uber public image/description verified. Grubhub merchant image/description sync visually verified. DoorDash description synced from Square; photo now reports visible, subject to later review. DoorDash manual-description override was declined to preserve POS synchronization. Approved master, landscape derivative and original references archived in assets/images/source/2026-10-03-teriyaki-salmon. No bento changes.

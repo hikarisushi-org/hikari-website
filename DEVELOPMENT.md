@@ -297,48 +297,39 @@ Next time:
 
 ### Menu Structure
 
-Menu items are hardcoded in `index.html` within category sections:
+The QR menu at `/menu` displays the generated customer-menu JSON. Its maintained
+source is the category/item object in the `MENU-DATA` block of `js/menu-page.js`.
+Homepage featured-dish markup is presentation content, not a separate full menu
+registry. Do not use old hardcoded HTML examples as current prices or dish details.
 
-```html
-<div class="menu-category" data-category="sushi">
-  <div class="menu-item">
-    <div class="menu-item-image">
-      <img src="assets/images/menu/sushi/firefly_fusion.webp"
-           alt="Firefly Fusion Roll">
-    </div>
-    <div class="menu-item-content">
-      <div class="menu-item-header">
-        <h3>Firefly Fusion</h3>
-        <span class="menu-item-price">$16.95</span>
-      </div>
-      <p class="menu-item-description">
-        Spicy tuna, cucumber, topped with seared salmon,
-        jalapeño, and firefly sauce
-      </p>
-    </div>
-  </div>
-</div>
-```
+### Adding or Updating a Menu Item
 
-### Adding a New Menu Item
+The `MENU-DATA` block in `js/menu-page.js` is the source of truth for current
+website dish content. Work from a current release checkout based on `origin/main`;
+preserve any older design checkout and its uncommitted work.
 
-The public website menu section and the in-store QR menu page both use generated data from `../hikari-ops/menu-data/hikari-menu.json`.
+1. Edit the approved name, price, description, flags or membership directly in
+   `js/menu-page.js`. Keep deliberate repeated listings such as Most Popular consistent.
+2. Add approved digital images under `assets/images/menu/`; update
+   `data/menu-presentation.json` when optimized mappings are needed.
+3. Run `node scripts/build-site.mjs`, then
+   `node --test scripts/customer-menu.test.mjs scripts/analytics.test.js`.
+4. Review the affected preview and follow the authorized release workflow.
 
-1. Add or update the item in `hikari-ops/menu-data/hikari-menu.json`
-2. Add the digital-menu-ready image to `assets/images/menu/[category]/`
-3. Run `node scripts/generate-menu.js` from `../hikari-ops`
-4. Verify `js/menu-page.js` was regenerated
-5. Update DoorDash menu if applicable
-6. Commit and deploy both repos as needed
+The build generates `dist/data/customer-menu.json`; do not edit that output.
+The former `hikari-ops/menu-data/hikari-menu.json` is archived as historical
+reference. The Ops generator and hook installer are retired and cannot update
+or stage website files. If this checkout lacks the documented customer-menu
+build/test, use the current release checkout rather than the retired generator.
+
+Print, Square and delivery-channel availability remain separately approved.
+A website update does not automatically authorize changes to those channels.
 
 ### Updating Prices
 
-Prices shown on the public website menu and QR menu come from `../hikari-ops/menu-data/hikari-menu.json`, then generate into `js/menu-page.js`.
-
-1. Update the price in `hikari-ops/menu-data/hikari-menu.json`
-2. Run `node scripts/generate-menu.js` from `../hikari-ops`
-3. Verify DoorDash menu matches
-4. Commit and deploy
+Edit prices in the `MENU-DATA` block of `js/menu-page.js`, including any repeated
+listing, and use the build, tests and release workflow above. Coordinate other
+channels only within their approved scope.
 
 ### Menu Images
 
@@ -346,7 +337,7 @@ Google Drive is the master media archive, but digital menus must use deployable 
 
 For public website and QR menu items:
 
-- `hikari-menu.json` should reference paths like `assets/images/menu/sushi/rainbow.png`
+- The `MENU-DATA` block should reference paths like `assets/images/menu/sushi/rainbow.png`
 - the referenced file must exist inside this repo under `assets/images/menu/...`
 - do not reference `/Users/.../GoogleDrive/...` paths from digital menu data
 - print-only optimized assets belong in `../hikari-ops/printable-menu/assets/...`, not in website menu data

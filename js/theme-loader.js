@@ -120,7 +120,9 @@ class ThemeLoader {
     this._applyLogo(theme.content && theme.content.logoImageKey);
 
     // Hero media swap: themed video, default reels, or static image(s).
-    if (theme.content && theme.content.heroVideoPath) {
+    if (document.querySelector('[data-fixed-hero]')) {
+      // The approved homepage hero stays fixed, independent of seasonal media.
+    } else if (theme.content && theme.content.heroVideoPath) {
       this._applyHeroVideo(theme.content.heroVideoPath);
     } else if (theme.content && theme.content.heroVideoSources) {
       this._applyHeroVideoSources(theme.content.heroVideoSources);

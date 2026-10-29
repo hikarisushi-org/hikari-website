@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-09-27T05:13:04.005470+00:00",
+  "browser": "recovered; live dashboard verification passed",
+  "grubhub_deposits": "implemented, deployed and browser verified",
+  "uber_funnel_and_marketing": "implemented, deployed and browser verified",
+  "receipt_evidence": "awaiting genuine customer event and exact GA4/Square match",
+  "last_read_only_refresh": "2026-09-27T05:12:07.987682+00:00",
+  "status": "Unchanged: Square Online order remains an unpaid draft. No genuine paid purchase or receipt evidence available; attribution verification remains awaiting data. Future checks must include September 26 onward to catch delayed GA processing across midnight.",
+  "receipt_query_available": true,
+  "receipt_order_ids_observed": 0,
+  "native_purchase_rows": 0,
+  "ga_collection_errors": 0,
+  "square_orders_created_today": 22,
+  "square_today_channel_counts": {
+    "Point of Sale": 19,
+    "DoorDash Marketplace": 1,
+    "Grubhub": 1,
+    "Square Online": 1
+  },
+  "square_today_paid_orders": 19,
+  "report_period": {
+    "start": "2026-09-26",
+    "end": "2026-09-26",
+    "timezone": "America/Denver"
+  },
+  "square_online_payment_evidence": [
+    {
+      "order_state": "DRAFT",
+      "payment_states": [],
+      "fulfillment_states": [
+        "PROPOSED"
+      ],
+      "paid": false,
+      "paid_cents": 0,
+      "total_cents": 7221,
+      "created_at": "2026-09-27T01:46:48.932Z",
+      "updated_at": "2026-09-27T01:49:28.967Z"
+    }
+  ]
+}

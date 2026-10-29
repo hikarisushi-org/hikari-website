@@ -1,3 +1,6 @@
 [functions]
   directory = "netlify/functions"
   included_files = ["data/**"]
+[build]
+  command = "node scripts/build-site.mjs"
+  publish = "dist"

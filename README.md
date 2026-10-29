@@ -2,19 +2,15 @@
 
 ## Pick up here
 
-> **For AI:** Read this section when the user says **"pick up here"**. Update when pausing or finishing a checkpoint.
+Read [PROJECT-STATE.md](PROJECT-STATE.md) for current status and the next action, then [ACTION-ITEMS.md](ACTION-ITEMS.md) and recent [SESSION-LOG.md](SESSION-LOG.md) entries. Deployment history belongs there, not in this overview.
 
-**Last updated:** 2026-06-07
-**Phase:** —
+## Homepage build and release
 
-### Done
-- (none yet)
+The homepage uses static HTML, self-hosted fonts, `css/homepage.css`, and `js/homepage*.js`. Build public files with `node scripts/build-site.mjs`; add `--preview` for draft-wide noindex. Only the generated `dist/` is the publish artifact. Never publish the repository root or a draft build as production.
 
-### Next
-- (none yet)
+Validate a deployed draft with `node scripts/verify-release.cjs <draft-url>`; live checks additionally use `--production`. Dependencies must be available in the Node runtime.
 
-### Blocked
-- (none)
+The approved release source was reconciled into `main` as `b7908a6` on September 27. Netlify builds `main` into `dist/`, including after daily review-sync commits. Start future releases from current `origin/main`; the older dirty design checkout remains preserved. The QR-only `/menu` stays out of public navigation and indexing.
 
 ---
 
@@ -43,8 +39,8 @@ Important: do not publish Sunday or holiday-specific open messaging unless owner
 ## 🏗️ Tech Stack
 
 - Static HTML/CSS/JavaScript (no framework)
-- Google Fonts (Inter + Playfair Display)
-- Swiper.js for mobile carousels
+- Self-hosted Inter + Playfair Display fonts
+- Native scroll-snap mobile favorites carousel
 - Netlify serverless functions (Google Reviews API proxy)
 - Hosted on **Netlify** with auto-deploy from GitHub
 
@@ -255,3 +251,14 @@ For website issues or feature requests, contact the development team or open an 
 | [CHANGELOG.md](./CHANGELOG.md) | What changed |
 | [DECISION-LOG.md](./DECISION-LOG.md) | Why |
 | [SPECS.md](./SPECS.md) | Specs & measurements |
+
+## 2026-09-26 — Ordering analytics
+
+Ordering analytics is integrated into the existing Hikari dashboard. See [implementation report](results/2026-09-26-ordering-analytics/IMPLEMENTATION-REPORT.md) and [35-row coverage table](results/2026-09-26-ordering-analytics/COVERAGE.csv). These private artifacts are excluded from the public website build. New receipt attribution is configured but awaits genuine-order proof.
+
+
+## Customer QR menu maintenance
+
+The customer menu remains at `/menu`, with no public navigation link or indexing. Its approved continuous UI is in production `menu.html`. In current main, edit the `MENU-DATA` block of `js/menu-page.js` for canonical names, prices, descriptions and flags. `scripts/build-site.mjs` generates `dist/data/customer-menu.json`, enriching photos from `data/menu-presentation.json`. New unmatched photos fall back to their original asset path. Build first, then run `node --test scripts/customer-menu.test.mjs` and `node --test scripts/analytics.test.js`.
+
+The older dirty preview checkout does not contain the integrated production implementation: use current main or the release checkout named in PROJECT-STATE.md. LAN preview QR images are session-specific; printed restaurant QR codes should continue pointing to the permanent `/menu` URL.

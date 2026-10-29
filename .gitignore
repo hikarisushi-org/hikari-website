@@ -9,6 +9,7 @@ assets/video/*.mov
 .netlify/
 
 # Build artifacts
+dist/
 *.log
 *.tmp
 *.bak
@@ -28,3 +29,18 @@ PROJECT-PULSE.md
 .codex/
 .skillshare/
 .claude/skills/
+
+# Skillshare per-machine skill links (regenerated on each computer)
+.skillshare/
+.claude/skills/
+.codex/skills/
+.agents/skills/
+.DS_Store
+
+# Review screenshots/videos stay local (large, regenerable)
+results/**/*.png
+results/**/*.jpg
+results/**/*.jpeg
+results/**/*.webp
+results/**/*.webm
+results/**/*.mp4

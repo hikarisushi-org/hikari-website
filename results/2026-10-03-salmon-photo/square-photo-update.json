@@ -1,0 +1,18 @@
+{
+  "item_id": "CNJNTCWWEUNX4VDSQACF2A2N",
+  "name": "Teriyaki Salmon Rice Bowl",
+  "old_image_ids": [
+    "ZUCMLE7CK7573GDMRSRIPZP7"
+  ],
+  "image_ids": [
+    "B62ZRFHCZZORZF2AE2D5F7BC",
+    "ZUCMLE7CK7573GDMRSRIPZP7"
+  ],
+  "new_image_id": "B62ZRFHCZZORZF2AE2D5F7BC",
+  "image_url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/d15cf62516bf6efbf5d9f22aed2972a8d8846003/original.jpeg",
+  "upload_sha256": "3bcfa60cf14d87c2d5239a44cb125980646139c58fe1c67b379bf73a886c6863",
+  "unchanged_other_item_fields": true,
+  "description": "Salmon glazed in sweet-savory teriyaki sauce over white rice, served with a fresh side salad.",
+  "single_photo_verified": true,
+  "other_fields_preserved": true
+}

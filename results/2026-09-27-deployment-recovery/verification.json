@@ -1,0 +1,18 @@
+{
+  "commit": "b7908a66f5479d155b2a5ef18d8d40a71ac97cf4",
+  "deploy": "6ab9b2f698c1960008494922",
+  "restored_from": "6ab76537d007357abec5c0ec",
+  "review_sync_run": 36361920996,
+  "review_sync": "success; no changes to commit",
+  "public_source_hash_mismatches": 0,
+  "homepage_exact_match_both_hostnames": true,
+  "browser_widths": [
+    1440,
+    390,
+    320,
+    768
+  ],
+  "release_browser_test": "PASS",
+  "analytics_tests": 9,
+  "theme_checks": 111
+}

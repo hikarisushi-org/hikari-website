@@ -1,0 +1,117 @@
+{
+  "url": "http://100.124.197.26:6421/preview",
+  "timestamp": "2026-09-24T20:12:01.763Z",
+  "viewports": [
+    {
+      "width": 1440,
+      "documentWidth": 1440,
+      "images": [
+        {
+          "src": "http://100.124.197.26:6421/assets/images/logo.webp",
+          "width": 1024,
+          "alt": ""
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/home/sushi_row-1280.avif",
+          "width": 691,
+          "alt": "Salmon-topped sushi with lemon and scallions on a blossom-patterned plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/island_heatwave-640.avif",
+          "width": 648,
+          "alt": "Island Heatwave roll with salmon, jalapeño and crunchy toppings, served on a plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/concepts/flares-original-editorial.webp",
+          "width": 1600,
+          "alt": "Original photograph of Flares of Hikari rolls with salmon and vibrant toppings"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/concepts/sashimi-macro-concept.webp",
+          "width": 1448,
+          "alt": "Concept macro photograph showing the texture of salmon, tuna and white-fish sashimi"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/concepts/karaage-action-concept.webp",
+          "width": 1536,
+          "alt": "Concept photograph of lemon being squeezed over crisp chicken karaage"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/home/sushi_platter_1-1280.avif",
+          "width": 648,
+          "alt": "A Hikari chef finishing a tray of sushi rolls with sauce"
+        },
+        {
+          "src": "",
+          "width": 0,
+          "alt": ""
+        }
+      ],
+      "headings": 1,
+      "brokenAnchors": [],
+      "forbiddenLinks": [],
+      "unlabelledActions": 0,
+      "externalResources": []
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "images": [
+        {
+          "src": "http://100.124.197.26:6421/assets/images/logo.webp",
+          "width": 1024,
+          "alt": ""
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/home/sushi_row-640.avif",
+          "width": 350,
+          "alt": "Salmon-topped sushi with lemon and scallions on a blossom-patterned plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/menu/sushi/island_heatwave-640.avif",
+          "width": 350,
+          "alt": "Island Heatwave roll with salmon, jalapeño and crunchy toppings, served on a plate"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/concepts/flares-original-editorial.webp",
+          "width": 1600,
+          "alt": "Original photograph of Flares of Hikari rolls with salmon and vibrant toppings"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/concepts/sashimi-macro-concept.webp",
+          "width": 1448,
+          "alt": "Concept macro photograph showing the texture of salmon, tuna and white-fish sashimi"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/concepts/karaage-action-concept.webp",
+          "width": 1536,
+          "alt": "Concept photograph of lemon being squeezed over crisp chicken karaage"
+        },
+        {
+          "src": "http://100.124.197.26:6421/assets/images/generated/home/sushi_platter_1-640.avif",
+          "width": 350,
+          "alt": "A Hikari chef finishing a tray of sushi rolls with sauce"
+        },
+        {
+          "src": "",
+          "width": 0,
+          "alt": ""
+        }
+      ],
+      "headings": 1,
+      "brokenAnchors": [],
+      "forbiddenLinks": [],
+      "unlabelledActions": 0,
+      "externalResources": []
+    }
+  ],
+  "assertions": [
+    "Mobile navigation opens, Escape closes and restores focus; section selection closes; sticky order appears after hero; click metadata classified for order, reserve, directions.",
+    "No-JavaScript order links and native mobile navigation work; reduced motion disables drawing animation.",
+    "Private preview server does not expose QR menu or project documents."
+  ],
+  "orderHandoff": {
+    "url": "https://hikarisushi-online.square.site/#Y7DXG5VB4X6CYFEBQ6ZUD7DX",
+    "title": "Hikari Sushi"
+  }
+}

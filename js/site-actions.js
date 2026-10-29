@@ -60,10 +60,19 @@
   }
 
   function buildEventParameters(link, pageLocation) {
+    const destination = parseUrl(link.href);
+    const safeDestination = destination && new URL(destination.origin + destination.pathname);
+    if (safeDestination) {
+      for (const key of ['location', 'item']) {
+        if (destination.searchParams.has(key)) {
+          safeDestination.searchParams.set(key, destination.searchParams.get(key));
+        }
+      }
+    }
     const parameters = {
       page_path: pageLocation && pageLocation.pathname ? pageLocation.pathname : '/',
       cta_placement: link.dataset.analyticsPlacement || 'unknown',
-      link_url: link.href
+      link_url: safeDestination ? safeDestination.href : ''
     };
 
     if (link.dataset.orderItem) {
@@ -82,6 +91,13 @@
     const eventName = classifyDestination(link.href);
     if (!eventName) return null;
 
+    if (eventName === 'click_order_online') {
+      const destination = parseUrl(link.href);
+      const path = pageLocation && pageLocation.pathname;
+      destination.searchParams.set('hikari_entry', /^\/menu(?:\.html)?\/?$/.test(path || '') ? 'qr_menu' : 'public_website');
+      link.href = destination.href;
+    }
+
     gtag('event', eventName, buildEventParameters(link, pageLocation));
     return {
       eventName,
@@ -90,6 +106,17 @@
   }
 
   function install(documentObject, gtag, pageLocation) {
+    // Decorate existing anchors before interaction so context-menu/new-tab
+    // navigation also carries the handoff. Dynamic links are handled on click.
+    if (documentObject.querySelectorAll) {
+      for (const link of documentObject.querySelectorAll('a[href]')) {
+        if (classifyDestination(link.href) === 'click_order_online') {
+          const destination = parseUrl(link.href);
+          destination.searchParams.set('hikari_entry', /^\/menu(?:\.html)?\/?$/.test(pageLocation.pathname || '') ? 'qr_menu' : 'public_website');
+          link.href = destination.href;
+        }
+      }
+    }
     const debugMode = pageLocation && new URLSearchParams(pageLocation.search).has('analytics-debug');
     if (debugMode) {
       documentObject.documentElement.dataset.analyticsReady = 'true';

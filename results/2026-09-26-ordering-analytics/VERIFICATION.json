@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-09-26T15:55:55.617883+00:00",
+  "website_deploy": "6ab76537d007357abec5c0ec",
+  "website_design_unchanged": true,
+  "backend_tests": {
+    "passed": 28
+  },
+  "dashboard": {
+    "targeted_files_hash_verified": 11,
+    "sqlite_copy": "consistent backup",
+    "local_health": "ok",
+    "public_http": "CLI 403; signed-in Chrome dashboard renders and all new controls verified",
+    "deployed_app_test": "pass",
+    "app_exceptions": 0,
+    "period": "2026-09-01 through 2026-09-26",
+    "paid_online_orders": 31,
+    "paid_online_order_total_cents": 146571,
+    "doordash_payout_cents": 42784,
+    "uber_payout_initiation_cents": 7679,
+    "grubhub_transaction_merchant_net_cents": 4214,
+    "download_controls": 7,
+    "final_desktop_browser": "PASS including new Uber and Grubhub controls"
+  },
+  "latest_refresh": {
+    "square_orders": 194,
+    "ga_purchase_transaction_rows": 13,
+    "ga_collection_errors": 0,
+    "google_ads": "successful empty response"
+  },
+  "receipt_evidence": "configured, genuine execution and three-way exact-ID match awaiting data",
+  "grubhub_deposits": {
+    "period": "2026-09-01 through 2026-09-25",
+    "records": 2,
+    "amount_cents": 4214,
+    "actual_schema_import": "pass",
+    "live_browser": "pass"
+  },
+  "follow_up_automation": "finish-hikari-analytics-verification",
+  "additional_backend_regression": {
+    "passed": 20,
+    "scope": "Square, DoorDash and merchant exports; separate from earlier baseline"
+  },
+  "coverage_metrics": 40
+}

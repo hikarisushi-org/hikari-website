@@ -1,0 +1,20 @@
+<script>
+/* Receipt tracking only. Evidence event; never a purchase or revenue event. */
+(function(){
+'use strict';
+if(location.hostname!=='hikarisushi-online.square.site')return;
+var id='{orderid}',attempts=0;
+if(!/^[A-Za-z0-9_-]{8,128}$/.test(id))return;
+function send(){
+try{
+var m=JSON.parse(sessionStorage.getItem('hikari_journey_v1'));
+var now=Date.now(),key='hikari_receipt_sent_v1_'+id;
+if(!m||!['public_website','qr_menu'].includes(m.value)||!Number.isFinite(m.expires)||m.expires<=now||m.expires>now+1800000||sessionStorage.getItem(key))return;
+if(typeof window.gtag!=='function'){if(++attempts<20)setTimeout(send,500);return;}
+sessionStorage.setItem(key,'1');
+window.gtag('event','hikari_order_handoff',{send_to:'G-SH54LFXHJ3',transaction_id:id,hikari_order_id:id,hikari_journey:m.value});
+}catch(_){}
+}
+send();
+})();
+</script>
