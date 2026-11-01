@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Rebecca Guinn",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjU2xNi6313LFSPEGON8_9iREzMmu9wU6zzsAEaJEtMn9Z-iSbk=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "Really amazing attention to detail. The food was awesome, fresh, and just surprisingly beautiful. I don\u2019t leave reviews often. Will absolutely come back again.",
+      "relativeTime": "",
+      "publishTime": "2026-10-31T19:00:25.475054Z"
+    },
+    {
       "author": "Travis",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWnC8sfmx_FMBekIhFHooozmp1BxWVJ9IdJUMs0xMKt-cQJ6QU=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1690,5 +1698,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 235
+  "totalReviews": 236
 }
