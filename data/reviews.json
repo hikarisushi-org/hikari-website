@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Mickael Sorensen",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWEu0D6Se_WdfV8t-A5hOdKoVaQxmnuGutC8TFYo2Y-8u6XTiGE0w=s120-c-rp-mo-ba12-br100",
+      "rating": 5,
+      "text": "I have eaten here so many times since they opened. I decided it was time to share the good news. I was not surprised to see they have a 5.0 rating as of November of 2026. This place delivers consistent quality every time. It is a little hidden so you have to go out of your way to find it. If you are reading this wondering if it is worth it, well it absolutely is!",
+      "relativeTime": "",
+      "publishTime": "2026-11-06T01:20:56.685366Z"
+    },
+    {
       "author": "Rebecca Guinn",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjU2xNi6313LFSPEGON8_9iREzMmu9wU6zzsAEaJEtMn9Z-iSbk=s120-c-rp-mo-ba12-br100",
       "rating": 5,
@@ -1698,5 +1706,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 236
+  "totalReviews": 237
 }
