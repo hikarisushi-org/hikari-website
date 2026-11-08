@@ -38,6 +38,7 @@ const customerMenu = JSON.parse(menuMatch[1]);
 const presentation = JSON.parse(fs.readFileSync(path.join(root, 'data/menu-presentation.json'), 'utf8'));
 for (const group of Object.values(customerMenu)) {
   for (const item of group.items) {
+    if (!item.img) continue;
     Object.assign(item, presentation[item.img] || {previewImage: '/' + item.img});
     const photoPath = item.previewImage.replace(/^\//, '');
     if (!fs.existsSync(path.join(root, photoPath))) throw new Error('Missing menu photo: ' + photoPath);

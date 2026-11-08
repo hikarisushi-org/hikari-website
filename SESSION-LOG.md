@@ -54,3 +54,7 @@ Google project uses these live URLs for its branding.
 ## 2026-10-14 — Expanded mail utility disclosure
 
 Updated the isolated `/mail-research/` pages for the full routine mailbox tool, built the site, passed the 12 existing checks, and visually reviewed all three narrow pages and links. Published from `main` commit `b9d2197`; each live route returned 200 with matching updated copy. Restaurant homepage and menu remained available.
+
+## 2026-11-07 — Winter table menu release
+
+Updated the canonical QR menu data, incorporated eleven approved dish photos, and tested pictured and text-only details at mobile, tablet and desktop widths. Existing menu and analytics tests passed. The homepage build and QR index controls matched the baseline.

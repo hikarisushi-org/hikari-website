@@ -1,3 +1,7 @@
+# Winter QR menu — November 7, 2026
+
+The winter table-menu release uses the approved whole- and half-dollar prices and dishes. The existing permanent URL remains `/menu`. Mochi is offered on the table menu. The 12 retired dishes still present online were removed from the menu data and featured duplicates. Garlic Shrimp was already absent. Build, menu and analytics checks, and phone/tablet/desktop interaction checks passed. The remaining photo items are listed in ACTION-ITEMS.md.
+
 # Mail research pages live — October 14, 2026
 
 Joel approved the existing Hikari domain and `hello@hikarisojo.com` contact for the private Gmail mailbox tool. On October 14, the published privacy and terms pages were updated for read, send, draft, label, archive, and recoverable Trash actions; permanent message deletion is excluded. The updated live pages returned 200 and matched the tested text. The `/mail-research/` homepage, privacy, and terms pages are published from `main` commit `beaf8ce`. All three routes and the stylesheet return HTTP 200 from Netlify; published page text matches the approved build. Netlify rewrites links to its pretty URL form, so HTML bytes differ while content is unchanged. The restaurant homepage and `/menu` exactly match the tested build and return HTTP 200. Build, 12 existing website checks, and local narrow-browser review passed. The separate Google OAuth project now uses these live URLs.

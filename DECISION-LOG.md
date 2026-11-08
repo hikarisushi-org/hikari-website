@@ -72,3 +72,7 @@ accurate Google OAuth disclosure and an owner-controlled public contact.
 ## 2026-10-14 — Disclose full mailbox actions
 
 Joel expanded the private tool to routine Gmail mailbox actions. The public pages must describe send, draft, archive, labels, and Trash/restore before the stronger `gmail.modify` grant is authorized. Keep the mail utility separate from restaurant navigation and do not imply immediate permanent deletion.
+
+## 2026-11-07 — Winter menu scope and media
+
+Joel confirmed that the table QR menu retains Mochi even though it is excluded from online ordering. Use the approved editable winter prices for the QR menu. Remove the confirmed seasonal retirements and any duplicate placements. Display the existing thumbnail placeholder and text-only details when a matching photo is unavailable.

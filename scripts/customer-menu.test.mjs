@@ -14,6 +14,10 @@ test('published menu preserves canonical names, prices, descriptions and warning
 });
 test('every published menu photo exists and uses a root-relative production path', () => {
   for (const group of Object.values(built)) for (const item of group.items) {
+    if (!item.img) {
+      assert.equal(item.previewImage, undefined);
+      continue;
+    }
     assert.ok(item.previewImage.startsWith('/assets/'));
     assert.ok(fs.existsSync(path.join('dist', item.previewImage)));
   }

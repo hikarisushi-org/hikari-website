@@ -83,3 +83,8 @@ The restaurant homepage and menu remain byte-identical to the tested build.
 ## 2026-10-14 — Mail utility disclosure expanded
 
 Updated the public mail utility homepage, privacy policy, and terms to describe Gmail read, send, drafts, label changes, archive, and recoverable Trash movement. The published pages match the tested text; permanent message deletion remains excluded.
+
+## 2026-11-07 — Winter QR menu
+
+- Updated winter dishes, prices, serving sizes, bento sides and photos at the existing QR route. Retained Mochi for dine-in.
+- Dish details support menu entries without a photo.

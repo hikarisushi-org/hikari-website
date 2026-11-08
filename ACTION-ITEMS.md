@@ -1,3 +1,8 @@
+# Winter QR menu
+
+- [x] Apply the approved winter menu, remove retired listings, and retain Mochi on the table menu.
+- [ ] Add matching photos as approved for winter dishes still using the photo placeholder, including the salmon bento with its revised sides.
+
 # Mail research information pages
 
 - [x] Publish the full mailbox-action disclosure and verify the three live routes before expanding the production OAuth grant.
