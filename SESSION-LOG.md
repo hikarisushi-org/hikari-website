@@ -61,4 +61,4 @@ Updated the canonical QR menu data, incorporated eleven approved dish photos, an
 
 ## 2026-11-10 — Winter homepage refresh
 
-Swapped homepage hero, feature and gallery to winter dishes, added NEW badges and announcement copy, reviewed on a private Tailnet preview with Joel, and published after his approval. 17 existing tests and theme validation passed.
+Swapped homepage hero, feature and gallery to winter dishes, added NEW badges and announcement copy, reviewed on a private Tailnet preview with Joel, and published after his approval. 17 existing tests and theme validation passed. Live homepage HTML/CSS matched the build exactly; new images and `/menu` returned 200; preview route removed.

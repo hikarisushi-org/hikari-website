@@ -1,6 +1,8 @@
 # Winter homepage refresh — November 10, 2026
 
-Homepage now features the winter menu: Pink Lotus hero and Cowboy Crunch feature with NEW-seal name badges, a "New this winter" callout, a NEW link to /menu under the hero, and a gallery of Coco Nirvana, Teriyaki Chicken Don, Jalapeño Kampachi, Tempura Don, Teriyaki Chicken Bento Box and Beef Don with verified Square item links. Joel approved the Tailnet preview before release. Red Ruby, Kiwi Minaj, Shrimp Shady and Spider Roll have no photos yet.
+Homepage now features the winter menu: Pink Lotus hero and Cowboy Crunch feature with NEW-seal name badges, a "New this winter" callout, a NEW link to /menu under the hero, and a gallery of Coco Nirvana, Teriyaki Chicken Don, Jalapeño Kampachi, Tempura Don, Teriyaki Chicken Bento Box and Beef Don with verified Square item links. Joel approved the Tailnet preview before release. Published from `main` and verified live on 2026-11-10: homepage HTML and CSS match the build byte-for-byte, and all new images and `/menu` return 200. The temporary preview route (Tailnet port 9462) was removed. Source dish photos for new items live in hikari-ops `printable-menu/` (not the Drive Food Photos folder).
+
+NEXT ACTION: add homepage photos for Red Ruby, Kiwi Minaj, Shrimp Shady and Spider Roll once real photos exist.
 
 # Winter QR menu — November 7, 2026
 
