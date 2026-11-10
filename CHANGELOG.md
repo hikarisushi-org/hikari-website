@@ -88,3 +88,8 @@ Updated the public mail utility homepage, privacy policy, and terms to describe 
 
 - Updated winter dishes, prices, serving sizes, bento sides and photos at the existing QR route. Retained Mochi for dine-in.
 - Dish details support menu entries without a photo.
+
+## 2026-11-10 — Winter homepage refresh
+
+- Replaced retired Island Heatwave, Flares of Hikari and pre-winter hero/gallery photos with winter dishes; gallery links point to verified Square items.
+- Added NEW-seal name badges on the Pink Lotus and Cowboy Crunch photos, a "New this winter" feature callout and a hero NEW link to the menu.

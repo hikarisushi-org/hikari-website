@@ -1,3 +1,7 @@
+# Winter homepage refresh — November 10, 2026
+
+Homepage now features the winter menu: Pink Lotus hero and Cowboy Crunch feature with NEW-seal name badges, a "New this winter" callout, a NEW link to /menu under the hero, and a gallery of Coco Nirvana, Teriyaki Chicken Don, Jalapeño Kampachi, Tempura Don, Teriyaki Chicken Bento Box and Beef Don with verified Square item links. Joel approved the Tailnet preview before release. Red Ruby, Kiwi Minaj, Shrimp Shady and Spider Roll have no photos yet.
+
 # Winter QR menu — November 7, 2026
 
 The winter table-menu release uses the approved whole- and half-dollar prices and dishes. The existing permanent URL remains `/menu`. Mochi is offered on the table menu. The 12 retired dishes still present online were removed from the menu data and featured duplicates. Garlic Shrimp was already absent. Build, menu and analytics checks, and phone/tablet/desktop interaction checks passed. The remaining photo items are listed in ACTION-ITEMS.md.

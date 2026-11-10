@@ -58,3 +58,7 @@ Updated the isolated `/mail-research/` pages for the full routine mailbox tool, 
 ## 2026-11-07 — Winter table menu release
 
 Updated the canonical QR menu data, incorporated eleven approved dish photos, and tested pictured and text-only details at mobile, tablet and desktop widths. Existing menu and analytics tests passed. The homepage build and QR index controls matched the baseline.
+
+## 2026-11-10 — Winter homepage refresh
+
+Swapped homepage hero, feature and gallery to winter dishes, added NEW badges and announcement copy, reviewed on a private Tailnet preview with Joel, and published after his approval. 17 existing tests and theme validation passed.

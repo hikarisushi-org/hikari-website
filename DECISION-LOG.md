@@ -76,3 +76,7 @@ Joel expanded the private tool to routine Gmail mailbox actions. The public page
 ## 2026-11-07 — Winter menu scope and media
 
 Joel confirmed that the table QR menu retains Mochi even though it is excluded from online ordering. Use the approved editable winter prices for the QR menu. Remove the confirmed seasonal retirements and any duplicate placements. Display the existing thumbnail placeholder and text-only details when a matching photo is unavailable.
+
+## 2026-11-10 — Winter homepage photos
+
+The only Pink Lotus photo is a soft phone-video still, and printed-menu cutouts looked like studio shots next to the site's table photos. New homepage images were made with Codex built-in image generation from the approved real and printed-menu dish photos, preserving servingware, ingredients and portions; masters and prompts are in hikari-ops `printable-menu/assets/generated/website-editorial-20261110/`. Joel chose Teriyaki Chicken Don over Tekka Don. Square names it "Teriyaki Chicken Rice Bowl"; the homepage keeps the menu name and links by item ID.

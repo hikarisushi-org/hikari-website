@@ -1,3 +1,8 @@
+# Winter homepage
+
+- [x] Feature winter dishes on the homepage with NEW badges and announcement; publish after Joel's approval.
+- [ ] Add homepage photos for Red Ruby, Kiwi Minaj, Shrimp Shady and Spider Roll when real photos exist.
+
 # Winter QR menu
 
 - [x] Apply the approved winter menu, remove retired listings, and retain Mochi on the table menu.
