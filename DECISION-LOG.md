@@ -116,3 +116,7 @@ November 11 owner clarification: no separate lunch specials are currently offere
 ## 2026-11-11 — Existing table review placards
 
 Joel confirmed review placards already exist on every table. Keep those in use; the newly prepared card does not require printing, distribution or replacement of existing materials. No existing placard destination or physical scan was independently tested in this session.
+
+## 2026-11-11 — Submit the two directory corrections
+
+Joel explicitly authorized fixing EatOutMap and RestaurantJump. Use each site's published correction route, not a customer review: EatOutMap's public wrong-details form returned a review acknowledgment; RestaurantJump publishes an update email, and a single message from the verified Hikari mailbox was read back with SENT. No owner login or claim was required. Submission is distinct from public correction; both pages still showed old fields immediately afterward. Other editorial outreach is still unsent and not covered by this narrow request. Retain receipts privately and avoid unchanged-status polling.

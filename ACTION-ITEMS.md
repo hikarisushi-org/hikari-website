@@ -3,7 +3,9 @@
 - [x] Consolidate Owner, competitor, and offsite-ordering research into the [dated report](docs/reports/2026-11-11-hikari-website-improvement-report.md) and verified PDF.
 - [x] A0/A3/A4: captured live Google/GA4 and current Square baseline; audited listing fields and mobile Square pickup/cart. Search Console and paid same-session attribution remain separately limited.
 - [ ] Enable Search Console API through an authorized Google project administrator, then test property access and index coverage. Existing credential gets SERVICE_DISABLED / AUTH_PERMISSION_DENIED.
-- [ ] Submit prepared directory corrections/outreach only after explicit sending/claim authorization; Apple/Bing owner fields remain unverified.
+- [x] Submit EatOutMap and RestaurantJump correction requests after Joel's explicit authorization: public report accepted by EatOutMap; RestaurantJump email verified in Hikari Sent.
+- [ ] Verify EatOutMap/RestaurantJump public changes after their review; both still show old fields immediately after submission.
+- [ ] Other editorial outreach remains unsent and needs separate sending authorization; Apple/Bing owner fields remain unverified.
 - [x] A1/A2: Joel approved reusing `/menu`; removed production search exclusions, retained its canonical/homepage links, added sitemap entry and verified publication. This supersedes the separate-menu proposal.
 - [ ] Observe actual Google indexing and later comparable search performance; eligibility is live, indexing/ranking is not yet verified.
 - [x] A5-A8: prepared visitor/lunch/story and two canonical-menu-driven dish pages, neutral review page/card/staff process, and researched local outreach packet.

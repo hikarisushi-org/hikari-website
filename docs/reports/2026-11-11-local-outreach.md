@@ -1,4 +1,4 @@
-# Hikari local discovery packet — prepared, not sent
+# Hikari local discovery packet — directory corrections submitted; editorial outreach unsent
 
 ## Verified listing information
 
@@ -37,7 +37,7 @@ Thank you for considering us.
 Hikari Sushi
 (385) 866-3746
 
-No email, contact form, directory submission or membership request was sent. An actual sender and outreach authorization are required before use.
+The Salt & Seek editorial email above remains unsent, as do the other editorial/membership inquiries. Joel separately authorized fixing EatOutMap and RestaurantJump; their correction requests were submitted November 11 as recorded below.
 
 ## Exact directory corrections prepared
 
@@ -46,3 +46,12 @@ No email, contact form, directory submission or membership request was sent. An 
 [RestaurantJump](https://restaurantjump.com/hikari-sushi-84095/), read November 11, has the correct address/phone but labels Hikari as serving brunch and points menu photos to an ordering marketplace. Hikari's Google attributes explicitly say it does not serve brunch. Prepare correction: remove the brunch label, use the official menu URL, and use HTTPS for the website. Treat its review count as an older directory snapshot.
 
 Yelp blocked automated access. No exact South Jordan Hikari Restaurantji or Tripadvisor listing was established in the bounded search; results for other Hikari restaurants were excluded. Apple/Bing owner-managed fields and Google place-action ordering links remain unverified; the Place Actions API returned 403. These are access limits, not evidence of absence or incorrect listings.
+
+## November 11 submission status
+
+Joel explicitly asked to fix both directory listings. Submitted each request once using the site's published correction route:
+
+- **EatOutMap — submitted, awaiting review.** Used the listing's public Report a problem form, reason Wrong details. Requested Monday 4:30–9 PM, Saturday 11 AM–9 PM, HTTPS website and official menu link where supported; supplied official visitor-page evidence and Hikari contact details. The form responded, “Thanks — we'll review this shortly.” The public listing still displayed its old hours/website immediately afterward. No account creation or ownership claim was needed.
+- **RestaurantJump — sent, awaiting action.** The listing publishes `yrosa968@gmail.com` for List / Update requests. At 2:29 PM MST, sent from the verified restaurant mailbox `hello@hikarisojo.com`, subject “Listing corrections: Hikari Sushi, South Jordan UT 84095.” Requested removal of Brunch and replacement of the old Website/Menu links with `https://hikarisojo.com/` and `https://hikarisojo.com/menu`. Gmail read-back confirms SENT and the intended sender/recipient/body; recipient delivery, reading and actual listing edits remain unverified.
+
+Both public listings still showed the old fields at handoff. Do not describe either as corrected until a later public check confirms the requested changes. No repeated polling, follow-up email, Salt & Seek outreach or paid service was initiated. Private receipts are retained in the main checkout's ignored evidence directory. Task-created browser tabs were closed.

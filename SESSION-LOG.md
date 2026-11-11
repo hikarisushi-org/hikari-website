@@ -82,3 +82,7 @@ Full build, 17 protected checks, six generated-content/context checks and link/m
 Joel later confirmed no separate lunch specials yet, with an offer planned this week. Recorded the distinction and future content task; current regular-price lunch page needs no public change.
 
 Joel confirmed existing review placards are already on every table. Closed the unnecessary new-printing task and retained the current placards; no public website change was needed.
+
+### November 11 follow-up — Directory correction submissions
+
+Joel authorized fixing both audited listings. Submitted EatOutMap hours/website/menu corrections through its public report form; it acknowledged review. Sent RestaurantJump brunch/website/menu corrections from hello@hikarisojo.com at 2:29 PM MST to its published update contact; exact message read-back confirms SENT. Both public pages still showed old information; no claim of completed listing edits. Stored private receipts and closed both task-owned tabs. Other outreach remains unsent.

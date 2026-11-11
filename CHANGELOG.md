@@ -110,3 +110,7 @@ Updated the public mail utility homepage, privacy policy, and terms to describe 
 - Added neutral review page, verified QR/5×7 print card, staff process and unsent local outreach/correction materials.
 - Added a bounded private Google/GA4 baseline collector and measurement definitions; documented Search Console/API access limits and mixed public/QR menu traffic.
 - Corrected Hikari's Google profile Menu and website URLs through scoped, read-back-verified API updates. Public website link verified on Maps; menu-field public propagation remains unverified.
+
+## 2026-11-11 — Directory correction requests
+
+Submitted the authorized EatOutMap and RestaurantJump corrections through their public report and update-email routes. Receipt/Sent verified; public changes pending each site's action. No website code or deployment change.
