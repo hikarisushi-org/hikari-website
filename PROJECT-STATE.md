@@ -1,3 +1,11 @@
+# Existing menu search eligibility — November 11, 2026
+
+Published the authorized change to the existing [public/QR menu](https://hikarisojo.com/menu) from `main` commit `9f40f5d`, Netlify deploy `6af4c7765f58f0230134fa50` (12:52 PM MST). Production HTML and HTTP headers allow indexing; canonical `/menu` is now in the sitemap. Preview builds retain global noindex. Public `/menu`, `/menu.html`, sitemap, robots, homepage and menu JSON returned 200 and matched the tested build. Menu body and homepage matched their pre-change live bytes; dish/photo/ordering code was preserved. Full build, 17 protected checks and three search-eligibility checks passed. No UI redesign or new ordering flow occurred.
+
+Google indexing and ranking improvement remain unverified. No Search Console indexing request was submitted. NEXT ACTION: check indexing and search performance at a later meaningful checkpoint; avoid repeated unchanged ranking scans.
+
+The earlier eight-page [research report](output/pdf/hikari-website-improvement-report-2026-11-11.pdf) and [editable source](docs/reports/2026-11-11-hikari-website-improvement-report.md) remain a historical pre-change baseline. Joel's later decision to reuse `/menu` supersedes its separate `/food` proposal. Other proposals remain unimplemented. Owner's failed scan and unverified score methodology still limit its ranking/customer claims; no reviewed evidence establishes an automatic ranking penalty for a legitimate Square order click.
+
 # Winter homepage refresh — November 10, 2026
 
 Homepage now features the winter menu: Pink Lotus hero and Cowboy Crunch feature with NEW-seal name badges, a "New this winter" callout, a NEW link to /menu under the hero, and a gallery of Coco Nirvana, Teriyaki Chicken Don, Jalapeño Kampachi, Tempura Don, Teriyaki Chicken Bento Box and Beef Don with verified Square item links. Joel approved the Tailnet preview before release. Published from `main` and verified live on 2026-11-10: homepage HTML and CSS match the build byte-for-byte, and all new images and `/menu` return 200. The temporary preview route (Tailnet port 9462) was removed. Source dish photos for new items live in hikari-ops `printable-menu/` (not the Drive Food Photos folder).

@@ -62,3 +62,11 @@ Updated the canonical QR menu data, incorporated eleven approved dish photos, an
 ## 2026-11-10 — Winter homepage refresh
 
 Swapped homepage hero, feature and gallery to winter dishes, added NEW badges and announcement copy, reviewed on a private Tailnet preview with Joel, and published after his approval. 17 existing tests and theme validation passed. Live homepage HTML/CSS matched the build exactly; new images and `/menu` returned 200; preview route removed.
+
+## 2026-11-11 - Owner review and website improvement report
+
+Reviewed the full public Loom transcript and six sampled recording frames; compared Nami Lily, Maru, and Arigato, including Joel's corrected Maru address. Checked live Hikari homepage/menu/sitemap source and existing menu/measurement requirements. Researched the exact outbound-ordering claim through Google documentation, a public 2025 trial exhibit, Owner/independent articles, Reddit, Stack Exchange, and Square staff guidance. Sources, access failures and limits are recorded in the report.
+
+Created the editable research report, eight-page PDF, and renderer. Rendered all pages, inspected layout including the research, action table, chart and sources, and checked PDF text/links. At report creation the recommendations were proposed and no production changes had occurred.
+
+Joel subsequently clarified that the existing `/menu` should be discoverable and explicitly authorized the work. Captured a passing preservation baseline, removed HTML and HTTP search exclusions, added the menu to the sitemap and improved its title/description. Kept global preview exclusions and the existing menu UI/data/photos/homepage/order measurement. Full production build, 17 preservation checks and three eligibility checks passed. Published `9f40f5d` to `main`; Netlify `6af4c7765f58f0230134fa50` published at 12:52 PM MST. Six live routes returned 200 and matched the built files; menu body/homepage matched pre-change live bytes. No fresh browser interaction, paid order, Search Console inspection or Google indexing confirmation is claimed. Updated current project records to supersede the earlier separate-menu proposal; report/PDF remain the dated research baseline. Next: observe indexing and later comparable search results.

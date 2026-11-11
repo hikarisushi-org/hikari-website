@@ -93,3 +93,13 @@ Updated the public mail utility homepage, privacy policy, and terms to describe 
 
 - Replaced retired Island Heatwave, Flares of Hikari and pre-winter hero/gallery photos with winter dishes; gallery links point to verified Square items.
 - Added NEW-seal name badges on the Pink Lotus and Cowboy Crunch photos, a "New this winter" feature callout and a hero NEW link to the menu.
+
+## 2026-11-11 - Website improvement research report
+
+- Added an editable, sourced report and eight-page PDF covering the live website, three competitors, Owner's map/area statistics, offsite-ordering research, proposed priorities, and measurement/acceptance criteria.
+- Added a reproducible PDF renderer. Restaurant source, build configuration, ordering links, account settings, and production were unchanged.
+
+## 2026-11-11 — Existing menu search eligibility
+
+- Removed search exclusion from production `/menu` HTML/HTTP headers and added the canonical menu URL to the sitemap. Updated the menu title/description and corrected homepage lastmod.
+- Kept global preview exclusions. Added production/preview build checks and changed the legacy release script's old noindex expectation. Menu UI/content, homepage and ordering code remain unchanged.

@@ -80,3 +80,21 @@ Joel confirmed that the table QR menu retains Mochi even though it is excluded f
 ## 2026-11-10 — Winter homepage photos
 
 The only Pink Lotus photo is a soft phone-video still, and printed-menu cutouts looked like studio shots next to the site's table photos. New homepage images were made with Codex built-in image generation from the approved real and printed-menu dish photos, preserving servingware, ingredients and portions; masters and prompts are in hikari-ops `printable-menu/assets/generated/website-editorial-20261110/`. Joel chose Teriyaki Chicken Don over Tekka Don. Square names it "Teriyaki Chicken Rice Bowl"; the homepage keeps the menu name and links by item ID.
+
+## 2026-11-11 - Owner analysis: findings and proposed response
+
+The [research report](docs/reports/2026-11-11-hikari-website-improvement-report.md) distinguishes verified source behavior from reported scores and ranking hypotheses. Live table-menu noindex exists in both meta and HTTP headers; sitemap has only the homepage and a stale lastmod. The first website proposal is a separate searchable public menu generated from the approved existing menu source. This is a recommendation, not a change to the accepted QR menu or publication approval.
+
+Owner's recorded scan shows an error; its Top 3 percentages, expected CTR, search geography, and customer estimate need raw data/methodology. Do not treat the percentages as market share, or searches as lost customers. Nami Lily uses SkyTab, Maru's working address supplied by Joel is `https://marusushitogout.menu11.com/`, and Arigato links to Toast. The corrected Maru address must be used in subsequent comparisons.
+
+Requested follow-up research read current Google ranking/GA4 documentation, a 2025 public engineer-call exhibit, Owner's own article, independent articles, Reddit, Stack Exchange and Square Community. Google's interaction signals are real; an automatic penalty for a legitimate outbound order click is not established. Older Analytics denials must not be broadened to deny all behavioral signals, and older forum answers do not override newer primary evidence. The Google video linked by the 2022 article was throttled; its statement is attributed as reported, not watched. Keep the useful content and handoff recommendations separate from unproven ranking causation. No platform switch is justified by the evidence in this report alone.
+
+## 2026-11-11 — Reuse the existing menu for search
+
+After clarifying that `/menu` already lets guests browse without ordering, Joel explicitly authorized making that existing page discoverable. This supersedes the earlier report's separate `/food` proposal. Remove production HTML and HTTP noindex controls, retain the canonical `/menu`, add it to the sitemap, and describe the menu/location in its title and description. Keep preview-wide noindex. The existing JavaScript-rendered menu remains in place; this release does not add prerendering or guarantee indexing.
+
+Menu body, canonical dish data, photo presentation, homepage, and ordering/measurement scripts were unchanged. The existing homepage already links to `/menu`. Full production build, 17 protected checks, and three production/preview eligibility checks passed. Protection baseline `menu-search-before-tap-20261111`, digest `d1983747420ef9e4dc7da12bff7d50b2677dc941172bcafd47d44961e5ded461`; original oracle files and requirement selection preserved. The first pre-change capture had a test-output parser mismatch; it was retained, corrected to explicit TAP, and a passing baseline was captured before implementation.
+
+The legacy browser release script still contains unrelated obsolete homepage/menu UI assertions; its search-expectation assertion was updated, but the complete script was not claimed to pass. Preservation evidence is byte comparison plus the existing menu/analytics checks. Google Search Console indexing and improved rankings are unverified; no indexing request or paid order was submitted.
+
+Release evidence: `9f40f5d` on origin/main, Netlify `6af4c7765f58f0230134fa50`, published November 11 at 12:52 PM MST. Six public route/build comparisons passed, including both menu URLs, sitemap/robots, unchanged homepage and customer-menu JSON. Menu body is byte-identical to the pre-change live version.

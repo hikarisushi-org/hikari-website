@@ -188,6 +188,7 @@ If a 525 appears again, check Cloudflare DNS proxy status before changing site c
 
 ## 📝 Documentation
 
+- [Website improvement report - November 11, 2026](docs/reports/2026-11-11-hikari-website-improvement-report.md) - Historical research baseline: Owner analysis, competitor findings, offsite-ordering research, and proposed priorities. The later approved implementation reuses `/menu`; it supersedes the separate `/food` proposal. [PDF](output/pdf/hikari-website-improvement-report-2026-11-11.pdf).
 - **README.md** (this file) - Project overview and quick start
 - **DEVELOPMENT.md** - Detailed development guide, theme creation, deployment workflows
 - **RECOMMENDATIONS.md** - Feature roadmap based on competitor research
@@ -258,10 +259,10 @@ For website issues or feature requests, contact the development team or open an 
 
 ## Production release source
 
-Netlify builds `main` with `node scripts/build-site.mjs` and publishes only `dist/`. The approved homepage, responsive assets, QR-only menu and analytics must remain committed on that branch. The daily Google review sync commits `data/reviews.json` to `main` and triggers the same build. Never rely on a direct deployment whose source is absent from `main`.
+Netlify builds `main` with `node scripts/build-site.mjs` and publishes only `dist/`. The approved homepage, responsive assets, public/QR menu and analytics must remain committed on that branch. The daily Google review sync commits `data/reviews.json` to `main` and triggers the same build. Never rely on a direct deployment whose source is absent from `main`.
 
 Checks: `node --test scripts/analytics.test.js`, `node scripts/validate-themes.js`, and `node scripts/verify-release.cjs https://hikarisojo.com --production` (requires Playwright and Chrome).
 
 
-### Customer QR menu
-The approved customer menu is served at `/menu`. Update dish content in the `MENU-DATA` block of `js/menu-page.js`; `node scripts/build-site.mjs` generates `dist/data/customer-menu.json`. `data/menu-presentation.json` maps original image paths to optimized photos and intrinsic dimensions. Run `node --test scripts/customer-menu.test.mjs` after building.
+### Public and customer QR menu
+The approved customer menu is served at `/menu`, linked from the homepage and included in the sitemap. Production allows Google indexing; preview builds retain global noindex. Google indexing and rankings are separate external outcomes. Update dish content in the `MENU-DATA` block of `js/menu-page.js`; `node scripts/build-site.mjs` generates `dist/data/customer-menu.json`. `data/menu-presentation.json` maps original image paths to optimized photos and intrinsic dimensions. Run `node --test scripts/customer-menu.test.mjs` after building.
