@@ -5,7 +5,8 @@
 - [ ] Enable Search Console API through an authorized Google project administrator, then test property access and index coverage. Existing credential gets SERVICE_DISABLED / AUTH_PERMISSION_DENIED.
 - [x] Submit EatOutMap and RestaurantJump correction requests after Joel's explicit authorization: public report accepted by EatOutMap; RestaurantJump email verified in Hikari Sent.
 - [ ] Verify EatOutMap/RestaurantJump public changes after their review; both still show old fields immediately after submission.
-- [ ] Other editorial outreach remains unsent and needs separate sending authorization; Apple/Bing owner fields remain unverified.
+- [x] Send Joel-authorized Salt & Seek editorial request from hello@hikarisojo.com to alex@saltandseek.com; SENT verified November 11 at 2:40 PM MST.
+- [ ] Salt & Seek response/editorial inclusion remains unverified. Other editorial inquiries remain unsent; Apple/Bing owner fields remain unverified.
 - [x] A1/A2: Joel approved reusing `/menu`; removed production search exclusions, retained its canonical/homepage links, added sitemap entry and verified publication. This supersedes the separate-menu proposal.
 - [ ] Observe actual Google indexing and later comparable search performance; eligibility is live, indexing/ranking is not yet verified.
 - [x] A5-A8: prepared visitor/lunch/story and two canonical-menu-driven dish pages, neutral review page/card/staff process, and researched local outreach packet.

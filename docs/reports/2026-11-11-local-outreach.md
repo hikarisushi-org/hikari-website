@@ -1,4 +1,4 @@
-# Hikari local discovery packet — directory corrections submitted; editorial outreach unsent
+# Hikari local discovery packet — directory corrections and Salt & Seek request submitted
 
 ## Verified listing information
 
@@ -22,7 +22,7 @@ Do not add ramen, brunch, catering, all-you-can-eat, awards, special discounts, 
 | [University of Utah Health dining guide](https://healthcare.utah.edu/patient-family-services/dining) | The South Jordan section includes restaurants around its health center. Stated criteria include a Google rating of at least four and a five-mile radius. | Verify Hikari meets the guide's current radius/rating criteria before asking the site's editorial contact about inclusion. Do not promise a hospital discount or imply endorsement. |
 | [Visit Salt Lake](https://www.visitsaltlake.com/plan-your-visit/frequently-asked-questions/) | Business links/listings generally relate to membership and its mission. | Request eligibility/cost information only after outreach authorization. No membership purchase or account signup is approved; lower priority than an editorial local guide. |
 
-## Ready-to-use editorial email
+## Salt & Seek email sent November 11
 
 Subject: Hikari Sushi for future South Jordan dining coverage
 
@@ -37,7 +37,7 @@ Thank you for considering us.
 Hikari Sushi
 (385) 866-3746
 
-The Salt & Seek editorial email above remains unsent, as do the other editorial/membership inquiries. Joel separately authorized fixing EatOutMap and RestaurantJump; their correction requests were submitted November 11 as recorded below.
+Joel authorized sending the Salt & Seek email above from hello@hikarisojo.com; it was sent to alex@saltandseek.com at 2:40 PM MST on November 11. Gmail read-back confirms SENT, intended sender/recipient and exact body. Delivery, reading, response and editorial inclusion remain unverified. University of Utah Health and Visit Salt Lake inquiries remain unsent. The directory requests were submitted earlier as recorded below.
 
 ## Exact directory corrections prepared
 
@@ -54,4 +54,4 @@ Joel explicitly asked to fix both directory listings. Submitted each request onc
 - **EatOutMap — submitted, awaiting review.** Used the listing's public Report a problem form, reason Wrong details. Requested Monday 4:30–9 PM, Saturday 11 AM–9 PM, HTTPS website and official menu link where supported; supplied official visitor-page evidence and Hikari contact details. The form responded, “Thanks — we'll review this shortly.” The public listing still displayed its old hours/website immediately afterward. No account creation or ownership claim was needed.
 - **RestaurantJump — sent, awaiting action.** The listing publishes `yrosa968@gmail.com` for List / Update requests. At 2:29 PM MST, sent from the verified restaurant mailbox `hello@hikarisojo.com`, subject “Listing corrections: Hikari Sushi, South Jordan UT 84095.” Requested removal of Brunch and replacement of the old Website/Menu links with `https://hikarisojo.com/` and `https://hikarisojo.com/menu`. Gmail read-back confirms SENT and the intended sender/recipient/body; recipient delivery, reading and actual listing edits remain unverified.
 
-Both public listings still showed the old fields at handoff. Do not describe either as corrected until a later public check confirms the requested changes. No repeated polling, follow-up email, Salt & Seek outreach or paid service was initiated. Private receipts are retained in the main checkout's ignored evidence directory. Task-created browser tabs were closed.
+Both public listings still showed the old fields at handoff. Do not describe either as corrected until a later public check confirms the requested changes. At the directory-submission handoff, no repeated polling, follow-up email, Salt & Seek outreach or paid service had been initiated. Salt & Seek was subsequently sent with Joel's authorization as recorded above. Private receipts are retained in the main checkout's ignored evidence directory. Task-created browser tabs were closed.

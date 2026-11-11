@@ -114,3 +114,7 @@ Updated the public mail utility homepage, privacy policy, and terms to describe 
 ## 2026-11-11 — Directory correction requests
 
 Submitted the authorized EatOutMap and RestaurantJump corrections through their public report and update-email routes. Receipt/Sent verified; public changes pending each site's action. No website code or deployment change.
+
+## 2026-11-11 — Salt & Seek outreach
+
+Sent the authorized South Jordan dining-coverage request from Hikari's mailbox; Sent read-back verified. No website code or deployment change.

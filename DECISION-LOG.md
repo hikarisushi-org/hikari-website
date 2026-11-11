@@ -120,3 +120,7 @@ Joel confirmed review placards already exist on every table. Keep those in use; 
 ## 2026-11-11 — Submit the two directory corrections
 
 Joel explicitly authorized fixing EatOutMap and RestaurantJump. Use each site's published correction route, not a customer review: EatOutMap's public wrong-details form returned a review acknowledgment; RestaurantJump publishes an update email, and a single message from the verified Hikari mailbox was read back with SENT. No owner login or claim was required. Submission is distinct from public correction; both pages still showed old fields immediately afterward. Other editorial outreach is still unsent and not covered by this narrow request. Retain receipts privately and avoid unchanged-status polling.
+
+## 2026-11-11 — Send Salt & Seek request
+
+Joel pointed to existing hello@hikarisojo.com access and authorized sending the prepared Salt & Seek request. Verified restaurant mailbox identity and absence of a matching prior Sent message, reviewed the exact draft and sent it once to alex@saltandseek.com. Read-back confirms SENT and expected sender/recipient/body at 2:40 PM MST. Sent does not establish receipt, editorial acceptance or inclusion. No automated follow-up or other outreach initiated.

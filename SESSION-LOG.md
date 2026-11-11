@@ -86,3 +86,7 @@ Joel confirmed existing review placards are already on every table. Closed the u
 ### November 11 follow-up — Directory correction submissions
 
 Joel authorized fixing both audited listings. Submitted EatOutMap hours/website/menu corrections through its public report form; it acknowledged review. Sent RestaurantJump brunch/website/menu corrections from hello@hikarisojo.com at 2:29 PM MST to its published update contact; exact message read-back confirms SENT. Both public pages still showed old information; no claim of completed listing edits. Stored private receipts and closed both task-owned tabs. Other outreach remains unsent.
+
+### November 11 follow-up — Salt & Seek email
+
+Sent the prepared editorial consideration request to Alex at Salt & Seek from the verified Hikari mailbox with Joel's authorization. Exact Gmail Sent read-back passed at 2:40 PM MST. Private receipt retained; no recipient response or editorial inclusion claimed.

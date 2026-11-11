@@ -6,6 +6,8 @@ Joel authorized all six remaining workstreams: listing audit, mobile Square hand
 
 Joel separately authorized submitting the EatOutMap and RestaurantJump corrections on November 11 ("can you fix those?"). This permits the scoped report/email submissions; other editorial outreach and paid services remain outside that authorization.
 
+Joel subsequently authorized sending the prepared Salt & Seek editorial request from hello@hikarisojo.com. This covers that one email; no paid placement, membership, automated follow-ups or other editorial messages are authorized.
+
 Joel confirmed November 11 that separate lunch specials are not currently offered and are planned for this week. No dishes, prices, launch date or promotional terms are confirmed. Keep the lunch page on regular menu prices/hours until those details are approved.
 
 ## Existing menu search eligibility - November 11, 2026
