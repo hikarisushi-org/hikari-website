@@ -4,6 +4,8 @@
 
 Joel authorized all six remaining workstreams: listing audit, mobile Square handoff, current measurement baseline, helpful dining information, neutral review materials, and local/dish/story content. Keep approved dishes, prices, photos, homepage composition, Square destinations and existing event semantics. New dish-page names/descriptions/prices must derive from canonical menu data at build time. Use verified restaurant hours/contact details; exclude unconfirmed parking, founder biography and promotions. Do not send outreach or customer messages, create paid orders, buy memberships, or claim Google indexing/ranking results. Prepare correction/outreach material for destinations that need owner-controlled access.
 
+Joel confirmed November 11 that separate lunch specials are not currently offered and are planned for this week. No dishes, prices, launch date or promotional terms are confirmed. Keep the lunch page on regular menu prices/hours until those details are approved.
+
 ## Existing menu search eligibility - November 11, 2026
 
 Joel authorized making the existing `/menu` discoverable in Google search. Reuse this menu and its approved data; do not create a second menu, change dishes/prices/photos, alter the browse/detail interactions, or add ordering requirements. Production HTML and HTTP headers must allow indexing, `/menu` must appear in the sitemap, and previews must remain excluded. Google indexing and ranking are external outcomes, distinct from removing the blocking settings.

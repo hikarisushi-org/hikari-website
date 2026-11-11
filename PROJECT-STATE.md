@@ -6,7 +6,7 @@ Google profile Menu and website fields were updated and read back; public Maps v
 
 Current Google/GA4 and Square snapshots are retained outside this public repository in the main checkout's ignored `.ai/context-logger/evidence/discovery-20261111/`. Search Console's API is disabled and the existing credential cannot administer it. Property access/index coverage, paid same-session attribution and ranking improvements remain unverified. `/menu` now has mixed public/QR use; path alone is not scan evidence. [Measurement rules](docs/discovery-measurement.md).
 
-NEXT ACTION: resolve Google project-admin/API access before checking Search Console; use the prepared staff materials and confirm any separate lunch offers/entrance directions before adding them. No recurring polling or new paid service was installed. Temporary review server/tabs are task-owned and closed at handoff.
+NEXT ACTION: resolve Google project-admin/API access before checking Search Console; use the prepared staff materials and confirm planned lunch-special details and entrance directions before adding them (Joel confirmed no separate lunch specials yet; planned this week). No recurring polling or new paid service was installed. Temporary review server/tabs are task-owned and closed at handoff.
 
 # Existing menu search eligibility — November 11, 2026
 

@@ -110,3 +110,5 @@ Google/GA4 and Square records support a fresh baseline without a new integration
 The review QR uses the stable first-party `/review/` route and a Google-provided review URI. It invites all honest feedback, with no rewards or satisfaction gate. Staff remain responsible for real requests and physical print/scan acceptance. No recurring polling or external service purchase was installed. Repeated baseline captures require explicit refresh; existing capture files are reused by default.
 
 Validation and limits are in docs/reports/2026-11-11-discovery-release.md. Taste was used as a checker through its browser probe in T3; no separate browser, direction dealer or motion quota was applied. Existing brand warnings were retained, not treated as a redesign request.
+
+November 11 owner clarification: no separate lunch specials are currently offered; Joel plans to add something this week. Keep regular menu prices/hours on the lunch page until the actual offer and launch details are confirmed. This is a plan, not approval of invented promotional dishes, prices or dates.
