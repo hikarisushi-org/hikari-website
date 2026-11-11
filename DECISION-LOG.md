@@ -112,3 +112,7 @@ The review QR uses the stable first-party `/review/` route and a Google-provided
 Validation and limits are in docs/reports/2026-11-11-discovery-release.md. Taste was used as a checker through its browser probe in T3; no separate browser, direction dealer or motion quota was applied. Existing brand warnings were retained, not treated as a redesign request.
 
 November 11 owner clarification: no separate lunch specials are currently offered; Joel plans to add something this week. Keep regular menu prices/hours on the lunch page until the actual offer and launch details are confirmed. This is a plan, not approval of invented promotional dishes, prices or dates.
+
+## 2026-11-11 — Existing table review placards
+
+Joel confirmed review placards already exist on every table. Keep those in use; the newly prepared card does not require printing, distribution or replacement of existing materials. No existing placard destination or physical scan was independently tested in this session.

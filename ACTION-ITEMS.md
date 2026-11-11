@@ -9,7 +9,7 @@
 - [x] A5-A8: prepared visitor/lunch/story and two canonical-menu-driven dish pages, neutral review page/card/staff process, and researched local outreach packet.
 - [ ] Add separate lunch specials after their dishes, prices and launch details are confirmed. Joel confirmed November 11 that none are offered yet; they are planned for this week. Current lunch page uses regular menu prices/hours.
 - [ ] Confirm exact entrance directions before adding them. Free on-site parking is verified in the existing Google profile.
-- [ ] Staff: print/use the prepared review card and verify a physical phone scan; digital QR decoding passed.
+- [x] Review placards: Joel confirmed existing review placards are already on every table. Keep those in use; no new printing or replacement is needed. The new card is optional unused material.
 - [ ] Observe public Maps menu-field propagation; merchant API saved state is verified, public website link is verified.
 - [ ] A9: evaluate comparable search/local-grid and paid-order outcomes after an approved release. Request Owner's successful scan and raw methodology before relying on its scores.
 
