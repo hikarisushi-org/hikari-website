@@ -103,3 +103,10 @@ Updated the public mail utility homepage, privacy policy, and terms to describe 
 
 - Removed search exclusion from production `/menu` HTML/HTTP headers and added the canonical menu URL to the sitemap. Updated the menu title/description and corrected homepage lastmod.
 - Kept global preview exclusions. Added production/preview build checks and changed the legacy release script's old noindex expectation. Menu UI/content, homepage and ordering code remain unchanged.
+
+## 2026-11-11 — Practical discovery and guest information
+
+- Added full-menu navigation, visitor/lunch/story content and two dish guides generated from approved menu data. Updated sitemap and restaurant menu structured-data link. Preserved the old lunch source in a non-published archive.
+- Added neutral review page, verified QR/5×7 print card, staff process and unsent local outreach/correction materials.
+- Added a bounded private Google/GA4 baseline collector and measurement definitions; documented Search Console/API access limits and mixed public/QR menu traffic.
+- Corrected Hikari's Google profile Menu and website URLs through scoped, read-back-verified API updates. Public website link verified on Maps; menu-field public propagation remains unverified.

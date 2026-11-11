@@ -1,3 +1,13 @@
+# Discovery and guest information released — November 11, 2026
+
+Published `3e719b0` to origin/main, Netlify `6af4d37282c56de49918754e`, at 1:43 PM MST. Visitor/lunch/story and Firefly Fusion/Citrus Mango Dream pages, menu navigation, review page and sitemap are live. Twelve public HTML/style/menu-data responses returned 200 and matched the tested build byte-for-byte. Existing menu and data bytes stayed unchanged. Live review function returned five valid reviews and the same total as public Maps. Full build, 17 protected checks, six content/context checks and narrow/tablet/desktop browser review passed. [Release detail](docs/reports/2026-11-11-discovery-release.md).
+
+Google profile Menu and website fields were updated and read back; public Maps verified the HTTPS website. Public menu-field propagation remains unverified. Staff [review materials](docs/reports/2026-11-11-review-process.md) and [local outreach/correction packet](docs/reports/2026-11-11-local-outreach.md) are ready; no requests, replies, claims or outreach were sent. Digital QR decoding passed; printing and a physical phone scan remain untested.
+
+Current Google/GA4 and Square snapshots are retained outside this public repository in the main checkout's ignored `.ai/context-logger/evidence/discovery-20261111/`. Search Console's API is disabled and the existing credential cannot administer it. Property access/index coverage, paid same-session attribution and ranking improvements remain unverified. `/menu` now has mixed public/QR use; path alone is not scan evidence. [Measurement rules](docs/discovery-measurement.md).
+
+NEXT ACTION: resolve Google project-admin/API access before checking Search Console; use the prepared staff materials and confirm any separate lunch offers/entrance directions before adding them. No recurring polling or new paid service was installed. Temporary review server/tabs are task-owned and closed at handoff.
+
 # Existing menu search eligibility — November 11, 2026
 
 Published the authorized change to the existing [public/QR menu](https://hikarisojo.com/menu) from `main` commit `9f40f5d`, Netlify deploy `6af4c7765f58f0230134fa50` (12:52 PM MST). Production HTML and HTTP headers allow indexing; canonical `/menu` is now in the sitemap. Preview builds retain global noindex. Public `/menu`, `/menu.html`, sitemap, robots, homepage and menu JSON returned 200 and matched the tested build. Menu body and homepage matched their pre-change live bytes; dish/photo/ordering code was preserved. Full build, 17 protected checks and three search-eligibility checks passed. No UI redesign or new ordering flow occurred.

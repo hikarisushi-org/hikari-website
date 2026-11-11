@@ -98,3 +98,15 @@ Menu body, canonical dish data, photo presentation, homepage, and ordering/measu
 The legacy browser release script still contains unrelated obsolete homepage/menu UI assertions; its search-expectation assertion was updated, but the complete script was not claimed to pass. Preservation evidence is byte comparison plus the existing menu/analytics checks. Google Search Console indexing and improved rankings are unverified; no indexing request or paid order was submitted.
 
 Release evidence: `9f40f5d` on origin/main, Netlify `6af4c7765f58f0230134fa50`, published November 11 at 12:52 PM MST. Six public route/build comparisons passed, including both menu URLs, sitemap/robots, unchanged homepage and customer-menu JSON. Menu body is byte-identical to the pre-change live version.
+
+## 2026-11-11 — Complete the six discovery workstreams
+
+Joel authorized the listings, mobile-ordering, measurement, dining-information, neutral review and local/dish/story workstreams. Reuse the current website design and approved menu. Generated editorial pages take primary descriptions/prices from canonical data and header/footer/hour-table from the homepage; preserve the old lunch source in a non-published archive rather than carrying an independent outdated price list. No separate lunch promotion or entrance instruction is claimed without confirmation. The existing Google profile verifies free on-site parking.
+
+Authenticated Google reads exposed a marketplace Menu URL and HTTP website URL. Scoped API patches changed only those fields to the official menu and HTTPS homepage; read-back verified them. Public Maps verified the website; menu-field propagation remains unverified. Place Actions API access is unavailable, so provider ordering links were not modified. Exact third-party corrections and outreach are drafted, not sent.
+
+Google/GA4 and Square records support a fresh baseline without a new integration. This repository is public: raw aggregates, order-confirmation paths and mutation receipts stay in the main checkout's ignored evidence directory, not Git or the site build. The Search Console API is disabled, and Service Usage read returns AUTH_PERMISSION_DENIED for the existing credential. Do not infer missing property permission before API enablement is resolved. No IAM/auth/API changes were made. `/menu` is now mixed public/QR traffic; path-only QR attribution is no longer proof of a scan.
+
+The review QR uses the stable first-party `/review/` route and a Google-provided review URI. It invites all honest feedback, with no rewards or satisfaction gate. Staff remain responsible for real requests and physical print/scan acceptance. No recurring polling or external service purchase was installed. Repeated baseline captures require explicit refresh; existing capture files are reused by default.
+
+Validation and limits are in docs/reports/2026-11-11-discovery-release.md. Taste was used as a checker through its browser probe in T3; no separate browser, direction dealer or motion quota was applied. Existing brand warnings were retained, not treated as a redesign request.

@@ -1,10 +1,15 @@
 # Website improvement report - proposed work
 
 - [x] Consolidate Owner, competitor, and offsite-ordering research into the [dated report](docs/reports/2026-11-11-hikari-website-improvement-report.md) and verified PDF.
-- [ ] A0/A3/A4: establish search/profile/paid-order baselines, inspect listing accuracy, and review the mobile Square handoff. Proposed; not executed by this report.
+- [x] A0/A3/A4: captured live Google/GA4 and current Square baseline; audited listing fields and mobile Square pickup/cart. Search Console and paid same-session attribution remain separately limited.
+- [ ] Enable Search Console API through an authorized Google project administrator, then test property access and index coverage. Existing credential gets SERVICE_DISABLED / AUTH_PERMISSION_DENIED.
+- [ ] Submit prepared directory corrections/outreach only after explicit sending/claim authorization; Apple/Bing owner fields remain unverified.
 - [x] A1/A2: Joel approved reusing `/menu`; removed production search exclusions, retained its canonical/homepage links, added sitemap entry and verified publication. This supersedes the separate-menu proposal.
 - [ ] Observe actual Google indexing and later comparable search performance; eligibility is live, indexing/ranking is not yet verified.
-- [ ] A5-A8: assess useful dining information, honest review requests, suitable local guides, signature-dish pages and the Hikari story. Proposed; operational facts and services need verification before drafting.
+- [x] A5-A8: prepared visitor/lunch/story and two canonical-menu-driven dish pages, neutral review page/card/staff process, and researched local outreach packet.
+- [ ] Confirm any separate current lunch promotions and exact entrance directions before adding them. Free on-site parking is verified in the existing Google profile.
+- [ ] Staff: print/use the prepared review card and verify a physical phone scan; digital QR decoding passed.
+- [ ] Observe public Maps menu-field propagation; merchant API saved state is verified, public website link is verified.
 - [ ] A9: evaluate comparable search/local-grid and paid-order outcomes after an approved release. Request Owner's successful scan and raw methodology before relying on its scores.
 
 # Winter homepage
