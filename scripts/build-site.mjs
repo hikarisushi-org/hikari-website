@@ -26,7 +26,10 @@ function copy(file) {
 for (const file of ['index.html', 'menu.html', 'lunch-specials.html', 'mail-research', 'sitemap.xml', 'theme-config.json', 'themes', 'css', 'js', 'assets/fonts', 'assets/images/menu', 'assets/images/generated/menu']) copy(file);
 fs.writeFileSync(path.join(out, '_redirects'), '/menu /menu.html 200\n');
 const preview = process.argv.includes('--preview') || process.env.CONTEXT === 'deploy-preview';
-fs.writeFileSync(path.join(out, '_headers'), `${preview ? '/*\n  X-Robots-Tag: noindex, nofollow\n' : ''}/menu\n  X-Robots-Tag: noindex, nofollow\n/menu.html\n  X-Robots-Tag: noindex, nofollow\n`);
+// The existing menu is public and searchable; private previews stay excluded.
+fs.writeFileSync(path.join(out, '_headers'), preview
+  ? '/*\n  X-Robots-Tag: noindex, nofollow\n'
+  : '/menu\n  X-Robots-Tag: index, follow\n/menu.html\n  X-Robots-Tag: index, follow\n');
 fs.writeFileSync(path.join(out, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: https://hikarisojo.com/sitemap.xml\n');
 console.log(`Built ${copied.size} public files/directories into ${out}; preview=${preview}`);
 

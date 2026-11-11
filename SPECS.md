@@ -1,5 +1,26 @@
 # SPECS
 
+## Existing menu search eligibility - November 11, 2026
+
+Joel authorized making the existing `/menu` discoverable in Google search. Reuse this menu and its approved data; do not create a second menu, change dishes/prices/photos, alter the browse/detail interactions, or add ordering requirements. Production HTML and HTTP headers must allow indexing, `/menu` must appear in the sitemap, and previews must remain excluded. Google indexing and ranking are external outcomes, distinct from removing the blocking settings.
+
+```toolkit-requirements
+[
+  {
+    "id": "MENU-AND-ORDER-PRESERVATION",
+    "status": "approved",
+    "statement": "Keep the approved menu data, photos, QR route and ordering measurement intact while enabling search eligibility for the existing menu.",
+    "evidence": "Joel's November 11, 2026 instruction to make the existing menu discoverable; September 28 QR-menu approval in DECISION-LOG.md and measurement requirements below.",
+    "scope": ["menu.html", "scripts/build-site.mjs", "sitemap.xml", "js/*", "data/*"],
+    "artifacts": ["menu.html", "scripts/build-site.mjs", "js/menu-page.js", "data/menu-presentation.json", "js/homepage.js", "js/site-actions.js"],
+    "check": {
+      "argv": ["python3", "-c", "import subprocess,json,re; r=subprocess.run(['node','--test','--test-reporter=tap','scripts/analytics.test.js','scripts/customer-menu.test.mjs','scripts/favorites-order.test.cjs','scripts/gallery-order.test.cjs'],capture_output=True,text=True); n=re.search(r'# tests (\\d+)',r.stdout); print(json.dumps({'status':'pass' if r.returncode==0 and n else 'fail','checks':int(n[1]) if n else 0,'details':r.stdout[-1800:]})); raise SystemExit(r.returncode)"],
+      "files": ["scripts/analytics.test.js", "scripts/customer-menu.test.mjs", "scripts/favorites-order.test.cjs", "scripts/gallery-order.test.cjs"]
+    }
+  }
+]
+```
+
 No formal specification yet.
 
 See `README.md` for overview. Measurements, APIs, schemas, or design rules go here when this project needs a source of truth.
