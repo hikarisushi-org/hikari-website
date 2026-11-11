@@ -124,3 +124,7 @@ Joel explicitly authorized fixing EatOutMap and RestaurantJump. Use each site's 
 ## 2026-11-11 — Send Salt & Seek request
 
 Joel pointed to existing hello@hikarisojo.com access and authorized sending the prepared Salt & Seek request. Verified restaurant mailbox identity and absence of a matching prior Sent message, reviewed the exact draft and sent it once to alex@saltandseek.com. Read-back confirms SENT and expected sender/recipient/body at 2:40 PM MST. Sent does not establish receipt, editorial acceptance or inclusion. No automated follow-up or other outreach initiated.
+
+## 2026-11-11 — Complete authorized submissions using existing access
+
+Joel repeatedly asked whether prepared directory/editorial work had actually been sent and pointed out existing Hikari mailbox access. When he authorizes a specific submission, use the verified restaurant mailbox or the site's published correction route and finish it instead of returning another draft or asking for the same permission. Report prepared, submitted/Sent, and public/editorial acceptance separately. This does not authorize unrelated recipients or automated follow-ups.

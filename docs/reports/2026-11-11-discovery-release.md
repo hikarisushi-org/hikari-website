@@ -17,7 +17,7 @@ Existing menu UI/content/photos and homepage ordering/gallery/Favorites behavior
 
 Hikari's authenticated Google Business Profile matches the approved website for hours, phone and address. Its attributes confirm dine-in, takeout/delivery, lunch and free on-site parking. Its Menu URL had pointed to an ordering marketplace. The Menu field was updated to `https://hikarisojo.com/menu`, and website field to `https://hikarisojo.com/`; both were read back successfully. Public Google Maps showed the corrected HTTPS website. The limited public Maps view did not expose the menu field, so public propagation of that field remains unverified.
 
-EatOutMap has incorrect Monday/Saturday hours. RestaurantJump has an unsupported brunch label and a marketplace menu link. Exact corrections and verified listing copy are in [the local discovery packet](2026-11-11-local-outreach.md). Those external changes were prepared, not submitted. Yelp blocked automated access; a specific South Jordan Restaurantji/Tripadvisor listing was not established. Apple/Bing owner fields and Google place-action ordering links remain unverified. Do not interpret inaccessible fields as errors or absence.
+EatOutMap has incorrect Monday/Saturday hours. RestaurantJump has an unsupported brunch label and a marketplace menu link. Exact corrections and verified listing copy are in [the local discovery packet](2026-11-11-local-outreach.md). At the website release those external changes were prepared, not submitted. Joel later authorized both requests: EatOutMap acknowledged the report and RestaurantJump email was verified in Hikari Sent; public changes remain pending. Yelp blocked automated access; a specific South Jordan Restaurantji/Tripadvisor listing was not established. Apple/Bing owner fields and Google place-action ordering links remain unverified. Do not interpret inaccessible fields as errors or absence.
 
 ## Ordering and measurement
 
@@ -31,9 +31,9 @@ The public `/menu` route now has mixed public/QR use. Its path alone cannot esta
 
 ## Staff materials and local content
 
-[Review process](2026-11-11-review-process.md), a 5×7-inch / 300-DPI PNG card, and a standalone QR are ready. Both PNG QR payloads decode to the stable first-party review URL. Physical printing/phone scanning remains a staff acceptance step. No customer requests or replies were sent.
+[Review process](2026-11-11-review-process.md), a 5×7-inch / 300-DPI PNG card, and a standalone QR are ready. Both PNG QR payloads decode to the stable first-party review URL. Joel subsequently confirmed existing review placards on every table; keep those in use, with no new printing required. The new card has not been physically printed/phone-scanned. No customer requests or replies were sent.
 
-[Local outreach packet](2026-11-11-local-outreach.md) contains a researched shortlist, exact corrections, verified listing description and an unsent editorial email. Salt & Seek is an editorial opportunity; U of U Health has stated radius/rating criteria to verify; Visit Salt Lake's membership route is lower priority. No outreach, claim submission, membership purchase or new service signup occurred.
+[Local outreach packet](2026-11-11-local-outreach.md) contains a researched shortlist, exact corrections, verified listing description and the exact Salt & Seek editorial email. Salt & Seek is an editorial opportunity; U of U Health has stated radius/rating criteria to verify; Visit Salt Lake's membership route is lower priority. At the website release no outreach had occurred. With Joel's later authorization, the Salt & Seek request was sent and verified in Hikari Sent at 2:40 PM MST; response/inclusion remain unverified. No ownership claim, membership purchase or new service signup occurred.
 
 ## Validation
 

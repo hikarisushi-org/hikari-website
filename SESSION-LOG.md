@@ -63,7 +63,7 @@ Updated the canonical QR menu data, incorporated eleven approved dish photos, an
 
 Swapped homepage hero, feature and gallery to winter dishes, added NEW badges and announcement copy, reviewed on a private Tailnet preview with Joel, and published after his approval. 17 existing tests and theme validation passed. Live homepage HTML/CSS matched the build exactly; new images and `/menu` returned 200; preview route removed.
 
-## 2026-11-11 - Owner review and website improvement report
+## 2026-11-11 — Owner review and website improvement report
 
 Reviewed the full public Loom transcript and six sampled recording frames; compared Nami Lily, Maru, and Arigato, including Joel's corrected Maru address. Checked live Hikari homepage/menu/sitemap source and existing menu/measurement requirements. Researched the exact outbound-ordering claim through Google documentation, a public 2025 trial exhibit, Owner/independent articles, Reddit, Stack Exchange, and Square staff guidance. Sources, access failures and limits are recorded in the report.
 
@@ -90,3 +90,5 @@ Joel authorized fixing both audited listings. Submitted EatOutMap hours/website/
 ### November 11 follow-up — Salt & Seek email
 
 Sent the prepared editorial consideration request to Alex at Salt & Seek from the verified Hikari mailbox with Joel's authorization. Exact Gmail Sent read-back passed at 2:40 PM MST. Private receipt retained; no recipient response or editorial inclusion claimed.
+
+Session close: consolidated current state into one handoff and one next action, preserving the release/protection evidence and external-outcome limits. Existing table placards stay in use; lunch/entrance facts and Search Console access remain unresolved. Directory requests and Salt & Seek email are submitted, not confirmed public changes or editorial acceptance. No task-owned operations remain running. Close-only documentation is saved separately without a new production release.

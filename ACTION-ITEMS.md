@@ -1,4 +1,4 @@
-# Website improvement report - proposed work
+# Website discovery improvements — implemented and follow-ups
 
 - [x] Consolidate Owner, competitor, and offsite-ordering research into the [dated report](docs/reports/2026-11-11-hikari-website-improvement-report.md) and verified PDF.
 - [x] A0/A3/A4: captured live Google/GA4 and current Square baseline; audited listing fields and mobile Square pickup/cart. Search Console and paid same-session attribution remain separately limited.
