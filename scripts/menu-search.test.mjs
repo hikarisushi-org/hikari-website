@@ -16,12 +16,19 @@ function build(t, context, args = []) {
   fs.mkdirSync(path.join(fixture, 'scripts'));
   fs.mkdirSync(path.join(fixture, 'js'));
   fs.mkdirSync(path.join(fixture, 'data'));
-  for (const file of ['scripts/build-site.mjs', 'menu.html', 'sitemap.xml']) {
+  for (const file of ['scripts/build-site.mjs', 'scripts/build-discovery.mjs', 'index.html', 'menu.html', 'sitemap.xml']) {
     fs.copyFileSync(path.join(root, file), path.join(fixture, file));
   }
-  fs.writeFileSync(path.join(fixture, 'js/menu-page.js'),
-    'const menuData = {"appetizers":{"title":"Appetizers","items":[{"name":"Edamame","price":"$5","desc":"Steamed soybeans"}]}}; // MENU-DATA:END');
+  const source = fs.readFileSync(path.join(root, 'js/menu-page.js'), 'utf8');
+  fs.writeFileSync(path.join(fixture, 'js/menu-page.js'), source);
   fs.writeFileSync(path.join(fixture, 'data/menu-presentation.json'), '{}');
+  const menu = JSON.parse(source.match(/const menuData = ([\s\S]*?);\s*\/\/ MENU-DATA:END/)[1]);
+  for (const group of Object.values(menu)) for (const item of group.items) {
+    if (!item.img) continue;
+    const photo = path.join(fixture, item.img);
+    fs.mkdirSync(path.dirname(photo), {recursive:true});
+    fs.writeFileSync(photo, 'fixture image');
+  }
   const result = spawnSync(process.execPath, ['scripts/build-site.mjs', ...args], {
     cwd:fixture, env:{...process.env, CONTEXT:context}, encoding:'utf8',
   });

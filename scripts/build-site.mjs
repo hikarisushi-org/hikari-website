@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildDiscovery } from './build-discovery.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'dist');
 // Only this script's generated output may be removed.
@@ -23,7 +24,7 @@ function copy(file) {
     for (const match of fs.readFileSync(source, 'utf8').matchAll(/(?:\/?)(assets\/[^\s"'<>?)`]+\.(?:png|webp|avif|jpg|jpeg|svg|woff2|mp4))/g)) copy(match[1]);
   }
 }
-for (const file of ['index.html', 'menu.html', 'lunch-specials.html', 'mail-research', 'sitemap.xml', 'theme-config.json', 'themes', 'css', 'js', 'assets/fonts', 'assets/images/menu', 'assets/images/generated/menu']) copy(file);
+for (const file of ['index.html', 'menu.html', 'mail-research', 'sitemap.xml', 'theme-config.json', 'themes', 'css', 'js', 'assets/fonts', 'assets/images/menu', 'assets/images/generated/menu']) copy(file);
 fs.writeFileSync(path.join(out, '_redirects'), '/menu /menu.html 200\n');
 const preview = process.argv.includes('--preview') || process.env.CONTEXT === 'deploy-preview';
 // The existing menu is public and searchable; private previews stay excluded.
@@ -50,3 +51,6 @@ for (const group of Object.values(customerMenu)) {
 }
 fs.mkdirSync(path.join(out, 'data'), {recursive: true});
 fs.writeFileSync(path.join(out, 'data/customer-menu.json'), JSON.stringify(customerMenu));
+
+// Editorial pages share approved menu content rather than keeping a second price list.
+buildDiscovery({root, out, menu:customerMenu, copy});

@@ -266,3 +266,15 @@ Checks: `node --test scripts/analytics.test.js`, `node scripts/validate-themes.j
 
 ### Public and customer QR menu
 The approved customer menu is served at `/menu`, linked from the homepage and included in the sitemap. Production allows Google indexing; preview builds retain global noindex. Google indexing and rankings are separate external outcomes. Update dish content in the `MENU-DATA` block of `js/menu-page.js`; `node scripts/build-site.mjs` generates `dist/data/customer-menu.json`. `data/menu-presentation.json` maps original image paths to optimized photos and intrinsic dimensions. Run `node --test scripts/customer-menu.test.mjs` after building.
+
+### Discovery pages and review materials
+
+`node scripts/build-site.mjs` also generates `/visit/`, `/our-story/`, `/lunch-specials`, `/dishes/firefly-fusion/`, `/dishes/citrus-mango-dream/` and `/review/` through `scripts/build-discovery.mjs`. Dish descriptions/prices come from the existing menu source. Header/footer and the hours table come from the homepage. Update editorial copy in the generator; do not edit `dist/`. The former lunch page is retained only in `docs/archive/lunch-specials-before-2026-11-11.html`; it is not published. Review pages remain noindex and outside the sitemap.
+
+Run `node --test scripts/discovery.test.mjs scripts/menu-search.test.mjs` for generated content and production/preview eligibility. The search-test fixture now uses the real menu source with placeholder image bytes; existing menu tests validate actual production photos.
+
+- [Review process and print card](docs/reports/2026-11-11-review-process.md)
+- [Prepared local outreach and listing corrections](docs/reports/2026-11-11-local-outreach.md)
+- [Measurement definitions and private baseline capture](docs/discovery-measurement.md)
+
+The repository is public. Keep account snapshots, confirmation URLs, sales/traffic aggregates, and credentials out of Git and the public build. Private evidence belongs in the main checkout's ignored `.ai/context-logger/evidence/`.
