@@ -1,6 +1,14 @@
 {
   "reviews": [
     {
+      "author": "Victoria Cline",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWOQ-IUALzkYFxzmwJnOiiY5cDZ1XvKaWwl9LgPjV1UoDDGXrBF4g=s120-c-rp-mo-br100",
+      "rating": 5,
+      "text": "This place is adorable!! Loved the table settings. Service was very friendly. We ordered a few different things and we all LOVED the food. And if you\u2019re thinking about dessert DO it!! The mochi treats were delicious!!! Definitely will be recommending and returning!",
+      "relativeTime": "",
+      "publishTime": "2026-11-14T20:49:22.366817Z"
+    },
+    {
       "author": "Brett and Heather Heyland",
       "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjVog5UyjclwDt94wNFskaNbKUbx5FDDgdaA4QSFBdUuwsBDTZ_b=s120-c-rp-mo-br100",
       "rating": 5,
@@ -1714,5 +1722,5 @@
     }
   ],
   "rating": 5,
-  "totalReviews": 238
+  "totalReviews": 240
 }
