@@ -9,4 +9,4 @@ Owner explicitly approved replacing the live /menu with the reviewed continuous 
 
 
 ## October 3, 2026 — Favorites tracking
-Favorites tracking implemented and pre-release browser verified; publication/live verification in progress on codex/favorites-tracking. See SPECS.md for definitions. Existing website design preserved.
+Published a3a4122 to origin/main; Netlify deploy 6ac09c606659fa0009c307dd ready. Live homepage.js bytes match release. Focused live desktop and native-touch mobile browser tests pass, and 12 existing tests pass. Google-tag-generated outgoing favorites_view, view_item_list and named select_item requests verified by intercepting collection before transmission; tests do not contaminate analytics. Normal batching required a longer transport wait. Genuine customer ingestion/report population remains pending; tracking begins October 3, 2026. See SPECS.md for reporting definitions. Next: inspect genuine section reach, per-roll views and swipe/selection reports after data arrives.

@@ -9,4 +9,5 @@ Owner explicitly approved replacing the live /menu with the reviewed continuous 
 
 ## October 3, 2026 — Favorites tracking
 - [x] Implement and browser-test favorites visibility/swipes/named selections.
-- [ ] Verify published tracking and later inspect genuine GA data; historical engagement cannot be recovered.
+- [x] Verify published tracking, named desktop selections, native-touch swipes and outbound GA request payloads.
+- [ ] Inspect genuine GA favorites data after processing; historical engagement cannot be recovered.

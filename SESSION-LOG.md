@@ -12,3 +12,5 @@ Release verification: a9a1e63 pushed to origin/main; hikarisojo.com serves exact
 
 ## October 3, 2026 — Favorites tracking
 Added favorites tracking at owner request. Twelve existing tests and focused desktop/mobile browser checks pass. Verified GA item-name/interaction reporting query compatibility (HTTP 200). Publishing from clean production-derived checkout; canonical dirty preview remains isolated.
+
+Release verification: Published a3a4122 to origin/main; Netlify deploy 6ac09c606659fa0009c307dd ready. Live homepage.js bytes match release. Focused live desktop and native-touch mobile browser tests pass, and 12 existing tests pass. Google-tag-generated outgoing favorites_view, view_item_list and named select_item requests verified by intercepting collection before transmission; tests do not contaminate analytics. Normal batching required a longer transport wait. Genuine customer ingestion/report population remains pending; tracking begins October 3, 2026.
