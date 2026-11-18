@@ -25,7 +25,15 @@ function copy(file) {
   }
 }
 for (const file of ['index.html', 'menu.html', 'mail-research', 'sitemap.xml', 'theme-config.json', 'themes', 'css', 'js', 'assets/fonts', 'assets/images/menu', 'assets/images/generated/menu']) copy(file);
-fs.writeFileSync(path.join(out, '_redirects'), '/menu /menu.html 200\n');
+// Printed QR codes open these first-party addresses, never the destination itself, so a
+// destination can change without reprinting. Once a code is printed, never remove or rename
+// its address; change only where it points. 302 keeps browsers from caching an old destination.
+// Register of codes and where each is printed: docs/qr-codes.md.
+const qrForwards = [
+  ['/order', 'https://hikarisushi-online.square.site/?utm_source=togo-bag&utm_medium=qr&utm_campaign=togo-bag'],
+  ['/promo', '/?utm_source=promo&utm_medium=qr&utm_campaign=promo-default'],
+];
+fs.writeFileSync(path.join(out, '_redirects'), '/menu /menu.html 200\n' + qrForwards.map(([from, to]) => `${from} ${to} 302\n`).join(''));
 const preview = process.argv.includes('--preview') || process.env.CONTEXT === 'deploy-preview';
 // The existing menu is public and searchable; private previews stay excluded.
 fs.writeFileSync(path.join(out, '_headers'), preview
