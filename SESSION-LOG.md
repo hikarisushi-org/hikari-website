@@ -90,3 +90,7 @@ Joel authorized fixing both audited listings. Submitted EatOutMap hours/website/
 ### November 11 follow-up — Salt & Seek email
 
 Sent the prepared editorial consideration request to Alex at Salt & Seek from the verified Hikari mailbox with Joel's authorization. Exact Gmail Sent read-back passed at 2:40 PM MST. Private receipt retained; no recipient response or editorial inclusion claimed.
+
+## 2026-11-19 — Animated logo for Owner.com
+
+Joel asked for the animated Hikari logo for Owner.com, who are rebuilding the website. Found it is the homepage hero sunrise (inline SVG + `css/hero-sunrise.css`), not a media file. Exported it frame by frame with headless Chromium to MP4/GIF on white, transparent WebM (alpha verified) and ProRes 4444 MOV, a standalone animated SVG and a still PNG in `~/Downloads/hikari-sunrise-for-owner/`. Drafted a Spanish reply in Alan's "Próximos Pasos" thread with five files attached; the Gmail send tool failed on the dashed draft ID (fixed and released in agent-integrations), and Joel sent the draft himself at 11:18 AM MST. No website code or deployment change.

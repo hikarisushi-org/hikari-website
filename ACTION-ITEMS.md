@@ -1,3 +1,9 @@
+# Owner.com rebuild
+
+- [x] Send the hero sunrise animation to Owner.com (Alan Hernandez) as files; sent November 19 at 11:18 AM MST from hello@hikarisojo.com.
+- [ ] Review Owner.com's preview before the November 20, 10:30 AM MST call; confirm the sunrise can be used and send the transparent MOV if asked.
+- [ ] Switch the domain at Porkbun only after Joel approves the Owner.com site.
+
 # Website improvement report - proposed work
 
 - [x] Consolidate Owner, competitor, and offsite-ordering research into the [dated report](docs/reports/2026-11-11-hikari-website-improvement-report.md) and verified PDF.

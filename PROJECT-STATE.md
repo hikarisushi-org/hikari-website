@@ -1,3 +1,9 @@
+# Owner.com rebuild — November 19, 2026
+
+Owner.com (launch specialist Alan Hernandez) is building a new Hikari website; this repo's site stays live until Joel approves theirs and the Porkbun domain is switched. Joel's design guide went to Alan on November 17. Alan asked for the animated logo: it is the homepage hero sunrise, which exists only as inline SVG in `index.html` plus `css/hero-sunrise.css` (no video/image file). A handoff pack (MP4 and GIF on white, transparent WebM/MOV, standalone animated SVG, still PNG) was exported frame-accurately from that code to `~/Downloads/hikari-sunrise-for-owner/` on the Mac mini. Joel sent it to Alan from hello@hikarisojo.com on November 19 at 11:18 AM MST (Sent verified). The 59 MB transparent MOV was not attached; offered on request.
+
+NEXT ACTION: review Owner.com's preview link before the Friday November 20, 10:30 AM MST call with Alan and confirm whether they can use the sunrise. Open follow-ups from earlier work (Search Console access, lunch specials, entrance directions, winter roll photos) are listed below and in ACTION-ITEMS.md.
+
 # Discovery and guest information released — November 11, 2026
 
 Published `3e719b0` to origin/main, Netlify `6af4d37282c56de49918754e`, at 1:43 PM MST. Visitor/lunch/story and Firefly Fusion/Citrus Mango Dream pages, menu navigation, review page and sitemap are live. Twelve public HTML/style/menu-data responses returned 200 and matched the tested build byte-for-byte. Existing menu and data bytes stayed unchanged. Live review function returned five valid reviews and the same total as public Maps. Full build, 17 protected checks, six content/context checks and narrow/tablet/desktop browser review passed. [Release detail](docs/reports/2026-11-11-discovery-release.md).
@@ -6,13 +12,13 @@ Google profile Menu and website fields were updated and read back; public Maps v
 
 Current Google/GA4 and Square snapshots are retained outside this public repository in the main checkout's ignored `.ai/context-logger/evidence/discovery-20261111/`. Search Console's API is disabled and the existing credential cannot administer it. Property access/index coverage, paid same-session attribution and ranking improvements remain unverified. `/menu` now has mixed public/QR use; path alone is not scan evidence. [Measurement rules](docs/discovery-measurement.md).
 
-NEXT ACTION: resolve Google project-admin/API access before checking Search Console; retain the existing table review placards and confirm planned lunch-special details and entrance directions before adding them (Joel confirmed no separate lunch specials yet; planned this week). No recurring polling or new paid service was installed. Temporary review server/tabs are task-owned and closed at handoff.
+Open follow-ups: resolve Google project-admin/API access before checking Search Console; retain the existing table review placards and confirm planned lunch-special details and entrance directions before adding them (Joel confirmed no separate lunch specials yet; planned this week). No recurring polling or new paid service was installed. Temporary review server/tabs are task-owned and closed at handoff.
 
 # Existing menu search eligibility — November 11, 2026
 
 Published the authorized change to the existing [public/QR menu](https://hikarisojo.com/menu) from `main` commit `9f40f5d`, Netlify deploy `6af4c7765f58f0230134fa50` (12:52 PM MST). Production HTML and HTTP headers allow indexing; canonical `/menu` is now in the sitemap. Preview builds retain global noindex. Public `/menu`, `/menu.html`, sitemap, robots, homepage and menu JSON returned 200 and matched the tested build. Menu body and homepage matched their pre-change live bytes; dish/photo/ordering code was preserved. Full build, 17 protected checks and three search-eligibility checks passed. No UI redesign or new ordering flow occurred.
 
-Google indexing and ranking improvement remain unverified. No Search Console indexing request was submitted. NEXT ACTION: check indexing and search performance at a later meaningful checkpoint; avoid repeated unchanged ranking scans.
+Google indexing and ranking improvement remain unverified. No Search Console indexing request was submitted. Later: check indexing and search performance at a later meaningful checkpoint; avoid repeated unchanged ranking scans.
 
 The earlier eight-page [research report](output/pdf/hikari-website-improvement-report-2026-11-11.pdf) and [editable source](docs/reports/2026-11-11-hikari-website-improvement-report.md) remain a historical pre-change baseline. Joel's later decision to reuse `/menu` supersedes its separate `/food` proposal. Other proposals remain unimplemented. Owner's failed scan and unverified score methodology still limit its ranking/customer claims; no reviewed evidence establishes an automatic ranking penalty for a legitimate Square order click.
 
@@ -20,7 +26,7 @@ The earlier eight-page [research report](output/pdf/hikari-website-improvement-r
 
 Homepage now features the winter menu: Pink Lotus hero and Cowboy Crunch feature with NEW-seal name badges, a "New this winter" callout, a NEW link to /menu under the hero, and a gallery of Coco Nirvana, Teriyaki Chicken Don, Jalapeño Kampachi, Tempura Don, Teriyaki Chicken Bento Box and Beef Don with verified Square item links. Joel approved the Tailnet preview before release. Published from `main` and verified live on 2026-11-10: homepage HTML and CSS match the build byte-for-byte, and all new images and `/menu` return 200. The temporary preview route (Tailnet port 9462) was removed. Source dish photos for new items live in hikari-ops `printable-menu/` (not the Drive Food Photos folder).
 
-NEXT ACTION: add homepage photos for Red Ruby, Kiwi Minaj, Shrimp Shady and Spider Roll once real photos exist.
+Later: add homepage photos for Red Ruby, Kiwi Minaj, Shrimp Shady and Spider Roll once real photos exist.
 
 # Winter QR menu — November 7, 2026
 
