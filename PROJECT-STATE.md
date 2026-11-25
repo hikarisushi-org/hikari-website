@@ -1,3 +1,7 @@
+# Spider Roll wording — November 25, 2026 (pending release)
+
+Branch `t3/spider-roll-tempura-crab` changes the menu's Spider Roll text to "Tempura crab". Not merged to main, not live. NEXT ACTION: Joel's typed OK to merge to main (publishes via Netlify).
+
 # Discovery and guest information released — November 11, 2026
 
 Published `3e719b0` to origin/main, Netlify `6af4d37282c56de49918754e`, at 1:43 PM MST. Visitor/lunch/story and Firefly Fusion/Citrus Mango Dream pages, menu navigation, review page and sitemap are live. Twelve public HTML/style/menu-data responses returned 200 and matched the tested build byte-for-byte. Existing menu and data bytes stayed unchanged. Live review function returned five valid reviews and the same total as public Maps. Full build, 17 protected checks, six content/context checks and narrow/tablet/desktop browser review passed. [Release detail](docs/reports/2026-11-11-discovery-release.md).
