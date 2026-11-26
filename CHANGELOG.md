@@ -1,5 +1,9 @@
 # Changelog
 
+## November 25, 2026 (branch t3/spider-roll-tempura-crab, not live)
+
+- Spider Roll on the QR/website menu now reads "Tempura crab" (was "Tempura soft-shell crab"), matching the approved sushi guide. Only `js/menu-page.js` changed.
+
 ## October 12, 2026
 
 - Favorites order links follow the current roll; phone carousel has a visible named order button.

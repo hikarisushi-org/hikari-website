@@ -213,7 +213,7 @@ const menuData = {
       {
         "name": "Spider Roll",
         "price": "$14",
-        "desc": "Tempura soft-shell crab, spicy crab, and fresh mango. Topped with eel sauce and sesame seeds."
+        "desc": "Tempura crab, spicy crab, and fresh mango. Topped with eel sauce and sesame seeds."
       },
       {
         "name": "Coco Nirvana",

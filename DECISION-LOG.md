@@ -11,6 +11,11 @@ Format: newest first. Link measurements to `SPECS.md`; link resume state to `REA
 
 ---
 
+## November 25, 2026 — Spider Roll crab wording
+
+Joel decided the Spider Roll's crab is a tempura fried crab, not soft-shell. The website menu now says "Tempura crab", as the approved sushi guide does. Prepared on branch t3/spider-roll-tempura-crab; going live needs Joel's typed OK. The printable menu and its archived proof are a separate decision.
+
+
 ## 2026-08-20 — Remove retired SSH identity documentation
 
 **Decision:** Document only the active `arcos33` GitHub SSH identity.
